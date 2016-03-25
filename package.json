@@ -4,7 +4,8 @@
   "description": "boilerplate website",
   "main": "app.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "webpack -p"
   },
   "repository": {
     "type": "git",
