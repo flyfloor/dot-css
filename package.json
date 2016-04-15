@@ -1,7 +1,7 @@
 {
-  "name": "boilerplate",
+  "name": "dot-css",
   "version": "0.0.1",
-  "description": "boilerplate website",
+  "description": "dot css website",
   "main": "app.js",
   "scripts": {
     "start": "node server.js",
@@ -12,13 +12,13 @@
     "url": "https://github.com"
   },
   "keywords": [
-    "boilerplate"
+    "dot css, css micro framework"
   ],
   "author": "jerryshew",
   "license": "MIT",
   "homepage": "https://github.com",
   "devDependencies": {
-    "autoprefixer-loader": "^3.1.0",
+    "postcss-loader": "^0.8.2",
     "babel-core": "^5.8.23",
     "babel-loader": "^5.3.2",
     "babel-runtime": "^5.8.20",
@@ -27,6 +27,7 @@
     "less": "^2.5.1",
     "less-loader": "^2.2.0",
     "style-loader": "^0.12.3",
+    "extract-text-webpack-plugin": "^1.0.1",
     "webpack-dev-middleware": "^1.2.0",
     "webpack-hot-middleware": "^2.5.0",
     "html-webpack-plugin": "^1.7.0",

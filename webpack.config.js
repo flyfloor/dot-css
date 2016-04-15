@@ -1,10 +1,11 @@
 var path = require('path');
 var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin')
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
 
-    entry: "./src/app.js",
+    entry: "./entre.js",
     output: {
         path: path.join(__dirname, 'dist'),
         filename: 'app.js',
@@ -14,6 +15,7 @@ module.exports = {
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin(),
+        new ExtractTextPlugin("app.css"),
         // new webpack.optimize.UglifyJsPlugin({
         //     sourceMap: false,
         //     mangle: false
@@ -27,10 +29,6 @@ module.exports = {
             }, { 
                 test: /\.css$/,
                 loader: "style!css" 
-            },  { 
-                test: /\.js$/,
-                exclude: /(node_modules|bower_components)/,
-                loader: "babel" 
             }
         ]
     },
