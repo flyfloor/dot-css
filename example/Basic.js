@@ -1,28 +1,28 @@
 import React, { Component } from 'react';
-import {COLOR} from './setting';
+import {COLOR, NS} from './setting';
 
 
 const makeColor = (color) => {
     switch (color) {
         case 'white':
-            return <div className={`background-${color}`}>{color}</div>;
+            return <div className={`${NS} bg-${color}`}>{color}</div>;
         case 'black':
-            return <div className={`background-${color}`}>{color}</div>;
+            return <div className={`${NS} bg-${color}`}>{color}</div>;
         case 'gray':
             return <div>
-                    <div className={`background-mini_${color}`}>{`mini_${color}`}</div>
-                    <div className={`background-tiny_${color}`}>{`tiny_${color}`}</div>
-                    <div className={`background-light_${color}`}>{`light_${color}`}</div>
-                    <div className={`background-${color}`}>{color}</div>
-                    <div className={`background-dark_${color}`}>{`dark_${color}`}</div>
-                    <div className={`background-deep_${color}`}>{`deep_${color}`}</div>
+                    <div className={`${NS} bg-mini_${color}`}>{`mini_${color}`}</div>
+                    <div className={`${NS} bg-tiny_${color}`}>{`tiny_${color}`}</div>
+                    <div className={`${NS} bg-light_${color}`}>{`light_${color}`}</div>
+                    <div className={`${NS} bg-${color}`}>{color}</div>
+                    <div className={`${NS} bg-dark_${color}`}>{`dark_${color}`}</div>
+                    <div className={`${NS} bg-deep_${color}`}>{`deep_${color}`}</div>
                 </div>;
         default:
             return <div>
-                    <div className={`background-light_${color}`}>{`light_${color}`}</div>
-                    <div className={`background-${color}`}>{color}</div>
-                    <div className={`background-dark_${color}`}>{`dark_${color}`}</div>
-                    <div className={`background-deep_${color}`}>{`deep_${color}`}</div>
+                    <div className={`${NS} bg-light_${color}`}>{`light_${color}`}</div>
+                    <div className={`${NS} bg-${color}`}>{color}</div>
+                    <div className={`${NS} bg-dark_${color}`}>{`dark_${color}`}</div>
+                    <div className={`${NS} bg-deep_${color}`}>{`deep_${color}`}</div>
                 </div>;
     }
 };
@@ -30,7 +30,7 @@ const makeColor = (color) => {
 export default class Basic extends Component {
     render() {
         const nodes = COLOR.map(item => {
-            return <li key={`color-${item}`}>
+            return <li className={`${NS} column`} key={`color-${item}`}>
                         <h4>{item}</h4>
                         {makeColor(item)}
                     </li>
@@ -53,7 +53,7 @@ export default class Basic extends Component {
                 </li>
                 <li>
                     <h3>Colors</h3>
-                    <ul>
+                    <ul className={`${NS} grid grid-${COLOR.length}`}>
                         {nodes}
                     </ul>
                 </li>

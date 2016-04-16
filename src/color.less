@@ -68,7 +68,8 @@
 @tiny_gray: #F5F5F5;
 @light_gray: #EEEEEE;
 @dark_gray: #616161;
-@deep_gray: #212121;
+@deep_gray: #383838;
+@most_gray: #212121;
 
 @bluegray: #607D8B;
 @light_bluegray: #B0BEC5;
@@ -97,7 +98,7 @@
     }
 }
 
-.color {
+@{NS}.color {
     .setColor(red, color);
     .setColor(pink, color);
     .setColor(purple, color);
@@ -115,11 +116,12 @@
     .setColor(yellow, color);
     &-tiny_gray { color: @tiny_gray }
     &-mini_gray { color: @mini_gray }
+    &-most_gray { color: @most_gray }
     &-black { color: @black }
     &-white { color: @white }
 }
 
-.background {
+@{NS}.bg {
     .setColor(red, background-color);
     .setColor(pink, background-color);
     .setColor(purple, background-color);
@@ -137,6 +139,7 @@
     .setColor(yellow, background-color);
     &-tiny_gray { background-color: @tiny_gray }
     &-mini_gray { background-color: @mini_gray }
+    &-most_gray { background-color: @most_gray }
     &-black { background-color: @black }
     &-white { background-color: @white }
 }
