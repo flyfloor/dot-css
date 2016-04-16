@@ -1,0 +1,267 @@
+/* reset css */
+
+* {
+  outline: none;
+  box-sizing: border-box;
+}
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+  vertical-align: baseline;
+  word-break: break-all;
+  vertical-align: baseline;
+  -webkit-overflow-scrolling: touch;
+}
+
+article, picture, section, header, footer, nav, wrapper, pagination, comment, blockquote, aside {
+  display: block;
+}
+
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, Microsoft Yahei, sans-serif;
+  color: #383838;
+  line-height: 1;
+  /*font-size: 100%;*/
+  font-size: 15px;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+  overflow-y: scroll;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+}
+
+ul {
+  padding:0;
+  margin: 0;
+  li {
+      list-style-type: none;
+  }
+}
+
+body {
+  background-color: #fff;
+  min-height: 100%;
+}
+
+a {
+  &:active {
+    outline: none;
+  }
+  text-decoration: none;
+}
+
+p {
+  font-size: 15px;
+  line-height: 120%;
+}
+
+
+img {
+  width: auto;
+  height: auto;
+  border: none;
+}
+
+h1,h2,h3,h4,h5, h6 {
+  letter-spacing: 0px;
+  text-transform: none;
+  line-height: 120%;
+  font-weight: 500;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+h6 {
+  font-size: 15px;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+abbr {
+    cursor: default;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+}
+
+mark {
+    background: #ff0;
+    color: #000;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, serif;
+    font-size: 1em;
+}
+
+pre {
+    white-space: pre-wrap;
+}
+
+q {
+    quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+figure {
+    margin: 0;
+}
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+input[type="text"], 
+input[type="number"], 
+input[type="url"], 
+input[type="tel"], 
+input[type="password"], 
+input[type="email"], 
+textarea {
+  padding: 5px 8px;
+  border: 1px solid #efefef;
+  line-height: 22px;
+  border-radius: 3px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+textarea {
+    overflow: auto; 
+    vertical-align: top; 
+}
+
+caption,th,td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle
+}
+
+caption, th, td.gutter{
+  display: none;
+}
+
+q,blockquote {
+  quotes: none
+}
+
+q:before,q:after,blockquote:before,blockquote:after {
+  content: "";
+  content: none
+}
+
