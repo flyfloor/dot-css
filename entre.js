@@ -20,10 +20,10 @@ class App extends Component {
         return (
             <page>
                 <header>
-                    <h2>Dot css</h2>
+                    <h1>Dot css</h1>
                 </header>
                 <div className={`${NS} grid`}>
-                    <aside className="column column-2">
+                    <aside className={`column column-2 ${NS} padding`}>
                         <ul>
                             <li>
                                 <NavLink to="/basic">basic</NavLink>
@@ -49,7 +49,7 @@ class App extends Component {
 class RootPage extends Component {
     render() {
         return (
-            <h2>
+            <h2 className={`${NS} text-center`}>
                 A micro css framework
             </h2>
         );

@@ -8,6 +8,20 @@
     &-right {
         text-align: right;
     }
+    &-major {
+        font-size: 18px;
+        font-weight: 500;
+    }
+    &-content {
+        font-size: 16px;
+    }
+    &-extra {
+        font-size: 12px;
+    }
+}
+
+@{NS}.padding {
+    padding: @padding;
 }
 
 @{NS}.float {
@@ -20,4 +34,13 @@
     &-none {
         float: none;
     }
+}
+
+@{NS}.field {
+    margin-bottom: @padding;
+}
+
+@{NS}.block {
+    padding: @padding;
+    margin-bottom: @padding;
 }

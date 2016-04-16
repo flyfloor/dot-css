@@ -9,7 +9,7 @@ export default class Grid extends Component {
                 <ul>
                     <li>
                         <h4>same width column</h4>
-                        <ul className={`${NS} grid grid-5 grid-example text-center`}>
+                        <ul className={`${NS} grid grid-5 grid-example text-center text-extra`}>
                             <li className="column">
                                 <p>column1
                                 </p>
