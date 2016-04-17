@@ -18,9 +18,7 @@ export default class Icon extends Component {
     render() {
         return (
             <div>
-                <h4>
-                    Icon
-                </h4>
+                <h4>Icon</h4>
                 <p>Use Google's material icons, <a href="https://design.google.com/icons/" target="_blank">Google icons</a></p>
                 <pre>
                     <code>
@@ -28,6 +26,16 @@ export default class Icon extends Component {
                     </code>
                 </pre>
                 {makeIcons()}
+                <br/>
+                <h4>Colored icon</h4>
+                <div className={`${NS} grid grid-10`}>
+                    <div className={`${NS} column padding`}>
+                        <i className={`${NS} color-red icon`}>favorite</i>
+                    </div>
+                    <div className={`${NS} column padding`}>
+                        <i className={`${NS} color-green icon`}>all_inclusive</i>
+                    </div>
+                </div>
             </div>
         );
     }
