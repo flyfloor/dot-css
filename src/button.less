@@ -1,0 +1,82 @@
+.colorBtn(@color){
+    &.@{color}{
+        @_dark: 'dark_@{color}';
+        @_deep: 'deep_@{color}';
+        background-color: @@_dark;
+        color: @tiny_gray;
+        border-color: @@_dark;
+        &:hover {
+            color: @white;
+            background-color: @@color;
+            border-color: @@_deep;
+        }
+    }
+}
+
+@{NS}.button {
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    border-radius: @radius;
+    vertical-align: middle;
+    color: @deep_gray;
+    font-weight: 500;
+    line-height: @line-height;
+    min-height: @line-height;
+    border: 1px solid @gray;
+    margin: 0 @padding 0 0;
+    padding: @padding * 6/10 @padding * 12/10;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    &:hover {
+        -webkit-transition: all .2s;
+        -o-transition: all .2s;
+        transition: all .2s;
+        color: @most_gray;
+        background-color: @mini_gray;
+        border: 1px solid @dark_gray;
+    }
+    &.tiny {
+        padding: @padding * 2/10 @padding * 5/10;
+        font-size: @line-height * 12/15;   
+    }
+    &.small {
+        padding: @padding * 5/10 @padding * 8/10;
+        font-size: @line-height * 13/15;   
+    }
+    &.large {
+        padding: @padding @padding * 15/10;
+        font-size: @line-height * 18/15;
+    }
+    &.huge {
+        padding: @padding * 12/10 @padding * 25/10;
+        font-size: @line-height * 22/15;
+    }
+
+    .colorBtn(red);
+    .colorBtn(pink);
+    .colorBtn(purple);
+    .colorBtn(indigo);
+    .colorBtn(blue);
+    .colorBtn(cyan);
+    .colorBtn(teal);
+    .colorBtn(green);
+    .colorBtn(lime);
+    .colorBtn(amber);
+    .colorBtn(orange);
+    .colorBtn(brown);
+    .colorBtn(gray);
+    .colorBtn(bluegray);
+    .colorBtn(yellow);
+    &.lime,
+    &.amber,
+    &.orange,
+    &.yellow {
+        color: @deep_gray;
+        &:hover {
+            color: @most_gray;
+        }
+    }
+
+}
