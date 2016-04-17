@@ -4,8 +4,11 @@
   "description": "dot css website",
   "main": "app.js",
   "scripts": {
-    "start": "node server.js",
-    "build": "webpack -p"
+    "start": "NODE_ENV=dev node server.js",
+    "dev": "NODE_ENV=dev node server.js",
+    "prod": "NODE_ENV=prod node server.js",
+    "build": "webpack -p",
+    "build-dev": "webpack"
   },
   "repository": {
     "type": "git",
@@ -30,6 +33,7 @@
     "eslint": "^2.7.0",
     "express": "^4.13.3",
     "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.8.5",
     "html-webpack-plugin": "^1.6.1",
     "less": "^2.5.1",
     "less-loader": "^2.2.0",

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {COLOR, NS} from './setting';
+import {COLORS, NS} from './setting';
 
 
 const makeColor = (color) => {
@@ -23,7 +23,7 @@ const makeColor = (color) => {
 
 export default class Basic extends Component {
     render() {
-        const nodes = COLOR.map(item => {
+        const nodes = COLORS.map(item => {
             return <li className={`${NS} column`} key={`color-${item}`}>
                         <h4>{item}</h4>
                         {makeColor(item)}
@@ -41,17 +41,20 @@ export default class Basic extends Component {
                         <h4>H4</h4>
                         <h5>H5</h5>
                         <h6>H6</h6>
+                        <br/>
                     </li>
                     <li>
                         <h3>Paragragh</h3>
                         <p>This is a content of Paragragh, Paragragh has 120% line height</p>
                         <p>This is another content of Paragragh</p>
+                        <br/>
                     </li>
                     <li>
                         <h3>Colors</h3>
                         <ul className={`${NS} grid grid-8 text-extra text-center`}>
                             {nodes}
                         </ul>
+                        <br/>
                     </li>
                 </ul>
             </div>

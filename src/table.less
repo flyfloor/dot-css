@@ -1,0 +1,38 @@
+@{NS}.table {
+    position: relative;
+    display: table;
+    border: 1px solid @light_gray;
+    &.fluid {
+        width: 100%;
+    }
+    >.row, tr {
+        display: table-row;
+        &.head {
+            >.cell {
+                border-top: 0;
+                background-color: @tiny_gray;
+            }
+        }
+        &:nth-child(1) {
+            >.cell, td {
+                border-top: 0;
+            }
+        }
+        >.cell, td {
+            border-top: 1px solid @light_gray;
+            padding: @padding @padding * 2;
+            vertical-align: middle;
+            display: table-cell;
+        }
+    }
+    &.basic {
+        border: 0;
+        >.row, tr {
+            >.cell, td {
+                background-color: @white;
+                padding: 0;
+                border: 0;
+            }
+        }
+    }
+}

@@ -8,6 +8,7 @@ import Button from './example/Button';
 import Basic from './example/Basic';
 import Grid from './example/Grid';
 import Icon from './example/Icon';
+import Table from './example/Table';
 
 const NavLink = (props) => {
     return (
@@ -30,6 +31,7 @@ class App extends Component {
                             <li><NavLink to="/grid">grid</NavLink></li>
                             <li><NavLink to="/button">button</NavLink></li>
                             <li><NavLink to="/icon">icon</NavLink></li>
+                            <li><NavLink to="/table">table</NavLink></li>
                         </ul>
                     </aside>
                     <artical className="column column-14">
@@ -61,6 +63,7 @@ ReactDOM.render(<Router history={hashHistory}>
                         <Route path="/basic" component={Basic}></Route>
                         <Route path="/grid" component={Grid}></Route>
                         <Route path="/Icon" component={Icon}></Route>
+                        <Route path="/Table" component={Table}></Route>
                     </Route>
                 </Router>, document.getElementById('root'));
 

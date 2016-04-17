@@ -23,7 +23,7 @@ export default class Button extends Component {
                     </li>
                     <li>
                         <h3>Colored button</h3>
-                        <div className={`${NS} field`}>
+                        <div>
                             <button className={`${NS} red button`}>red</button>
                             <button className={`${NS} pink button`}>pink</button>
                             <button className={`${NS} purple button`}>purple</button>
@@ -40,8 +40,9 @@ export default class Button extends Component {
                             <button className={`${NS} yellow button`}>yellow</button>
                             <button className={`${NS} black button`}>black</button>
                         </div>
+                        <br/>
                         <h3>basic button</h3>
-                        <div className={`${NS} field`}>
+                        <div>
                             <button className={`${NS} basic red button`}>red</button>
                             <button className={`${NS} basic pink button`}>pink</button>
                             <button className={`${NS} basic purple button`}>purple</button>
@@ -58,9 +59,10 @@ export default class Button extends Component {
                             <button className={`${NS} basic yellow button`}>yellow</button>
                             <button className={`${NS} basic black button`}>black</button>
                         </div>
+                        <br/>
                     </li>
                     <li>
-                        <h4>Icon button</h4>
+                        <h3>Icon button</h3>
                     </li>
                 </ul>
             </div>
