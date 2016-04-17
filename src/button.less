@@ -10,6 +10,16 @@
             background-color: @@color;
             border-color: @@_deep;
         }
+        &.basic {
+            background-color: @white;
+            color: @@_dark;
+            border-color: @@_dark;
+            &:hover {
+                background-color: @white;
+                color: @@_deep;
+                border-color: @@_deep;
+            }
+        }
     }
 }
 
@@ -54,6 +64,23 @@
         font-size: @line-height * 22/15;
     }
 
+    &.black {
+        color: @tiny_gray;
+        background-color: @black;
+        border-color: @most_gray;
+        &:hover {
+            background-color: @most_gray;
+            color: @white;
+            border-color: @black;
+        }
+        &.basic {
+            color: @deep_gray;
+            background-color: @white;
+            &:hover {
+                color: @black;
+            }
+        }
+    }
     .colorBtn(red);
     .colorBtn(pink);
     .colorBtn(purple);

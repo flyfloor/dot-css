@@ -7,7 +7,7 @@ const makeColor = (color) => {
         case 'white':
             return <div className={`${NS} padding bg-${color}`}>{color}</div>;
         case 'black':
-            return <div className={`${NS} padding bg-${color}`}>{color}</div>;
+            return <div className={`${NS} padding bg-${color} color-white`}>{color}</div>;
         default:
             return <div>
                     <div className={`${NS} padding bg-mini_${color}`}>{`mini_${color}`}</div>

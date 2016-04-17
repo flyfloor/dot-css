@@ -40,6 +40,9 @@ module.exports = {
                 test: /\.jsx?$/,
                 exclude: /(node_modules|bower_components)/,
                 loader: 'babel',
+            }, {
+                test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+                loader : 'url-loader?name=font/[name].[ext]'
             }
         ],
         postcss: function () {
