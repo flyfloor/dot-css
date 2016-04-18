@@ -106,6 +106,7 @@
 @mini_gray: #FAFAFA;
 @tiny_gray: #F5F5F5;
 @light_gray: #EEEEEE;
+@dull_gray: #999999;
 @dark_gray: #616161;
 @deep_gray: #383838;
 @most_gray: #212121;
@@ -168,6 +169,7 @@
     .setColor(gray, color);
     .setColor(bluegray, color);
     .setColor(yellow, color);
+    &-dull_gray { color: @dull_gray }
     &-black { color: @black }
     &-white { color: @white }
 }
@@ -188,6 +190,7 @@
     .setColor(gray, background-color);
     .setColor(bluegray, background-color);
     .setColor(yellow, background-color);
+    &-dull_gray { background-color: @dull_gray }
     &-black { background-color: @black }
     &-white { background-color: @white }
 }

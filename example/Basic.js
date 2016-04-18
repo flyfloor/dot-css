@@ -8,6 +8,18 @@ const makeColor = (color) => {
             return <div className={`${NS} padding bg-${color}`}>{color}</div>;
         case 'black':
             return <div className={`${NS} padding bg-${color} color-white`}>{color}</div>;
+        case 'gray':
+            return <div>
+                    <div className={`${NS} padding bg-mini_${color}`}>{`mini_${color}`}</div>
+                    <div className={`${NS} padding bg-tiny_${color}`}>{`tiny_${color}`}</div>
+                    <div className={`${NS} padding bg-light_${color}`}>{`light_${color}`}</div>
+                    <div className={`${NS} padding bg-${color}`}>{color}</div>
+                    <div className={`${NS} padding bg-dull_${color}`}>{`dull_${color}`}</div>
+                    <div className={`${NS} padding bg-dark_${color}`}>{`dark_${color}`}</div>
+                    <div className={`${NS} padding bg-deep_${color}`}>{`deep_${color}`}</div>
+                    <div className={`${NS} padding bg-most_${color}`}>{`most_${color}`}</div>
+                </div>;
+
         default:
             return <div>
                     <div className={`${NS} padding bg-mini_${color}`}>{`mini_${color}`}</div>

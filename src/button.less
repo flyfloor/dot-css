@@ -32,11 +32,12 @@
     border-radius: @radius;
     vertical-align: middle;
     color: @deep_gray;
+    background-color: @mini_gray;
     font-weight: 500;
     font-size: @line-height;
     line-height: @line-height;
     min-height: @line-height;
-    border: 1px solid @gray;
+    border: 1px solid @light_gray;
     margin: 0 @padding 0 0;
     padding: @padding * 8/10 @padding * 12/10;
     -webkit-transition: all .2s;
@@ -47,18 +48,25 @@
         -o-transition: all .2s;
         transition: all .2s;
         color: @most_gray;
-        background-color: @mini_gray;
-        border: 1px solid @dark_gray;
+        background-color: @white;
+        border: 1px solid @gray;
     }
-    
+    @{NS}.icon {
+        width: @line-height;
+        height: @line-height;
+        font-size: inherit;
+        color: inherit;
+        line-height: @line-height + 1;
+    }
+
+    &.fluid {
+        display: block;
+        width: 100%;
+    }
+
     &.icon-button {
         >@{NS}.icon {
-            line-height: @line-height + 1;
-            color: inherit;
-            width: @line-height;
             margin: 0 @padding * 8/10 0 0;
-            height: @line-height;
-            font-size: inherit;
             float: left;
         }
     }
@@ -102,6 +110,34 @@
             width: @_font;
             height: @_font;
             margin: 0 @padding * 12/10 0 0;
+        }
+    }
+
+    &.round {
+        padding: @padding * 18/10;
+        border-radius: @padding * 18/10 + @line-height/2;
+        width: 0;
+        height: 0;
+        position: relative;
+        &>@{NS}.icon {
+            ._AB_CENTER;
+            line-height: initial;
+        }
+        &.tiny {
+            padding: @padding * 12/10;
+            border-radius: @padding * 12/10 + @line-height/2;
+        }
+        &.small {
+            padding: @padding * 15/10;
+            border-radius: @padding * 15/10 + @line-height/2;
+        }
+        &.large {
+            padding: @padding * 21/10;
+            border-radius: @padding * 21/10 + @line-height/2;
+        }
+        &.huge {
+            padding: @padding * 24/10;
+            border-radius: @padding * 24/10 + @line-height/2;
         }
     }
 

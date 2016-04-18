@@ -105,6 +105,20 @@ export default class Grid extends Component {
                             </li>
                         </ul>
                     </li>
+                    <li>
+                        <h3>column width, divide to 16 part</h3>
+                        <ul className={`${NS} grid grid-example text-center`}>
+                            <li className="column column-3">
+                                <p>3 part column</p>
+                            </li>
+                            <li className="column column-5">
+                                <p>5 part column</p>
+                            </li>
+                            <li className={`${NS} float-right column column-4`}>
+                                <p>4 part column</p>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         );

@@ -26,13 +26,13 @@
 
 @{NS}.float {
     &-left {
-        float: left;
+        float: left !important;
     }
     &-right {
-        float: right;
+        float: right !important;
     }
     &-none {
-        float: none;
+        float: none !important;
     }
 }
 
@@ -43,4 +43,13 @@
 @{NS}.block {
     padding: @padding;
     margin-bottom: @padding;
+}
+
+._AB_CENTER {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
 }
