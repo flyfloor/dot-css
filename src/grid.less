@@ -1,5 +1,8 @@
 .make-columns(@n, @i: 1) when (@i =< @n) {
     &.grid-@{i} {
+        >.row>.column {
+            width: 100% / @i;
+        }
         >.column {
             width: 100% / @i;
         }
@@ -11,15 +14,28 @@
     >.column.column-@{i} {
         width: (@i / 16) * 100%;
     }
+    >.row {
+        >.column.column-@{i} {
+            width: (@i / 16) * 100%;
+        }
+    }
     .make-wide-columns(@n, (@i + 1));
 }
 
 @{NS}.grid {
     overflow: hidden;
+    position: relative;
     margin: 0;
     padding: 0;
     >.column {
         float: left;
+    }
+    >.row {
+        width: 100%;
+        overflow: hidden;
+        >.column {
+            float: left;
+        }
     }
     .make-wide-columns(16);
     .make-columns(20);
