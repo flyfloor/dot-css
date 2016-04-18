@@ -63,6 +63,32 @@ export default class Button extends Component {
                     </li>
                     <li>
                         <h3>Icon button</h3>
+                        <div>
+                            <button className={`${NS} button tiny icon-button`}>
+                                <i className={`${NS} icon`}>refresh</i>
+                                refresh
+                            </button>
+                            <button className={`${NS} button small icon-button`}>
+                                <i className={`${NS} icon`}>star</i>
+                                star
+                            </button>
+                            <button className={`${NS} button icon-button`}>
+                                <i className={`${NS} icon`}>home</i>
+                                home
+                            </button>
+                            <button className={`${NS} button large icon-button`}>
+                                <i className={`${NS} icon`}>contact_mail</i>
+                                contact_mail
+                            </button>
+                            <button className={`${NS} button red large icon-button`}>
+                                <i className={`${NS} icon`}>watch</i>
+                                watch
+                            </button>
+                            <button className={`${NS} button huge icon-button`}>
+                                <i className={`${NS} icon`}>group</i>
+                                group
+                            </button>
+                        </div>
                     </li>
                 </ul>
             </div>
