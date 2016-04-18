@@ -12,6 +12,12 @@ export default class Button extends Component {
                     <li>
                         <h3>A standard button</h3>
                         <button className={`${NS} button`}>button</button>
+                        <br/>
+                    </li>
+                    <li>
+                        <h3>Right angled button</h3>
+                        <button className={`${NS} angled button`}>angled button</button>
+                        <br/>
                     </li>
                     <li>
                         <h3>Button size</h3>
@@ -20,6 +26,7 @@ export default class Button extends Component {
                         <button className={`${NS} button`}>normal</button>
                         <button className={`${NS} large button`}>large</button>
                         <button className={`${NS} huge button`}>huge</button>
+                        <br/>
                     </li>
                     <li>
                         <h3>Colored button</h3>
@@ -99,29 +106,37 @@ export default class Button extends Component {
                         <br/>
                     </li>
                     <li>
-                        <h3>Round button</h3>
+                        <h3>Circle button</h3>
                         <div>
-                            <div className={`${NS} round tiny button`}>
+                            <div className={`${NS} circle tiny button`}>
                                 <i className={`${NS} icon`}>apps</i>
                             </div>
-                            <div className={`${NS} round small button`}>
+                            <div className={`${NS} circle small button`}>
                                 <i className={`${NS} icon`}>share</i>
                             </div>
-                            <div className={`${NS} round button`}>
+                            <div className={`${NS} circle button`}>
                                 <i className={`${NS} icon`}>clear</i>
                             </div>
-                            <div className={`${NS} round green button`}>
+                            <div className={`${NS} circle green button`}>
                                 <i className={`${NS} icon`}>arrow_back</i>
                             </div>
-                            <div className={`${NS} round basic blue button`}>
+                            <div className={`${NS} circle basic blue button`}>
                                 <i className={`${NS} icon`}>more_vert</i>
                             </div>
-                            <div className={`${NS} round large button`}>
+                            <div className={`${NS} circle large button`}>
                                 <i className={`${NS} icon`}>reply</i>
                             </div>
-                            <div className={`${NS} round huge button`}>
+                            <div className={`${NS} circle huge button`}>
                                 <i className={`${NS} icon`}>plus_one</i>
                             </div>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Button grounp</h3>
+                        <div className={`${NS} button-group`}>
+                            <div className={`${NS} button`}>first</div>
+                            <div className={`${NS} button`}>second</div>
+                            <div className={`${NS} button`}>thrid</div>
                         </div>
                     </li>
                 </ul>

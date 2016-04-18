@@ -29,10 +29,10 @@
     cursor: pointer;
     display: inline-block;
     text-align: center;
-    border-radius: @radius;
     vertical-align: middle;
     color: @deep_gray;
-    background-color: @mini_gray;
+    border-radius: @radius;
+    background-color: @tiny_gray;
     font-weight: 500;
     font-size: @line-height;
     line-height: @line-height;
@@ -48,9 +48,14 @@
         -o-transition: all .2s;
         transition: all .2s;
         color: @most_gray;
-        background-color: @white;
+        background-color: @mini_gray;
         border: 1px solid @gray;
     }
+
+    &.angled {
+        border-radius: 0;
+    }
+
     @{NS}.icon {
         width: @line-height;
         height: @line-height;
@@ -65,7 +70,7 @@
     }
 
     &.icon-button {
-        >@{NS}.icon {
+        >.icon {
             margin: 0 @padding * 8/10 0 0;
             float: left;
         }
@@ -75,7 +80,7 @@
         @_font: @line-height * 12/15;
         padding: @padding * 2/10 @padding * 5/10;
         font-size: @_font;
-        &>@{NS}.icon {
+        >.icon {
             width: @_font;
             height: @_font;
             margin: 0 @padding * 3/10 0 0;
@@ -85,7 +90,7 @@
         padding: @padding * 5/10 @padding * 8/10;
         @_font: @line-height * 13/15;
         font-size: @_font;
-        &>@{NS}.icon {
+        >.icon {
             width: @_font;
             height: @_font;
             margin: 0 @padding * 5/10 0 0;
@@ -95,7 +100,7 @@
         padding: @padding @padding * 15/10;
         @_font: @line-height * 18/15;
         font-size: @_font;
-        &>@{NS}.icon {
+        >.icon {
             width: @_font;
             height: @_font;
             margin: 0 @padding 0 0;
@@ -106,20 +111,20 @@
         @_font: @line-height * 20/15;
         font-size: @_font;
         font-size: @_font;
-        &>@{NS}.icon {
+        >.icon {
             width: @_font;
             height: @_font;
             margin: 0 @padding * 12/10 0 0;
         }
     }
 
-    &.round {
+    &.circle {
         padding: @padding * 18/10;
         border-radius: @padding * 18/10 + @line-height/2;
         width: 0;
         height: 0;
         position: relative;
-        &>@{NS}.icon {
+        >.icon {
             ._AB_CENTER;
             line-height: initial;
         }
@@ -182,5 +187,25 @@
             color: @most_gray;
         }
     }
+}
 
+@{NS}.button-group {
+    >.button {
+        margin-right: 0;
+        border-radius: 0;
+        &:first-child {
+            border-top-left-radius: @radius;
+            border-button-left-radius: @radius;
+        }
+        &:last-child {
+            border-top-right-radius: @radius;
+            border-button-right-radius: @radius;
+            margin-right: @padding;
+        }
+    }
+    &.vertical {
+        >.button {
+            border-radius: 0;
+        }   
+    }
 }
