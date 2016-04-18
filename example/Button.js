@@ -138,6 +138,16 @@ export default class Button extends Component {
                             <div className={`${NS} button`}>second</div>
                             <div className={`${NS} button`}>thrid</div>
                         </div>
+                        <br/>
+                    </li>
+                    <li>
+                        <h3>Button grounp</h3>
+                        <div className={`${NS} vertical button-group`}>
+                            <div className={`${NS} button`}>first</div>
+                            <div className={`${NS} button`}>second</div>
+                            <div className={`${NS} button`}>thrid</div>
+                        </div>
+                        <br/>
                     </li>
                 </ul>
             </div>

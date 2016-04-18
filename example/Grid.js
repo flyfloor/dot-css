@@ -28,32 +28,38 @@ export default class Grid extends Component {
                                 </div>
                             </div>
                         </div>
-                        <ul className={`${NS} grid grid-8 grid-example text-center`}>
-                            <li className="column">
-                                <p>column1</p>
-                            </li>
-                            <li className="column">
-                                <p>column2</p>
-                            </li>
-                            <li className="column">
-                                <p>column3</p>
-                            </li>
-                            <li className="column">
-                                <p>column4</p>
-                            </li>
-                            <li className="column">
-                                <p>column5</p>
-                            </li>
-                            <li className="column">
-                                <p>column6</p>
-                            </li>
-                            <li className="column">
-                                <p>column7</p>
-                            </li>
-                            <li className="column">
-                                <p>column8</p>
-                            </li>
-                        </ul>
+                        <br/>
+                        <div className={`${NS} grid grid-example text-center`}>
+                            <div className="row column-3">
+                                <div className="column">
+                                    <p>column1</p>
+                                </div>
+                                <div className="column">
+                                    <p>column2</p>
+                                </div>
+                                <div className="column">
+                                    <p>column3</p>
+                                </div>
+                            </div>
+                            <div className="row column-5">
+                                <div className="column">
+                                    <p>column4</p>
+                                </div>
+                                <div className="column">
+                                    <p>column5</p>
+                                </div>
+                                <div className="column">
+                                    <p>column6</p>
+                                </div>
+                                <div className="column">
+                                    <p>column7</p>
+                                </div>
+                                <div className="column">
+                                    <p>column8</p>
+                                </div>
+                            </div>
+                        </div>
+                        <br/>
                         <ul className={`${NS} grid grid-4 grid-example text-center`}>
                             <li className="column">
                                 <p>column1
@@ -103,6 +109,7 @@ export default class Grid extends Component {
                                 </div>
                             </div>
                         </div>
+                        <br/>
                     </li>
                     <li>
                         <h3>column width, divide to 16 part</h3>

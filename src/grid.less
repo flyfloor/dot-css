@@ -12,14 +12,23 @@
 
 .make-wide-columns(@n, @i: 1) when (@i =< @n) {
     >.column.column-@{i} {
-        width: (@i / 16) * 100%;
+        width: (@i / @column_count) * 100%;
     }
     >.row {
         >.column.column-@{i} {
-            width: (@i / 16) * 100%;
+            width: (@i / @column_count) * 100%;
         }
     }
     .make-wide-columns(@n, (@i + 1));
+}
+
+.make-row-column(@n, @i: 1) when (@i =< @n) {
+    &.column-@{i} {
+        >.column {
+            width: 100% / @i;
+        }
+    }
+    .make-row-column(@n, (@i + 1));
 }
 
 @{NS}.grid {
@@ -36,6 +45,9 @@
             float: left;
         }
     }
-    .make-wide-columns(16);
-    .make-columns(20);
+    .make-wide-columns(@column_count);
+    .make-columns(@column_count);
+    >.row {
+        .make-row-column(@column_count);
+    }
 }

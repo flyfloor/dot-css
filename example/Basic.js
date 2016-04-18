@@ -13,6 +13,7 @@ const makeColor = (color) => {
                     <div className={`${NS} padding bg-mini_${color}`}>{`mini_${color}`}</div>
                     <div className={`${NS} padding bg-tiny_${color}`}>{`tiny_${color}`}</div>
                     <div className={`${NS} padding bg-light_${color}`}>{`light_${color}`}</div>
+                    <div className={`${NS} padding bg-soft_${color}`}>{`soft_${color}`}</div>
                     <div className={`${NS} padding bg-${color}`}>{color}</div>
                     <div className={`${NS} padding bg-dull_${color}`}>{`dull_${color}`}</div>
                     <div className={`${NS} padding bg-dark_${color}`}>{`dark_${color}`}</div>
