@@ -19,8 +19,8 @@ export default class Icon extends Component {
     render() {
         return (
             <div>
-                <h4>Icon</h4>
-                <p>Use Google's material icons, <a href="https://design.google.com/icons/" target="_blank">Google icons</a></p>
+                <h2>Icon</h2>
+                <blockquote>Use Google's material icons, <a href="https://design.google.com/icons/" target="_blank">Google icons</a></blockquote>
                 <pre>
                     <code>
                         &lt;i class="dot-icon"&gt;account_circle&lt;/i&gt;
