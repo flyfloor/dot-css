@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {NS} from './setting';
+import {className} from './util';
 
 export default class Button extends Component {
     render() {
@@ -11,88 +11,88 @@ export default class Button extends Component {
                 <ul>
                     <li>
                         <h3>A standard button</h3>
-                        <button className={`${NS} button`}>button</button>
+                        <button className={className('button')}>button</button>
                         <br/>
                     </li>
                     <li>
                         <h3>Right angled button</h3>
-                        <button className={`${NS} angled button`}>angled button</button>
+                        <button className={className('angled button')}>angled button</button>
                         <br/>
                     </li>
                     <li>
                         <h3>Button size</h3>
-                        <button className={`${NS} tiny button`}>tiny</button>
-                        <button className={`${NS} small button`}>small</button>
-                        <button className={`${NS} button`}>normal</button>
-                        <button className={`${NS} large button`}>large</button>
-                        <button className={`${NS} huge button`}>huge</button>
+                        <button className={className('tiny button')}>tiny</button>
+                        <button className={className('small button')}>small</button>
+                        <button className={className('button')}>normal</button>
+                        <button className={className('large button')}>large</button>
+                        <button className={className('huge button')}>huge</button>
                         <br/>
                     </li>
                     <li>
                         <h3>Colored button</h3>
                         <div>
-                            <button className={`${NS} red button`}>red</button>
-                            <button className={`${NS} pink button`}>pink</button>
-                            <button className={`${NS} purple button`}>purple</button>
-                            <button className={`${NS} indigo button`}>indigo</button>
-                            <button className={`${NS} cyan button`}>cyan</button>
-                            <button className={`${NS} teal button`}>teal</button>
-                            <button className={`${NS} green button`}>green</button>
-                            <button className={`${NS} lime button`}>lime</button>
-                            <button className={`${NS} amber button`}>amber</button>
-                            <button className={`${NS} orange button`}>orange</button>
-                            <button className={`${NS} brown button`}>brown</button>
-                            <button className={`${NS} gray button`}>gray</button>
-                            <button className={`${NS} bluegray button`}>bluegray</button>
-                            <button className={`${NS} yellow button`}>yellow</button>
-                            <button className={`${NS} black button`}>black</button>
+                            <button className={className('red button')}>red</button>
+                            <button className={className('pink button')}>pink</button>
+                            <button className={className('purple button')}>purple</button>
+                            <button className={className('indigo button')}>indigo</button>
+                            <button className={className('cyan button')}>cyan</button>
+                            <button className={className('teal button')}>teal</button>
+                            <button className={className('green button')}>green</button>
+                            <button className={className('lime button')}>lime</button>
+                            <button className={className('amber button')}>amber</button>
+                            <button className={className('orange button')}>orange</button>
+                            <button className={className('brown button')}>brown</button>
+                            <button className={className('gray button')}>gray</button>
+                            <button className={className('bluegray button')}>bluegray</button>
+                            <button className={className('yellow button')}>yellow</button>
+                            <button className={className('black button')}>black</button>
                         </div>
                         <br/>
                         <h3>basic button</h3>
                         <div>
-                            <button className={`${NS} basic red button`}>red</button>
-                            <button className={`${NS} basic pink button`}>pink</button>
-                            <button className={`${NS} basic purple button`}>purple</button>
-                            <button className={`${NS} basic indigo button`}>indigo</button>
-                            <button className={`${NS} basic cyan button`}>cyan</button>
-                            <button className={`${NS} basic teal button`}>teal</button>
-                            <button className={`${NS} basic green button`}>green</button>
-                            <button className={`${NS} basic lime button`}>lime</button>
-                            <button className={`${NS} basic amber button`}>amber</button>
-                            <button className={`${NS} basic orange button`}>orange</button>
-                            <button className={`${NS} basic brown button`}>brown</button>
-                            <button className={`${NS} basic gray button`}>gray</button>
-                            <button className={`${NS} basic bluegray button`}>bluegray</button>
-                            <button className={`${NS} basic yellow button`}>yellow</button>
-                            <button className={`${NS} basic black button`}>black</button>
+                            <button className={className('basic red button')}>red</button>
+                            <button className={className('basic pink button')}>pink</button>
+                            <button className={className('basic purple button')}>purple</button>
+                            <button className={className('basic indigo button')}>indigo</button>
+                            <button className={className('basic cyan button')}>cyan</button>
+                            <button className={className('basic teal button')}>teal</button>
+                            <button className={className('basic green button')}>green</button>
+                            <button className={className('basic lime button')}>lime</button>
+                            <button className={className('basic amber button')}>amber</button>
+                            <button className={className('basic orange button')}>orange</button>
+                            <button className={className('basic brown button')}>brown</button>
+                            <button className={className('basic gray button')}>gray</button>
+                            <button className={className('basic bluegray button')}>bluegray</button>
+                            <button className={className('basic yellow button')}>yellow</button>
+                            <button className={className('basic black button')}>black</button>
                         </div>
                         <br/>
                     </li>
                     <li>
                         <h3>Icon button</h3>
                         <div>
-                            <button className={`${NS} button tiny icon-button`}>
-                                <i className={`${NS} icon`}>refresh</i>
+                            <button className={className('button tiny icon-button')}>
+                                <i className={className('icon')}>refresh</i>
                                 refresh
                             </button>
-                            <button className={`${NS} button small icon-button`}>
-                                <i className={`${NS} icon`}>star</i>
+                            <button className={className('button small icon-button')}>
+                                <i className={className('icon')}>star</i>
                                 star
                             </button>
-                            <button className={`${NS} button icon-button`}>
-                                <i className={`${NS} icon`}>home</i>
+                            <button className={className('button icon-button')}>
+                                <i className={className('icon')}>home</i>
                                 home
                             </button>
-                            <button className={`${NS} button red icon-button`}>
-                                <i className={`${NS} icon`}>watch</i>
+                            <button className={className('button red icon-button')}>
+                                <i className={className('icon')}>watch</i>
                                 watch
                             </button>
-                            <button className={`${NS} button large icon-button`}>
-                                <i className={`${NS} icon`}>contact_mail</i>
+                            <button className={className('button large icon-button')}>
+                                <i className={className('icon')}>contact_mail</i>
                                 contact_mail
                             </button>
-                            <button className={`${NS} button huge icon-button`}>
-                                <i className={`${NS} icon`}>group</i>
+                            <button className={className('button huge icon-button')}>
+                                <i className={className('icon')}>group</i>
                                 group
                             </button>
                         </div>
@@ -101,53 +101,59 @@ export default class Button extends Component {
                     <li>
                         <h3>Fluid button</h3>
                         <div>
-                            <button className={`${NS} fluid button`}>fluid button</button>
+                            <button className={className('fluid button')}>fluid button</button>
                         </div>
                         <br/>
                     </li>
                     <li>
                         <h3>Circle button</h3>
                         <div>
-                            <div className={`${NS} circle tiny button`}>
-                                <i className={`${NS} icon`}>apps</i>
+                            <div className={className('circle tiny button')}>
+                                <i className={className('icon')}>apps</i>
                             </div>
-                            <div className={`${NS} circle small button`}>
-                                <i className={`${NS} icon`}>share</i>
+                            <div className={className('circle small button')}>
+                                <i className={className('icon')}>share</i>
                             </div>
-                            <div className={`${NS} circle button`}>
-                                <i className={`${NS} icon`}>clear</i>
+                            <div className={className('circle button')}>
+                                <i className={className('icon')}>clear</i>
                             </div>
-                            <div className={`${NS} circle green button`}>
-                                <i className={`${NS} icon`}>arrow_back</i>
+                            <div className={className('circle green button')}>
+                                <i className={className('icon')}>arrow_back</i>
                             </div>
-                            <div className={`${NS} circle basic blue button`}>
-                                <i className={`${NS} icon`}>more_vert</i>
+                            <div className={className('circle basic blue button')}>
+                                <i className={className('icon')}>more_vert</i>
                             </div>
-                            <div className={`${NS} circle large button`}>
-                                <i className={`${NS} icon`}>reply</i>
+                            <div className={className('circle large button')}>
+                                <i className={className('icon')}>reply</i>
                             </div>
-                            <div className={`${NS} circle huge button`}>
-                                <i className={`${NS} icon`}>plus_one</i>
+                            <div className={className('circle huge button')}>
+                                <i className={className('icon')}>plus_one</i>
                             </div>
                         </div>
                     </li>
                     <li>
                         <h3>Button grounp</h3>
-                        <div className={`${NS} button-group`}>
-                            <div className={`${NS} button`}>first</div>
-                            <div className={`${NS} button`}>second</div>
-                            <div className={`${NS} button`}>thrid</div>
+                        <div className={className('button-group')}>
+                            <div className={className('button')}>first</div>
+                            <div className={className('button')}>second</div>
+                            <div className={className('button')}>thrid</div>
                         </div>
                         <br/>
                     </li>
                     <li>
                         <h3>Button grounp</h3>
-                        <div className={`${NS} vertical button-group`}>
-                            <div className={`${NS} button`}>first</div>
-                            <div className={`${NS} button`}>second</div>
-                            <div className={`${NS} button`}>thrid</div>
+                        <div className={className('vertical button-group')}>
+                            <div className={className('button')}>first</div>
+                            <div className={className('button')}>second</div>
+                            <div className={className('button')}>thrid</div>
                         </div>
                         <br/>
+                    </li>
+                    <li>
+                        <h3>Edge button</h3>
+                        <div className={className('edge button')}>
+                            <div className={className('button')}></div>
+                        </div>
                     </li>
                 </ul>
             </div>

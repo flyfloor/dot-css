@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {NS} from './setting';
+import {className} from './util';
 
 export default class Grid extends Component {
     render() {
@@ -9,7 +9,7 @@ export default class Grid extends Component {
                 <ul>
                     <li>
                         <h4>same width column</h4>
-                        <div className={`${NS} grid grid-5 grid-example text-center text-extra`}>
+                        <div className={className('grid grid-5 grid-example text-center text-extra')}>
                             <div className="row">
                                 <div className="column">
                                     <p>column1</p>
@@ -29,7 +29,7 @@ export default class Grid extends Component {
                             </div>
                         </div>
                         <br/>
-                        <div className={`${NS} grid grid-example text-center`}>
+                        <div className={className('grid grid-example text-center')}>
                             <div className="row column-3">
                                 <div className="column">
                                     <p>column1</p>
@@ -60,7 +60,7 @@ export default class Grid extends Component {
                             </div>
                         </div>
                         <br/>
-                        <ul className={`${NS} grid grid-4 grid-example text-center`}>
+                        <ul className={className('grid grid-4 grid-example text-center')}>
                             <li className="column">
                                 <p>column1
                                 </p>
@@ -82,7 +82,7 @@ export default class Grid extends Component {
                     </li>
                     <li>
                         <h3>column width, divide to 16 part</h3>
-                        <div className={`${NS} grid grid-example text-center`}>
+                        <div className={className('grid grid-example text-center')}>
                             <div className="row">
                                 <div className="column column-2">
                                     <p>2 part column</p>
@@ -113,7 +113,7 @@ export default class Grid extends Component {
                     </li>
                     <li>
                         <h3>column width, divide to 16 part</h3>
-                        <div className={`${NS} grid grid-example text-center`}>
+                        <div className={className('grid grid-example text-center')}>
                             <div className="row">
                                 <div className="column column-3">
                                     <p>3 part column</p>
@@ -121,7 +121,7 @@ export default class Grid extends Component {
                                 <div className="column column-5">
                                     <p>5 part column</p>
                                 </div>
-                                <div className={`${NS} float-right column column-4`}>
+                                <div className={className('float-right column column-4')}>
                                     <p>4 part column</p>
                                 </div>
                             </div>

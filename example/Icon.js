@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import {NS, ICONS} from './setting';
+import {ICONS} from './setting';
+import {className} from './util';
 
 const makeIcons = () => {
     return (
-        <ul className={`${NS} grid grid-5 text-center text-extra`}>
+        <ul className={className('grid grid-5 text-center text-extra')}>
             {ICONS.map(icon => {
-                return <li key={icon} className={`${NS} column padding field`}>
-                            <i className={`${NS} icon`}>{icon}</i>
+                return <li key={icon} className={className('column padding field')}>
+                            <i className={className('icon')}>{icon}</i>
                             <p>{icon}</p>
                         </li>
             })}
@@ -28,12 +29,12 @@ export default class Icon extends Component {
                 {makeIcons()}
                 <br/>
                 <h4>Colored icon</h4>
-                <div className={`${NS} grid grid-10`}>
-                    <div className={`${NS} column padding`}>
-                        <i className={`${NS} color-red icon`}>favorite</i>
+                <div className={className('grid grid-10')}>
+                    <div className={className('column padding')}>
+                        <i className={className('color-red icon')}>favorite</i>
                     </div>
-                    <div className={`${NS} column padding`}>
-                        <i className={`${NS} color-green icon`}>all_inclusive</i>
+                    <div className={className('column padding')}>
+                        <i className={className('color-green icon')}>all_inclusive</i>
                     </div>
                 </div>
             </div>
