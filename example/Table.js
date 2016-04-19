@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import {className} from './util';
+import {CN} from './util';
 
 const makeTable = (cn='') => {
     return (
-        <div className={className(`${cn} table`)}>
+        <div className={CN(`${cn} table`)}>
             <div className="row head">
                 <div className="cell" width="30%">
                     <p>table head1</p>

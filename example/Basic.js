@@ -1,36 +1,36 @@
 import React, { Component } from 'react';
 import {COLORS} from './setting';
-import {className} from './util';
+import {CN} from './util';
 
 
 const makeColor = (color) => {
     switch (color) {
         case 'white':
-            return <div className={className(`padding bg-${color}`)}>{color}</div>;
+            return <div className={CN(`padding bg-${color}`)}>{color}</div>;
         case 'black':
-            return <div className={className(`padding bg-${color} color-white`)}>{color}</div>;
+            return <div className={CN(`padding bg-${color} color-white`)}>{color}</div>;
         case 'gray':
             return <div>
-                    <div className={className(`padding bg-mini_${color}`)}>{`mini_${color}`}</div>
-                    <div className={className(`padding bg-tiny_${color}`)}>{`tiny_${color}`}</div>
-                    <div className={className(`padding bg-light_${color}`)}>{`light_${color}`}</div>
-                    <div className={className(`padding bg-soft_${color}`)}>{`soft_${color}`}</div>
-                    <div className={className(`padding bg-${color}`)}>{color}</div>
-                    <div className={className(`padding bg-dull_${color}`)}>{`dull_${color}`}</div>
-                    <div className={className(`padding bg-dark_${color}`)}>{`dark_${color}`}</div>
-                    <div className={className(`padding bg-deep_${color}`)}>{`deep_${color}`}</div>
-                    <div className={className(`padding bg-most_${color}`)}>{`most_${color}`}</div>
+                    <div className={CN(`padding bg-mini_${color}`)}>{`mini_${color}`}</div>
+                    <div className={CN(`padding bg-tiny_${color}`)}>{`tiny_${color}`}</div>
+                    <div className={CN(`padding bg-light_${color}`)}>{`light_${color}`}</div>
+                    <div className={CN(`padding bg-soft_${color}`)}>{`soft_${color}`}</div>
+                    <div className={CN(`padding bg-${color}`)}>{color}</div>
+                    <div className={CN(`padding bg-dull_${color}`)}>{`dull_${color}`}</div>
+                    <div className={CN(`padding bg-dark_${color}`)}>{`dark_${color}`}</div>
+                    <div className={CN(`padding bg-deep_${color}`)}>{`deep_${color}`}</div>
+                    <div className={CN(`padding bg-most_${color}`)}>{`most_${color}`}</div>
                 </div>;
 
         default:
             return <div>
-                    <div className={className(`padding bg-mini_${color}`)}>{`mini_${color}`}</div>
-                    <div className={className(`padding bg-tiny_${color}`)}>{`tiny_${color}`}</div>
-                    <div className={className(`padding bg-light_${color}`)}>{`light_${color}`}</div>
-                    <div className={className(`padding bg-${color}`)}>{color}</div>
-                    <div className={className(`padding bg-dark_${color}`)}>{`dark_${color}`}</div>
-                    <div className={className(`padding bg-deep_${color}`)}>{`deep_${color}`}</div>
-                    <div className={className(`padding bg-most_${color}`)}>{`most_${color}`}</div>
+                    <div className={CN(`padding bg-mini_${color}`)}>{`mini_${color}`}</div>
+                    <div className={CN(`padding bg-tiny_${color}`)}>{`tiny_${color}`}</div>
+                    <div className={CN(`padding bg-light_${color}`)}>{`light_${color}`}</div>
+                    <div className={CN(`padding bg-${color}`)}>{color}</div>
+                    <div className={CN(`padding bg-dark_${color}`)}>{`dark_${color}`}</div>
+                    <div className={CN(`padding bg-deep_${color}`)}>{`deep_${color}`}</div>
+                    <div className={CN(`padding bg-most_${color}`)}>{`most_${color}`}</div>
                 </div>;
     }
 };
@@ -38,7 +38,7 @@ const makeColor = (color) => {
 export default class Basic extends Component {
     render() {
         const nodes = COLORS.map(item => {
-            return <li className={className('column')} key={`color-${item}`}>
+            return <li className={CN('column')} key={`color-${item}`}>
                         <h4>{item}</h4>
                         {makeColor(item)}
                     </li>
@@ -65,7 +65,7 @@ export default class Basic extends Component {
                     </li>
                     <li>
                         <h3>Colors</h3>
-                        <ul className={className('grid grid-8 text-extra text-center')}>
+                        <ul className={CN('grid grid-8 text-extra text-center')}>
                             {nodes}
                         </ul>
                         <br/>

@@ -38,7 +38,7 @@
     background-color: @tiny_gray;
     font-weight: 500;
     font-size: @line-height;
-    line-height: @line-height;
+    line-height: @line-height - 1;
     min-height: @line-height;
     border: 1px solid @light_gray;
     margin: 0 @padding 0 0;
@@ -80,7 +80,7 @@
         width: 100%;
     }
 
-    &.icon-button {
+    &.icon {
         >.icon {
             margin: 0 @padding * 8/10 0 0;
             float: left;
@@ -129,9 +129,8 @@
         }
     }
 
-    &.circle {
-        padding: @padding * 18/10;
-        border-radius: @padding * 18/10 + @line-height/2;
+    &.circle, &.labeld {
+        padding: @padding * 15/10;
         width: 0;
         height: 0;
         position: relative;
@@ -140,19 +139,31 @@
             line-height: initial;
         }
         &.tiny {
-            padding: @padding * 12/10;
-            border-radius: @padding * 12/10 + @line-height/2;
+            padding: @padding * 8/10;
         }
         &.small {
-            padding: @padding * 15/10;
-            border-radius: @padding * 15/10 + @line-height/2;
+            padding: @padding * 12/10;
         }
         &.large {
-            padding: @padding * 21/10;
-            border-radius: @padding * 21/10 + @line-height/2;
+            padding: @padding * 20/10;
         }
         &.huge {
             padding: @padding * 24/10;
+        }
+    }
+
+    &.circle {
+        border-radius: @padding * 18/10 + @line-height/2;
+        &.tiny {
+            border-radius: @padding * 12/10 + @line-height/2;
+        }
+        &.small {
+            border-radius: @padding * 15/10 + @line-height/2;
+        }
+        &.large {
+            border-radius: @padding * 21/10 + @line-height/2;
+        }
+        &.huge {
             border-radius: @padding * 24/10 + @line-height/2;
         }
     }

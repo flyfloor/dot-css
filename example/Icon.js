@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import {ICONS} from './setting';
-import {className} from './util';
+import {CN} from './util';
 
 const makeIcons = () => {
     return (
-        <ul className={className('grid grid-5 text-center text-extra')}>
+        <ul className={CN('grid grid-5 text-center text-extra')}>
             {ICONS.map(icon => {
-                return <li key={icon} className={className('column padding field')}>
-                            <i className={className('icon')}>{icon}</i>
+                return <li key={icon} className={CN('column padding field')}>
+                            <i className={CN('icon')}>{icon}</i>
                             <p>{icon}</p>
                         </li>
             })}
@@ -29,12 +29,12 @@ export default class Icon extends Component {
                 {makeIcons()}
                 <br/>
                 <h4>Colored icon</h4>
-                <div className={className('grid grid-10')}>
-                    <div className={className('column padding')}>
-                        <i className={className('color-red icon')}>favorite</i>
+                <div className={CN('grid grid-10')}>
+                    <div className={CN('column padding')}>
+                        <i className={CN('color-red icon')}>favorite</i>
                     </div>
-                    <div className={className('column padding')}>
-                        <i className={className('color-green icon')}>all_inclusive</i>
+                    <div className={CN('column padding')}>
+                        <i className={CN('color-green icon')}>all_inclusive</i>
                     </div>
                 </div>
             </div>

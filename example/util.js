@@ -1,4 +1,4 @@
 import {NS} from './setting';
-export const className = (className) => {
+export const CN = (className) => {
     return `${NS} ${className}`;
 };
