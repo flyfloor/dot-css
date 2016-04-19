@@ -1,17 +1,58 @@
 .__inputSize(@size, @_pd){
-    input {
-        font-size: @line-height * @size / 15;
-        padding: @padding * @_pd / 10;
-        line-height: @size + 4px;
+    @_padding: @padding * @_pd / 10;
+    @_lh: @line-height * @size / 15;
+    @_border_radius: @line-height * @size / 15 + @padding * @_pd / 10;
+    font-size: @_lh;
+    line-height: @_lh + 4px;
+    input, .button {
+        font-size: inherit;
+        padding: @_padding;
+        line-height: inherit;
     }
+
+    &.icon {
+        &.fluid {
+            display: block;
+        }
+        input {
+            &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'], &textarea {
+                padding-right: @_padding * 2 + @_lh + 6px;
+            }
+        }
+
+        &.left {
+            input {
+                &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'], &textarea {
+                    padding-left: @_padding * 2 + @_lh + 6px;
+                    padding-right: @_padding;
+                }
+            }
+        }
+    }
+
+    .icon {
+        /*add two border, two padding, lin-height*/
+        cursor: pointer;
+        width: @_padding * 2 + @_lh + 6px;
+        text-align: center;
+        line-height: @_padding * 2 + @_lh + 6px;
+        font-size: @_lh + 6px;
+    }
+
     &.round {
-        >*, &.action>* {
-            border-radius: @line-height * @size / 15 + @padding * @_pd / 10;
+        >:first-child {
+            border-top-left-radius: @_border_radius;
+            border-bottom-left-radius: @_border_radius;
+        }
+        >:last-child {
+            border-top-right-radius: @_border_radius;
+            border-bottom-right-radius: @_border_radius;
         }
     }
 }
 @{NS}.input {
     position: relative;
+    overflow: hidden;
     input {
         vertical-align: middle;
         -webkit-transition: all .3s;
@@ -21,7 +62,9 @@
 
     &.fluid {
         input {
-            width: 100%;
+            &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'], &textarea {
+                width: 100%;
+            }
         }
     }
 
@@ -29,6 +72,10 @@
         .button {
             border-radius: 0;
             margin-right: 0;
+        }
+        display: table;
+        >* {
+            display: table-cell;
         }
         >:first-child {
             border-top-left-radius: @radius;
@@ -41,6 +88,12 @@
             border-bottom-left-radius: 0 !important;
             border-top-right-radius: @radius;
             border-bottom-right-radius: @radius;
+        }
+        &.fluid {
+            width: 100%;
+            .button {
+                width: 5em;
+            }
         }
     }
     
@@ -87,6 +140,24 @@
                 &:focus {
                     border-color: @light_red;
                 }
+            }
+        }
+    }
+    &.icon {
+        display: inline-block;
+        .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+        }
+        &.left .icon{
+            left: 0;
+            right: initial;
+        }
+        input {
+            &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'], &textarea {
+                width: 100%;
             }
         }
     }

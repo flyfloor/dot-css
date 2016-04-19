@@ -1,18 +1,42 @@
 import React, { Component } from 'react';
 import {CN} from './util';
+const SIZE = ['tiny', 'small', '', 'large', 'huge'];
 
-const labeledBtns = (cn='', invert) => {
+const labeledBtn = (cn='', invert) => {
     if (invert) {
-        return <div className={CN(`${cn} round input action`)}>
+        return <div className={CN(`${cn} input action`)}>
                     <input type="text" placeholder='search...'/>
-                    <div className={CN(`${cn} button`)}>search</div>
+                    <div className={CN("button")}>button</div>
                 </div>;
     }
-    return <div className={CN(`${cn} round input action`)}>
-                <div className={CN(`${cn} button`)}>search</div>
+    return <div className={CN(`${cn} input action`)}>
+                <div className={CN('button')}>button</div>
                 <input type="text" placeholder='search...'/>
             </div>;
 }
+
+const makeBtn = (cn='') => {
+    return <div>
+                <div className={CN(`${cn} input`)}>
+                    <input type="text" placeholder='search...'/>
+                </div>
+                <br/>
+            </div>;
+};
+
+const actionBtns =  (invert=false) => {
+    let node = [];
+    for (var i = 0; i < SIZE.length; i++) {
+        node.push(<div key={`${SIZE[i]}-action-button`}>
+                    {labeledBtn(SIZE[i], invert)}
+                    <br/>
+                </div>);
+    }
+
+    return <div>
+                {node}
+            </div>;
+};
 
 export default class Input extends Component {
     render() {
@@ -22,90 +46,75 @@ export default class Input extends Component {
                 <ul>
                     <li>
                         <h3>Default input</h3>
-                        <div className={CN('input')}>
-                            <input type="text" placeholder='search...'/>
-                        </div>
+                        {makeBtn()}
+                        <h4>Error input</h4>
+                        {makeBtn('error')}
+                        <h4>Focus input</h4>
+                        {makeBtn('focus')}
                         <br/>
-                    </li>
-                    <li>
-                        <h3>Error input</h3>
-                        <div className={CN('error input')}>
-                            <input type="text" placeholder='error'/>
-                        </div>
-                        <br/>
-                    </li>
-                    <li>
-                        <h3>Focus input</h3>
-                        <div className={CN('focus input')}>
-                            <input type="text" placeholder='search...'/>
-                        </div>
-                        <br/>
-                    </li>
-                    <li>
-                        <h3>Round input</h3>
-                        <div className={CN('round input')}>
-                            <input type="text" placeholder='search...'/>
-                        </div>
-                        <br/>
-                    </li>
-                    <li>
-                        <h3>Fluid input</h3>
-                        <div className={CN('fluid input')}>
-                            <input type="text" placeholder='search...'/>
-                        </div>
-                        <br/>
-                    </li>
-                    <li>
-                        <h3>Disabled input</h3>
-                        <div className={CN('disabled input')}>
-                            <input type="text"/>
-                        </div>
+                        <h4>Round input</h4>
+                        {makeBtn('round')}
+                        <h4>Fluid input</h4>
+                        {makeBtn('fluid')}
+                        <h4>Disabled input</h4>
+                        {makeBtn('disabled')}
                     </li>
                     <li>
                         <h3>Size</h3>
-                        <div className={CN('tiny input')}>
+                        {makeBtn('tiny')}
+                        {makeBtn('small')}
+                        {makeBtn('')}
+                        {makeBtn('large')}
+                        {makeBtn('huge')}
+                    </li>
+                    <li>
+                        <h3>Action input</h3>
+                        {actionBtns()}
+                        {actionBtns(true)}
+                        <h4>Round action input</h4>
+                        <div className={CN('input round action')}>
                             <input type="text" placeholder='search...'/>
+                            <div className={CN('button')}>button</div>
                         </div>
                         <br/>
-                        <div className={CN('small input')}>
+                        <h4>Fluid action input</h4>
+                        <div className={CN('fluid action input')}>
                             <input type="text" placeholder='search...'/>
+                            <div className={CN('button')}>button</div>
                         </div>
                         <br/>
-                        <div className={CN('input')}>
-                            <input type="text" placeholder='search...'/>
-                        </div>
-                        <br/>
-                        <div className={CN('large input')}>
-                            <input type="text" placeholder='search...'/>
-                        </div>
-                        <br/>
-                        <div className={CN('huge input')}>
+                        <div className={CN('fluid huge action input')}>
+                            <div className={CN('button')}>button</div>
                             <input type="text" placeholder='search...'/>
                         </div>
                         <br/>
                     </li>
                     <li>
-                        <h3>Labeld input</h3>
-                        {labeledBtns('tiny')}
-                        <br/>
-                        {labeledBtns('small')}
-                        <br/>
-                        {labeledBtns()}
-                        <br/>
-                        {labeledBtns('large')}
-                        <br/>
-                        {labeledBtns('huge')}
-                        <br/>
-                        {labeledBtns('tiny', true)}
-                        <br/>
-                        {labeledBtns('small', true)}
-                        <br/>
-                        {labeledBtns('', true)}
-                        <br/>
-                        {labeledBtns('large', true)}
-                        <br/>
-                        {labeledBtns('huge', true)}
-                        <br/>
+                        <h3>Icon input</h3>
+                        <div className={CN('field')}>
+                            <div className={CN('icon input')}>
+                                <input type="text" placeholder="search..."/>
+                                <i className={CN('icon')}>search</i>
+                            </div>
+                        </div>
+                        <div className={CN('field')}>
+                            <div className={CN('icon left input')}>
+                                <i className={CN('icon')}>search</i>
+                                <input type="text" placeholder="search..."/>
+                            </div>
+                        </div>
+                        <div className={CN('field')}>
+                            <div className={CN('huge icon input')}>
+                                <input type="text" placeholder="search..."/>
+                                <i className={CN('icon')}>search</i>
+                            </div>
+                        </div>
+                        <div className={CN('field')}>
+                            <div className={CN('fluid icon input')}>
+                                <input type="text" placeholder="search..."/>
+                                <i className={CN('icon')}>search</i>
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </div>
