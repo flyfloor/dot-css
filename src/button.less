@@ -1,4 +1,4 @@
-.colorBtn(@color){
+.__colorBtn(@color){
     &.@{color}{
         @_dark: 'dark_@{color}';
         @_deep: 'deep_@{color}';
@@ -26,7 +26,62 @@
     }
 }
 
+.__fontPadding(@size, @_pd){
+    padding: @padding * @_pd/10 @padding * @_pd * 2/10;
+    @_font: @line-height * @size/15;
+    font-size: @_font;
+    line-height: @_font;
+    >.icon {
+        line-height: @_font;
+        width: @_font;
+        height: @_font;
+    }
+    &.icon>.icon {
+        margin: 0 @padding * @_pd/10 0 0;
+    }
+    &.circle, &.labeled {
+        padding: @padding * @size/10;
+    }
+    &.circle {
+        border-radius: @size + @_font / 2;
+    }
+}
 
+.__sizeBtn(@group) when(@group = false) {
+    .__fontPadding(14, 7);
+    &.tiny {
+        .__fontPadding(10, 5);
+    }
+    &.small {
+        .__fontPadding(12, 6);
+    }
+
+    &.large {
+        .__fontPadding(18, 9);
+    }
+    &.huge {
+        .__fontPadding(24, 12);
+    }
+}
+
+.__sizeBtn(@group) when(@group = true) {
+    >.button {
+        .__fontPadding(14, 7);
+    }
+    &.tiny>.button {
+        .__fontPadding(10, 5);
+    }
+
+    &.small>.button {
+        .__fontPadding(12, 6);
+    }
+    &.large>.button {
+        .__fontPadding(18, 9);
+    }
+    &.huge>.button {
+        .__fontPadding(24, 12);
+    }
+}
 
 @{NS}.button {
     cursor: pointer;
@@ -42,7 +97,8 @@
     min-height: @line-height;
     border: 1px solid @light_gray;
     margin: 0 @padding 0 0;
-    padding: @padding * 8/10 @padding * 12/10;
+    position: relative;
+    /*padding: @padding * 8/10 @padding * 12/10;*/
     -webkit-transition: all .2s;
     -o-transition: all .2s;
     transition: all .2s;
@@ -66,7 +122,9 @@
     @{NS}.icon {
         width: @line-height;
         height: @line-height;
-        font-size: inherit;
+        line-height: @line-height;
+        vertical-align: middle;
+        font-size: 1em;
         color: inherit;
         line-height: @line-height + 1;
     }
@@ -83,88 +141,22 @@
     &.icon {
         >.icon {
             margin: 0 @padding * 8/10 0 0;
-            float: left;
+            opacity: .95;
+            &:hover {
+                opacity: 1;
+            }
         }
     }
 
-    &.tiny {
-        @_font: @line-height * 12/15;
-        padding: @padding * 2/10 @padding * 5/10;
-        font-size: @_font;
-        >.icon {
-            width: @_font;
-            height: @_font;
-            margin: 0 @padding * 3/10 0 0;
-        }
-    }
-    &.small {
-        padding: @padding * 5/10 @padding * 8/10;
-        @_font: @line-height * 13/15;
-        font-size: @_font;
-        >.icon {
-            width: @_font;
-            height: @_font;
-            margin: 0 @padding * 5/10 0 0;
-        }
-    }
-    &.large {
-        padding: @padding @padding * 15/10;
-        @_font: @line-height * 18/15;
-        font-size: @_font;
-        >.icon {
-            width: @_font;
-            height: @_font;
-            margin: 0 @padding 0 0;
-        }
-    }
-    &.huge {
-        padding: @padding * 12/10 @padding * 25/10;
-        @_font: @line-height * 20/15;
-        font-size: @_font;
-        font-size: @_font;
-        >.icon {
-            width: @_font;
-            height: @_font;
-            margin: 0 @padding * 12/10 0 0;
-        }
-    }
+    .__sizeBtn(false);
 
-    &.circle, &.labeld {
-        padding: @padding * 15/10;
+    &.circle, &.labeled {
+        /*padding: @padding * 15/10;*/
         width: 0;
         height: 0;
-        position: relative;
         >.icon {
             ._AB_CENTER;
             line-height: initial;
-        }
-        &.tiny {
-            padding: @padding * 8/10;
-        }
-        &.small {
-            padding: @padding * 12/10;
-        }
-        &.large {
-            padding: @padding * 20/10;
-        }
-        &.huge {
-            padding: @padding * 24/10;
-        }
-    }
-
-    &.circle {
-        border-radius: @padding * 18/10 + @line-height/2;
-        &.tiny {
-            border-radius: @padding * 12/10 + @line-height/2;
-        }
-        &.small {
-            border-radius: @padding * 15/10 + @line-height/2;
-        }
-        &.large {
-            border-radius: @padding * 21/10 + @line-height/2;
-        }
-        &.huge {
-            border-radius: @padding * 24/10 + @line-height/2;
         }
     }
 
@@ -185,21 +177,21 @@
             }
         }
     }
-    .colorBtn(red);
-    .colorBtn(pink);
-    .colorBtn(purple);
-    .colorBtn(indigo);
-    .colorBtn(blue);
-    .colorBtn(cyan);
-    .colorBtn(teal);
-    .colorBtn(green);
-    .colorBtn(lime);
-    .colorBtn(amber);
-    .colorBtn(orange);
-    .colorBtn(brown);
-    .colorBtn(gray);
-    .colorBtn(bluegray);
-    .colorBtn(yellow);
+    .__colorBtn(red);
+    .__colorBtn(pink);
+    .__colorBtn(purple);
+    .__colorBtn(indigo);
+    .__colorBtn(blue);
+    .__colorBtn(cyan);
+    .__colorBtn(teal);
+    .__colorBtn(green);
+    .__colorBtn(lime);
+    .__colorBtn(amber);
+    .__colorBtn(orange);
+    .__colorBtn(brown);
+    .__colorBtn(gray);
+    .__colorBtn(bluegray);
+    .__colorBtn(yellow);
     &.lime,
     &.amber,
     &.orange,
@@ -226,6 +218,7 @@
             margin-right: @padding;
         }
     }
+    .__sizeBtn(true);
     &.vertical {
         border-radius: 0;
         display: inline-block;
@@ -234,6 +227,7 @@
             margin-right: @padding;
         }
         >.button {
+            width: 100%;
             display: block;
             border-radius: 0;
             margin: 0 0 0 0;

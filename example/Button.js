@@ -1,10 +1,45 @@
 import React, { Component } from 'react';
 import {CN} from './util';
 
+const labelBtnGroup = (cn='') => {
+    return <div className={CN(`${cn} button-group`)}>
+                <div className={CN('labeled button')}>
+                    <i className={CN('icon')}>photo_camera</i>
+                </div>
+                <div className={CN('labeled button')}>
+                    <i className={CN('icon')}>extension</i>
+                </div>
+                <div className={CN('button')}>normal button</div>
+                <div className={CN('labeled button')}>
+                    <i className={CN('icon')}>layers</i>
+                </div>
+            </div>;
+};
+
+const colorBtns = (cn='') => {
+    return <div>
+            <button className={CN(`${cn} red button`)}>red</button>
+            <button className={CN(`${cn} pink button`)}>pink</button>
+            <button className={CN(`${cn} purple button`)}>purple</button>
+            <button className={CN(`${cn} indigo button`)}>indigo</button>
+            <button className={CN(`${cn} cyan button`)}>cyan</button>
+            <button className={CN(`${cn} teal button`)}>teal</button>
+            <button className={CN(`${cn} green button`)}>green</button>
+            <button className={CN(`${cn} lime button`)}>lime</button>
+            <button className={CN(`${cn} amber button`)}>amber</button>
+            <button className={CN(`${cn} orange button`)}>orange</button>
+            <button className={CN(`${cn} brown button`)}>brown</button>
+            <button className={CN(`${cn} gray button`)}>gray</button>
+            <button className={CN(`${cn} bluegray button`)}>bluegray</button>
+            <button className={CN(`${cn} yellow button`)}>yellow</button>
+            <button className={CN(`${cn} black button`)}>black</button>
+        </div>;
+}
+
 export default class Button extends Component {
     render() {
         return (
-            <div>
+            <div className="button-example">
                 <h2>
                     Button
                 </h2>
@@ -30,42 +65,10 @@ export default class Button extends Component {
                     </li>
                     <li>
                         <h3>Colored button</h3>
-                        <div>
-                            <button className={CN('red button')}>red</button>
-                            <button className={CN('pink button')}>pink</button>
-                            <button className={CN('purple button')}>purple</button>
-                            <button className={CN('indigo button')}>indigo</button>
-                            <button className={CN('cyan button')}>cyan</button>
-                            <button className={CN('teal button')}>teal</button>
-                            <button className={CN('green button')}>green</button>
-                            <button className={CN('lime button')}>lime</button>
-                            <button className={CN('amber button')}>amber</button>
-                            <button className={CN('orange button')}>orange</button>
-                            <button className={CN('brown button')}>brown</button>
-                            <button className={CN('gray button')}>gray</button>
-                            <button className={CN('bluegray button')}>bluegray</button>
-                            <button className={CN('yellow button')}>yellow</button>
-                            <button className={CN('black button')}>black</button>
-                        </div>
+                        {colorBtns()}
                         <br/>
-                        <h3>basic button</h3>
-                        <div>
-                            <button className={CN('basic red button')}>red</button>
-                            <button className={CN('basic pink button')}>pink</button>
-                            <button className={CN('basic purple button')}>purple</button>
-                            <button className={CN('basic indigo button')}>indigo</button>
-                            <button className={CN('basic cyan button')}>cyan</button>
-                            <button className={CN('basic teal button')}>teal</button>
-                            <button className={CN('basic green button')}>green</button>
-                            <button className={CN('basic lime button')}>lime</button>
-                            <button className={CN('basic amber button')}>amber</button>
-                            <button className={CN('basic orange button')}>orange</button>
-                            <button className={CN('basic brown button')}>brown</button>
-                            <button className={CN('basic gray button')}>gray</button>
-                            <button className={CN('basic bluegray button')}>bluegray</button>
-                            <button className={CN('basic yellow button')}>yellow</button>
-                            <button className={CN('basic black button')}>black</button>
-                        </div>
+                        <h3>Basic colored button</h3>
+                        {colorBtns('basic')}
                         <br/>
                     </li>
                     <li>
@@ -83,17 +86,21 @@ export default class Button extends Component {
                                 <i className={CN('icon')}>home</i>
                                 home
                             </button>
-                            <button className={CN('button red icon')}>
-                                <i className={CN('icon')}>watch</i>
-                                watch
-                            </button>
                             <button className={CN('button large icon')}>
                                 <i className={CN('icon')}>contact_mail</i>
-                                contact_mail
+                                mail
                             </button>
                             <button className={CN('button huge icon')}>
                                 <i className={CN('icon')}>group</i>
                                 group
+                            </button>
+                            <button className={CN('button red icon')}>
+                                <i className={CN('icon')}>watch</i>
+                                watch
+                            </button>
+                            <button className={CN('button basic amber icon')}>
+                                <i className={CN('icon')}>keyboard</i>
+                                keyboard
                             </button>
                         </div>
                         <br/>
@@ -117,17 +124,17 @@ export default class Button extends Component {
                             <div className={CN('circle button')}>
                                 <i className={CN('icon')}>clear</i>
                             </div>
-                            <div className={CN('circle green button')}>
-                                <i className={CN('icon')}>arrow_back</i>
-                            </div>
-                            <div className={CN('circle basic blue button')}>
-                                <i className={CN('icon')}>more_vert</i>
-                            </div>
                             <div className={CN('circle large button')}>
                                 <i className={CN('icon')}>reply</i>
                             </div>
                             <div className={CN('circle huge button')}>
                                 <i className={CN('icon')}>plus_one</i>
+                            </div>
+                            <div className={CN('circle green button')}>
+                                <i className={CN('icon')}>arrow_back</i>
+                            </div>
+                            <div className={CN('circle basic blue button')}>
+                                <i className={CN('icon')}>more_vert</i>
                             </div>
                         </div>
                     </li>
@@ -139,9 +146,6 @@ export default class Button extends Component {
                             <div className={CN('button')}>thrid</div>
                         </div>
                         <br/>
-                    </li>
-                    <li>
-                        <h3>Button grounp</h3>
                         <div className={CN('vertical button-group')}>
                             <div className={CN('button')}>first</div>
                             <div className={CN('button')}>second</div>
@@ -150,26 +154,19 @@ export default class Button extends Component {
                         <br/>
                     </li>
                     <li>
-                        <h3>Labeld button</h3>
-                        <div className={CN('labeld button')}>
+                        <h3>Labeled button</h3>
+                        <div className={CN('labeled button')}>
                             <i className={CN('icon')}>menu</i>
                         </div>
                         <br/>
                     </li>
                     <li>
-                        <h3>Labeld button group</h3>
-                        <div className={CN('button-group')}>
-                            <div className={CN('labeld button')}>
-                                <i className={CN('icon')}>photo_camera</i>
-                            </div>
-                            <div className={CN('labeld button')}>
-                                <i className={CN('icon')}>extension</i>
-                            </div>
-                            <div className={CN('button')}>normal button</div>
-                            <div className={CN('labeld button')}>
-                                <i className={CN('icon')}>layers</i>
-                            </div>
-                        </div>
+                        <h3>Labeled button group</h3>
+                        {labelBtnGroup('tiny')}
+                        {labelBtnGroup('small')}
+                        {labelBtnGroup()}
+                        {labelBtnGroup('large')}
+                        {labelBtnGroup('huge')}
                     </li>
                 </ul>
             </div>
