@@ -5,6 +5,13 @@ export default class Input extends Component {
         return (
             <div>
                 <h2>Input</h2>
+                <ul>
+                    <li>
+                        <h3>Default input</h3>
+                        <input type="text" placeholder='input...'/>
+                    </li>
+                    <li></li>
+                </ul>
             </div>
         );
     }
