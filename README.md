@@ -1,3 +1,7 @@
-## boilerplate
+## Dot css
 
-this is a boilerplate for webpack and es6 syntax
+this is a very basic css scaffold.
+
+###Demo
+
+http://braavos.me/dot-css
