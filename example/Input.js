@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {CN} from './util';
 const SIZE = ['tiny', 'small', '', 'large', 'huge'];
 
-const labeledBtn = (cn='', invert) => {
+const labeledInput = (cn='', invert) => {
     if (invert) {
         return <div className={CN(`${cn} input action`)}>
                     <input type="text" placeholder='search...'/>
@@ -15,7 +15,7 @@ const labeledBtn = (cn='', invert) => {
             </div>;
 }
 
-const makeBtn = (cn='') => {
+const makeInput = (cn='') => {
     return <div>
                 <div className={CN(`${cn} input`)}>
                     <input type="text" placeholder='search...'/>
@@ -24,18 +24,16 @@ const makeBtn = (cn='') => {
             </div>;
 };
 
-const actionBtns =  (invert=false) => {
+const actionInputs =  (invert=false) => {
     let node = [];
     for (var i = 0; i < SIZE.length; i++) {
         node.push(<div key={`${SIZE[i]}-action-button`}>
-                    {labeledBtn(SIZE[i], invert)}
+                    {labeledInput(SIZE[i], invert)}
                     <br/>
                 </div>);
     }
 
-    return <div>
-                {node}
-            </div>;
+    return <div>{node}</div>;
 };
 
 export default class Input extends Component {
@@ -46,31 +44,38 @@ export default class Input extends Component {
                 <ul>
                     <li>
                         <h3>Default input</h3>
-                        {makeBtn()}
+                        {makeInput()}
+                        <h4>Angled input</h4>
+                        {makeInput('angled')}
+                        <h3>Default textarea</h3>
+                        <div className={CN('input')}>
+                            <textarea name="" id="" cols="30" rows="10" placeholder='type in something...'>
+                            </textarea>
+                        </div>
                         <h4>Error input</h4>
-                        {makeBtn('error')}
+                        {makeInput('error')}
                         <h4>Focus input</h4>
-                        {makeBtn('focus')}
+                        {makeInput('focus')}
                         <br/>
                         <h4>Round input</h4>
-                        {makeBtn('round')}
+                        {makeInput('round')}
                         <h4>Fluid input</h4>
-                        {makeBtn('fluid')}
+                        {makeInput('fluid')}
                         <h4>Disabled input</h4>
-                        {makeBtn('disabled')}
+                        {makeInput('disabled')}
                     </li>
                     <li>
                         <h3>Size</h3>
-                        {makeBtn('tiny')}
-                        {makeBtn('small')}
-                        {makeBtn('')}
-                        {makeBtn('large')}
-                        {makeBtn('huge')}
+                        {makeInput('tiny')}
+                        {makeInput('small')}
+                        {makeInput('')}
+                        {makeInput('large')}
+                        {makeInput('huge')}
                     </li>
                     <li>
                         <h3>Action input</h3>
-                        {actionBtns()}
-                        {actionBtns(true)}
+                        {actionInputs()}
+                        {actionInputs(true)}
                         <h4>Round action input</h4>
                         <div className={CN('input round action')}>
                             <input type="text" placeholder='search...'/>

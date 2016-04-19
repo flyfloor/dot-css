@@ -60,11 +60,25 @@
         transition: all .3s;
     }
 
+    &.angled {
+        input {
+            &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'], &textarea {
+                border-radius: 0;
+            }
+        }
+        textarea, .button, .icon {
+            border-radius: 0;
+        }
+    }
+
     &.fluid {
         input {
             &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'], &textarea {
                 width: 100%;
             }
+        }
+        textarea {
+            width: 100%;
         }
     }
 
@@ -80,12 +94,12 @@
         >:first-child {
             border-top-left-radius: @radius;
             border-bottom-left-radius: @radius;
-            border-top-right-radius: 0 !important;
-            border-bottom-right-radius: 0 !important;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
         }
         >:last-child {
-            border-top-left-radius: 0 !important;
-            border-bottom-left-radius: 0 !important;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
             border-top-right-radius: @radius;
             border-bottom-right-radius: @radius;
         }
@@ -111,35 +125,58 @@
         .__inputSize(24, 10);
     }
     input {
-        &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'], &textarea {
+        &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
             &:focus {
                 border-color: @light_blue;
             }
         }
     }
-    &.focus input{
-       &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'], &textarea {
-           border-color: @light_blue;
-       } 
+    textarea {
+        &:focus {
+            border-color: @light_blue;
+        }
+    }
+    &.focus {
+        input {
+            &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email']{
+                border-color: @light_blue;
+            } 
+        }
+        textarea {
+            border-color: @light_blue;
+        }
     }
     &.disabled {
         input {
             cursor: not-allowed;
             pointer-events: none;
-            &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'], &textarea {
+            &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
                 border-color: @light_gray;
                 background-color: @mini_gray;
                 opacity: .85;
             }
         }
+        textarea {
+            cursor: not-allowed;
+            pointer-events: none;
+            border-color: @light_gray;
+            background-color: @mini_gray;
+            opacity: .85;
+        }
     }
     &.error {
         input {
-            &[type='text'], [type='number'], [type='url'], [type='tel'], [type='password'], [type='email'], textarea {
+            &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
                 border-color: @red;
                 &:focus {
                     border-color: @light_red;
                 }
+            }
+        }
+        textarea {
+            border-color: @red;
+            &:focus {
+                border-color: @light_red;
             }
         }
     }

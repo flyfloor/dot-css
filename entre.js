@@ -2,7 +2,7 @@ import demoCss from './example/demo.less';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, IndexRoute, Link, hashHistory } from 'react-router';
-import {NS} from './example/setting';
+import {CN} from './example/util';
 
 import Button from './example/Button';
 import Basic from './example/Basic';
@@ -20,26 +20,32 @@ const NavLink = (props) => {
 class App extends Component {
     render() {
         const {children} = this.props;
+        const {pathname} = this.props.location;
         return (
             <page>
-                <header>
-                    <h1>Dot css</h1>
-                </header>
-                <div className={`${NS} grid`}>
-                    <aside className={`column column-2 ${NS} padding`}>
-                        <ul>
-                            <li><NavLink to="/basic">basic</NavLink></li>
-                            <li><NavLink to="/grid">grid</NavLink></li>
-                            <li><NavLink to="/button">button</NavLink></li>
-                            <li><NavLink to="/icon">icon</NavLink></li>
-                            <li><NavLink to="/table">table</NavLink></li>
-                            <li><NavLink to="/input">input</NavLink></li>
-                        </ul>
-                    </aside>
-                    <artical className="column column-14">
-                        {children}
-                    </artical>
-                </div>
+                {pathname !== '/' ? 
+                    <div>
+                        <header>
+                            <h1>Dot css</h1>
+                        </header>
+                        <div className={CN('grid')}>
+                            <aside className={CN('column column-2 padding')}>
+                                <ul>
+                                    <li><NavLink to="/basic">basic</NavLink></li>
+                                    <li><NavLink to="/grid">grid</NavLink></li>
+                                    <li><NavLink to="/button">button</NavLink></li>
+                                    <li><NavLink to="/icon">icon</NavLink></li>
+                                    <li><NavLink to="/table">table</NavLink></li>
+                                    <li><NavLink to="/input">input</NavLink></li>
+                                </ul>
+                            </aside>
+                            <artical className="column column-14">
+                                {children}
+                            </artical>
+                        </div>
+                    </div>
+                    : <RootPage/>
+                }
             </page>
         );
     }
@@ -49,9 +55,15 @@ class App extends Component {
 class RootPage extends Component {
     render() {
         return (
-            <h2 className={`${NS} text-center`}>
-                A micro css framework
-            </h2>
+            <div className={CN('basic table intro-page absolute-center')}>
+                <div className="row">
+                    <div className="cell">
+                        <h1 className={CN('field')}>Dot Css</h1>
+                        <p className={CN('field')}>A Micro Css Scaffold</p>
+                        <Link to="/basic" className={CN('red button')}>see more</Link>
+                    </div>
+                </div>
+            </div>
         );
     }
 }
