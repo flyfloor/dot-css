@@ -98,15 +98,15 @@ export default class Input extends Component {
                             </div>
                         </div>
                         <div className={CN('field')}>
-                            <div className={CN('icon left input')}>
-                                <i className={CN('icon')}>search</i>
-                                <input type="text" placeholder="search..."/>
-                            </div>
-                        </div>
-                        <div className={CN('field')}>
                             <div className={CN('huge icon input')}>
                                 <input type="text" placeholder="search..."/>
                                 <i className={CN('icon')}>search</i>
+                            </div>
+                        </div>
+                        <div className={CN('field')}>
+                            <div className={CN('icon left input')}>
+                                <i className={CN('icon')}>search</i>
+                                <input type="text" placeholder="search..."/>
                             </div>
                         </div>
                         <div className={CN('field')}>
