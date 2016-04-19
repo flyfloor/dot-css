@@ -162,6 +162,17 @@ export default class Button extends Component {
                     </li>
                     <li>
                         <h3>Labeled button group</h3>
+                        <div className={CN('vertical button-group')}>
+                            <div className={CN('labeled button')}>
+                                <i className={CN('icon')}>laptop</i>
+                            </div>
+                            <div className={CN('labeled button')}>
+                                <i className={CN('icon')}>watch</i>
+                            </div>
+                            <div className={CN('labeled button')}>
+                                <i className={CN('icon')}>headset</i>
+                            </div>
+                        </div>
                         {labelBtnGroup('tiny')}
                         {labelBtnGroup('small')}
                         {labelBtnGroup()}
