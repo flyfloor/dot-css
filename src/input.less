@@ -7,7 +7,7 @@
     input, .button {
         font-size: inherit;
         padding: @_padding;
-        line-height: inherit;
+        line-height: @_lh + 4px;
     }
 
     &.icon {
@@ -15,14 +15,14 @@
             display: block;
         }
         input {
-            &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'], &textarea {
+            &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
                 padding-right: @_padding * 2 + @_lh + 6px;
             }
         }
 
         &.left {
             input {
-                &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'], &textarea {
+                &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
                     padding-left: @_padding * 2 + @_lh + 6px;
                     padding-right: @_padding;
                 }
@@ -62,7 +62,7 @@
 
     &.angled {
         input {
-            &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'], &textarea {
+            &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
                 border-radius: 0;
             }
         }
@@ -73,7 +73,7 @@
 
     &.fluid {
         input {
-            &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'], &textarea {
+            &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
                 width: 100%;
             }
         }
@@ -90,6 +90,15 @@
         display: table;
         >* {
             display: table-cell;
+            margin: 0;
+        }
+        input {
+            &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
+                width: 100%;
+            }
+        }
+        textarea {
+            width: 100%;
         }
         >:first-child {
             border-top-left-radius: @radius;

@@ -38,6 +38,7 @@ body {
   overflow-y: scroll;
   -webkit-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: rgba(0,0,0,.08);
 }
 
 ul {
@@ -215,6 +216,8 @@ input[type="tel"],
 input[type="password"], 
 input[type="email"], 
 textarea {
+  box-shadow: none;
+  -webkit-appearance: none;
   padding: @padding * 8/10 @padding;
   border: 1px solid @soft_gray;
   -webkit-transition: all .2s;
