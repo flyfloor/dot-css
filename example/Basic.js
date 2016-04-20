@@ -46,9 +46,12 @@ export default class Basic extends Component {
         return (
             <div>
                 <h2>Basic</h2>
+                <blockquote>
+                    <p>This part contains basic stuff, colors, fonts, H1 ~ H6</p>
+                </blockquote>
                 <ul>
                     <li>
-                        <h3>The titles, H1 ~ H6</h3>
+                        <h3>The titles</h3>
                         <h1>H1</h1>
                         <h2>H2</h2>
                         <h3>H3</h3>

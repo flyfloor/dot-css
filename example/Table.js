@@ -64,6 +64,9 @@ export default class Table extends Component {
         return (
             <div>
                 <h2>Table</h2>
+                <blockquote>
+                    <p>This part contains Table, and Table layout</p>
+                </blockquote>
                 <ul>
                     <li>
                         <h3>default display table</h3>

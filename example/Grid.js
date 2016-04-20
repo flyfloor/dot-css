@@ -6,6 +6,9 @@ export default class Grid extends Component {
         return (
             <div>
                 <h2>Grid</h2>
+                <blockquote>
+                    <p>This part is about Grid</p>
+                </blockquote>
                 <ul>
                     <li>
                         <h4>same width column</h4>

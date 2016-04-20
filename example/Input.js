@@ -41,6 +41,9 @@ export default class Input extends Component {
         return (
             <div>
                 <h2>Input</h2>
+                <blockquote>
+                    <p>This part contains Input, Input size, Action input, Icon input</p>
+                </blockquote>
                 <ul>
                     <li>
                         <h3>Default input</h3>

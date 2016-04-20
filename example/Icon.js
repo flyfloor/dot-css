@@ -20,7 +20,9 @@ export default class Icon extends Component {
         return (
             <div>
                 <h2>Icon</h2>
-                <blockquote>Use Google's material icons, <a href="https://design.google.com/icons/" target="_blank">Google icons</a></blockquote>
+                <blockquote>
+                    <p>This part is the Icons dot css use, <span className={CN('color-brown')}>from Google's material icons, <a href="https://design.google.com/icons/" target="_blank">Google icons</a></span></p>
+                </blockquote>
                 <pre>
                     <code>
                         &lt;i class="dot-icon"&gt;account_circle&lt;/i&gt;

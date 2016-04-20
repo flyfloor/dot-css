@@ -1,13 +1,13 @@
 /* fallback */
 @font-face {
-  font-family: 'Material Icons';
+  font-family: @icon_family;
   font-style: normal;
   font-weight: 400;
-  src: local('Material Icons'), local('MaterialIcons-Regular'), url(font/material-icons.woff) format('woff');
+  src: local(@icon_family), local('MaterialIcons-Regular'), url(font/material-icons.woff) format('woff');
 }
 
 i.dot.icon {
-  font-family: 'Material Icons';
+  font-family: @icon_family;
   font-weight: normal;
   font-style: normal;
   font-size: 24px;
@@ -19,10 +19,7 @@ i.dot.icon {
   word-wrap: normal;
   direction: ltr;
   opacity: .95;
-  -webkit-user-select: none;  /* Chrome all / Safari all */
-  -moz-user-select: none;     /* Firefox all */
-  -ms-user-select: none;      /* IE 10+ */
-  user-select: none; 
+  ._NO_USER_SELECT;
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
   &:hover {
