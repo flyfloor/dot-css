@@ -32,7 +32,6 @@ export default class Label extends Component {
                     <li>
                         <h3>Label</h3>
                         <div className={CN('field')}>
-                            <h4>Default Label</h4>
                             <div className={CN('label')}>
                                 label
                             </div>

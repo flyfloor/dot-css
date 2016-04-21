@@ -37,34 +37,15 @@ export default class Button extends Component {
                 </blockquote>
                 <ul>
                     <li>
-                        <h3>A standard button</h3>
+                        <h3>Button</h3>
                         <button className={CN('button')}>button</button>
-                        <br/>
-                    </li>
-                    <li>
-                        <h3>Right angled button</h3>
+                        <h4>Right angled button</h4>
                         <button className={CN('angled button')}>angled button</button>
-                        <br/>
-                    </li>
-                    <li>
-                        <h3>Button size</h3>
-                        <button className={CN('tiny button')}>tiny</button>
-                        <button className={CN('small button')}>small</button>
-                        <button className={CN('button')}>normal</button>
-                        <button className={CN('large button')}>large</button>
-                        <button className={CN('huge button')}>huge</button>
-                        <br/>
-                    </li>
-                    <li>
-                        <h3>Colored button</h3>
+                        <h4>Colored button</h4>
                         {colorBtns()}
-                        <br/>
-                        <h3>Basic colored button</h3>
+                        <h4>Basic button</h4>
                         {colorBtns('basic')}
-                        <br/>
-                    </li>
-                    <li>
-                        <h3>Icon button</h3>
+                        <h4>Icon button</h4>
                         <div>
                             <button className={CN('button tiny icon')}>
                                 <i className={CN('icon')}>refresh</i>
@@ -95,17 +76,11 @@ export default class Button extends Component {
                                 keyboard
                             </button>
                         </div>
-                        <br/>
-                    </li>
-                    <li>
-                        <h3>Fluid button</h3>
+                        <h4>Fluid button</h4>
                         <div>
                             <button className={CN('fluid button')}>fluid button</button>
                         </div>
-                        <br/>
-                    </li>
-                    <li>
-                        <h3>Circle button</h3>
+                        <h4>Circle button</h4>
                         <div>
                             <div className={CN('circle tiny button')}>
                                 <i className={CN('icon')}>apps</i>
@@ -129,9 +104,7 @@ export default class Button extends Component {
                                 <i className={CN('icon')}>more_vert</i>
                             </div>
                         </div>
-                    </li>
-                    <li>
-                        <h3>Round button</h3>
+                        <h4>Round button</h4>
                         <div className={CN('round button')}>
                             button
                         </div>
@@ -141,6 +114,10 @@ export default class Button extends Component {
                         </div>
                         <div className={CN('round basic green button')}>
                             ok
+                        </div>
+                        <h4>Labeled button</h4>
+                        <div className={CN('labeled button')}>
+                            <i className={CN('icon')}>menu</i>
                         </div>
                     </li>
                     <li>
@@ -159,10 +136,12 @@ export default class Button extends Component {
                         <br/>
                     </li>
                     <li>
-                        <h3>Labeled button</h3>
-                        <div className={CN('labeled button')}>
-                            <i className={CN('icon')}>menu</i>
-                        </div>
+                        <h3>Button size</h3>
+                        <button className={CN('tiny button')}>tiny</button>
+                        <button className={CN('small button')}>small</button>
+                        <button className={CN('button')}>normal</button>
+                        <button className={CN('large button')}>large</button>
+                        <button className={CN('huge button')}>huge</button>
                         <br/>
                     </li>
                     <li>
