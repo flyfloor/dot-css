@@ -12,16 +12,18 @@
     }
 
     &.icon {
+        @_icon_pd: @padding * (@_pd - 2)/10;
         .icon {
             vertical-align: top;
-            margin: 0 @padding * (@_pd - 2)/10 0 0;
+            /*default icon left*/
+            margin: 0 @_icon_pd 0 @_icon_pd * -1;
             opacity: .95;
             &:hover {
                 opacity: 1;
             }
         }
         :last-child.icon {
-            padding: 0 0 0 @padding * (@_pd - 2)/10;
+            margin: 0 @_icon_pd * -1 0 @_icon_pd;
         }
     }
 

@@ -121,7 +121,7 @@ export default class Button extends Component {
                         </div>
                     </li>
                     <li>
-                        <h3>Button grounp</h3>
+                        <h3>Button group share same size</h3>
                         <div className={CN('button-group')}>
                             <div className={CN('button')}>first</div>
                             <div className={CN('button')}>second</div>

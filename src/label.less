@@ -16,15 +16,16 @@
 }
 
 .__labelSize(@group) when(@group = true) {
-    >.label {
-        ._FONT_PADDING(10, 5);
-    }
     &.tiny>.label {
         ._FONT_PADDING(8, 4);
     }
+    
+    >.label {
+        ._FONT_PADDING(12, 6);
+    }
 
     &.small>.label {
-        ._FONT_PADDING(12, 6);
+        ._FONT_PADDING(10, 5);
     }
     &.large>.label {
         ._FONT_PADDING(16, 8);
@@ -81,5 +82,10 @@
     &.float-right {
         margin-right: 0;
     }
+}
 
+
+@{NS}.label-group {
+    /*label group size*/
+    .__labelSize(true);
 }

@@ -20,6 +20,22 @@ const colorLabels = (cn='') => {
         </div>
 }
 
+const makeLabelGroups = (cn='') => {
+    return <div className={CN(`${cn} label-group`)}>
+            <div className={CN('label')}>
+                label
+            </div>
+            <div className={CN('icon label')}>
+                label
+                <i className={CN('icon')}>close</i>
+            </div>
+            <div className={CN('round icon label')}>
+                <i className={CN('icon')}>fullscreen</i>
+                label
+            </div>
+        </div>;
+}
+
 export default class Label extends Component {
     render() {
         return (
@@ -36,22 +52,22 @@ export default class Label extends Component {
                                 label
                             </div>
                             <div className={CN('icon label')}>
-                                user
+                                label
                                 <i className={CN('icon')}>close</i>
                             </div>
                             <div className={CN('icon label')}>
                                 <i className={CN('icon')}>close</i>
-                                user
+                                label
                             </div>
                         </div>
                         <div className={CN('field')}>
                             <h4>Image label</h4>
                             <div className={CN('image label')}>
                                 <img src="img/avatar.png" className={CN('image')} alt=""/>
-                                user
+                                label
                             </div>
                             <div className={CN('image label')}>
-                                user
+                                label
                                 <img src="img/avatar.png" className={CN('image')} alt=""/>
                             </div>
                         </div>
@@ -80,8 +96,8 @@ export default class Label extends Component {
                                 share
                             </div>
                             <div className={CN('round red icon label')}>
-                                <i className={CN('icon')}>close</i>
                                 close
+                                <i className={CN('icon')}>close</i>
                             </div>
                             <div className={CN('round green basic icon label')}>
                                 <i className={CN('icon')}>check</i>
@@ -96,6 +112,12 @@ export default class Label extends Component {
                             {makeSizeLabels('large')}
                             {makeSizeLabels('huge')}
                         </div>
+                        <h3>Label Group share same size</h3>
+                        {makeLabelGroups('tiny')}
+                        {makeLabelGroups('small')}
+                        {makeLabelGroups()}
+                        {makeLabelGroups('large')}
+                        {makeLabelGroups('huge')}
                     </li>
                 </ul>
             </div>
