@@ -131,6 +131,19 @@ export default class Button extends Component {
                         </div>
                     </li>
                     <li>
+                        <h3>Round button</h3>
+                        <div className={CN('round button')}>
+                            button
+                        </div>
+                        <div className={CN('round icon blue button')}>
+                            <i className={CN('icon')}>more_vert</i>
+                            more
+                        </div>
+                        <div className={CN('round basic green button')}>
+                            ok
+                        </div>
+                    </li>
+                    <li>
                         <h3>Button grounp</h3>
                         <div className={CN('button-group')}>
                             <div className={CN('button')}>first</div>

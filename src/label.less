@@ -36,7 +36,6 @@
 
 
 @{NS}.label {
-    cursor: text;
     display: inline-block;
     color: @most_gray;
     margin-right: @padding;
@@ -44,6 +43,10 @@
     background-color: @tiny_gray;
     vertical-align: middle;
     border-radius: @radius;
+    position: relative;
+    &:not(a){
+        cursor: text;
+    }
     &.angled {
         border-radius: 0;
     }
@@ -75,14 +78,6 @@
         }
     }
     
-    /*icon label*/
-    &.icon {
-        > * {
-            display: table-cell;
-            vertical-align: middle;
-        }
-    }
-
     &.float-right {
         margin-right: 0;
     }
