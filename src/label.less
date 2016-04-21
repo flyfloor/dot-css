@@ -2,6 +2,7 @@
     ._FONT_PADDING(12, 6);
     &.tiny {
         ._FONT_PADDING(8, 4);
+
     }
     &.small {
         ._FONT_PADDING(10, 5);
@@ -38,54 +39,46 @@
 
 @{NS}.label {
     display: inline-block;
+    position: relative;
     color: @most_gray;
     margin-right: @padding;
     border: 0;
     background-color: @tiny_gray;
     vertical-align: middle;
     border-radius: @radius;
-    position: relative;
     &:not(a){
         cursor: text;
     }
     &.angled {
         border-radius: 0;
     }
-    /*size*/
-    .__labelSize(false);
 
     &:hover {
         background-color: @light_gray;
         color: @black;
     }
 
+    /*size*/
+    .__labelSize(false);
+
+    /*color label*/
+    ._COLOR_EL;
+    /*floar right clear padding*/
+    ._F_RIGHT_EL;
 
     &.basic {
         border: 1px solid @gray;
     }
 
-    ._COLOR_EL;
-
-    @{NS}.icon {
-        cursor: pointer;
-        font-size: 1em;
-        line-height: inherit;
-        width: 1em;
-        height: 1em;
-        color: inherit;
-        opacity: .95;
-        &:hover {
-            opacity: 1;
-        }
-    }
-    
-    &.float-right {
-        margin-right: 0;
-    }
 }
 
 
 @{NS}.label-group {
     /*label group size*/
     .__labelSize(true);
+    >:last-child {
+        margin-right: 0;
+    }
+    /*floar right clear padding*/
+    ._F_RIGHT_EL;
 }

@@ -70,16 +70,6 @@
         border-radius: 0;
     }
 
-    @{NS}.icon {
-        vertical-align: middle;
-        font-size: 1em;
-        color: inherit;
-    }
-
-    &.float-right {
-        margin-right: 0;
-    }
-
     &.fluid {
         display: block;
         width: 100%;
@@ -88,6 +78,8 @@
     .__btnSize(false);
     /*color button*/
     ._COLOR_EL;
+    /*floar right clear padding*/
+    ._F_RIGHT_EL;
 }
 
 @{NS}.button-group {
@@ -105,6 +97,8 @@
             margin-right: @padding;
         }
     }
+    /*floar right clear padding*/
+    ._F_RIGHT_EL;
     /*button group size*/
     .__btnSize(true);
     &.vertical {
@@ -118,7 +112,7 @@
             width: 100%;
             display: block;
             border-radius: 0;
-            margin: 0 0 0 0;
+            margin: 0;
             &:first-child {
                 border-top-left-radius: @radius;
                 border-top-right-radius: @radius;
