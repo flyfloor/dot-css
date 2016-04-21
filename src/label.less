@@ -1,0 +1,90 @@
+.__labelSize(@group) when(@group = false) {
+    ._FONT_PADDING(12, 6);
+    &.tiny {
+        ._FONT_PADDING(8, 4);
+    }
+    &.small {
+        ._FONT_PADDING(10, 5);
+    }
+
+    &.large {
+        ._FONT_PADDING(16, 8);
+    }
+    &.huge {
+        ._FONT_PADDING(20, 10);
+    }
+}
+
+.__labelSize(@group) when(@group = true) {
+    >.label {
+        ._FONT_PADDING(10, 5);
+    }
+    &.tiny>.label {
+        ._FONT_PADDING(8, 4);
+    }
+
+    &.small>.label {
+        ._FONT_PADDING(12, 6);
+    }
+    &.large>.label {
+        ._FONT_PADDING(16, 8);
+    }
+    &.huge>.label {
+        ._FONT_PADDING(20, 10);
+    }
+}
+
+
+@{NS}.label {
+    cursor: text;
+    display: inline-block;
+    color: @most_gray;
+    margin-right: @padding;
+    border: 0;
+    background-color: @tiny_gray;
+    vertical-align: middle;
+    border-radius: @radius;
+    &.angled {
+        border-radius: 0;
+    }
+    /*size*/
+    .__labelSize(false);
+
+    &:hover {
+        background-color: @light_gray;
+        color: @black;
+    }
+
+
+    &.basic {
+        border: 1px solid @gray;
+    }
+
+    ._COLOR_EL;
+
+    @{NS}.icon {
+        cursor: pointer;
+        font-size: 1em;
+        line-height: inherit;
+        width: 1em;
+        height: 1em;
+        color: inherit;
+        opacity: .95;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    
+    /*icon label*/
+    &.icon {
+        > * {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+
+    &.float-right {
+        margin-right: 0;
+    }
+
+}

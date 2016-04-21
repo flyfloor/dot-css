@@ -1,0 +1,30 @@
+.__ftPd(@size, @_pd){
+    padding: @padding * @_pd/10 @padding * @_pd * 2/10;
+    @_font: @line-height * @size/15;
+    font-size: @_font;
+    line-height: @_font;
+    >.icon {
+        line-height: @_font;
+        width: @_font;
+        height: @_font;
+        height: @_font;
+    }
+    &.icon {
+        .icon {
+            padding: 0 @padding * (@_pd - 2)/10 0 0;
+        }
+        :last-child.icon {
+            padding: 0 0 0 @padding * (@_pd - 2)/10;
+        }
+    }
+    &.circle, &.labeled {
+        padding: @padding * @size/10;
+    }
+    &.circle {
+        border-radius: @size + @_font / 2;
+    }
+}
+
+._FONT_PADDING(@size, @_pd) {
+    .__ftPd(@size, @_pd);
+}

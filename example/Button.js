@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {CN} from './util';
+import {COLORS} from './setting';
 
 const labelBtnGroup = (cn='') => {
     return <div className={CN(`${cn} button-group`)}>
@@ -18,22 +19,12 @@ const labelBtnGroup = (cn='') => {
 
 const colorBtns = (cn='') => {
     return <div>
-            <button className={CN(`${cn} red button`)}>red</button>
-            <button className={CN(`${cn} pink button`)}>pink</button>
-            <button className={CN(`${cn} purple button`)}>purple</button>
-            <button className={CN(`${cn} indigo button`)}>indigo</button>
-            <button className={CN(`${cn} cyan button`)}>cyan</button>
-            <button className={CN(`${cn} teal button`)}>teal</button>
-            <button className={CN(`${cn} green button`)}>green</button>
-            <button className={CN(`${cn} lime button`)}>lime</button>
-            <button className={CN(`${cn} amber button`)}>amber</button>
-            <button className={CN(`${cn} orange button`)}>orange</button>
-            <button className={CN(`${cn} brown button`)}>brown</button>
-            <button className={CN(`${cn} gray button`)}>gray</button>
-            <button className={CN(`${cn} bluegray button`)}>bluegray</button>
-            <button className={CN(`${cn} yellow button`)}>yellow</button>
-            <button className={CN(`${cn} black button`)}>black</button>
-        </div>;
+                {COLORS.map(color => {
+                    return <button key={`${cn}-${color}-button`} className={CN(`${cn} ${color} button`)}>
+                                {color}
+                            </button>;
+                })}
+            </div>;
 }
 
 export default class Button extends Component {

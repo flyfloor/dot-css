@@ -1,89 +1,42 @@
-.__colorBtn(@color){
-    &.@{color}{
-        @_dark: 'dark_@{color}';
-        @_deep: 'deep_@{color}';
-        background-color: @@_dark;
-        color: @tiny_gray;
-        border-color: @@_dark;
-        &:hover {
-            color: @white;
-            background-color: @@color;
-            border-color: @@_deep;
-        }
-        &.active {
-            background-color: @@_deep;
-        }
-        &.basic {
-            background-color: @white;
-            color: @@_dark;
-            border-color: @@_dark;
-            &:hover {
-                background-color: @white;
-                color: @@_deep;
-                border-color: @@_deep;
-            }
-        }
-    }
-}
-
-.__fontPadding(@size, @_pd){
-    padding: @padding * @_pd/10 @padding * @_pd * 2/10;
-    @_font: @line-height * @size/15;
-    font-size: @_font;
-    line-height: @_font;
-    >.icon {
-        line-height: @_font;
-        width: @_font;
-        height: @_font;
-    }
-    &.icon>.icon {
-        margin: 0 @padding * @_pd/10 0 0;
-    }
-    &.circle, &.labeled {
-        padding: @padding * @size/10;
-    }
-    &.circle {
-        border-radius: @size + @_font / 2;
-    }
-}
-
-.__sizeBtn(@group) when(@group = false) {
-    .__fontPadding(16, 8);
+.__btnSize(@group) when(@group = false) {
+    ._FONT_PADDING(16, 8);
     &.tiny {
-        .__fontPadding(10, 5);
+        ._FONT_PADDING(10, 5);
     }
     &.small {
-        .__fontPadding(12, 6);
+        ._FONT_PADDING(12, 6);
     }
 
     &.large {
-        .__fontPadding(20, 10);
+        ._FONT_PADDING(20, 10);
     }
     &.huge {
-        .__fontPadding(24, 12);
+        ._FONT_PADDING(24, 12);
     }
 }
 
-.__sizeBtn(@group) when(@group = true) {
+.__btnSize(@group) when(@group = true) {
     >.button {
-        .__fontPadding(16, 8);
+        ._FONT_PADDING(16, 8);
     }
     &.tiny>.button {
-        .__fontPadding(10, 5);
+        ._FONT_PADDING(10, 5);
     }
 
     &.small>.button {
-        .__fontPadding(12, 6);
+        ._FONT_PADDING(12, 6);
     }
     &.large>.button {
-        .__fontPadding(20, 10);
+        ._FONT_PADDING(20, 10);
     }
     &.huge>.button {
-        .__fontPadding(24, 12);
+        ._FONT_PADDING(24, 12);
     }
 }
 
+
 @{NS}.button {
+    /*style*/
     cursor: pointer;
     display: inline-block;
     text-align: center;
@@ -93,12 +46,10 @@
     background-color: @tiny_gray;
     font-weight: 500;
     font-size: @line-height;
-    line-height: @line-height - 1;
     min-height: @line-height;
     border: 1px solid @light_gray;
     margin: 0 @padding 0 0;
     position: relative;
-    /*padding: @padding * 8/10 @padding * 12/10;*/
     -webkit-transition: all .2s;
     -o-transition: all .2s;
     transition: all .2s;
@@ -120,13 +71,9 @@
     }
 
     @{NS}.icon {
-        width: @line-height;
-        height: @line-height;
-        line-height: @line-height;
         vertical-align: middle;
         font-size: 1em;
         color: inherit;
-        line-height: @normal_font_size;
     }
 
     &.float-right {
@@ -139,8 +86,12 @@
     }
 
     &.icon {
+        display: table-row;
+        >* {
+            display: table-cell;
+            vertical-align: middle;
+        }
         >.icon {
-            margin: 0 @padding * 8/10 0 0;
             opacity: .95;
             &:hover {
                 opacity: 1;
@@ -148,10 +99,9 @@
         }
     }
 
-    .__sizeBtn(false);
+    .__btnSize(false);
 
     &.circle, &.labeled {
-        /*padding: @padding * 15/10;*/
         width: 0;
         height: 0;
         >.icon {
@@ -159,48 +109,7 @@
             line-height: initial;
         }
     }
-
-    &.black {
-        color: @tiny_gray;
-        background-color: @black;
-        border-color: @most_gray;
-        &:hover {
-            background-color: @most_gray;
-            color: @white;
-            border-color: @black;
-        }
-        &.basic {
-            color: @deep_gray;
-            background-color: @white;
-            &:hover {
-                color: @black;
-            }
-        }
-    }
-    .__colorBtn(red);
-    .__colorBtn(pink);
-    .__colorBtn(purple);
-    .__colorBtn(indigo);
-    .__colorBtn(blue);
-    .__colorBtn(cyan);
-    .__colorBtn(teal);
-    .__colorBtn(green);
-    .__colorBtn(lime);
-    .__colorBtn(amber);
-    .__colorBtn(orange);
-    .__colorBtn(brown);
-    .__colorBtn(gray);
-    .__colorBtn(bluegray);
-    .__colorBtn(yellow);
-    &.lime,
-    &.amber,
-    &.orange,
-    &.yellow {
-        color: @deep_gray;
-        &:hover {
-            color: @most_gray;
-        }
-    }
+    ._COLOR_EL;
 }
 
 @{NS}.button-group {
@@ -218,7 +127,7 @@
             margin-right: @padding;
         }
     }
-    .__sizeBtn(true);
+    .__btnSize(true);
     &.vertical {
         border-radius: 0;
         display: inline-block;

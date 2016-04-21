@@ -1,0 +1,83 @@
+.__color_el(@color){
+    &.@{color}{
+        @_dark: 'dark_@{color}';
+        @_deep: 'deep_@{color}';
+        background-color: @@_dark;
+        color: @tiny_gray;
+        border-color: @@_dark;
+        &:hover {
+            color: @white;
+            background-color: @@color;
+            border-color: @@_deep;
+        }
+        &.active {
+            background-color: @@_deep;
+        }
+        &.basic {
+            background-color: @white;
+            color: @@_dark;
+            border-color: @@_dark;
+            &:hover {
+                background-color: @white;
+                color: @@_deep;
+                border-color: @@_deep;
+            }
+        }
+    }
+}
+
+._COLOR_EL() {
+    .__color_el(red);
+    .__color_el(pink);
+    .__color_el(purple);
+    .__color_el(indigo);
+    .__color_el(blue);
+    .__color_el(cyan);
+    .__color_el(teal);
+    .__color_el(green);
+    .__color_el(lime);
+    .__color_el(amber);
+    .__color_el(orange);
+    .__color_el(brown);
+    .__color_el(gray);
+    .__color_el(bluegray);
+    .__color_el(yellow);
+    &.lime,
+    &.amber,
+    &.orange,
+    &.yellow {
+        color: @deep_gray;
+        &:hover {
+            color: @most_gray;
+        }
+    }
+    &.white {
+        &.basic {
+            border: 1px solid @mini_gray;
+            color: @mini_gray;
+            background-color: @black;
+            &:hover {
+                background-color: @most_gray;
+                color: @white;
+                border-color: @white;
+            }
+        }
+    }
+    &.black {
+        border: 1px solid @most_gray;
+        color: @tiny_gray;
+        background-color: @black;
+        &:hover {
+            background-color: @most_gray;
+            color: @white;
+            border-color: @black;
+        }
+        &.basic {
+            color: @deep_gray;
+            background-color: @white;
+            &:hover {
+                color: @black;
+            }
+        }
+    }
+}
