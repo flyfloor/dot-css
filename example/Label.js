@@ -63,12 +63,12 @@ export default class Label extends Component {
                         <div className={CN('field')}>
                             <h4>Image label</h4>
                             <div className={CN('image label')}>
-                                <img src="img/avatar.png" className={CN('image')} alt=""/>
+                                <img src="http://braavos.me/dot-css/dist/img/avatar.png" className={CN('image')} alt=""/>
                                 label
                             </div>
                             <div className={CN('image label')}>
                                 label
-                                <img src="img/avatar.png" className={CN('image')} alt=""/>
+                                <img src="http://braavos.me/dot-css/dist/img/avatar.png" className={CN('image')} alt=""/>
                             </div>
                         </div>
                         <div className={CN('field')}>
