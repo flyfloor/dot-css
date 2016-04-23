@@ -25,10 +25,10 @@ class App extends Component {
         const {children} = this.props;
         const {pathname} = this.props.location;
         return (
-            <page>
+            <page className={CN('container')}>
                 {pathname !== '/' ? 
                     <div>
-                        <header>
+                        <header className={CN('padding')}>
                             <h1>Dot css</h1>
                         </header>
                         <div className={CN('grid')}>

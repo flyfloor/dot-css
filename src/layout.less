@@ -1,0 +1,28 @@
+@{NS}.container {
+    margin: 0 auto;
+    display: block;
+}
+
+@media @large_view {
+    @{NS}.container {
+        width: @large_desktop;
+    }
+}
+
+@media @small_view {
+    @{NS}.container {
+        width: @small_desktop;
+    }
+}
+
+@media @tablet_view {
+    @{NS}.container {
+        width: @tablet;
+    }
+}
+
+@media @mobile_view {
+    @{NS}.container {
+        width: 100%;
+    }
+}
