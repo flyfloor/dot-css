@@ -12,6 +12,7 @@ import Table from './example/Table';
 import Input from './example/Input';
 import Checkbox from './example/Checkbox';
 import Label from './example/Label';
+import Text from './example/Text';
 
 const NavLink = (props) => {
     return (
@@ -41,6 +42,7 @@ class App extends Component {
                                     <li><NavLink to="/input">input</NavLink></li>
                                     <li><NavLink to="/checkbox">checkbox</NavLink></li>
                                     <li><NavLink to="/label">label</NavLink></li>
+                                    <li><NavLink to="/text">text</NavLink></li>
                                 </ul>
                             </aside>
                             <artical className="column column-14">
@@ -85,6 +87,7 @@ ReactDOM.render(<Router history={hashHistory}>
                         <Route path="/Input" component={Input}></Route>
                         <Route path="/Checkbox" component={Checkbox}></Route>
                         <Route path="/Label" component={Label}></Route>
+                        <Route path="/text" component={Text}></Route>
                     </Route>
                 </Router>, document.getElementById('root'));
 

@@ -4,6 +4,8 @@ export const COLORS = ['red', 'pink', 'purple', 'indigo', 'cyan', 'blue',
 
 export const NS = 'dot';
 
+export const BLOG_URL = 'http://braavos.me';
+
 export const ICONS = ['check_box', 'check_box_outline_blank', 'indeterminate_check_box', 'radio_button_checked', 
                     'radio_button_unchecked', 'star', 'star_border', 'star_half', 'person', 'plus_one', 'school', 'group', 
                     'all_inclusive', 'do_not_disturb', 'ondemand_video', 'menu', 'more_horiz', 'more_vert', 

@@ -16,3 +16,23 @@ blockquote {
         display: inline;
     }
 }
+
+pre, code, tt {
+    font-family: Monaco,"Andale Mono","lucida console","Courier New",monospace;
+}
+
+pre {
+    font-size: @line-height * 13/15;
+    line-height: 1.5;
+    vertical-align: baseline;
+    box-shadow: none;
+    padding: @padding;
+    overflow: auto;
+    color: @blue;
+    background: @tiny_gray;
+    margin: @padding 0;
+    overflow: scroll;
+    overflow-x: auto;
+    overflow-y: hidden;
+    word-wrap: normal; 
+}
