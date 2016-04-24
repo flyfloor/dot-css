@@ -4,6 +4,11 @@ export const COLORS = ['red', 'pink', 'purple', 'indigo', 'cyan', 'blue',
 
 export const NS = 'dot';
 
+export const MOBILE_VIEW = '<768px';
+export const TABLET_VIEW = '769px ~ 991px';
+export const SMALL_VIEW = '992px ~ 1200px';
+export const LARGE_VIEW = '>1201px';
+
 export const BLOG_URL = 'http://braavos.me';
 
 export const ICONS = ['check_box', 'check_box_outline_blank', 'indeterminate_check_box', 'radio_button_checked', 

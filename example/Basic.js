@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {COLORS} from './setting';
+import {COLORS, LARGE_VIEW, SMALL_VIEW, MOBILE_VIEW, TABLET_VIEW} from './setting';
 import {CN} from './util';
 
 
@@ -72,6 +72,43 @@ export default class Basic extends Component {
                             {nodes}
                         </ul>
                         <br/>
+                    </li>
+                    <li>
+                        <h3>Container</h3>
+                        <ol>
+                            <li>
+                                <h4>Container is center block content</h4>
+                                <p>adjust to screen width</p>
+                                <br/>
+                                <div className={CN('table')}>
+                                    <div className="row">
+                                        <div className="cell">mobile({MOBILE_VIEW})</div>
+                                        <div className="cell">tablet({TABLET_VIEW})</div>
+                                        <div className="cell">small desktop({SMALL_VIEW})</div>
+                                        <div className="cell">large desktop({LARGE_VIEW})</div>
+                                    </div>
+                                </div>
+                                <br/>
+                            </li>
+                            <li>
+                                <h4>Text Container</h4>
+                                <p>center text block</p>
+                                <div className={CN('table')}>
+                                    <div className="row head">
+                                        <div className="cell">{MOBILE_VIEW}</div>
+                                        <div className="cell">{TABLET_VIEW}</div>
+                                        <div className="cell">{SMALL_VIEW}</div>
+                                        <div className="cell">{LARGE_VIEW}</div>
+                                    </div>
+                                    <div className={CN('row text-extra')}>
+                                        <div className="cell">100%</div>
+                                        <div className="cell">100%</div>
+                                        <div className="cell">{SMALL_VIEW}</div>
+                                        <div className="cell">{SMALL_VIEW}</div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ol>
                     </li>
                 </ul>
             </div>
