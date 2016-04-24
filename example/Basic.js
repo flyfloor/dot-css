@@ -68,7 +68,7 @@ export default class Basic extends Component {
                     </li>
                     <li>
                         <h3>Colors</h3>
-                        <ul className={CN('grid grid-8 text-extra text-center')}>
+                        <ul className={CN('grid text-extra text-center')}>
                             {nodes}
                         </ul>
                         <br/>

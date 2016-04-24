@@ -26,3 +26,37 @@
         margin-bottom: @padding;
     }
 }
+
+.icon-example {
+    .icon-item {
+        cursor: pointer;
+    }
+}
+
+.__main_aside_mobile_display {
+    .main-content {
+        width: auto !important;
+        padding: @padding;
+    }
+    .main-aside {
+        overflow: hidden;
+        float: none !important;
+        width: auto !important;
+        >a {
+            padding: @padding /2 @padding;
+            display: inline-block;
+            float: left;
+            &.active {
+                color: @white;
+                background-color: @deep_gray;
+            }
+        }
+    }
+}
+
+@media @tablet_view {
+    .__main_aside_mobile_display;
+}
+@media @mobile_view {
+    .__main_aside_mobile_display;
+}

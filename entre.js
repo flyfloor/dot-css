@@ -32,20 +32,18 @@ class App extends Component {
                             <h1>Dot css</h1>
                         </header>
                         <div className={CN('grid')}>
-                            <aside className={CN('column column-2 padding')}>
-                                <ul>
-                                    <li><NavLink to="/basic">basic</NavLink></li>
-                                    <li><NavLink to="/grid">grid</NavLink></li>
-                                    <li><NavLink to="/button">button</NavLink></li>
-                                    <li><NavLink to="/icon">icon</NavLink></li>
-                                    <li><NavLink to="/table">table</NavLink></li>
-                                    <li><NavLink to="/input">input</NavLink></li>
-                                    <li><NavLink to="/checkbox">checkbox</NavLink></li>
-                                    <li><NavLink to="/label">label</NavLink></li>
-                                    <li><NavLink to="/text">text</NavLink></li>
-                                </ul>
+                            <aside className={CN('column column-2 padding main-aside')}>
+                                <NavLink className={CN('block')} to="/basic">basic</NavLink>
+                                <NavLink className={CN('block')} to="/grid">grid</NavLink>
+                                <NavLink className={CN('block')} to="/button">button</NavLink>
+                                <NavLink className={CN('block')} to="/icon">icon</NavLink>
+                                <NavLink className={CN('block')} to="/table">table</NavLink>
+                                <NavLink className={CN('block')} to="/input">input</NavLink>
+                                <NavLink className={CN('block')} to="/checkbox">checkbox</NavLink>
+                                <NavLink className={CN('block')} to="/label">label</NavLink>
+                                <NavLink className={CN('block')} to="/text">text</NavLink>
                             </aside>
-                            <artical className="column column-14">
+                            <artical className="column column-14 main-content">
                                 {children}
                             </artical>
                         </div>
