@@ -29,7 +29,11 @@ class App extends Component {
                 {pathname !== '/' ? 
                     <div>
                         <header className={CN('padding')}>
-                            <h1>Dot css</h1>
+                            <h1>
+                                <span>D</span>
+                                <i className={CN('icon dot-icon')}>invert_colors</i>
+                                <span>t css</span>
+                            </h1>
                         </header>
                         <div className={CN('grid')}>
                             <aside className={CN('column column-2 padding main-aside')}>
@@ -62,7 +66,11 @@ class RootPage extends Component {
             <div className={CN('basic table intro-page absolute-center')}>
                 <div className="row">
                     <div className="cell">
-                        <h1 className={CN('field')}>Dot Css</h1>
+                        <h1 className={CN('field')}>
+                            <span>D</span>
+                            <i className={CN('icon dot-icon')}>invert_colors</i>
+                            <span>t Css</span>
+                        </h1>
                         <p className={CN('field')}>A Micro Css Scaffold</p>
                         <Link to="/basic" className={CN('red button')}>see more</Link>
                     </div>

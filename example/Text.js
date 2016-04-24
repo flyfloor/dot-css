@@ -36,13 +36,13 @@ export default class Text extends Component {
                         <h3>Text Align</h3>
                         <div className={CN('bg-tiny_gray grid grid-3')}>
                             <p className={CN('padding text-left column')}>
-                                this content is text align left
+                                Aligh left
                             </p>
                             <p className={CN('padding text-center column')}>
-                                this content is text align center
+                                Aligh center
                             </p>
                             <p className={CN('padding text-right column')}>
-                                this content is text align right
+                                Aligh right
                             </p>
                         </div>
                         <br/>
@@ -50,9 +50,9 @@ export default class Text extends Component {
                     <li>
                         <h3>Float</h3>
                         <div className={CN('padding bg-tiny_gray')}>
-                            <span className={CN('float-none')}>this content is float none</span>
-                            <span className={CN('float-left')}>this content is float left</span>
-                            <span className={CN('float-right')}>this content is float right</span>
+                            <span className={CN('float-none')}>Float none</span>
+                            <span className={CN('float-left')}>Float left</span>
+                            <span className={CN('float-right')}>Float right</span>
                         </div>
                         <br/>
                     </li>

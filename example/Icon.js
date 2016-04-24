@@ -22,7 +22,7 @@ export default class Icon extends Component {
         return (
             <ul className={CN('grid grid-5 text-center text-extra')}>
                 {ICONS.map(icon => {
-                    return <li key={icon} onClick={() => this.handleClick(icon)} className={CN('column padding field icon-item')}>
+                    return <li key={icon} onClick={() => this.handleClick(icon)} className={CN('column padding truncate field icon-item')}>
                                 <i className={CN('icon')}>{icon}</i>
                                 <p>{icon}</p>
                             </li>
