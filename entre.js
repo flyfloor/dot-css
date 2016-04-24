@@ -36,7 +36,7 @@ class App extends Component {
                             </h1>
                         </header>
                         <div className={CN('grid')}>
-                            <aside className={CN('column column-2 padding main-aside')}>
+                            <aside className={CN('column column-3 padding main-aside')}>
                                 <NavLink className={CN('block')} to="/basic">basic</NavLink>
                                 <NavLink className={CN('block')} to="/grid">grid</NavLink>
                                 <NavLink className={CN('block')} to="/button">button</NavLink>
@@ -47,7 +47,7 @@ class App extends Component {
                                 <NavLink className={CN('block')} to="/label">label</NavLink>
                                 <NavLink className={CN('block')} to="/text">text</NavLink>
                             </aside>
-                            <artical className="column column-14 main-content">
+                            <artical className="column column-13 main-content">
                                 {children}
                             </artical>
                         </div>

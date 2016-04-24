@@ -38,6 +38,15 @@
     text-align: center;
 }
 
+.main-aside {
+    >a {
+        padding: @padding/2 0 @padding/2 @padding*2;
+        &.active {
+            color: @light_green;
+        }
+    }
+}
+
 .__main_aside_mobile_display {
     .main-content {
         width: 100% !important;
@@ -51,10 +60,6 @@
             padding: @padding /2 @padding;
             display: inline-block;
             float: left;
-            &.active {
-                color: @white;
-                background-color: @deep_gray;
-            }
         }
     }
 }
