@@ -1,0 +1,52 @@
+@{NS}.comment {
+    margin: @padding 0;
+    >.avatar {
+        float: left;
+        width: @padding * 4;
+        height: @padding * 4;
+        img {
+            width: 100%;
+            height: 100%;
+            background-color: @tiny_gray;
+            border-radius: @radius;
+        }
+        &.angled {
+            img {
+                border-radius: 0;
+            }
+        }
+        &.round {
+            img {
+                border-radius: @padding * 2;
+            }
+        }
+    }
+    >.content {
+        margin-left: @padding * 5;
+        >.nickname {
+            cursor: pointer;
+            display: inline-block;
+        }
+        >.text {
+            margin-bottom: @padding /2;
+        }
+        >.extra {
+            font-size: @line-height * 12/15;
+            color: @gray;
+            display: inline-block;
+            margin-left: @padding /2;
+            &.right {
+                float: right;
+            }
+        }
+        >.action {
+            font-size: @line-height * 13/15;
+            >a {
+                margin-right: @padding/2;
+            }
+        }
+    }
+    >.comments {
+        margin-left: @padding * 5;
+    }
+}

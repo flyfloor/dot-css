@@ -18,8 +18,8 @@ const makeColor = (color) => {
                     <div className={CN(`padding bg-${color}`)}>{color}</div>
                     <div className={CN(`padding bg-dull_${color}`)}>{`dull_${color}`}</div>
                     <div className={CN(`padding bg-dark_${color}`)}>{`dark_${color}`}</div>
-                    <div className={CN(`padding bg-deep_${color}`)}>{`deep_${color}`}</div>
-                    <div className={CN(`padding bg-most_${color}`)}>{`most_${color}`}</div>
+                    <div className={CN(`padding color-white bg-deep_${color}`)}>{`deep_${color}`}</div>
+                    <div className={CN(`padding color-white bg-most_${color}`)}>{`most_${color}`}</div>
                 </div>;
 
         default:
@@ -30,7 +30,7 @@ const makeColor = (color) => {
                     <div className={CN(`padding bg-${color}`)}>{color}</div>
                     <div className={CN(`padding bg-dark_${color}`)}>{`dark_${color}`}</div>
                     <div className={CN(`padding bg-deep_${color}`)}>{`deep_${color}`}</div>
-                    <div className={CN(`padding bg-most_${color}`)}>{`most_${color}`}</div>
+                    <div className={CN(`padding color-white bg-most_${color}`)}>{`most_${color}`}</div>
                 </div>;
     }
 };
@@ -46,7 +46,7 @@ export default class Basic extends Component {
         return (
             <div>
                 <h2>Basic</h2>
-                <blockquote>
+                <blockquote className={CN('blockquote')}>
                     <p>This part contains basic stuff, colors, fonts, H1 ~ H6</p>
                 </blockquote>
                 <ul>

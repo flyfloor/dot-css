@@ -32,7 +32,7 @@ export default class Button extends Component {
         return (
             <div className="button-example">
                 <h2>Button</h2>
-                <blockquote>
+                <blockquote className={CN('blockquote')}>
                     <p>This part is about Button, Icon button, Labeled button, Circle button, Button size, Button group</p>
                 </blockquote>
                 <ul>

@@ -6,7 +6,7 @@ export default class Grid extends Component {
         return (
             <div className='grid-example'>
                 <h2>Grid</h2>
-                <blockquote>
+                <blockquote className={CN('blockquote')}>
                     <p>This part is about Grid</p>
                 </blockquote>
                 <ul>

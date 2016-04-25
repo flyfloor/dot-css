@@ -13,6 +13,7 @@ import Input from './example/Input';
 import Checkbox from './example/Checkbox';
 import Label from './example/Label';
 import Text from './example/Text';
+import Advanced from './example/Advanced';
 
 const NavLink = (props) => {
     return (
@@ -46,6 +47,7 @@ class App extends Component {
                                 <NavLink className={CN('block')} to="/checkbox">checkbox</NavLink>
                                 <NavLink className={CN('block')} to="/label">label</NavLink>
                                 <NavLink className={CN('block')} to="/text">text</NavLink>
+                                <NavLink className={CN('block')} to="/advanced">advanced</NavLink>
                             </aside>
                             <artical className="column column-13 main-content">
                                 {children}
@@ -94,6 +96,7 @@ ReactDOM.render(<Router history={hashHistory}>
                         <Route path="/Checkbox" component={Checkbox}></Route>
                         <Route path="/Label" component={Label}></Route>
                         <Route path="/text" component={Text}></Route>
+                        <Route path="/advanced" component={Advanced}></Route>
                     </Route>
                 </Router>, document.getElementById('root'));
 

@@ -7,7 +7,7 @@ export default class Text extends Component {
         return (
             <div>
                 <h2>Text</h2>
-                <blockquote>
+                <blockquote className={CN('blockquote')}>
                     <p>This part is about text</p>
                 </blockquote>
                 <ul>

@@ -41,7 +41,7 @@ export default class Label extends Component {
         return (
             <div className="label-example">
                 <h2>Label</h2>
-                <blockquote>
+                <blockquote className={CN('blockquote')}>
                     <p>This part is about Label</p>
                 </blockquote>
                 <ul>

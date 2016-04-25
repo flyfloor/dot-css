@@ -6,7 +6,7 @@ export default class Checkbox extends Component {
         return (
             <div>
                 <h2>Checkbox</h2>
-                <blockquote>
+                <blockquote className={CN('blockquote')}>
                     <p>This contains checkbox and radio</p>
                 </blockquote>
                 <ul>

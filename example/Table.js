@@ -64,7 +64,7 @@ export default class Table extends Component {
         return (
             <div>
                 <h2>Table</h2>
-                <blockquote>
+                <blockquote className={CN('blockquote')}>
                     <p>This part contains Table, and Table layout</p>
                 </blockquote>
                 <ul>

@@ -34,7 +34,7 @@ export default class Icon extends Component {
         return (
             <div className="icon-example">
                 <h2>Icon</h2>
-                <blockquote>
+                <blockquote className={CN('blockquote')}>
                     <p>This part is the Icons dot css use, <span className={CN('color-brown')}>from Google's material icons, <a href="https://design.google.com/icons/" target="_blank">Google icons</a></span></p>
                 </blockquote>
                 <pre>
