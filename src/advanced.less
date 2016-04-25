@@ -2,8 +2,9 @@
     margin: @padding 0;
     >.avatar {
         float: left;
-        width: @padding * 4;
-        height: @padding * 4;
+        width: @padding * 3.5;
+        height: @padding * 3.5;
+        margin: @padding/2 0 0;
         img {
             width: 100%;
             height: 100%;
@@ -26,8 +27,10 @@
         >.nickname {
             cursor: pointer;
             display: inline-block;
+            color: @black;
         }
         >.text {
+            font-size: @line-height * 14/15;
             margin-bottom: @padding /2;
         }
         >.extra {
@@ -37,6 +40,9 @@
             margin-left: @padding /2;
             &.right {
                 float: right;
+            }
+            >* {
+                margin-right: @padding * 3/10;
             }
         }
         >.action {
