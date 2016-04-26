@@ -12,11 +12,27 @@ export default class Image extends Component {
                 <ul>
                     <li>
                         <h3>Image</h3>
-                        <div className={CN('image')}>
+                        <div className={CN('mini image')}>
+                            <img src="http://braavos.me/dot-css/dist/img/img.png"/>
+                        </div>
+                        <div className={CN('tiny image')}>
+                            <img src="http://braavos.me/dot-css/dist/img/img.png"/>
+                        </div>
+                        <div className={CN('small image')}>
+                            <img src="http://braavos.me/dot-css/dist/img/img.png"/>
+                        </div>
+                        <div className={CN('large image')}>
+                            <img src="http://braavos.me/dot-css/dist/img/img.png"/>
+                        </div>
+                        <div className={CN('big image')}>
+                            <img src="http://braavos.me/dot-css/dist/img/img.png"/>
+                        </div>
+                        <div className={CN('huge image')}>
                             <img src="http://braavos.me/dot-css/dist/img/img.png"/>
                         </div>
                     </li>
-                    <li></li>
+                    <li>
+                    </li>
                     <li></li>
                 </ul>
             </div>
