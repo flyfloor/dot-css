@@ -5,7 +5,9 @@
         width: @padding * 3.5;
         height: @padding * 3.5;
         margin: @padding/2 0 0;
+        overflow: hidden;
         img {
+            float: left;
             width: 100%;
             height: 100%;
             background-color: @tiny_gray;
@@ -54,5 +56,31 @@
     }
     >.comments {
         margin-left: @padding * 5;
+    }
+}
+
+@{NS}.item {
+    display: table;
+    margin-bottom: @padding;
+    >.image, >.content {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    >.content {
+        padding-left: @padding;
+    }
+    &.top>.content {
+        vertical-align: top;
+    }
+    &.bottom>.content {
+        vertical-align: bottom;
+    }
+    >.image {
+        overflow: hidden;
+        >img {
+            float: left;
+            max-width: 100%;
+            height: auto;
+        }
     }
 }

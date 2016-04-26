@@ -134,17 +134,44 @@ export default class Advanced extends Component {
                         </div>
                     </li>
                     <li>
-                        <h3>List</h3>
+                        <h3>Item</h3>
                         <ul className={CN('list')}>
-                            <li className="item">
-                                <img src="http://braavos.me/dot-css/dist/img/avatar.png" alt="" className="avatar"/>
-                                <div className="content">
-                                    <div className="header">Jerry</div>
-                                    <div className="extra">just push 3 commit to dot-css</div>
+                            <li>
+                                <h4>Item</h4>
+                                <div className={CN('item')}>
+                                    <div className={CN('mini image')}>
+                                        <img src="http://braavos.me/dot-css/dist/img/avatar.png"/>
+                                    </div>
+                                    <div className="content">
+                                        <div className="header">Jerry</div>
+                                        <div className="extra">just push 3 commit to dot-css</div>
+                                    </div>
                                 </div>
                             </li>
-                            <li className="item"></li>
-                            <li className="item"></li>
+                            <li>
+                                <h4>vertical top item</h4>
+                                <div className={CN('item top')}>
+                                    <div className={CN('mini image')}>
+                                        <img src="http://braavos.me/dot-css/dist/img/avatar.png"/>
+                                    </div>
+                                    <div className="content">
+                                        <div className="header">Jerry</div>
+                                        <div className="extra">just push 3 commit to dot-css</div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li className="item">
+                                <h4>vertical bottom item</h4>
+                                <div className={CN('item bottom')}>
+                                    <div className={CN('mini image')}>
+                                        <img src="http://braavos.me/dot-css/dist/img/avatar.png"/>
+                                    </div>
+                                    <div className="content">
+                                        <div className="header">Jerry</div>
+                                        <div className="extra">just push 3 commit to dot-css</div>
+                                    </div>
+                                </div>
+                            </li>
                             <li className="item"></li>
                             <li className="item"></li>
                         </ul>
