@@ -16,11 +16,10 @@ const labeledInput = (cn='', invert) => {
 }
 
 const makeInput = (cn='') => {
-    return <div>
+    return <div className={CN('field')}>
                 <div className={CN(`${cn} input`)}>
                     <input type="text" placeholder='search...'/>
                 </div>
-                <br/>
             </div>;
 };
 

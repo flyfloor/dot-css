@@ -133,6 +133,26 @@ export default class Advanced extends Component {
                             </div>
                         </div>
                     </li>
+                    <li>
+                        <h3>List</h3>
+                        <ul className={CN('list')}>
+                            <li className="item">
+                                <img src="http://braavos.me/dot-css/dist/img/avatar.png" alt="" className="avatar"/>
+                                <div className="content">
+                                    <div className="header">Jerry</div>
+                                    <div className="extra">just push 3 commit to dot-css</div>
+                                </div>
+                            </li>
+                            <li className="item"></li>
+                            <li className="item"></li>
+                            <li className="item"></li>
+                            <li className="item"></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Card</h3>
+
+                    </li>
                 </ul>
             </div>
         );
