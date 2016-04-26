@@ -53,7 +53,12 @@ export default class Image extends Component {
                             <img src="http://braavos.me/dot-css/dist/img/img0.png"/>
                         </div>
                     </li>
-                    <li></li>
+                    <li>
+                        <h3>Fluid image</h3>
+                        <div className={CN('fluid image')}>
+                            <img src="http://braavos.me/dot-css/dist/img/img.png"/>
+                        </div>
+                    </li>
                 </ul>
             </div>
         );
