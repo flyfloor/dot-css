@@ -6,8 +6,10 @@ const makeCard = (cn='card') => {
                 <div className={CN('image')}>
                     <img src="http://braavos.me/dot-css/dist/img/img.png"/>
                 </div>
+                <div className="header">
+                    Header
+                </div>
                 <div className="content">
-                    <p>This is content</p>
                     <p>This is content</p>
                 </div>
                 <div className="extra">
