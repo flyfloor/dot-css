@@ -1,41 +1,27 @@
-.__labelSize(@group) when(@group = false) {
-    ._FONT_PADDING(12, 6);
-    &.tiny {
-        ._FONT_PADDING(8, 4);
+.__setLabelSize(@size, @pd) {
+    &.label {
+        ._FONT_PADDING(@size, @pd);
+    }
+    &:not(.label)>.label {
+       ._FONT_PADDING(@size, @pd); 
+    }
+}
 
+.__labelSize() {
+    .__setLabelSize(12, 6);
+    &.tiny {
+        .__setLabelSize(8, 4);
     }
     &.small {
-        ._FONT_PADDING(10, 5);
+        .__setLabelSize(10, 5);
     }
-
     &.large {
-        ._FONT_PADDING(16, 8);
+        .__setLabelSize(16, 8);
     }
     &.huge {
-        ._FONT_PADDING(20, 10);
+        .__setLabelSize(20, 10);
     }
 }
-
-.__labelSize(@group) when(@group = true) {
-    &.tiny>.label {
-        ._FONT_PADDING(8, 4);
-    }
-    
-    >.label {
-        ._FONT_PADDING(12, 6);
-    }
-
-    &.small>.label {
-        ._FONT_PADDING(10, 5);
-    }
-    &.large>.label {
-        ._FONT_PADDING(16, 8);
-    }
-    &.huge>.label {
-        ._FONT_PADDING(20, 10);
-    }
-}
-
 
 @{NS}.label {
     display: inline-block;
@@ -59,7 +45,7 @@
     }
 
     /*size*/
-    .__labelSize(false);
+    .__labelSize();
 
     /*color label*/
     ._COLOR_EL;
@@ -75,7 +61,7 @@
 
 @{NS}.label-group {
     /*label group size*/
-    .__labelSize(true);
+    .__labelSize();
     >:last-child {
         margin-right: 0;
     }

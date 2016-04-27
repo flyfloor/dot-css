@@ -1,39 +1,28 @@
-.__btnSize(@group) when(@group = false) {
-    ._FONT_PADDING(14, 7);
+.__setButtonSize(@size, @pd) {
+    &.button {
+        ._FONT_PADDING(@size, @pd);
+    }
+    &:not(.button)>.button {
+       ._FONT_PADDING(@size, @pd); 
+    }
+}
+
+.__btnSize() {
+    .__setButtonSize(14, 7);
     &.tiny {
-        ._FONT_PADDING(10, 5);
+        .__setButtonSize(10, 5);
     }
     &.small {
-        ._FONT_PADDING(12, 6);
+        .__setButtonSize(12, 6);
     }
 
     &.large {
-        ._FONT_PADDING(18, 9);
+        .__setButtonSize(18, 9);
     }
     &.huge {
-        ._FONT_PADDING(22, 11);
+        .__setButtonSize(22, 11);
     }
 }
-
-.__btnSize(@group) when(@group = true) {
-    >.button {
-        ._FONT_PADDING(14, 7);
-    }
-    &.tiny>.button {
-        ._FONT_PADDING(10, 5);
-    }
-
-    &.small>.button {
-        ._FONT_PADDING(12, 6);
-    }
-    &.large>.button {
-        ._FONT_PADDING(18, 9);
-    }
-    &.huge>.button {
-        ._FONT_PADDING(22, 11);
-    }
-}
-
 
 @{NS}.button {
     /*style*/
@@ -75,7 +64,7 @@
         width: 100%;
     }
     /*button size*/
-    .__btnSize(false);
+    .__btnSize();
     /*color button*/
     ._COLOR_EL;
     /*floar right clear padding*/
@@ -100,7 +89,7 @@
     /*floar right clear padding*/
     ._F_RIGHT_EL;
     /*button group size*/
-    .__btnSize(true);
+    .__btnSize();
     &.vertical {
         border-radius: 0;
         display: inline-block;

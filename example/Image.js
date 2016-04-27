@@ -1,20 +1,30 @@
 import React, { Component } from 'react';
 import {CN} from './util';
+import {NS} from './setting';
 
 export default class Image extends Component {
     render() {
         return (
             <div>
                 <h2>Image</h2>
-                <blockquote>
-                    <q>This part is about image</q>
+                <blockquote className={CN('blockquote')}>
+                    <p>This part is about image</p>
                 </blockquote>
+                <pre>
+                    <p>Use in two ways</p>
+                    <ol>
+                        <li>{`<img src="image.png" class="${NS} image"/>`}</li>
+                        <li>
+                            <div>{`<div class="${NS} image">`}</div>
+                            <div>{`    <img src="image.png"/>`}</div>
+                            <div>{`</div>`}</div>
+                        </li>
+                    </ol>
+                </pre>
                 <ul>
                     <li>
                         <h3>Image</h3>
-                        <div className={CN('mini image')}>
-                            <img src="http://braavos.me/dot-css/dist/img/img.png"/>
-                        </div>
+                        <img src="http://braavos.me/dot-css/dist/img/img.png" className={CN('mini image')}/>
                         <div className={CN('tiny image')}>
                             <img src="http://braavos.me/dot-css/dist/img/img.png"/>
                         </div>
@@ -33,10 +43,15 @@ export default class Image extends Component {
                         <div className={CN('huge image')}>
                             <img src="http://braavos.me/dot-css/dist/img/img.png"/>
                         </div>
-                        <h4>Round image</h4>
+                        <h4>Round border radius image</h4>
                         <div className={CN('round image')}>
+                            <img src="http://braavos.me/dot-css/dist/img/img0.png"/>
+                        </div>
+                        <h4>Fluid image</h4>
+                        <div className={CN('fluid image')}>
                             <img src="http://braavos.me/dot-css/dist/img/img.png"/>
                         </div>
+                        <br/>
                     </li>
                     <li>
                         <h3>Circle image</h3>
@@ -51,12 +66,6 @@ export default class Image extends Component {
                         <h4>Portrait circle image</h4>
                         <div className={CN('circle small portrait image')}>
                             <img src="http://braavos.me/dot-css/dist/img/img0.png"/>
-                        </div>
-                    </li>
-                    <li>
-                        <h3>Fluid image</h3>
-                        <div className={CN('fluid image')}>
-                            <img src="http://braavos.me/dot-css/dist/img/img.png"/>
                         </div>
                     </li>
                 </ul>

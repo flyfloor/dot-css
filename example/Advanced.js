@@ -151,8 +151,8 @@ export default class Advanced extends Component {
                             <li>
                                 <h4>vertical top item</h4>
                                 <div className={CN('item top')}>
-                                    <div className={CN('mini image')}>
-                                        <img src="http://braavos.me/dot-css/dist/img/avatar.png"/>
+                                    <div className={CN('small image')}>
+                                        <img src="http://braavos.me/dot-css/dist/img/img.png"/>
                                     </div>
                                     <div className="content">
                                         <div className="header">Jerry</div>
@@ -163,7 +163,7 @@ export default class Advanced extends Component {
                             <li className="item">
                                 <h4>vertical bottom item</h4>
                                 <div className={CN('item bottom')}>
-                                    <div className={CN('mini image')}>
+                                    <div className={CN('tiny image')}>
                                         <img src="http://braavos.me/dot-css/dist/img/avatar.png"/>
                                     </div>
                                     <div className="content">

@@ -24,104 +24,68 @@
             }
         }
     }
-    &.fluid {
-        >img {
-            display: block;
-            width: 100%;
+}
+
+.__calcImgSize(@size) {
+    @_width: @padding * @size/10;
+    img& {
+        width: @_width;
+        &.circle {
+            border-radius: @_width/2;
+        }
+    }
+    &:not(img) {
+        .__circleImg(@_width);
+        > img {
+            width: @_width;
         }
     }
 }
 
-.__isAImg(@isImg) when(@isImg = false) {
-    &.middle>img {
-        @_width: @padding * 300/10;
-        width: @_width;
-    }
-    &.mini>img { 
-        width: @padding * 30/10; 
-    }
-    &.tiny>img { 
-        width: @padding * 60/10; 
-    }
-    &.small>img { 
-        width: @padding * 150/10; 
-    }
-    &.large>img { 
-        width: @padding * 450/10; 
-    }
-    &.big>img { 
-        width: @padding * 600/10; 
-    }
-    &.huge>img { 
-        width: @padding * 800/10; 
-    }
-    &.massive>img { 
-        width: @padding * 960/10; 
-    }
-    &.round>img {
-        border-radius: @radius
-    }
-}
-
-.__isAImg(@isImg) when(@isImg = false) {
+.__imgSize() {
     &.middle {
-        @_width: @padding * 300/10;
-        width: @_width;
-        .__circleImg(@_width);
+        .__calcImgSize(300);
     }
     &.mini { 
-        @_width: @padding * 30/10;
-        width: @_width;
-        .__circleImg(@_width);
+        .__calcImgSize(30);
     }
     &.tiny { 
-        @_width: @padding * 60/10; 
-        width: @_width;
-        .__circleImg(@_width);
+        .__calcImgSize(60);
     }
     &.small { 
-        @_width: @padding * 150/10; 
-        width: @_width;
-        .__circleImg(@_width);
+        .__calcImgSize(150);
     }
     &.large { 
-        @_width: @padding * 450/10; 
-        width: @_width;
-        .__circleImg(@_width);
+        .__calcImgSize(450);
     }
     &.big { 
-        @_width: @padding * 600/10; 
-        width: @_width;
-        .__circleImg(@_width);
+        .__calcImgSize(600);
     }
     &.huge { 
-        @_width: @padding * 800/10; 
-        width: @_width;
-        .__circleImg(@_width);
+        .__calcImgSize(800);
     }
     &.massive { 
-        @_width: @padding * 960/10; 
-        width: @_width;
-        .__circleImg(@_width);
+        .__calcImgSize(860);
     }
     &.round {
         border-radius: @radius
     }
+    &.fluid {
+        display: block;
+        width: 100%;
+    }
 }
-
 
 @{NS}.image {
     &:not(img) {
-        .__isAImg(false);
         >img {
             max-width: 100%;
             height: auto;
         }
     }
-}
-
-img@{NS}.image {
-    max-width: 100%;
-    height: auto;
-    .__isAImg(true)
+    img& {
+        max-width: 100%;
+        height: auto;
+    }
+    .__imgSize();
 }
