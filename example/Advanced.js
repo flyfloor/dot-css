@@ -196,11 +196,32 @@ export default class Advanced extends Component {
                         <ul>
                             <li>
                                 <h4>One Card</h4>
-                                {makeCard(CN('card'))}
+                                <div className={CN('card')}>
+                                    <div className={CN('image')}>
+                                        <img src="http://braavos.me/dot-css/dist/img/avatar.png"/>
+                                    </div>
+                                    <div className="content">
+                                        <p>This is content</p>
+                                        <p>This is content</p>
+                                    </div>
+                                    <div className="extra">
+                                        <p>This is extra data</p>
+                                    </div>
+                                </div>
                             </li>
                             <li>
                                 <h4>Cards</h4>
                                 <div className={CN('cards')}>
+                                    {makeCard()}
+                                    {makeCard()}
+                                    {makeCard()}
+                                    {makeCard()}
+                                    {makeCard()}
+                                </div>
+                            </li>
+                            <li>
+                                <h4>Cards with given count</h4>
+                                <div className={CN('cards cards-5')}>
                                     {makeCard()}
                                     {makeCard()}
                                     {makeCard()}

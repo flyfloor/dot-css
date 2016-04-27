@@ -1,7 +1,7 @@
-.__ftPd(@size, @_pd){
+._FONT_PADDING(@size, @_pd){
     @_padding: @padding * @_pd/10;
     padding: @_padding @_padding * 2;
-    @_font: @line-height * @size/15;
+    @_font: @line_height * @size/15;
     font-size: @_font;
     line-height: @_font;
     >@{NS}.icon {
@@ -61,8 +61,4 @@
     &.circle, &.round {
         border-radius: @size + @_font / 2;
     }
-}
-
-._FONT_PADDING(@size, @_pd) {
-    .__ftPd(@size, @_pd);
 }

@@ -1,4 +1,4 @@
-.make-columns(@n, @i: 1) when (@i =< @n) {
+.__makeColumns(@n, @i: 1) when (@i =< @n) {
     &.grid-@{i} {
         >.row>.column {
             width: 100% / @i;
@@ -7,10 +7,10 @@
             width: 100% / @i;
         }
     }
-    .make-columns(@n, (@i + 1));
+    .__makeColumns(@n, (@i + 1));
 }
 
-.make-wide-columns(@n, @i: 1) when (@i =< @n) {
+.__makeWideColumns(@n, @i: 1) when (@i =< @n) {
     >.column.column-@{i} {
         width: (@i / @column_count) * 100%;
     }
@@ -19,16 +19,16 @@
             width: (@i / @column_count) * 100%;
         }
     }
-    .make-wide-columns(@n, (@i + 1));
+    .__makeWideColumns(@n, (@i + 1));
 }
 
-.make-row-column(@n, @i: 1) when (@i =< @n) {
+.__makeRowColumn(@n, @i: 1) when (@i =< @n) {
     &.column-@{i} {
         >.column {
             width: 100% / @i;
         }
     }
-    .make-row-column(@n, (@i + 1));
+    .__makeRowColumn(@n, (@i + 1));
 }
 
 @{NS}.grid {
@@ -46,9 +46,9 @@
             float: left;
         }
     }
-    .make-wide-columns(@column_count);
-    .make-columns(@column_count);
+    .__makeWideColumns(@column_count);
+    .__makeColumns(@column_count);
     >.row {
-        .make-row-column(@column_count);
+        .__makeRowColumn(@column_count);
     }
 }

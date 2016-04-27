@@ -32,11 +32,11 @@
             color: @black;
         }
         >.text {
-            font-size: @line-height * 14/15;
+            font-size: @line_height * 14/15;
             margin-bottom: @padding /2;
         }
         >.extra {
-            font-size: @line-height * 12/15;
+            font-size: @line_height * 12/15;
             color: @gray;
             display: inline-block;
             margin-left: @padding /2;
@@ -48,7 +48,7 @@
             }
         }
         >.action {
-            font-size: @line-height * 13/15;
+            font-size: @line_height * 13/15;
             >a {
                 margin-right: @padding/2;
             }
@@ -103,8 +103,22 @@
     .__cardView();
 }
 
+.__cardSize(@size) {
+    >.card {
+        width: calc(~'100%/@{size} - @{padding}* 2');
+    }
+}
+
+.__makeEqualCards(@n, @i: 1) when (@i =< @n) {
+    &.cards-@{i} {
+        .__cardSize(@i);
+    }
+    .__makeEqualCards(@n, (@i + 1));
+}
+
 @{NS}.cards {
     margin: 0 -1 * @padding;
+    overflow: hidden;
     >.card {
         .__cardView();
         margin: @padding;
@@ -113,4 +127,5 @@
         line-height: 100%;
         height: 100%;
     }
+    .__makeEqualCards(@column_count)
 }
