@@ -1,6 +1,21 @@
 import React, { Component } from 'react';
 import {CN} from './util';
 
+const makeCard = (cn='card') => {
+    return <div className={cn}>
+                <div className={CN('image')}>
+                    <img src="http://braavos.me/dot-css/dist/img/img.png"/>
+                </div>
+                <div className="content">
+                    <p>This is content</p>
+                    <p>This is content</p>
+                </div>
+                <div className="extra">
+                    <p>This is extra data</p>
+                </div>
+            </div>;
+};
+
 export default class Advanced extends Component {
     render() {
         return (
@@ -178,7 +193,22 @@ export default class Advanced extends Component {
                     </li>
                     <li>
                         <h3>Card</h3>
-
+                        <ul>
+                            <li>
+                                <h4>One Card</h4>
+                                {makeCard(CN('card'))}
+                            </li>
+                            <li>
+                                <h4>Cards</h4>
+                                <div className={CN('cards')}>
+                                    {makeCard()}
+                                    {makeCard()}
+                                    {makeCard()}
+                                    {makeCard()}
+                                    {makeCard()}
+                                </div>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </div>
