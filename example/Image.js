@@ -2,6 +2,15 @@ import React, { Component } from 'react';
 import {CN} from './util';
 import {NS} from './setting';
 
+const makeImage = (cn) => {
+    return  <div>
+                <h4>{`${cn} size image`}</h4>
+                <div className={CN(`${cn} image`)}>
+                    <img src="http://braavos.me/dot-css/dist/img/img.png"/>
+                </div>
+            </div>
+};
+
 export default class Image extends Component {
     render() {
         return (
@@ -25,24 +34,13 @@ export default class Image extends Component {
                     <li>
                         <h3>Image</h3>
                         <img src="http://braavos.me/dot-css/dist/img/img.png" className={CN('mini image')}/>
-                        <div className={CN('tiny image')}>
-                            <img src="http://braavos.me/dot-css/dist/img/img.png"/>
-                        </div>
-                        <div className={CN('small image')}>
-                            <img src="http://braavos.me/dot-css/dist/img/img.png"/>
-                        </div>
-                        <div className={CN('middle image')}>
-                            <img src="http://braavos.me/dot-css/dist/img/img.png"/>
-                        </div>
-                        <div className={CN('large image')}>
-                            <img src="http://braavos.me/dot-css/dist/img/img.png"/>
-                        </div>
-                        <div className={CN('big image')}>
-                            <img src="http://braavos.me/dot-css/dist/img/img.png"/>
-                        </div>
-                        <div className={CN('huge image')}>
-                            <img src="http://braavos.me/dot-css/dist/img/img.png"/>
-                        </div>
+                        {makeImage('tiny')}
+                        {makeImage('small')}
+                        {makeImage('middle')}
+                        {makeImage('large')}
+                        {makeImage('big')}
+                        {makeImage('huge')}
+                        {makeImage('massive')}
                         <h4>Round border radius image</h4>
                         <div className={CN('round image')}>
                             <img src="http://braavos.me/dot-css/dist/img/img0.png"/>

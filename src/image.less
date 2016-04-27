@@ -36,7 +36,7 @@
     }
     &:not(img) {
         .__circleImg(@_width);
-        > img {
+        >img {
             width: @_width;
         }
     }
@@ -67,9 +67,6 @@
     &.massive { 
         .__calcImgSize(860);
     }
-    &.round {
-        border-radius: @radius
-    }
     &.fluid {
         display: block;
         width: 100%;
@@ -82,10 +79,16 @@
             max-width: 100%;
             height: auto;
         }
+        &.round>img {
+            border-radius: @radius;
+        }
     }
     img& {
         max-width: 100%;
         height: auto;
+        &.round {
+            border-radius: @radius;
+        }
     }
     .__imgSize();
 }

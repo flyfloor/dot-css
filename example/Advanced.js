@@ -154,7 +154,7 @@ export default class Advanced extends Component {
                         <h3>Item</h3>
                         <ul className={CN('list')}>
                             <li>
-                                <h4>Item</h4>
+                                <h4>Default Item(vertical center)</h4>
                                 <div className={CN('item')}>
                                     <div className={CN('mini image')}>
                                         <img src="http://braavos.me/dot-css/dist/img/avatar.png"/>
