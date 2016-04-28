@@ -1,3 +1,8 @@
+@import url('meta');
+@import url('color');
+@import url('_font-padding');
+@import url('_color-el');
+
 .__setLabelSize(@size, @pd) {
     &.label {
         ._FONT_PADDING(@size, @pd);
@@ -33,7 +38,7 @@
     vertical-align: middle;
     border-radius: @radius;
     &:not(a){
-        cursor: default;
+        cursor: text;
     }
     &.angled {
         border-radius: 0;
@@ -47,9 +52,9 @@
     /*size*/
     .__labelSize();
     /*color label*/
-    ._COLOR_EL;
+    ._COLOR_EL();
     /*floar right clear padding*/
-    ._F_RIGHT_EL;
+    ._F_RIGHT_EL();
 
     &.basic {
         border: 1px solid @gray;
@@ -65,5 +70,5 @@
         margin-right: 0;
     }
     /*floar right clear padding*/
-    ._F_RIGHT_EL;
+    ._F_RIGHT_EL();
 }

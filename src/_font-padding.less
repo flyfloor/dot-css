@@ -1,3 +1,5 @@
+@import url('meta');
+
 ._FONT_PADDING(@size, @_pd){
     @_padding: @padding * @_pd/10;
     padding: @_padding @_padding * 2;
@@ -53,7 +55,7 @@
         width: 0;
         height: 0;
         >.icon {
-            ._AB_CENTER;
+            ._AB_CENTER();
             line-height: initial;
         }
     }

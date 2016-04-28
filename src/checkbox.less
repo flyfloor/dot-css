@@ -1,3 +1,6 @@
+@import url('meta');
+@import url('color');
+
 @{NS}.checkbox, @{NS}.radio {
     position: relative;
     display: inline-block;
@@ -7,7 +10,7 @@
     vertical-align: middle;
     input {
         &[type=checkbox], &[type=radio] {
-            ._AB_CENTER;
+            ._AB_CENTER();
             width: 100%;
             height: 100%;
             opacity: 0;

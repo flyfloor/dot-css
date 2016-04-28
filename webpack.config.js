@@ -9,13 +9,13 @@ module.exports = {
     entry: "./entre.js",
     output: {
         path: path.join(__dirname, 'dist'),
-        filename: 'dot.js',
+        filename: 'example.js',
         publicPath: publicPath
     },
     plugins: [
         new webpack.optimize.OccurenceOrderPlugin(),
         // new webpack.HotModuleReplacementPlugin(),
-        new ExtractTextPlugin("dot.css"),
+        new ExtractTextPlugin("example.css"),
         new webpack.NoErrorsPlugin(),
         // new webpack.optimize.UglifyJsPlugin({
         //     sourceMap: false,

@@ -1,3 +1,5 @@
+@import url('meta');
+
 /* fallback */
 @font-face {
   font-family: @icon_family;
@@ -7,6 +9,7 @@
 }
 
 i.dot.icon {
+  ._NO_USER_SELECT();
   font-style: normal;
   font-family: @icon_family;
   font-weight: normal;
@@ -20,7 +23,6 @@ i.dot.icon {
   word-wrap: normal;
   direction: ltr;
   opacity: .95;
-  ._NO_USER_SELECT;
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
   &:hover {
