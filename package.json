@@ -8,7 +8,7 @@
     "dev": "NODE_ENV=dev node server.js",
     "prod": "NODE_ENV=prod node server.js",
     "build:demo": "webpack -p",
-    "build": "lessc --clean-css src/dot.less dist/dot.min.css&lessc src/dot.less dist/dot.css"
+    "build": "webpack -p&&lessc --clean-css src/dot.less dist/dot.min.css&&lessc src/dot.less dist/dot.css"
   },
   "repository": {
     "type": "git",
