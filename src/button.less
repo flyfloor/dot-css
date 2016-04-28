@@ -3,29 +3,35 @@
 @import url('_font-padding');
 @import url('_color-el');
 
-.__setButtonSize(@size, @pd) {
-    &.button {
-        ._FONT_PADDING(@size, @pd);
+.__btnGroupSize(@group) when(@group = false) {
+    ._FONT_PADDING(14, 7);
+    &.tiny {
+        ._FONT_PADDING(10, 5);
     }
-    &:not(.button)>.button {
-       ._FONT_PADDING(@size, @pd); 
+    &.small {
+        ._FONT_PADDING(12, 6);
+    }
+    &.large {
+        ._FONT_PADDING(18, 9);
+    }
+    &.huge {
+        ._FONT_PADDING(22, 11);
     }
 }
 
-.__btnSize() {
-    .__setButtonSize(14, 7);
-    &.tiny {
-        .__setButtonSize(10, 5);
+.__btnGroupSize(@group) when(@group = true) {
+    &>.button {._FONT_PADDING(14, 7);}
+    &.tiny > .button {
+        ._FONT_PADDING(10, 5);
     }
-    &.small {
-        .__setButtonSize(12, 6);
+    &.small > .button {
+        ._FONT_PADDING(12, 6);
     }
-
-    &.large {
-        .__setButtonSize(18, 9);
+    &.large > .button {
+        ._FONT_PADDING(18, 9);
     }
-    &.huge {
-        .__setButtonSize(22, 11);
+    &.huge > .button {
+        ._FONT_PADDING(22, 11);
     }
 }
 
@@ -69,7 +75,7 @@
         width: 100%;
     }
     /*button size*/
-    .__btnSize();
+    .__btnGroupSize(false);
     /*color button*/
     ._COLOR_EL();
     /*floar right clear padding*/
@@ -77,10 +83,11 @@
 }
 
 @{NS}.button-group {
+    display: inline-block;
+    margin: 0 @padding @padding 0;
     >.button {
-        margin-right: 0;
         border-radius: 0;
-        margin-bottom: @padding;
+        margin: 0 !important;
         &:first-child {
             border-top-left-radius: @radius;
             border-bottom-left-radius: @radius;
@@ -91,22 +98,13 @@
             margin-right: @padding;
         }
     }
-    /*floar right clear padding*/
-    ._F_RIGHT_EL();
-    /*button group size*/
-    .__btnSize();
     &.vertical {
         border-radius: 0;
-        display: inline-block;
-        margin: 0 0 @padding 0;
-        &:not(.float-right) {
-            margin-right: @padding;
-        }
+        margin: 0 @padding @padding 0;
         >.button {
             width: 100%;
             display: block;
             border-radius: 0;
-            margin: 0;
             &:first-child {
                 border-top-left-radius: @radius;
                 border-top-right-radius: @radius;
@@ -117,4 +115,8 @@
             }
         }
     }
+    /*floar right clear padding*/
+    ._F_RIGHT_EL();
+    /*button group size*/
+    .__btnGroupSize(true);
 }

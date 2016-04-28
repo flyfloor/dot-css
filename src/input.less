@@ -16,18 +16,14 @@
         &.fluid {
             display: block;
         }
-        input {
-            &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
-                padding-right: @_padding * 2 + @_lh + 4px;
-            }
+        @{input_field} {
+            padding-right: @_padding * 2 + @_lh + 4px;
         }
 
         &.left {
-            input {
-                &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
-                    padding-left: @_padding * 2 + @_lh + 4px;
-                    padding-right: @_padding;
-                }
+            @{input_field} {
+                padding-left: @_padding * 2 + @_lh + 4px;
+                padding-right: @_padding;
             }
         }
     }
@@ -64,10 +60,8 @@
     }
 
     &.angled {
-        input {
-            &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
-                border-radius: 0;
-            }
+        @{input_field} {
+            border-radius: 0;
         }
         textarea, .button, .icon {
             border-radius: 0;
@@ -75,10 +69,8 @@
     }
 
     &.fluid {
-        input {
-            &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
-                width: 100%;
-            }
+        @{input_field} {
+            width: 100%;
         }
         textarea {
             width: 100%;
@@ -95,10 +87,8 @@
             display: table-cell;
             margin: 0;
         }
-        input {
-            &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
-                width: 100%;
-            }
+        @{input_field} {
+            width: 100%;
         }
         textarea {
             width: 100%;
@@ -136,12 +126,8 @@
     &.huge {
         .__inputSize(22, 11);
     }
-    input {
-        &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
-            &:focus {
-                border-color: @light_blue;
-            }
-        }
+    @{input_focus_field} {
+        border-color: @light_blue;
     }
     textarea {
         &:focus {
@@ -149,11 +135,9 @@
         }
     }
     &.focus {
-        input {
-            &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email']{
-                border-color: @light_blue;
-            } 
-        }
+        @{input_field} {
+            border-color: @light_blue;
+        } 
         textarea {
             border-color: @light_blue;
         }
@@ -163,11 +147,11 @@
             disabled: disabled;
             cursor: not-allowed;
             pointer-events: none;
-            &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
-                border-color: @light_gray;
-                background-color: @mini_gray;
-                opacity: .85;
-            }
+        }
+        @{input_field} {
+            border-color: @light_gray;
+            background-color: @mini_gray;
+            opacity: .85;
         }
         textarea {
             cursor: not-allowed;
@@ -178,12 +162,10 @@
         }
     }
     &.error {
-        input {
-            &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
-                border-color: @red;
-                &:focus {
-                    border-color: @light_red;
-                }
+        @{input_field} {
+            border-color: @red;
+            &:focus {
+                border-color: @light_red;
             }
         }
         textarea {
@@ -205,10 +187,8 @@
             left: 0;
             right: initial;
         }
-        input {
-            &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'], &textarea {
-                width: 100%;
-            }
+        @{input_field} {
+            width: 100%;
         }
     }
 }

@@ -121,6 +121,15 @@ export default class Button extends Component {
                         </div>
                     </li>
                     <li>
+                        <h3>Button size</h3>
+                        <button className={CN('tiny button')}>tiny</button>
+                        <button className={CN('small button')}>small</button>
+                        <button className={CN('button')}>normal</button>
+                        <button className={CN('large button')}>large</button>
+                        <button className={CN('huge button')}>huge</button>
+                        <br/>
+                    </li>
+                    <li>
                         <h3>Button group share same size</h3>
                         <div className={CN('button-group')}>
                             <div className={CN('button')}>first</div>
@@ -136,15 +145,6 @@ export default class Button extends Component {
                         <br/>
                     </li>
                     <li>
-                        <h3>Button size</h3>
-                        <button className={CN('tiny button')}>tiny</button>
-                        <button className={CN('small button')}>small</button>
-                        <button className={CN('button')}>normal</button>
-                        <button className={CN('large button')}>large</button>
-                        <button className={CN('huge button')}>huge</button>
-                        <br/>
-                    </li>
-                    <li>
                         <h3>Labeled button group</h3>
                         <div className={CN('vertical button-group')}>
                             <div className={CN('labeled button')}>
@@ -157,11 +157,21 @@ export default class Button extends Component {
                                 <i className={CN('icon')}>headset</i>
                             </div>
                         </div>
-                        {labelBtnGroup('tiny')}
-                        {labelBtnGroup('small')}
-                        {labelBtnGroup()}
-                        {labelBtnGroup('large')}
-                        {labelBtnGroup('huge')}
+                        <div>
+                            {labelBtnGroup('tiny')}
+                        </div>
+                        <div>
+                            {labelBtnGroup('small')}
+                        </div>
+                        <div>
+                            {labelBtnGroup()}
+                        </div>
+                        <div>
+                            {labelBtnGroup('large')}
+                        </div>
+                        <div>
+                            {labelBtnGroup('huge')}
+                        </div>
                     </li>
                 </ul>
             </div>

@@ -3,28 +3,35 @@
 @import url('_font-padding');
 @import url('_color-el');
 
-.__setLabelSize(@size, @pd) {
-    &.label {
-        ._FONT_PADDING(@size, @pd);
+.__labelGroupSize(@group) when(@group = false) {
+    ._FONT_PADDING(12, 6);
+    &.tiny {
+        ._FONT_PADDING(8, 4);
     }
-    &:not(.label)>.label {
-       ._FONT_PADDING(@size, @pd); 
+    &.small {
+        ._FONT_PADDING(10, 5);
+    }
+    &.large {
+        ._FONT_PADDING(16, 8);
+    }
+    &.huge {
+        ._FONT_PADDING(20, 10);
     }
 }
 
-.__labelSize() {
-    .__setLabelSize(12, 6);
-    &.tiny {
-        .__setLabelSize(8, 4);
+.__labelGroupSize(@group) when(@group = true) {
+    &>.label {._FONT_PADDING(12, 6);}
+    &.tiny > .label {
+        ._FONT_PADDING(8, 4);
     }
-    &.small {
-        .__setLabelSize(10, 5);
+    &.small > .label {
+        ._FONT_PADDING(10, 5);
     }
-    &.large {
-        .__setLabelSize(16, 8);
+    &.large > .label {
+        ._FONT_PADDING(16, 8);
     }
-    &.huge {
-        .__setLabelSize(20, 10);
+    &.huge > .label {
+        ._FONT_PADDING(20, 10);
     }
 }
 
@@ -37,9 +44,7 @@
     background-color: @tiny_gray;
     vertical-align: middle;
     border-radius: @radius;
-    &:not(a){
-        cursor: text;
-    }
+    cursor: pointer;
     &.angled {
         border-radius: 0;
     }
@@ -50,7 +55,7 @@
     }
 
     /*size*/
-    .__labelSize();
+    .__labelGroupSize(false);
     /*color label*/
     ._COLOR_EL();
     /*floar right clear padding*/
@@ -65,7 +70,7 @@
 
 @{NS}.label-group {
     /*label group size*/
-    .__labelSize();
+    .__labelGroupSize(true);
     >:last-child {
         margin-right: 0;
     }
