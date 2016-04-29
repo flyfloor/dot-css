@@ -2,21 +2,31 @@ import React, { Component } from 'react';
 import {CN} from './util';
 
 const makeCard = (cn='card') => {
-    return <div className={cn}>
-                <div className={CN('image')}>
-                    <img src="http://braavos.me/dot-css/dist/img/img.png"/>
-                </div>
-                <div className="header">
-                    Header
-                </div>
-                <div className="content">
-                    <p>This is content</p>
-                </div>
-                <div className="extra">
-                    <p>This is extra data</p>
-                </div>
-            </div>;
+    return (
+        <div className={cn}>
+            <div className={CN('image')}>
+                <img src="http://braavos.me/dot-css/dist/img/img.png"/>
+            </div>
+            <div className="header">
+                Header
+            </div>
+            <div className="content">
+                <p>This is content</p>
+            </div>
+            <div className="extra">
+                <p>This is extra data</p>
+            </div>
+        </div>
+    );
 };
+
+const makeMessage = (cn='') => {
+    return (
+        <div className={CN(`${cn} message`)}>
+            <p><span>{cn ? `${cn}: `: null}</span> edit your feed by updating the users you follow and repositories you watch</p>
+        </div>
+    );
+}
 
 export default class Advanced extends Component {
     render() {
@@ -230,6 +240,42 @@ export default class Advanced extends Component {
                                     {makeCard()}
                                     {makeCard()}
                                 </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Message</h3>
+                        <ul>
+                            <li>
+                                <h4>Default Message</h4>
+                                <div className={CN('message')}>
+                                    <h3 className="header">ProTips</h3>
+                                    <p>Edit your feed by updating the users you follow and repositories you watch.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <h4>Icon Message</h4>
+                                <div className={CN('icon message')}>
+                                    <i className={CN('icon')}>translate</i>
+                                    <div className="content">
+                                        <p>Edit your feed by updating the users you follow and repositories you watch.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <h4>Status Message</h4>
+                                {makeMessage('info')}
+                                {makeMessage('warning')}
+                                {makeMessage('success')}
+                                {makeMessage('error')}
+                            </li>
+                            <li>
+                                <h4>Size</h4>
+                                {makeMessage('tiny')}
+                                {makeMessage('small')}
+                                {makeMessage('')}
+                                {makeMessage('large')}
+                                {makeMessage('huge')}
                             </li>
                         </ul>
                     </li>

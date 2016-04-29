@@ -4525,6 +4525,340 @@ img.dot.image.massive.circle {
 .dot.cards.cards-16 > .card {
   width: calc(100%/16 - 10px* 2);
 }
+.dot.message {
+  padding: 10px;
+  margin: 10px 0;
+  color: #616161;
+  border-radius: 3px;
+  background-color: #FAFAFA;
+  border: 1px solid #EEEEEE;
+  padding: 9px 18px;
+  font-size: 15px;
+  line-height: 15px;
+}
+.dot.message > .header {
+  line-height: initial;
+  color: #212121;
+}
+.dot.message.icon > .icon,
+.dot.message.icon > .content {
+  display: table-cell;
+  vertical-align: middle;
+}
+.dot.message.icon > .icon {
+  font-size: inherit;
+  padding-right: 15px;
+}
+.dot.message.info {
+  background-color: #E0F7FA;
+  color: #006064;
+}
+.dot.message.warning {
+  background-color: #F9FBE7;
+  color: #827717;
+}
+.dot.message.success {
+  color: #4CAF50;
+}
+.dot.message.error {
+  background-color: #FFEBEE;
+  color: #B71C1C;
+}
+.dot.message > .dot.icon {
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 15px;
+  width: 15px;
+  height: 15px;
+}
+.dot.message.icon .icon {
+  vertical-align: top;
+  /*default icon left*/
+  margin: 0 7px 0 -7px;
+  opacity: .95;
+}
+.dot.message.icon .icon:hover {
+  opacity: 1;
+}
+.dot.message.icon :last-child.icon {
+  margin: 0 -7px 0 7px;
+}
+.dot.message.image img {
+  max-width: none;
+  max-height: none;
+  display: inline-block;
+  height: 33px;
+  margin: -9px 9px -9px -18px;
+  border-radius: 3px 0 0 3px;
+  vertical-align: top;
+}
+.dot.message.image :last-child.image {
+  border-radius: 0 3px 3px 0;
+  margin: -9px -18px -9px 9px;
+}
+.dot.message.circle,
+.dot.message.labeled {
+  padding: 15px;
+}
+.dot.message.circle,
+.dot.message.labeled {
+  width: 0;
+  height: 0;
+}
+.dot.message.circle > .icon,
+.dot.message.labeled > .icon {
+  position: absolute !important;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  line-height: initial;
+}
+.dot.message.circle,
+.dot.message.round {
+  border-radius: 22.5px;
+}
+.dot.message.tiny {
+  padding: 6px 12px;
+  font-size: 10px;
+  line-height: 10px;
+}
+.dot.message.tiny > .dot.icon {
+  cursor: pointer;
+  font-size: 10px;
+  line-height: 10px;
+  width: 10px;
+  height: 10px;
+}
+.dot.message.tiny.icon .icon {
+  vertical-align: top;
+  /*default icon left*/
+  margin: 0 4px 0 -4px;
+  opacity: .95;
+}
+.dot.message.tiny.icon .icon:hover {
+  opacity: 1;
+}
+.dot.message.tiny.icon :last-child.icon {
+  margin: 0 -4px 0 4px;
+}
+.dot.message.tiny.image img {
+  max-width: none;
+  max-height: none;
+  display: inline-block;
+  height: 22px;
+  margin: -6px 6px -6px -12px;
+  border-radius: 3px 0 0 3px;
+  vertical-align: top;
+}
+.dot.message.tiny.image :last-child.image {
+  border-radius: 0 3px 3px 0;
+  margin: -6px -12px -6px 6px;
+}
+.dot.message.tiny.circle,
+.dot.message.tiny.labeled {
+  padding: 10px;
+}
+.dot.message.tiny.circle,
+.dot.message.tiny.labeled {
+  width: 0;
+  height: 0;
+}
+.dot.message.tiny.circle > .icon,
+.dot.message.tiny.labeled > .icon {
+  position: absolute !important;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  line-height: initial;
+}
+.dot.message.tiny.circle,
+.dot.message.tiny.round {
+  border-radius: 15px;
+}
+.dot.message.small {
+  padding: 7px 14px;
+  font-size: 12px;
+  line-height: 12px;
+}
+.dot.message.small > .dot.icon {
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 12px;
+  width: 12px;
+  height: 12px;
+}
+.dot.message.small.icon .icon {
+  vertical-align: top;
+  /*default icon left*/
+  margin: 0 5px 0 -5px;
+  opacity: .95;
+}
+.dot.message.small.icon .icon:hover {
+  opacity: 1;
+}
+.dot.message.small.icon :last-child.icon {
+  margin: 0 -5px 0 5px;
+}
+.dot.message.small.image img {
+  max-width: none;
+  max-height: none;
+  display: inline-block;
+  height: 26px;
+  margin: -7px 7px -7px -14px;
+  border-radius: 3px 0 0 3px;
+  vertical-align: top;
+}
+.dot.message.small.image :last-child.image {
+  border-radius: 0 3px 3px 0;
+  margin: -7px -14px -7px 7px;
+}
+.dot.message.small.circle,
+.dot.message.small.labeled {
+  padding: 12px;
+}
+.dot.message.small.circle,
+.dot.message.small.labeled {
+  width: 0;
+  height: 0;
+}
+.dot.message.small.circle > .icon,
+.dot.message.small.labeled > .icon {
+  position: absolute !important;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  line-height: initial;
+}
+.dot.message.small.circle,
+.dot.message.small.round {
+  border-radius: 18px;
+}
+.dot.message.large {
+  padding: 12px 24px;
+  font-size: 20px;
+  line-height: 20px;
+}
+.dot.message.large > .dot.icon {
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 20px;
+  width: 20px;
+  height: 20px;
+}
+.dot.message.large.icon .icon {
+  vertical-align: top;
+  /*default icon left*/
+  margin: 0 10px 0 -10px;
+  opacity: .95;
+}
+.dot.message.large.icon .icon:hover {
+  opacity: 1;
+}
+.dot.message.large.icon :last-child.icon {
+  margin: 0 -10px 0 10px;
+}
+.dot.message.large.image img {
+  max-width: none;
+  max-height: none;
+  display: inline-block;
+  height: 44px;
+  margin: -12px 12px -12px -24px;
+  border-radius: 3px 0 0 3px;
+  vertical-align: top;
+}
+.dot.message.large.image :last-child.image {
+  border-radius: 0 3px 3px 0;
+  margin: -12px -24px -12px 12px;
+}
+.dot.message.large.circle,
+.dot.message.large.labeled {
+  padding: 20px;
+}
+.dot.message.large.circle,
+.dot.message.large.labeled {
+  width: 0;
+  height: 0;
+}
+.dot.message.large.circle > .icon,
+.dot.message.large.labeled > .icon {
+  position: absolute !important;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  line-height: initial;
+}
+.dot.message.large.circle,
+.dot.message.large.round {
+  border-radius: 30px;
+}
+.dot.message.huge {
+  padding: 15px 30px;
+  font-size: 25px;
+  line-height: 25px;
+}
+.dot.message.huge > .dot.icon {
+  cursor: pointer;
+  font-size: 25px;
+  line-height: 25px;
+  width: 25px;
+  height: 25px;
+}
+.dot.message.huge.icon .icon {
+  vertical-align: top;
+  /*default icon left*/
+  margin: 0 13px 0 -13px;
+  opacity: .95;
+}
+.dot.message.huge.icon .icon:hover {
+  opacity: 1;
+}
+.dot.message.huge.icon :last-child.icon {
+  margin: 0 -13px 0 13px;
+}
+.dot.message.huge.image img {
+  max-width: none;
+  max-height: none;
+  display: inline-block;
+  height: 55px;
+  margin: -15px 15px -15px -30px;
+  border-radius: 3px 0 0 3px;
+  vertical-align: top;
+}
+.dot.message.huge.image :last-child.image {
+  border-radius: 0 3px 3px 0;
+  margin: -15px -30px -15px 15px;
+}
+.dot.message.huge.circle,
+.dot.message.huge.labeled {
+  padding: 25px;
+}
+.dot.message.huge.circle,
+.dot.message.huge.labeled {
+  width: 0;
+  height: 0;
+}
+.dot.message.huge.circle > .icon,
+.dot.message.huge.labeled > .icon {
+  position: absolute !important;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  line-height: initial;
+}
+.dot.message.huge.circle,
+.dot.message.huge.round {
+  border-radius: 37.5px;
+}
 .dot.figure {
   padding-bottom: 100%;
   position: relative;
