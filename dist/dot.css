@@ -2574,7 +2574,12 @@ i.dot.icon:hover {
   -o-transition: all .3s;
   transition: all .3s;
 }
-.dot.input.angled input[type='text'], input[type='number'], input[type='url'], input[type='tel'], input[type='password'], input[type='email'] {
+.dot.input.angled input[type='text'],
+.dot.input.angled input[type='number'],
+.dot.input.angled input[type='url'],
+.dot.input.angled input[type='tel'],
+.dot.input.angled input[type='password'],
+.dot.input.angled input[type='email'] {
   border-radius: 0;
 }
 .dot.input.angled textarea,
@@ -2582,7 +2587,12 @@ i.dot.icon:hover {
 .dot.input.angled .icon {
   border-radius: 0;
 }
-.dot.input.fluid input[type='text'], input[type='number'], input[type='url'], input[type='tel'], input[type='password'], input[type='email'] {
+.dot.input.fluid input[type='text'],
+.dot.input.fluid input[type='number'],
+.dot.input.fluid input[type='url'],
+.dot.input.fluid input[type='tel'],
+.dot.input.fluid input[type='password'],
+.dot.input.fluid input[type='email'] {
   width: 100%;
 }
 .dot.input.fluid textarea {
@@ -2599,7 +2609,12 @@ i.dot.icon:hover {
   display: table-cell;
   margin: 0;
 }
-.dot.input.action input[type='text'], input[type='number'], input[type='url'], input[type='tel'], input[type='password'], input[type='email'] {
+.dot.input.action input[type='text'],
+.dot.input.action input[type='number'],
+.dot.input.action input[type='url'],
+.dot.input.action input[type='tel'],
+.dot.input.action input[type='password'],
+.dot.input.action input[type='email'] {
   width: 100%;
 }
 .dot.input.action textarea {
@@ -2633,10 +2648,20 @@ i.dot.icon:hover {
 .dot.input.icon.fluid {
   display: block;
 }
-.dot.input.icon input[type='text'], input[type='number'], input[type='url'], input[type='tel'], input[type='password'], input[type='email'] {
+.dot.input.icon input[type='text'],
+.dot.input.icon input[type='number'],
+.dot.input.icon input[type='url'],
+.dot.input.icon input[type='tel'],
+.dot.input.icon input[type='password'],
+.dot.input.icon input[type='email'] {
   padding-right: 32px;
 }
-.dot.input.icon.left input[type='text'], input[type='number'], input[type='url'], input[type='tel'], input[type='password'], input[type='email'] {
+.dot.input.icon.left input[type='text'],
+.dot.input.icon.left input[type='number'],
+.dot.input.icon.left input[type='url'],
+.dot.input.icon.left input[type='tel'],
+.dot.input.icon.left input[type='password'],
+.dot.input.icon.left input[type='email'] {
   padding-left: 32px;
   padding-right: 7px;
 }
@@ -2666,10 +2691,20 @@ i.dot.icon:hover {
 .dot.input.tiny.icon.fluid {
   display: block;
 }
-.dot.input.tiny.icon input[type='text'], input[type='number'], input[type='url'], input[type='tel'], input[type='password'], input[type='email'] {
+.dot.input.tiny.icon input[type='text'],
+.dot.input.tiny.icon input[type='number'],
+.dot.input.tiny.icon input[type='url'],
+.dot.input.tiny.icon input[type='tel'],
+.dot.input.tiny.icon input[type='password'],
+.dot.input.tiny.icon input[type='email'] {
   padding-right: 24px;
 }
-.dot.input.tiny.icon.left input[type='text'], input[type='number'], input[type='url'], input[type='tel'], input[type='password'], input[type='email'] {
+.dot.input.tiny.icon.left input[type='text'],
+.dot.input.tiny.icon.left input[type='number'],
+.dot.input.tiny.icon.left input[type='url'],
+.dot.input.tiny.icon.left input[type='tel'],
+.dot.input.tiny.icon.left input[type='password'],
+.dot.input.tiny.icon.left input[type='email'] {
   padding-left: 24px;
   padding-right: 5px;
 }
@@ -2699,10 +2734,20 @@ i.dot.icon:hover {
 .dot.input.small.icon.fluid {
   display: block;
 }
-.dot.input.small.icon input[type='text'], input[type='number'], input[type='url'], input[type='tel'], input[type='password'], input[type='email'] {
+.dot.input.small.icon input[type='text'],
+.dot.input.small.icon input[type='number'],
+.dot.input.small.icon input[type='url'],
+.dot.input.small.icon input[type='tel'],
+.dot.input.small.icon input[type='password'],
+.dot.input.small.icon input[type='email'] {
   padding-right: 28px;
 }
-.dot.input.small.icon.left input[type='text'], input[type='number'], input[type='url'], input[type='tel'], input[type='password'], input[type='email'] {
+.dot.input.small.icon.left input[type='text'],
+.dot.input.small.icon.left input[type='number'],
+.dot.input.small.icon.left input[type='url'],
+.dot.input.small.icon.left input[type='tel'],
+.dot.input.small.icon.left input[type='password'],
+.dot.input.small.icon.left input[type='email'] {
   padding-left: 28px;
   padding-right: 6px;
 }
@@ -2732,10 +2777,20 @@ i.dot.icon:hover {
 .dot.input.large.icon.fluid {
   display: block;
 }
-.dot.input.large.icon input[type='text'], input[type='number'], input[type='url'], input[type='tel'], input[type='password'], input[type='email'] {
+.dot.input.large.icon input[type='text'],
+.dot.input.large.icon input[type='number'],
+.dot.input.large.icon input[type='url'],
+.dot.input.large.icon input[type='tel'],
+.dot.input.large.icon input[type='password'],
+.dot.input.large.icon input[type='email'] {
   padding-right: 40px;
 }
-.dot.input.large.icon.left input[type='text'], input[type='number'], input[type='url'], input[type='tel'], input[type='password'], input[type='email'] {
+.dot.input.large.icon.left input[type='text'],
+.dot.input.large.icon.left input[type='number'],
+.dot.input.large.icon.left input[type='url'],
+.dot.input.large.icon.left input[type='tel'],
+.dot.input.large.icon.left input[type='password'],
+.dot.input.large.icon.left input[type='email'] {
   padding-left: 40px;
   padding-right: 9px;
 }
@@ -2765,10 +2820,20 @@ i.dot.icon:hover {
 .dot.input.huge.icon.fluid {
   display: block;
 }
-.dot.input.huge.icon input[type='text'], input[type='number'], input[type='url'], input[type='tel'], input[type='password'], input[type='email'] {
+.dot.input.huge.icon input[type='text'],
+.dot.input.huge.icon input[type='number'],
+.dot.input.huge.icon input[type='url'],
+.dot.input.huge.icon input[type='tel'],
+.dot.input.huge.icon input[type='password'],
+.dot.input.huge.icon input[type='email'] {
   padding-right: 48px;
 }
-.dot.input.huge.icon.left input[type='text'], input[type='number'], input[type='url'], input[type='tel'], input[type='password'], input[type='email'] {
+.dot.input.huge.icon.left input[type='text'],
+.dot.input.huge.icon.left input[type='number'],
+.dot.input.huge.icon.left input[type='url'],
+.dot.input.huge.icon.left input[type='tel'],
+.dot.input.huge.icon.left input[type='password'],
+.dot.input.huge.icon.left input[type='email'] {
   padding-left: 48px;
   padding-right: 11px;
 }
@@ -2788,13 +2853,23 @@ i.dot.icon:hover {
   border-top-right-radius: 33px;
   border-bottom-right-radius: 33px;
 }
-.dot.input input[type='text']:focus, input[type='number']:focus, input[type='url']:focus, input[type='tel']:focus, input[type='password']:focus, input[type='email']:focus {
+.dot.input input[type='text']:focus,
+.dot.input input[type='number']:focus,
+.dot.input input[type='url']:focus,
+.dot.input input[type='tel']:focus,
+.dot.input input[type='password']:focus,
+.dot.input input[type='email']:focus {
   border-color: #03A9F4;
 }
 .dot.input textarea:focus {
   border-color: #03A9F4;
 }
-.dot.input.focus input[type='text'], input[type='number'], input[type='url'], input[type='tel'], input[type='password'], input[type='email'] {
+.dot.input.focus input[type='text'],
+.dot.input.focus input[type='number'],
+.dot.input.focus input[type='url'],
+.dot.input.focus input[type='tel'],
+.dot.input.focus input[type='password'],
+.dot.input.focus input[type='email'] {
   border-color: #03A9F4;
 }
 .dot.input.focus textarea {
@@ -2805,7 +2880,12 @@ i.dot.icon:hover {
   cursor: not-allowed;
   pointer-events: none;
 }
-.dot.input.disabled input[type='text'], input[type='number'], input[type='url'], input[type='tel'], input[type='password'], input[type='email'] {
+.dot.input.disabled input[type='text'],
+.dot.input.disabled input[type='number'],
+.dot.input.disabled input[type='url'],
+.dot.input.disabled input[type='tel'],
+.dot.input.disabled input[type='password'],
+.dot.input.disabled input[type='email'] {
   border-color: #EEEEEE;
   background-color: #FAFAFA;
   opacity: .85;
@@ -2817,10 +2897,20 @@ i.dot.icon:hover {
   background-color: #FAFAFA;
   opacity: .85;
 }
-.dot.input.error input[type='text'], input[type='number'], input[type='url'], input[type='tel'], input[type='password'], input[type='email'] {
+.dot.input.error input[type='text'],
+.dot.input.error input[type='number'],
+.dot.input.error input[type='url'],
+.dot.input.error input[type='tel'],
+.dot.input.error input[type='password'],
+.dot.input.error input[type='email'] {
   border-color: #EF5350;
 }
-.dot.input.error input[type='text'], input[type='number'], input[type='url'], input[type='tel'], input[type='password'], input[type='email']:focus {
+.dot.input.error input[type='text']:focus,
+.dot.input.error input[type='number']:focus,
+.dot.input.error input[type='url']:focus,
+.dot.input.error input[type='tel']:focus,
+.dot.input.error input[type='password']:focus,
+.dot.input.error input[type='email']:focus {
   border-color: #EF9A9A;
 }
 .dot.input.error textarea {
@@ -2842,7 +2932,12 @@ i.dot.icon:hover {
   left: 0;
   right: initial;
 }
-.dot.input.icon input[type='text'], input[type='number'], input[type='url'], input[type='tel'], input[type='password'], input[type='email'] {
+.dot.input.icon input[type='text'],
+.dot.input.icon input[type='number'],
+.dot.input.icon input[type='url'],
+.dot.input.icon input[type='tel'],
+.dot.input.icon input[type='password'],
+.dot.input.icon input[type='email'] {
   width: 100%;
 }
 .dot.checkbox,

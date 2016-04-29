@@ -16,14 +16,18 @@
         &.fluid {
             display: block;
         }
-        @{input_field} {
-            padding-right: @_padding * 2 + @_lh + 4px;
+        input {
+            &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
+                padding-right: @_padding * 2 + @_lh + 4px;
+            }
         }
 
         &.left {
-            @{input_field} {
-                padding-left: @_padding * 2 + @_lh + 4px;
-                padding-right: @_padding;
+            input {
+                &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
+                    padding-left: @_padding * 2 + @_lh + 4px;
+                    padding-right: @_padding;
+                }
             }
         }
     }
@@ -60,8 +64,10 @@
     }
 
     &.angled {
-        @{input_field} {
-            border-radius: 0;
+        input {
+            &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
+                border-radius: 0;
+            }
         }
         textarea, .button, .icon {
             border-radius: 0;
@@ -69,8 +75,10 @@
     }
 
     &.fluid {
-        @{input_field} {
-            width: 100%;
+        input {
+            &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
+                width: 100%;
+            }
         }
         textarea {
             width: 100%;
@@ -87,8 +95,10 @@
             display: table-cell;
             margin: 0;
         }
-        @{input_field} {
-            width: 100%;
+        input {
+            &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
+                width: 100%;
+            }
         }
         textarea {
             width: 100%;
@@ -126,8 +136,12 @@
     &.huge {
         .__inputSize(22, 11);
     }
-    @{input_focus_field} {
-        border-color: @light_blue;
+    input {
+        &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
+            &:focus {
+                border-color: @light_blue;
+            }
+        } 
     }
     textarea {
         &:focus {
@@ -135,9 +149,11 @@
         }
     }
     &.focus {
-        @{input_field} {
-            border-color: @light_blue;
-        } 
+        input {
+            &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
+                border-color: @light_blue;
+            } 
+        }
         textarea {
             border-color: @light_blue;
         }
@@ -148,10 +164,12 @@
             cursor: not-allowed;
             pointer-events: none;
         }
-        @{input_field} {
-            border-color: @light_gray;
-            background-color: @mini_gray;
-            opacity: .85;
+        input {
+            &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
+                border-color: @light_gray;
+                background-color: @mini_gray;
+                opacity: .85;
+            }
         }
         textarea {
             cursor: not-allowed;
@@ -162,10 +180,12 @@
         }
     }
     &.error {
-        @{input_field} {
-            border-color: @red;
-            &:focus {
-                border-color: @light_red;
+        input {
+            &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
+                border-color: @red;
+                &:focus {
+                    border-color: @light_red;
+                }
             }
         }
         textarea {
@@ -187,8 +207,10 @@
             left: 0;
             right: initial;
         }
-        @{input_field} {
-            width: 100%;
+        input {
+            &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
+                width: 100%;
+            }
         }
     }
 }
