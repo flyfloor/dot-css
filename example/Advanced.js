@@ -279,6 +279,25 @@ export default class Advanced extends Component {
                             </li>
                         </ul>
                     </li>
+                    <li>
+                        <h3>Progress</h3>
+                        <div className={CN('progress')}>
+                            <div className="bar" style={{width: '20%'}}>
+                            </div>
+                        </div>
+                        <div className={CN('success progress')}>
+                            <div className="bar" style={{width: '100%'}}>
+                            </div>
+                        </div>
+                        <div className={CN('error progress')}>
+                            <div className="bar" style={{width: '30%'}}>
+                            </div>
+                        </div>
+                        <div className={CN('warning progress')}>
+                            <div className="bar" style={{width: '30%'}}>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </div>
         );

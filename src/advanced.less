@@ -193,3 +193,44 @@
     }
     .__messageSize();
 }
+
+@{NS}.progress {
+    position: relative;
+    display: block;
+    @_h: @line_height * 10/15;
+    height: @_h;
+    background-color: @tiny_gray;
+    border-radius: @_h/2;
+    overflow: hidden;
+    margin-bottom: @padding;
+    >.bar {
+        overflow: hidden;
+        -webkit-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+        text-align: center;
+        color: @white;
+        line-height: 10px;
+        background: @blue;
+        border-radius: 10px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+    }
+    &.success {
+        >.bar {
+            background-color: @green;
+        }
+    }
+    &.error {
+        >.bar {
+            background-color: @red;
+        }
+    }
+    &.warning {
+        >.bar {
+            background-color: @orange;
+        }
+    }
+}
