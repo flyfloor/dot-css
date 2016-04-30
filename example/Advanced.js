@@ -281,6 +281,7 @@ export default class Advanced extends Component {
                     </li>
                     <li>
                         <h3>Progress</h3>
+                        <h4>Status Progress</h4>
                         <div className={CN('progress')}>
                             <div className="bar" style={{width: '20%'}}>
                             </div>
@@ -295,6 +296,22 @@ export default class Advanced extends Component {
                         </div>
                         <div className={CN('warning progress')}>
                             <div className="bar" style={{width: '30%'}}>
+                            </div>
+                        </div>
+                        <h4>Progress Size</h4>
+                        <h5>small</h5>
+                        <div className={CN('small progress')}>
+                            <div className="bar" style={{'width': '30%'}}>
+                            </div>
+                        </div>
+                        <h5>default</h5>
+                        <div className={CN('progress')}>
+                            <div className="bar" style={{'width': '30%'}}>
+                            </div>
+                        </div>
+                        <h5>large</h5>
+                        <div className={CN('large progress')}>
+                            <div className="bar" style={{'width': '30%'}}>
                             </div>
                         </div>
                     </li>

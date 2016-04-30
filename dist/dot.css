@@ -4859,6 +4859,57 @@ img.dot.image.massive.circle {
 .dot.message.huge.round {
   border-radius: 37.5px;
 }
+.dot.progress {
+  position: relative;
+  display: block;
+  height: 10px;
+  font-size: 10px;
+  background-color: #F5F5F5;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.dot.progress > .bar {
+  width: 0;
+  font-size: inherit;
+  overflow: hidden;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  text-align: center;
+  color: #ffffff;
+  background-color: #42A5F5;
+  line-height: 100%;
+  vertical-align: middle;
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+.dot.progress.success > .bar {
+  background-color: #66BB6A;
+}
+.dot.progress.error > .bar {
+  background-color: #EF5350;
+}
+.dot.progress.warning > .bar {
+  background-color: #FFA726;
+}
+.dot.progress.small {
+  height: 5px;
+  font-size: 5px;
+}
+.dot.progress.small > .bar {
+  height: 5px;
+}
+.dot.progress.large {
+  height: 15px;
+  font-size: 15px;
+}
+.dot.progress.large > .bar {
+  height: 15px;
+}
 .dot.figure {
   padding-bottom: 100%;
   position: relative;
