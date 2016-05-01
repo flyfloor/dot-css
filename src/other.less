@@ -1,6 +1,12 @@
 @import url('meta');
 @import url('color');
 
+.__paddingFigure(@w, @h){
+    &.figure\:@{w}x@{h} {
+        padding-bottom: @h/@w * 100%;
+    }
+}
+
 @{NS}.figure {
     padding-bottom: 100%;
     position: relative;
@@ -10,15 +16,15 @@
         position: absolute;
         max-width: 100%;
     }
-    &\:1x1  { padding-bottom: 100%; }
-    &\:1x2  { padding-bottom: 200%; }
-    &\:2x1  { padding-bottom: 50%; }
-    &\:2x3  { padding-bottom: 150%; }
-    &\:3x2  { padding-bottom: 66.66%; }
-    &\:3x4  { padding-bottom: 133.333%; }
-    &\:4x3  { padding-bottom: 75%; }
-    &\:9x16 { padding-bottom: 177.777%; }
-    &\:16x9 { padding-bottom: 56.25%; }
-    &\:16x10 { padding-bottom: 62.5%; }
-
+    
+    .__paddingFigure(1, 1);
+    .__paddingFigure(1, 2);
+    .__paddingFigure(2, 1);
+    .__paddingFigure(2, 3);
+    .__paddingFigure(3, 2);
+    .__paddingFigure(3, 4);
+    .__paddingFigure(4, 3);
+    .__paddingFigure(9, 16);
+    .__paddingFigure(16, 9);
+    .__paddingFigure(16, 10);
 }

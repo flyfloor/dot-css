@@ -1112,7 +1112,12 @@ pre {
   display: block;
   padding: 10px;
   border: 1px solid #F5F5F5;
+  background-color: #ffffff;
   margin-bottom: 10px;
+}
+.dot.module.basic {
+  border: none;
+  background-color: initial;
 }
 .dot.absolute-center {
   width: 100%;
@@ -4920,33 +4925,33 @@ img.dot.image.massive.circle {
   position: absolute;
   max-width: 100%;
 }
-.dot.figure\:1x1 {
+.dot.figure.figure\:1x1 {
   padding-bottom: 100%;
 }
-.dot.figure\:1x2 {
+.dot.figure.figure\:1x2 {
   padding-bottom: 200%;
 }
-.dot.figure\:2x1 {
+.dot.figure.figure\:2x1 {
   padding-bottom: 50%;
 }
-.dot.figure\:2x3 {
+.dot.figure.figure\:2x3 {
   padding-bottom: 150%;
 }
-.dot.figure\:3x2 {
-  padding-bottom: 66.66%;
+.dot.figure.figure\:3x2 {
+  padding-bottom: 66.66666667%;
 }
-.dot.figure\:3x4 {
-  padding-bottom: 133.333%;
+.dot.figure.figure\:3x4 {
+  padding-bottom: 133.33333333%;
 }
-.dot.figure\:4x3 {
+.dot.figure.figure\:4x3 {
   padding-bottom: 75%;
 }
-.dot.figure\:9x16 {
-  padding-bottom: 177.777%;
+.dot.figure.figure\:9x16 {
+  padding-bottom: 177.77777778%;
 }
-.dot.figure\:16x9 {
+.dot.figure.figure\:16x9 {
   padding-bottom: 56.25%;
 }
-.dot.figure\:16x10 {
+.dot.figure.figure\:16x10 {
   padding-bottom: 62.5%;
 }
