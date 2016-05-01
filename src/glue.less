@@ -52,7 +52,12 @@
     display: block;
     padding: @padding;
     border: 1px solid @tiny_gray;
+    background-color: @white;
     margin-bottom: @padding;
+    &.basic {
+        border: none;
+        background-color: initial;
+    }
 }
 
 @{NS}.absolute-center {
