@@ -2254,8 +2254,6 @@ i.dot.icon:hover {
 .dot.grid {
   overflow: hidden;
   position: relative;
-  margin: 0;
-  padding: 0;
 }
 .dot.grid > .column {
   float: left;
