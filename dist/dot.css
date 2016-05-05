@@ -1188,6 +1188,7 @@ i.dot.icon:hover {
 }
 .dot.button {
   /*style*/
+  -webkit-appearance: none;
   cursor: pointer;
   display: inline-block;
   text-align: center;
