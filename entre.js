@@ -94,11 +94,11 @@ ReactDOM.render(<Router history={hashHistory}>
                         <Route path="/button" component={Button}></Route>
                         <Route path="/basic" component={Basic}></Route>
                         <Route path="/grid" component={Grid}></Route>
-                        <Route path="/Icon" component={Icon}></Route>
-                        <Route path="/Table" component={Table}></Route>
-                        <Route path="/Input" component={Input}></Route>
-                        <Route path="/Checkbox" component={Checkbox}></Route>
-                        <Route path="/Label" component={Label}></Route>
+                        <Route path="/icon" component={Icon}></Route>
+                        <Route path="/table" component={Table}></Route>
+                        <Route path="/input" component={Input}></Route>
+                        <Route path="/checkbox" component={Checkbox}></Route>
+                        <Route path="/label" component={Label}></Route>
                         <Route path="/text" component={Text}></Route>
                         <Route path="/image" component={Image}></Route>
                         <Route path="/other" component={Other}></Route>
