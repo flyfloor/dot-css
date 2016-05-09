@@ -10,6 +10,7 @@
         padding: @_padding;
         line-height: @_lh;
         height: @_lh + @_padding * 2 + 2px;
+        overflow: hidden;
     }
 
     &.icon {
@@ -86,20 +87,26 @@
     }
 
     &.action {
+        display: table;
         .button {
             border-radius: 0;
             margin-right: 0;
         }
-        display: table;
-        >* {
+
+        >.action, input {
             display: table-cell;
-            margin: 0;
+            vertical-align: bottom;
+        }
+        >.action>.button {
+            display: block;
+            border-radius: inherit;
         }
         input {
             &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
                 width: 100%;
             }
         }
+
         textarea {
             width: 100%;
         }
@@ -117,7 +124,7 @@
         }
         &.fluid {
             width: 100%;
-            .button {
+            >.action {
                 width: 5em;
             }
         }

@@ -1,10 +1,14 @@
 /* reset css */
 * {
   outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 *:before,
 *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 html,
@@ -2609,9 +2613,14 @@ i.dot.icon:hover {
   border-radius: 0;
   margin-right: 0;
 }
-.dot.input.action > * {
+.dot.input.action > .action,
+.dot.input.action input {
   display: table-cell;
-  margin: 0;
+  vertical-align: bottom;
+}
+.dot.input.action > .action > .button {
+  display: block;
+  border-radius: inherit;
 }
 .dot.input.action input[type='text'],
 .dot.input.action input[type='number'],
@@ -2639,7 +2648,7 @@ i.dot.icon:hover {
 .dot.input.action.fluid {
   width: 100%;
 }
-.dot.input.action.fluid .button {
+.dot.input.action.fluid > .action {
   width: 5em;
 }
 .dot.input input,
@@ -2648,6 +2657,7 @@ i.dot.icon:hover {
   padding: 7px;
   line-height: 14px;
   height: 30px;
+  overflow: hidden;
 }
 .dot.input.icon.fluid {
   display: block;
@@ -2691,6 +2701,7 @@ i.dot.icon:hover {
   padding: 5px;
   line-height: 10px;
   height: 22px;
+  overflow: hidden;
 }
 .dot.input.tiny.icon.fluid {
   display: block;
@@ -2734,6 +2745,7 @@ i.dot.icon:hover {
   padding: 6px;
   line-height: 12px;
   height: 26px;
+  overflow: hidden;
 }
 .dot.input.small.icon.fluid {
   display: block;
@@ -2777,6 +2789,7 @@ i.dot.icon:hover {
   padding: 9px;
   line-height: 18px;
   height: 38px;
+  overflow: hidden;
 }
 .dot.input.large.icon.fluid {
   display: block;
@@ -2820,6 +2833,7 @@ i.dot.icon:hover {
   padding: 11px;
   line-height: 22px;
   height: 46px;
+  overflow: hidden;
 }
 .dot.input.huge.icon.fluid {
   display: block;

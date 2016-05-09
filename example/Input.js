@@ -6,11 +6,15 @@ const labeledInput = (cn='', invert) => {
     if (invert) {
         return <div className={CN(`${cn} input action`)}>
                     <input type="text" placeholder='search...'/>
-                    <div className={CN("button")}>button</div>
+                    <div className="action">
+                        <div className={CN("button")}>button</div>
+                    </div>
                 </div>;
     }
     return <div className={CN(`${cn} input action`)}>
-                <div className={CN('button')}>button</div>
+                <div className="action">
+                    <div className={CN('button')}>button</div>
+                </div>
                 <input type="text" placeholder='search...'/>
             </div>;
 }
@@ -81,17 +85,23 @@ export default class Input extends Component {
                         <h4>Round action input</h4>
                         <div className={CN('input round action')}>
                             <input type="text" placeholder='search...'/>
-                            <div className={CN('button')}>button</div>
+                            <div className="action">
+                                <div className={CN('button')}>button</div>
+                            </div>
                         </div>
                         <br/>
                         <h4>Fluid action input</h4>
                         <div className={CN('fluid action input')}>
                             <input type="text" placeholder='search...'/>
-                            <div className={CN('button')}>button</div>
+                            <div className="action">
+                                <div className={CN('button')}>button</div>
+                            </div>
                         </div>
                         <br/>
                         <div className={CN('fluid huge action input')}>
-                            <div className={CN('button')}>button</div>
+                            <div className="action">
+                                <div className={CN('button')}>button</div>
+                            </div>
                             <input type="text" placeholder='search...'/>
                         </div>
                         <br/>
