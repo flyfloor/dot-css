@@ -4935,6 +4935,8 @@ img.dot.image.massive.circle {
 }
 .dot.figure > img {
   width: 100%;
+  left: 0;
+  top: 0;
   position: absolute;
   max-width: 100%;
 }
