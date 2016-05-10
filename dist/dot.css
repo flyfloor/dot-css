@@ -4959,6 +4959,15 @@ img.dot.image.massive.circle {
 .dot.figure.figure\:4x3 {
   padding-bottom: 75%;
 }
+.dot.figure.figure\:5x2 {
+  padding-bottom: 40%;
+}
+.dot.figure.figure\:5x3 {
+  padding-bottom: 60%;
+}
+.dot.figure.figure\:6x5 {
+  padding-bottom: 83.33333333%;
+}
 .dot.figure.figure\:9x16 {
   padding-bottom: 177.77777778%;
 }
