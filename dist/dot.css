@@ -4932,6 +4932,7 @@ img.dot.image.massive.circle {
   padding-bottom: 100%;
   position: relative;
   background-color: #EEEEEE;
+  overflow: hidden;
 }
 .dot.figure > img {
   width: 100%;
