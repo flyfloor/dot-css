@@ -57,14 +57,35 @@ export default class Image extends Component {
                         <div className={CN('circle tiny image')}>
                             <img src="http://braavos.me/dot-css/dist/img/avatar.png"/>
                         </div>
+                        <pre>
+                            <code>
+{`<div class="${NS} circle tiny image">
+    <img src="" alt="" />
+</div>`}                                
+                            </code>
+                        </pre>
                         <h4>Landscape circle image</h4>
                         <div className={CN('circle small landscape image')}>
                             <img src="http://braavos.me/dot-css/dist/img/img.png"/>
                         </div>
+                        <pre>
+                            <code>
+{`<div class="${NS} circle small landscape image">
+    <img src="" alt="" />
+</div>`}                                
+                            </code>
+                        </pre>
                         <h4>Portrait circle image</h4>
                         <div className={CN('circle small portrait image')}>
                             <img src="http://braavos.me/dot-css/dist/img/img0.png"/>
                         </div>
+                        <pre>
+                            <code>
+{`<div class="${NS} circle small portrait image">
+    <img src="" alt="" />
+</div>`}                                
+                            </code>
+                        </pre>
                     </li>
                 </ul>
             </div>

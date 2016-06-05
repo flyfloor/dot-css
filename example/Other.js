@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {CN} from './util';
+import {NS} from './setting';
 
 export default class Other extends Component {
     render() {
@@ -29,6 +30,13 @@ export default class Other extends Component {
                                 </div>
                             </li>
                         </ul>
+                        <pre>
+                            <code>
+{`<div class="${NS} figure">
+    <img src="" alt="" />
+</div>`}                                
+                            </code>
+                        </pre>
                         <h4>Other resolutions</h4>
                         <ul className={CN('grid grid-3')}>
                             <li className={CN('column padding')}>
@@ -47,6 +55,13 @@ export default class Other extends Component {
                                 </div>
                             </li>
                         </ul>
+                        <pre>
+                            <code>
+{`<div class="${NS} figure figure:2x1">
+    <img src="" alt="" />
+</div>`}                                
+                            </code>
+                        </pre>
                     </li>
                 </ul>
             </div>

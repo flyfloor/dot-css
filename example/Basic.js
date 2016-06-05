@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {COLORS, LARGE_VIEW, SMALL_VIEW, MOBILE_VIEW, TABLET_VIEW} from './setting';
+import {NS, COLORS, LARGE_VIEW, SMALL_VIEW, MOBILE_VIEW, TABLET_VIEW} from './setting';
 import {CN} from './util';
 
 
@@ -71,6 +71,13 @@ export default class Basic extends Component {
                         <ul className={CN('grid text-extra text-center')}>
                             {nodes}
                         </ul>
+                        <pre>
+                            <code>
+                                {`<div class="${NS} color-red"></div>`}
+                                <br/>
+                                {`<div class="${NS} bg-red"></div>`}
+                            </code>
+                        </pre>
                         <br/>
                     </li>
                     <li>
@@ -80,7 +87,7 @@ export default class Basic extends Component {
                                 <h4>Container is center block content</h4>
                                 <p>adjust to screen width</p>
                                 <br/>
-                                <div className={CN('table')}>
+                                <div className={CN('fluid table')}>
                                     <div className="row">
                                         <div className="cell">mobile({MOBILE_VIEW})</div>
                                         <div className="cell">tablet({TABLET_VIEW})</div>
@@ -89,11 +96,16 @@ export default class Basic extends Component {
                                     </div>
                                 </div>
                                 <br/>
+                                <pre>
+                                    <code>
+                                        {`<div class="${NS} container"></div>`}
+                                    </code>
+                                </pre>
                             </li>
                             <li>
                                 <h4>Text Container</h4>
                                 <p>center text block</p>
-                                <div className={CN('table')}>
+                                <div className={CN('fluid table')}>
                                     <div className="row head">
                                         <div className="cell">{MOBILE_VIEW}</div>
                                         <div className="cell">{TABLET_VIEW}</div>
@@ -107,6 +119,15 @@ export default class Basic extends Component {
                                         <div className="cell">{SMALL_VIEW}</div>
                                     </div>
                                 </div>
+                                <pre>
+                                    <code>
+                                        {`<div class="${NS} container">`}
+                                        <br/>
+                                        {'  <div class="text"></div>'}
+                                        <br/>
+                                        {`</div>`}
+                                    </code>
+                                </pre>
                             </li>
                         </ol>
                     </li>

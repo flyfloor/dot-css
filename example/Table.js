@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {CN} from './util';
+import {NS} from './setting';
 
 const makeTable = (cn='') => {
     return (
@@ -72,16 +73,50 @@ export default class Table extends Component {
                         <h3>default display table</h3>
                         {makeTable()}
                         <br/>
+                        <pre>
+                            <code>
+{`<div class="${NS} table">
+    <div class="head">
+        <div class="cell"></div>
+        <div class="cell"></div>
+    </div>
+    <div class="row">
+        <div class="cell"></div>
+        <div class="cell"></div>
+    </div>
+</div>`}                                
+                            </code>
+                        </pre>
                     </li>
                     <li>
                         <h3>fluid table</h3>
                         {makeTable('fluid')}
                         <br/>
+                        <pre>
+                            <code>
+{`<div class="${NS} fluid table">
+    <div class="row">
+        <div class="cell"></div>
+        <div class="cell"></div>
+    </div>
+</div>`}                                  
+                            </code>
+                        </pre>
                     </li>
                     <li>
                         <h3>table layout</h3>
                         {makeTable('basic fluid')}
                         <br/>
+                        <pre>
+                            <code>
+{`<div class="${NS} basic table">
+    <div class="row">
+        <div class="cell"></div>
+        <div class="cell"></div>
+    </div>
+</div>`}                                
+                            </code>
+                        </pre>
                     </li>
                 </ul>
             </div>

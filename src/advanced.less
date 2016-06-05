@@ -197,7 +197,7 @@
 @{NS}.progress {
     position: relative;
     display: block;
-    @_h: @line_height * 10/15;
+    @_h: @line_height * 6/15;
     height: @_h;
     font-size: @_h;
     background-color: @tiny_gray;
@@ -249,9 +249,9 @@
         }
     }
     &.small {
-       .__progressSize(5);
+       .__progressSize(4);
     }
     &.large {
-       .__progressSize(15);
+       .__progressSize(12);
     }
 }

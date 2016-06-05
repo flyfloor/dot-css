@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {CN} from './util';
+import {NS} from './setting';
 
 export default class Grid extends Component {
     render() {
@@ -32,6 +33,21 @@ export default class Grid extends Component {
                             </div>
                         </div>
                         <br/>
+                        <pre>
+                            <code>
+{`grid-(1~16)
+<div class="${NS} grid grid-5">
+    <div class="row">
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+    </div>
+</div>`
+}                            
+                            </code>
+                        </pre>
                         <div className={CN('grid text-center')}>
                             <div className="row column-3">
                                 <div className="column">
@@ -63,6 +79,20 @@ export default class Grid extends Component {
                             </div>
                         </div>
                         <br/>
+                        <pre>
+                            <code>
+{`<div class="${NS} grid">
+    <div class="row column-3">
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+    </div>
+    <div class="row">
+    </div>
+</div>`
+}                                   
+                            </code>
+                        </pre>
                         <ul className={CN('grid grid-4 text-center')}>
                             <li className="column">
                                 <p>1/4</p>
@@ -109,6 +139,21 @@ export default class Grid extends Component {
                             </div>
                         </div>
                         <br/>
+                        <pre>
+                            <code>
+{`column-(1~16)
+<div class="${NS} grid">
+    <div class="row">
+        <div class="column column-2"></div>
+        <div class="column column-6"></div>
+        <div class="column column-2"></div>
+        <div class="column column-2"></div>
+        <div class="column column-4"></div>
+    </div>
+</div>
+`}                                
+                            </code>
+                        </pre>
                     </li>
                     <li>
                         <h3>Column width, divide to 16 part</h3>
@@ -126,6 +171,17 @@ export default class Grid extends Component {
                             </div>
                         </div>
                         <br/>
+                        <pre>
+                            <code>
+{`<div class="grid">
+    <div class="row">
+        <div class="column column-3"></div>
+        <div class="column column-5"></div>
+        <div class="float-right column column-4"></div>
+    </div>
+</div>`}                                
+                            </code>
+                        </pre>
                     </li>
                     <li>
                         <h3>Auto fold column</h3>

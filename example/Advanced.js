@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {CN} from './util';
+import {NS} from './setting';
 
 const makeCard = (cn='card') => {
     return (
@@ -113,6 +114,27 @@ export default class Advanced extends Component {
                                 </div>
                             </div>
                         </div>
+                        <pre>
+                            <code>
+{`<div class="${NS} comment">
+    <div class="avatar">
+        <img src="" alt="" />
+    </div>
+    <div class="content">
+        <div class="nickname"></div>
+        <div class="extra"></div>
+        <div class="text"></div>
+        <div class="action"></div>
+    </div>
+    <div class="comments">
+        <div class="comment">
+            ...
+        </div>
+        ...
+    </div>
+</div>`}                                
+                            </code>
+                        </pre>
                     </li>
                     <li>
                         <h4>Right floated extra</h4>
@@ -134,6 +156,21 @@ export default class Advanced extends Component {
                                 </div>
                             </div>
                         </div>
+                        <pre>
+                            <code>
+{`<div class="${NS} comment">
+    <div class="avatar">
+        <img src="" alt="" />
+    </div>
+    <div class="content">
+        <div class="nickname"></div>
+        <div class="extra right"></div>
+        <div class="text"></div>
+        <div class="action"></div>
+    </div>
+</div>`}                                   
+                            </code>
+                        </pre>
                     </li>
                     <li>
                         <h4>Round avatar</h4>
@@ -159,6 +196,21 @@ export default class Advanced extends Component {
                                 </div>
                             </div>
                         </div>
+                        <pre>
+                            <code>
+{`<div class="${NS} comment">
+    <div class="round avatar">
+        <img src="" alt="" />
+    </div>
+    <div class="content">
+        <div class="nickname"></div>
+        <div class="extra right"></div>
+        <div class="text"></div>
+        <div class="action"></div>
+    </div>
+</div>`}                                   
+                            </code>
+                        </pre>
                     </li>
                     <li>
                         <h3>Item</h3>
@@ -174,6 +226,19 @@ export default class Advanced extends Component {
                                         <div className="extra">just push 3 commit to dot-css</div>
                                     </div>
                                 </div>
+                                <pre>
+                                    <code>
+{`<div class="${NS} item">
+    <div class="${NS} mini image">
+        <img src="" alt="" />
+    </div>
+    <div class="content">
+        <div class="header"></div>
+        <div class="extra"></div>
+    </div>
+</div>`}                                        
+                                    </code>
+                                </pre>
                             </li>
                             <li>
                                 <h4>vertical top item</h4>
@@ -186,6 +251,19 @@ export default class Advanced extends Component {
                                         <div className="extra">just push 3 commit to dot-css</div>
                                     </div>
                                 </div>
+                                <pre>
+                                    <code>
+{`<div class="${NS} item top">
+    <div class="${NS} mini image">
+        <img src="" alt="" />
+    </div>
+    <div class="content">
+        <div class="header"></div>
+        <div class="extra"></div>
+    </div>
+</div>`}                                             
+                                    </code>
+                                </pre>
                             </li>
                             <li className="item">
                                 <h4>vertical bottom item</h4>
@@ -198,9 +276,20 @@ export default class Advanced extends Component {
                                         <div className="extra">just push 3 commit to dot-css</div>
                                     </div>
                                 </div>
+                                <pre>
+                                    <code>
+{`<div class="${NS} item bottom">
+    <div class="${NS} mini image">
+        <img src="" alt="" />
+    </div>
+    <div class="content">
+        <div class="header"></div>
+        <div class="extra"></div>
+    </div>
+</div>`}                                             
+                                    </code>
+                                </pre>
                             </li>
-                            <li className="item"></li>
-                            <li className="item"></li>
                         </ul>
                     </li>
                     <li>
@@ -220,6 +309,17 @@ export default class Advanced extends Component {
                                         <p>This is extra data</p>
                                     </div>
                                 </div>
+                                <pre>
+                                    <code>
+{`<div class="${NS} card">
+    <div class="${NS} image">
+        <img src="" alt="" />
+    </div>
+    <div class="content"></div>
+    <div class="extra"></div>
+</div>`}                                        
+                                    </code>
+                                </pre>
                             </li>
                             <li>
                                 <h4>Cards</h4>
@@ -230,6 +330,18 @@ export default class Advanced extends Component {
                                     {makeCard()}
                                     {makeCard()}
                                 </div>
+                                <pre>
+                                    <code>
+{`<div class="${NS} cards">
+    <div class="${NS} card">
+        ...
+    </div>
+    <div class="${NS} card">
+    </div>
+    ...
+</div>`}                                        
+                                    </code>
+                                </pre>
                             </li>
                             <li>
                                 <h4>Cards with given count</h4>
@@ -240,6 +352,17 @@ export default class Advanced extends Component {
                                     {makeCard()}
                                     {makeCard()}
                                 </div>
+                                <pre>
+                                    <code>
+{`<div class="${NS} cards card-5">
+    <div class="${NS} card"></div>
+    <div class="${NS} card"></div>
+    <div class="${NS} card"></div>
+    <div class="${NS} card"></div>
+    <div class="${NS} card"></div>
+</div>`}                                        
+                                    </code>
+                                </pre>
                             </li>
                         </ul>
                     </li>
@@ -252,6 +375,14 @@ export default class Advanced extends Component {
                                     <h3 className="header">ProTips</h3>
                                     <p>Edit your feed by updating the users you follow and repositories you watch.</p>
                                 </div>
+                                <pre>
+                                    <code>
+{`<div class="${NS} message">
+    <div class="header"></div>
+    <p></p>
+</div>`}                                        
+                                    </code>
+                                </pre>
                             </li>
                             <li>
                                 <h4>Icon Message</h4>
@@ -261,6 +392,16 @@ export default class Advanced extends Component {
                                         <p>Edit your feed by updating the users you follow and repositories you watch.</p>
                                     </div>
                                 </div>
+                                <pre>
+                                    <code>
+{`<div class="${NS} icon message">
+    <i class="${NS} icon">translate</i>
+    <div class="content">
+        <p></p>
+    </div>
+</div>`}                                         
+                                    </code>
+                                </pre>
                             </li>
                             <li>
                                 <h4>Status Message</h4>
@@ -268,6 +409,13 @@ export default class Advanced extends Component {
                                 {makeMessage('warning')}
                                 {makeMessage('success')}
                                 {makeMessage('error')}
+                                <pre>
+                                    <code>
+{`<div class="${NS} info message">
+    <p></p>
+</div>`}                                               
+                                    </code>
+                                </pre>
                             </li>
                             <li>
                                 <h4>Size</h4>
@@ -276,6 +424,13 @@ export default class Advanced extends Component {
                                 {makeMessage('')}
                                 {makeMessage('large')}
                                 {makeMessage('huge')}
+                                <pre>
+                                    <code>
+{`<div class="${NS} tiny message">
+    <p></p>
+</div>`}                                           
+                                    </code>
+                                </pre>
                             </li>
                         </ul>
                     </li>
@@ -298,6 +453,14 @@ export default class Advanced extends Component {
                             <div className="bar" style={{width: '30%'}}>
                             </div>
                         </div>
+                        <pre>
+                            <code>
+{`success, error warning
+<div class="${NS} progress">
+    <div class="bar" style="width:20%"></div>
+</div>`}                                
+                            </code>
+                        </pre>
                         <h4>Progress Size</h4>
                         <h5>small</h5>
                         <div className={CN('small progress')}>

@@ -8,14 +8,14 @@
     &.fluid {
         width: 100%;
     }
+    .head {
+        >.cell {
+            border-top: 0;
+            background-color: @tiny_gray;
+        }
+    }
     >.row, tr {
         display: table-row;
-        &.head {
-            >.cell {
-                border-top: 0;
-                background-color: @tiny_gray;
-            }
-        }
         &:nth-child(1) {
             >.cell, td {
                 border-top: 0;
