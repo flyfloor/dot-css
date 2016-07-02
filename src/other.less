@@ -1,5 +1,6 @@
 @import url('meta');
 @import url('color');
+@import url('_font-padding');
 
 .__paddingFigure(@w, @h){
     &.figure\:@{w}x@{h} {
@@ -33,4 +34,45 @@
     .__paddingFigure(9, 16);
     .__paddingFigure(16, 9);
     .__paddingFigure(16, 10);
+}
+
+@{NS}.crumb {
+    >.section {
+        display: inline-block;
+        position: relative;
+        font-size: inherit;
+        &+.section:before {
+            font-family: @icon_family;
+            content: 'chevron_right';
+            display: inline-block;
+            margin: 0 @padding * .3;
+            vertical-align: middle;
+            color: @gray;
+        }
+        &:last-child {
+            color: @deep_gray;
+        }
+    }
+    &.slash {
+        >.section {
+            &+.section:before {
+                font-family: inherit;
+                content: '/';
+            }
+        }
+    }
+    ._FONT_SIZE(14);
+    &.tiny {
+        ._FONT_SIZE(10);
+    }
+    &.small {
+        ._FONT_SIZE(12);
+    }
+    &.large {
+        ._FONT_SIZE(18);
+    }
+    &.huge {
+        ._FONT_SIZE(22);
+    }
+    
 }
