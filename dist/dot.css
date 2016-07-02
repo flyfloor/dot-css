@@ -4880,10 +4880,10 @@ img.dot.image.massive.circle {
 .dot.progress {
   position: relative;
   display: block;
-  height: 6px;
-  font-size: 6px;
+  height: 10px;
+  font-size: 10px;
   background-color: #F5F5F5;
-  border-radius: 3px;
+  border-radius: 5px;
   overflow: hidden;
   margin-bottom: 10px;
 }
@@ -4915,18 +4915,58 @@ img.dot.image.massive.circle {
   background-color: #FFA726;
 }
 .dot.progress.small {
-  height: 4px;
-  font-size: 4px;
+  height: 5px;
+  font-size: 5px;
 }
 .dot.progress.small > .bar {
-  height: 4px;
+  height: 5px;
 }
 .dot.progress.large {
-  height: 12px;
-  font-size: 12px;
+  height: 15px;
+  font-size: 15px;
 }
 .dot.progress.large > .bar {
-  height: 12px;
+  height: 15px;
+}
+.dot.crumb {
+  font-size: 14px;
+  line-height: 14px;
+}
+.dot.crumb > .section {
+  display: inline-block;
+  position: relative;
+  font-size: inherit;
+}
+.dot.crumb > .section + .section:before {
+  font-family: 'Material Icons';
+  content: 'chevron_right';
+  display: inline-block;
+  margin: 0 3px;
+  vertical-align: middle;
+  color: #BDBDBD;
+}
+.dot.crumb > .section:last-child {
+  color: #383838;
+}
+.dot.crumb.slash > .section + .section:before {
+  font-family: inherit;
+  content: '/';
+}
+.dot.crumb.tiny {
+  font-size: 10px;
+  line-height: 10px;
+}
+.dot.crumb.small {
+  font-size: 12px;
+  line-height: 12px;
+}
+.dot.crumb.large {
+  font-size: 18px;
+  line-height: 18px;
+}
+.dot.crumb.huge {
+  font-size: 22px;
+  line-height: 22px;
 }
 .dot.figure {
   padding-bottom: 100%;
@@ -4979,44 +5019,4 @@ img.dot.image.massive.circle {
 }
 .dot.figure.figure\:16x10 {
   padding-bottom: 62.5%;
-}
-.dot.crumb {
-  font-size: 14px;
-  line-height: 14px;
-}
-.dot.crumb > .section {
-  display: inline-block;
-  position: relative;
-  font-size: inherit;
-}
-.dot.crumb > .section + .section:before {
-  font-family: 'Material Icons';
-  content: 'chevron_right';
-  display: inline-block;
-  margin: 0 3px;
-  vertical-align: middle;
-  color: #BDBDBD;
-}
-.dot.crumb > .section:last-child {
-  color: #383838;
-}
-.dot.crumb.slash > .section + .section:before {
-  font-family: inherit;
-  content: '/';
-}
-.dot.crumb.tiny {
-  font-size: 10px;
-  line-height: 10px;
-}
-.dot.crumb.small {
-  font-size: 12px;
-  line-height: 12px;
-}
-.dot.crumb.large {
-  font-size: 18px;
-  line-height: 18px;
-}
-.dot.crumb.huge {
-  font-size: 22px;
-  line-height: 22px;
 }
