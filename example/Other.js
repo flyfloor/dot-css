@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {CN} from './util';
+import {NS} from './setting';
 
 export default class Other extends Component {
     render() {
