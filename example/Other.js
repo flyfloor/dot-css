@@ -1,6 +1,23 @@
 import React, { Component } from 'react';
 import {CN} from './util';
-import {NS} from './setting';
+import {NS, SHAPE_SIZE} from './setting';
+
+const makeCrumbList = (cn='') => {
+    return (
+        <ul>
+            {SHAPE_SIZE.map(size => {
+                return <li key={`${size}${cn}_crumb`}>
+                            <div className={CN(`${size} ${cn} crumb`)}>
+                                <a href="#" className="section">home</a>
+                                <a href="#" className="section">blog</a>
+                                <span className="section">last year</span>
+                            </div>
+                            <br/>
+                        </li>
+            })}
+        </ul>
+    )
+}
 
 export default class Other extends Component {
     render() {
@@ -62,6 +79,13 @@ export default class Other extends Component {
 </div>`}                                
                             </code>
                         </pre>
+                    </li>
+                    <li>
+                        <h3>Crumb</h3>
+                        <br/>
+                        {makeCrumbList()}
+                        <br/>
+                        {makeCrumbList('slash')}
                     </li>
                 </ul>
             </div>

@@ -1,5 +1,11 @@
 @import url('meta');
 
+._FONT_SIZE(@size){
+    @_font: @line_height * @size/15;
+    font-size: @_font;
+    line-height: @_font;
+}
+
 ._FONT_PADDING(@size, @_pd){
     @_padding: @padding * @_pd/10;
     padding: @_padding @_padding * 2;
