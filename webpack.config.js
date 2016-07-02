@@ -2,6 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var ForceCaseSensitivityPlugin = require('force-case-sensitivity-webpack-plugin');
 
 var publicPath = process.env.NODE_ENV === 'dev' ? '/dist/' : '';
 
@@ -17,6 +18,7 @@ module.exports = {
         // new webpack.HotModuleReplacementPlugin(),
         new ExtractTextPlugin("example.css"),
         new webpack.NoErrorsPlugin(),
+        new ForceCaseSensitivityPlugin(),
         // new webpack.optimize.UglifyJsPlugin({
         //     sourceMap: false,
         //     mangle: false

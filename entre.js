@@ -14,8 +14,13 @@ import Checkbox from './example/Checkbox';
 import Label from './example/Label';
 import Text from './example/Text';
 import Image from './example/Image';
+import Comment from './example/Comment';
+import Item from './example/Item';
+import Card from './example/Card';
+import Message from './example/Message';
+import Progress from './example/Progress';
+import Crumb from './example/Crumb';
 import Other from './example/Other';
-import Advanced from './example/Advanced';
 
 const NavLink = (props) => {
     return (
@@ -50,7 +55,12 @@ class App extends Component {
                                 <NavLink className={CN('block')} to="/label">label</NavLink>
                                 <NavLink className={CN('block')} to="/text">text</NavLink>
                                 <NavLink className={CN('block')} to="/image">image</NavLink>
-                                <NavLink className={CN('block')} to="/advanced">advanced</NavLink>
+                                <NavLink className={CN('block')} to="/comment">comment</NavLink>
+                                <NavLink className={CN('block')} to="/item">item</NavLink>
+                                <NavLink className={CN('block')} to="/card">card</NavLink>
+                                <NavLink className={CN('block')} to="/message">message</NavLink>
+                                <NavLink className={CN('block')} to="/progress">progress</NavLink>
+                                <NavLink className={CN('block')} to="/crumb">crumb</NavLink>
                                 <NavLink className={CN('block')} to="/other">other</NavLink>
                             </aside>
                             <artical className="column column-13 main-content">
@@ -101,8 +111,13 @@ ReactDOM.render(<Router history={hashHistory}>
                         <Route path="/label" component={Label}></Route>
                         <Route path="/text" component={Text}></Route>
                         <Route path="/image" component={Image}></Route>
+                        <Route path="/comment" component={Comment}></Route>
+                        <Route path="/item" component={Item}></Route>
+                        <Route path="/card" component={Card}></Route>
+                        <Route path="/message" component={Message}></Route>
+                        <Route path="/progress" component={Progress}></Route>
+                        <Route path="/crumb" component={Crumb}></Route>
                         <Route path="/other" component={Other}></Route>
-                        <Route path="/advanced" component={Advanced}></Route>
                     </Route>
                 </Router>, document.getElementById('root'));
 
