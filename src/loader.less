@@ -4,33 +4,27 @@
 .__loaderSize(@size){
     width: @size;
     height: @size;
-    border-radius: @size;
+    border-radius: @size / 2;
     &:before, &:after {
         border-radius: @size;
         border-width: @size * .08;
-        margin-left: @size * -0.5;
-    }
-    &:after {
-        border-width: @size * .07;
+        margin: @size * -0.5 0 0 @size * -0.5;
     }
 }
 
 @{NS}.loader {
     /*shape size*/
     .__loaderSize(@padding * 2.5);
-    &.small {
-        .__loaderSize(@padding * 1.5)
-    }
-    &.large {
-        .__loaderSize(@padding * 3.5)
-    }
+    &.small {.__loaderSize(@padding * 1.5) }
+    &.large {.__loaderSize(@padding * 3.5) }
+
     color: @dark_gray;
     display: block;
     position: relative;
     &:before, &:after {
         content: '';
         position: absolute;
-        top: 0;
+        top: 50%;
         left: 50%;
         width: 100%;
         height: 100%;
@@ -42,10 +36,10 @@
     &:after {
         border-color: transparent;
         border-top-color: inherit;
-        -webkit-animation: .7s linear infinite spin_loader;
-        -moz-animation: .7s linear infinite spin_loader;
-        -o-animation: .7s linear infinite spin_loader;
-        animation: .7s linear infinite spin_loader;
+        -webkit-animation: 1s linear infinite spin_loader;
+        -moz-animation: 1s linear infinite spin_loader;
+        -o-animation: 1s linear infinite spin_loader;
+        animation: 1s linear infinite spin_loader;
     }
     &.inverted {
         color: @white;
@@ -55,6 +49,7 @@
     }
 }
 
+
 @{NS}.bounce.loader {
     width: auto;
     height: auto;
@@ -63,99 +58,123 @@
     }
     /*shape size*/
     &.small>.bounce {
-        .__loaderSize(@padding * 1.5)
+        .__loaderSize(@padding)
     }
     &.large>.bounce {
-        .__loaderSize(@padding * 3.5)
+        .__loaderSize(@padding * 3)
     }
     &>.bounce {
-        .__loaderSize(@padding * 2.5);
+        .__loaderSize(@padding * 2);
+        &+.bounce {
+            margin-left: .1em;
+        }
         display: inline-block;
-        -webkit-animation: spin_bounce 1.4s infinite ease-in-out both;
-        -moz-animation: spin_bounce 1.4s infinite ease-in-out both;
-        -o-animation: spin_bounce 1.4s infinite ease-in-out both;
-        animation: spin_bounce 1.4s infinite ease-in-out both;
-        background: @yellow;
+        -webkit-animation: spin_bounce 2s infinite ease-in-out both;
+        -moz-animation: spin_bounce 2s infinite ease-in-out both;
+        -o-animation: spin_bounce 2s infinite ease-in-out both;
+        animation: spin_bounce 2s infinite ease-in-out both;
+        background: @blue;
         &:first-child {
             background-color: @red;
-            -webkit-animation-delay: -0.32s;
-            -o-animation-delay: -0.32s;
-            animation-delay: -0.32s;
+            -webkit-animation-delay: -0.4s;
+            -o-animation-delay: -0.4s;
+            animation-delay: -0.4s;
         }
         &:nth-child(2) {
-            -webkit-animation-delay: -0.16s;
-            -o-animation-delay: -0.16s;
-            animation-delay: -0.16s;
+            -webkit-animation-delay: -0.2s;
+            -o-animation-delay: -0.2s;
+            animation-delay: -0.2s;
+            background-color: @yellow;
         }
-        &:last-child {
-            background-color: @blue;
-        }
+    }
+}
+
+.__spinnerSize(@size){
+    width: @size;
+    height: @size;
+    border-radius: @size / 2;
+    @_border_width: @size * 0.1;
+    @_half_offset: (@size + @_border_width) * 0.5;
+    border: @_border_width solid @dark_gray;
+    &:before, &:after {
+        width: @_half_offset;
+        height: @_half_offset * 2;
+        left: @_border_width * -1.5;
+        top: @_border_width * -1.5;
+    }
+    &:before {
+        border-radius: @size 0 0 @size;
+        -webkit-transform-origin: @_half_offset @_half_offset;
+        -ms-transform-origin: @_half_offset @_half_offset;
+        -o-transform-origin: @_half_offset @_half_offset;
+        transform-origin: @_half_offset @_half_offset;
+    }
+    &:after {
+        left: @size * 0.5 - @_border_width;
+        border-radius: 0 @size @size 0;
+    }
+}
+
+@{NS}.google.spinner {
+    position: relative;
+    .__spinnerSize(@padding * 3);
+    &.small {
+        .__spinnerSize(@padding * 2);
+    }
+    &.large {
+        .__spinnerSize(@padding * 5);
+    }
+    background-color: @white;
+    &:before, &:after {
+        content: "";
+        position: absolute;
+        background-color: inherit;
+        -webkit-animation: spin_loader 2s infinite ease-in-out;
+        -o-animation: spin_loader 2s infinite ease-in-out;
+        animation: spin_loader 2s infinite ease-in-out;
+    }
+    &:after {
+        -webkit-transform-origin: 0;
+        -ms-transform-origin: 0;
+        -o-transform-origin: 0;
+        transform-origin: 0;
+        -webkit-animation-delay: -1.5s;
+        -o-animation-delay: -1.5s;
+        animation-delay: -1.5s;
     }
 }
 
 @-webkit-keyframes spin_loader { 
-    from {
-        -webkit-transform: rotate(0);
-    } 
-    to {
-        -webkit-transform: rotate(360deg);
-    }  
+    from {-webkit-transform: rotate(0);} 
+    to {-webkit-transform: rotate(360deg);}  
  }
 @-moz-keyframes spin_loader { 
-    from {
-        -ms-transform: rotate(0);
-    } 
-    to {
-        -ms-transform: rotate(360deg);
-    }  
+    from {-ms-transform: rotate(0);} 
+    to {-ms-transform: rotate(360deg);}  
 }
  @-o-keyframes spin_loader { 
-    from {
-        -o-transform: rotate(0);
-    } 
-    to {
-        -o-transform: rotate(360deg);
-    }  
+    from {-o-transform: rotate(0);} 
+    to {-o-transform: rotate(360deg);}  
 }
 @keyframes spin_loader { 
-    from {
-        transform: rotate(0);
-    } 
-    to {
-        transform: rotate(360deg);
-    }  
+    from {transform: rotate(0);} 
+    to {transform: rotate(360deg);}  
 }
 
 @-webkit-keyframes spin_bounce { 
-    0%, 80%, 100% {
-        -webkit-transform: scale(0);
-    } 
-    40% {
-        -webkit-transform: scale(1);
-    }  
+    0%, 80%, 100% {-webkit-transform: scale(0); }
+    40% {-webkit-transform: scale(1);} 
  }
 @-moz-keyframes spin_bounce { 
-    0%, 80%, 100% {
-        -ms-transform: scale(0);
-    } 
-    40% {
-        -ms-transform: scale(1);
-    }  
+    0%, 80%, 100% {-ms-transform: scale(0); } 
+    40% {-ms-transform: scale(1); }  
 }
  @-o-keyframes spin_bounce { 
-    0%, 80%, 100% {
-        -o-transform: scale(0);
-    } 
-    40% {
-        -o-transform: scale(1);
-    }  
+    0%, 80%, 100% {-o-transform: scale(0); } 
+    40% {-o-transform: scale(1); }  
 }
 @keyframes spin_bounce { 
-    0%, 80%, 100% {
-        transform: scale(0);
-    } 
-    40% {
-        transform: scale(1);
-    }  
+    0%, 80%, 100% {transform: scale(0); } 
+    40% {transform: scale(1); }  
 }
 

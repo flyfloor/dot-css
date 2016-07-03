@@ -10,7 +10,8 @@ export default class Loader extends Component {
                     <li>
                         <h4>Default loader</h4>
                         <br/>
-                        <div className={CN('small loader')}></div>
+                        <div className={CN('small loader')}>
+                        </div>
                         <pre>
                             <code>{`<div class="${CN('small loader')}"></div>`}</code>
                         </pre>
@@ -61,7 +62,17 @@ export default class Loader extends Component {
                             </code>
                         </pre>
                     </li>
-                    <li></li>
+                    <li>
+                        <h4>Google loader</h4>
+                        <div className={CN('small google spinner')}></div>
+                        <br/>
+                        <div className={CN('google spinner')}></div>
+                        <br/>
+                        <div className={CN('large google spinner')}></div>
+                        <pre>
+                            <code>{`<div class="${CN('google spinner')}"></div>`}</code>
+                        </pre>
+                    </li>
                 </ul>
             </div>
         );
