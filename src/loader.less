@@ -1,21 +1,29 @@
 @import url('color');
 @import url('meta');
 
-@{NS}.loader {
-    .__loaderSize(@size){
-        width: @size;
-        height: @size;
-        &:before, &:after {
-            border-radius: @size;
-            border-width: @size * .08;
-            margin-left: @size * -0.5;
-        }
-        &:after {
-            border-width: @size * .07;
-        }
+.__loaderSize(@size){
+    width: @size;
+    height: @size;
+    border-radius: @size;
+    &:before, &:after {
+        border-radius: @size;
+        border-width: @size * .08;
+        margin-left: @size * -0.5;
     }
+    &:after {
+        border-width: @size * .07;
+    }
+}
 
+@{NS}.loader {
+    /*shape size*/
     .__loaderSize(@padding * 2.5);
+    &.small {
+        .__loaderSize(@padding * 1.5)
+    }
+    &.large {
+        .__loaderSize(@padding * 3.5)
+    }
     color: @dark_gray;
     display: block;
     position: relative;
@@ -39,17 +47,48 @@
         -o-animation: .7s linear infinite spin_loader;
         animation: .7s linear infinite spin_loader;
     }
-    /*shape size*/
-    &.small {
-        .__loaderSize(@padding * 1.5)
-    }
-    &.large {
-        .__loaderSize(@padding * 3.5)
-    }
     &.inverted {
         color: @white;
         &:before {
             border-color: rgba(200,200,200,.2);
+        }
+    }
+}
+
+@{NS}.bounce.loader {
+    width: auto;
+    height: auto;
+    &:before, &:after {
+        content: none;
+    }
+    /*shape size*/
+    &.small>.bounce {
+        .__loaderSize(@padding * 1.5)
+    }
+    &.large>.bounce {
+        .__loaderSize(@padding * 3.5)
+    }
+    &>.bounce {
+        .__loaderSize(@padding * 2.5);
+        display: inline-block;
+        -webkit-animation: spin_bounce 1.4s infinite ease-in-out both;
+        -moz-animation: spin_bounce 1.4s infinite ease-in-out both;
+        -o-animation: spin_bounce 1.4s infinite ease-in-out both;
+        animation: spin_bounce 1.4s infinite ease-in-out both;
+        background: @yellow;
+        &:first-child {
+            background-color: @red;
+            -webkit-animation-delay: -0.32s;
+            -o-animation-delay: -0.32s;
+            animation-delay: -0.32s;
+        }
+        &:nth-child(2) {
+            -webkit-animation-delay: -0.16s;
+            -o-animation-delay: -0.16s;
+            animation-delay: -0.16s;
+        }
+        &:last-child {
+            background-color: @blue;
         }
     }
 }
@@ -86,3 +125,37 @@
         transform: rotate(360deg);
     }  
 }
+
+@-webkit-keyframes spin_bounce { 
+    0%, 80%, 100% {
+        -webkit-transform: scale(0);
+    } 
+    40% {
+        -webkit-transform: scale(1);
+    }  
+ }
+@-moz-keyframes spin_bounce { 
+    0%, 80%, 100% {
+        -ms-transform: scale(0);
+    } 
+    40% {
+        -ms-transform: scale(1);
+    }  
+}
+ @-o-keyframes spin_bounce { 
+    0%, 80%, 100% {
+        -o-transform: scale(0);
+    } 
+    40% {
+        -o-transform: scale(1);
+    }  
+}
+@keyframes spin_bounce { 
+    0%, 80%, 100% {
+        transform: scale(0);
+    } 
+    40% {
+        transform: scale(1);
+    }  
+}
+

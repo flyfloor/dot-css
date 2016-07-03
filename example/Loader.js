@@ -30,7 +30,37 @@ export default class Loader extends Component {
                             <code>{`<div class="${CN('inverted loader')}"></div>`}</code>
                         </pre>
                     </li>
-                    <li></li>
+                    <li>
+                        <h4>Bounced loader</h4>
+                        <div className={CN('small bounce loader')}>
+                            <div className="bounce"></div>
+                            <div className="bounce"></div>
+                            <div className="bounce"></div>
+                        </div>
+                        <br/>
+                        <div className={CN('bounce loader')}>
+                            <div className="bounce"></div>
+                            <div className="bounce"></div>
+                            <div className="bounce"></div>
+                        </div>
+                        <br/>
+                        <div className={CN('large bounce loader')}>
+                            <div className="bounce"></div>
+                            <div className="bounce"></div>
+                            <div className="bounce"></div>
+                        </div>
+                        <pre>
+                            <code>
+{`
+<div class="${CN('bounce loader')}">
+    <div class="bounce"></div>
+    <div class="bounce"></div>
+    <div class="bounce"></div>
+</div>
+`}                                
+                            </code>
+                        </pre>
+                    </li>
                     <li></li>
                 </ul>
             </div>
