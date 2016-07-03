@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {CN} from './util';
+import {CN, TitleBlock} from './util';
 
 const makeCard = (cn='card') => {
     return (
@@ -24,10 +24,7 @@ export default class Card extends Component {
     render() {
         return (
             <div>
-                <h2>Card</h2>
-                <blockquote className={CN('blockquote')}>
-                    <p>Content about Card</p>
-                </blockquote>
+                {TitleBlock('Card')}
                 <ul>
                     <li>
                         <h4>One Card</h4>

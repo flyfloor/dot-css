@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
-import {CN} from './util';
+import {CN, TitleBlock} from './util';
 
 export default class Comment extends Component {
     render() {
         return (
             <div>
-                <h2>Comment</h2>
-                <blockquote className={CN('blockquote')}>
-                    <p>This is part about comment</p>
-                </blockquote>
+                {TitleBlock('Comment')}
                 <ul>
                     <li>
                         <div className={CN('comment')}>

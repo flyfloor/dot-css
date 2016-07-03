@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {CN} from './util';
+import {CN, TitleBlock} from './util';
 import {NS} from './setting';
 const SIZE = ['tiny', 'small', '', 'large', 'huge'];
 
@@ -44,10 +44,7 @@ export default class Input extends Component {
     render() {
         return (
             <div>
-                <h2>Input</h2>
-                <blockquote className={CN('blockquote')}>
-                    <p>This part contains Input, Input size, Action input, Icon input</p>
-                </blockquote>
+                {TitleBlock('Input')}
                 <ul>
                     <li>
                         <h3>Default input</h3>

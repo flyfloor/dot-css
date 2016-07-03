@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
-import {CN} from './util';
+import {CN, TitleBlock} from './util';
 
 export default class Progress extends Component {
     render() {
         return (
             <div>
-                <h2>Progress</h2>
-                <blockquote className={CN('blockquote')}>
-                    <p>Content about Progress</p>
-                </blockquote>
+                {TitleBlock('Progress')}
                 <ul>
                     <li>
                         <h4>Status Progress</h4>

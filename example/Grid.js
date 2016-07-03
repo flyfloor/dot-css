@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
-import {CN} from './util';
+import {CN, TitleBlock} from './util';
 import {NS} from './setting';
 
 export default class Grid extends Component {
     render() {
         return (
             <div className='grid-example'>
-                <h2>Grid</h2>
-                <blockquote className={CN('blockquote')}>
-                    <p>This part is about Grid</p>
-                </blockquote>
+                {TitleBlock('Grid')}
                 <ul>
                     <li>
                         <h4>Same width column</h4>

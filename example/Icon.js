@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {ICONS} from './setting';
-import {CN} from './util';
+import {CN, TitleBlock} from './util';
 import {NS} from './setting';
 
 
@@ -33,10 +33,12 @@ export default class Icon extends Component {
     render() {
         return (
             <div className="icon-example">
-                <h2>Icon</h2>
-                <blockquote className={CN('blockquote')}>
-                    <p>This part is the Icons dot css use, <span className={CN('color-brown')}>from Google's material icons, <a href="https://design.google.com/icons/" target="_blank">Google icons</a></span></p>
-                </blockquote>
+                {TitleBlock('Icon', <span>
+                                        This part is the Icons dot css use, 
+                                        <span className={CN('color-brown')}>from Google's material icons, 
+                                        <a href="https://design.google.com/icons/" target="_blank">Google icons</a>
+                                        </span>
+                                    </span>)}
                 <pre>
                     <code>
                         &lt;i class="{NS} icon"&gt;{this.state.display}&lt;/i&gt;

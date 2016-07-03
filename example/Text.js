@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
-import {CN} from './util';
+import {CN, TitleBlock} from './util';
 import {NS, BLOG_URL} from './setting';
 
 export default class Text extends Component {
     render() {
         return (
             <div>
-                <h2>Text</h2>
-                <blockquote className={CN('blockquote')}>
-                    <p>This part is about text</p>
-                </blockquote>
+                {TitleBlock('Text')}
                 <ul>
                     <li>
                         <h3>Display Block element</h3>

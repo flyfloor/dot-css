@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {CN} from './util';
+import {CN, TitleBlock} from './util';
 import {SHAPE_SIZE} from './setting';
 
 const makeCrumbList = (cn='') => {
@@ -23,10 +23,7 @@ export default class Crumb extends Component {
     render() {
         return (
             <div>
-                <h2>Crumb</h2>
-                <blockquote className={CN('blockquote')}>
-                    <p>Content about Crumb</p>
-                </blockquote>
+                {TitleBlock('Crumb')}
                 <ul>
                     <li>
                         {makeCrumbList()}

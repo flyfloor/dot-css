@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {CN} from './util';
+import {CN, TitleBlock} from './util';
 import {NS, COLORS} from './setting';
 
 const makeSizeLabels = (cn='') => {
@@ -40,10 +40,7 @@ export default class Label extends Component {
     render() {
         return (
             <div className="label-example">
-                <h2>Label</h2>
-                <blockquote className={CN('blockquote')}>
-                    <p>This part is about Label</p>
-                </blockquote>
+                {TitleBlock('Label')}
                 <ul>
                     <li>
                         <h3>Label</h3>

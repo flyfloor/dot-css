@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
-import {CN} from './util';
+import {CN, TitleBlock} from './util';
 import {NS} from './setting';
 
 export default class Other extends Component {
     render() {
         return (
             <div>
-                <h2>Other</h2>
-                <blockquote className={CN('blockquote')}>
-                    <p>This part is about MISC stuff</p>
-                </blockquote>
+                {TitleBlock('Other', 'Content about other stuff')}
                 <ul>
                     <li>
                         <h3>Responsive fixed img(fixed resolution)</h3>

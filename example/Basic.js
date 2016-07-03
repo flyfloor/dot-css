@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {NS, COLORS, LARGE_VIEW, SMALL_VIEW, MOBILE_VIEW, TABLET_VIEW} from './setting';
-import {CN} from './util';
+import {CN, TitleBlock} from './util';
 
 
 const makeColor = (color) => {
@@ -45,10 +45,7 @@ export default class Basic extends Component {
         });
         return (
             <div>
-                <h2>Basic</h2>
-                <blockquote className={CN('blockquote')}>
-                    <p>This part contains basic stuff, colors, fonts, H1 ~ H6</p>
-                </blockquote>
+                {TitleBlock('Basic', 'This part contains basic stuff, colors, fonts, H1 ~ H6')}
                 <ul>
                     <li>
                         <h3>The titles</h3>

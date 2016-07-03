@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {CN} from './util';
+import {CN, TitleBlock} from './util';
 import {SHAPE_SIZE} from './setting';
 
 const makeMessage = (cn='') => {
@@ -26,10 +26,7 @@ export default class Message extends Component {
     render() {
         return (
             <div>
-                <h2>Message</h2>
-                <blockquote className={CN('blockquote')}>
-                    <p>Content about Message</p>
-                </blockquote>
+                {TitleBlock('Message')}
                 <ul>
                     <li>
                         <h4>Default Message</h4>

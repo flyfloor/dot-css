@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {CN} from './util';
+import {CN, TitleBlock} from './util';
 import {NS} from './setting';
 
 const makeImage = (cn) => {
@@ -15,10 +15,7 @@ export default class Image extends Component {
     render() {
         return (
             <div>
-                <h2>Image</h2>
-                <blockquote className={CN('blockquote')}>
-                    <p>This part is about image</p>
-                </blockquote>
+                {TitleBlock('Image')}
                 <pre>
                     <p>Use in two ways</p>
                     <ol>

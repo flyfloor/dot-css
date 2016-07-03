@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
-import {CN} from './util';
+import {CN, TitleBlock} from './util';
 import {NS} from './setting';
 
 export default class Checkbox extends Component {
     render() {
         return (
             <div>
-                <h2>Checkbox</h2>
-                <blockquote className={CN('blockquote')}>
-                    <p>This contains checkbox and radio</p>
-                </blockquote>
+                {TitleBlock('Checkbox')}
                 <ul>
                     <li>
                         <h3>Checkbox</h3>

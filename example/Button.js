@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {CN} from './util';
+import {CN, TitleBlock} from './util';
 import {NS, COLORS} from './setting';
 
 const labelBtnGroup = (cn='') => {
@@ -31,10 +31,7 @@ export default class Button extends Component {
     render() {
         return (
             <div className="button-example">
-                <h2>Button</h2>
-                <blockquote className={CN('blockquote')}>
-                    <p>This part is about Button, Icon button, Labeled button, Circle button, Button size, Button group</p>
-                </blockquote>
+                {TitleBlock('Button')}
                 <ul>
                     <li>
                         <h3>Button</h3>
