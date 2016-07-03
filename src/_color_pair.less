@@ -1,6 +1,6 @@
 @import url('color');
 
-.__color_el(@color){
+.__color_pair(@color){
     &.@{color}{
         @_dark: 'dark_@{color}';
         @_deep: 'deep_@{color}';
@@ -28,22 +28,22 @@
     }
 }
 
-._COLOR_EL() {
-    .__color_el(red);
-    .__color_el(pink);
-    .__color_el(purple);
-    .__color_el(indigo);
-    .__color_el(blue);
-    .__color_el(cyan);
-    .__color_el(teal);
-    .__color_el(green);
-    .__color_el(lime);
-    .__color_el(amber);
-    .__color_el(orange);
-    .__color_el(brown);
-    .__color_el(gray);
-    .__color_el(bluegray);
-    .__color_el(yellow);
+._COLOR_PAIR() {
+    .__color_pair(red);
+    .__color_pair(pink);
+    .__color_pair(purple);
+    .__color_pair(indigo);
+    .__color_pair(blue);
+    .__color_pair(cyan);
+    .__color_pair(teal);
+    .__color_pair(green);
+    .__color_pair(lime);
+    .__color_pair(amber);
+    .__color_pair(orange);
+    .__color_pair(brown);
+    .__color_pair(gray);
+    .__color_pair(bluegray);
+    .__color_pair(yellow);
     &.lime,
     &.amber,
     &.orange,

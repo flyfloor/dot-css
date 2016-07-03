@@ -20,6 +20,7 @@ import Card from './example/Card';
 import Message from './example/Message';
 import Progress from './example/Progress';
 import Crumb from './example/Crumb';
+import Loader from './example/Loader';
 import Other from './example/Other';
 
 const NavLink = (props) => {
@@ -61,6 +62,7 @@ class App extends Component {
                                 <NavLink className={CN('block')} to="/message">message</NavLink>
                                 <NavLink className={CN('block')} to="/progress">progress</NavLink>
                                 <NavLink className={CN('block')} to="/crumb">crumb</NavLink>
+                                <NavLink className={CN('block')} to="/loader">loader</NavLink>
                                 <NavLink className={CN('block')} to="/other">other</NavLink>
                             </aside>
                             <artical className="column column-13 main-content">
@@ -117,6 +119,7 @@ ReactDOM.render(<Router history={hashHistory}>
                         <Route path="/message" component={Message}></Route>
                         <Route path="/progress" component={Progress}></Route>
                         <Route path="/crumb" component={Crumb}></Route>
+                        <Route path="/loader" component={Loader}></Route>
                         <Route path="/other" component={Other}></Route>
                     </Route>
                 </Router>, document.getElementById('root'));
