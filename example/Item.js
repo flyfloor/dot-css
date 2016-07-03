@@ -23,6 +23,21 @@ export default class Item extends Component {
                                         <div className="extra">just push 3 commit to dot-css</div>
                                     </div>
                                 </div>
+                                <pre>
+                                    <code>
+{`
+<div className="${CN('item')}">
+    <div className="${CN('mini image')}">
+        <img src="http://braavos.me/dot-css/dist/img/avatar.png"/>
+    </div>
+    <div className="content">
+        <div className="header">Jerry</div>
+        <div className="extra">just push 3 commit to dot-css</div>
+    </div>
+</div>
+`}                                        
+                                    </code>
+                                </pre>
                             </li>
                             <li>
                                 <h4>vertical top item</h4>
@@ -35,6 +50,15 @@ export default class Item extends Component {
                                         <div className="extra">just push 3 commit to dot-css</div>
                                     </div>
                                 </div>
+                                <pre>
+                                    <code>
+{`
+<div className="${CN('item top')}">
+    ...
+</div>
+`}                                        
+                                    </code>
+                                </pre>
                             </li>
                             <li className="item">
                                 <h4>vertical bottom item</h4>
@@ -47,9 +71,16 @@ export default class Item extends Component {
                                         <div className="extra">just push 3 commit to dot-css</div>
                                     </div>
                                 </div>
+                                <pre>
+                                    <code>
+{`
+<div className="${CN('item bottom')}">
+    ...
+</div>
+`}                                        
+                                    </code>
+                                </pre>
                             </li>
-                            <li className="item"></li>
-                            <li className="item"></li>
                         </ul>
                     </li>
                 </ul>

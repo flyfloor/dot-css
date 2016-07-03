@@ -37,12 +37,28 @@ export default class Card extends Component {
                             </div>
                             <div className="content">
                                 <p>This is content</p>
-                                <p>This is content</p>
                             </div>
                             <div className="extra">
                                 <p>This is extra data</p>
                             </div>
                         </div>
+                        <pre>
+                            <code>
+{`
+<div className="${CN('card')}">
+    <div className="${CN('image')}">
+        <img src="http://braavos.me/dot-css/dist/img/avatar.png"/>
+    </div>
+    <div className="content">
+        <p>This is content</p>
+    </div>
+    <div className="extra">
+        <p>This is extra data</p>
+    </div>
+</div>
+`}                                
+                            </code>
+                        </pre>
                     </li>
                     <li>
                         <h4>Cards</h4>
@@ -53,6 +69,17 @@ export default class Card extends Component {
                             {makeCard()}
                             {makeCard()}
                         </div>
+                        <pre>
+                            <code>
+{`
+<div class="${CN('cards')}">
+    <div class="card">
+        ...
+    </div>
+</div>
+`}                                    
+                            </code>
+                        </pre>
                     </li>
                     <li>
                         <h4>Cards with given count</h4>
@@ -63,6 +90,17 @@ export default class Card extends Component {
                             {makeCard()}
                             {makeCard()}
                         </div>
+                        <pre>
+                            <code>
+{`
+<div class="${CN('cards cards-5')}">
+    <div class="card">
+        ...
+    </div>
+</div>
+`}                            
+                            </code>
+                        </pre>
                     </li>
                 </ul>
             </div>

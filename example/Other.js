@@ -7,7 +7,7 @@ export default class Other extends Component {
         return (
             <div>
                 <h2>Other</h2>
-                <blockquote>
+                <blockquote className={CN('blockquote')}>
                     <p>This part is about MISC stuff</p>
                 </blockquote>
                 <ul>
@@ -57,11 +57,39 @@ export default class Other extends Component {
                         </ul>
                         <pre>
                             <code>
-{`<div class="${NS} figure figure:2x1">
+{`
+<div class="${NS} figure figure:2x1">
     <img src="" alt="" />
-</div>`}                                
+</div>
+`}                                
                             </code>
                         </pre>
+                        <div className={CN('info message')}>
+                            <div className="content">
+                                <h3>resolution:</h3>
+                                <br/>
+                                <div className={CN('small table')}>
+                                    <div className="row">
+                                        <div className="cell">figure:1x1</div>
+                                        <div className="cell">figure:1x2</div>
+                                        <div className="cell">figure:1x3</div>
+                                        <div className="cell">figure:2x1</div>
+                                        <div className="cell">figure:2x3</div>
+                                        <div className="cell">figure:3x2</div>
+                                        <div className="cell">figure:3x4</div>
+                                    </div>
+                                    <div className="row">
+                                        <div className="cell">figure:1x3</div>
+                                        <div className="cell">figure:5x2</div>
+                                        <div className="cell">figure:5x3</div>
+                                        <div className="cell">figure:6x5</div>
+                                        <div className="cell">figure:9x16</div>
+                                        <div className="cell">figure:16x9</div>
+                                        <div className="cell">figure:16x10</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </div>

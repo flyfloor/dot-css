@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {CN} from './util';
+import {SHAPE_SIZE} from './setting';
 
 const makeMessage = (cn='') => {
     return (
@@ -7,6 +8,18 @@ const makeMessage = (cn='') => {
             <p><span>{cn ? `${cn}: `: null}</span> edit your feed by updating the users you follow and repositories you watch</p>
         </div>
     );
+}
+
+const sizeMsgList = () => {
+    return (
+        <ul>
+            {SHAPE_SIZE.map(size => {
+                return <li key={`${size}_msg`}>
+                            {makeMessage(size)}
+                        </li>
+            })}
+        </ul>
+    )
 }
 
 export default class Message extends Component {
@@ -24,6 +37,16 @@ export default class Message extends Component {
                             <h3 className="header">ProTips</h3>
                             <p>Edit your feed by updating the users you follow and repositories you watch.</p>
                         </div>
+                        <pre>
+                            <code>
+{`
+<div class="${CN('message')}">
+    <div class="header"></div>
+    ...
+</div>
+`}                                
+                            </code>
+                        </pre>
                     </li>
                     <li>
                         <h4>Icon Message</h4>
@@ -33,6 +56,16 @@ export default class Message extends Component {
                                 <p>Edit your feed by updating the users you follow and repositories you watch.</p>
                             </div>
                         </div>
+                        <pre>
+                            <code>
+{`
+<div class="${CN('icon message')}">
+    <i class="${CN('icon')}">translate</i>
+    <div class="content"></div>
+</div>
+`}                                
+                            </code>
+                        </pre>
                     </li>
                     <li>
                         <h4>Status Message</h4>
@@ -40,14 +73,37 @@ export default class Message extends Component {
                         {makeMessage('warning')}
                         {makeMessage('success')}
                         {makeMessage('error')}
+                        <pre>
+                            <code>
+{`
+<div class="${CN('info message')}">
+    ...
+</div>
+
+<div class="${CN('warning message')}">
+</div>
+
+<div class="${CN('success message')}">
+</div>
+
+<div class="${CN('error message')}">
+</div>
+`}                                
+                            </code>
+                        </pre>
                     </li>
                     <li>
                         <h4>Size</h4>
-                        {makeMessage('tiny')}
-                        {makeMessage('small')}
-                        {makeMessage('')}
-                        {makeMessage('large')}
-                        {makeMessage('huge')}
+                        {sizeMsgList()}
+                        <pre>
+                            <code>
+{`
+<div class="${CN('large message')}">
+    ...
+</div>
+`}                                
+                            </code>
+                        </pre>
                     </li>
                 </ul>
             </div>

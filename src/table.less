@@ -1,11 +1,18 @@
 @import url('meta');
 @import url('color');
+@import url('_font_padding');
 
 @{NS}.table {
     position: relative;
     display: table;
     table-layout: fixed;
     border: 1px solid @light_gray;
+
+    /*shape size*/
+    ._FONT_SIZE(14);
+    &.small { ._FONT_SIZE(12);}
+    &.large { ._FONT_SIZE(18);}
+
     &.fluid {
         width: 100%;
     }

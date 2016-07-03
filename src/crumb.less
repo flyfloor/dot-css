@@ -1,6 +1,6 @@
 @import url('meta');
 @import url('color');
-@import url('_font-padding');
+@import url('_font_padding');
 
 @{NS}.crumb {
     >.section {
@@ -19,25 +19,17 @@
             color: @deep_gray;
         }
     }
-    &.slash {
-        >.section {
-            &+.section:before {
-                font-family: inherit;
-                content: '/';
-            }
+    &.slash >.section {
+        &+.section:before {
+            font-family: inherit;
+            content: '/';
         }
     }
+
+    /*shape size*/
     ._FONT_SIZE(14);
-    &.tiny {
-        ._FONT_SIZE(10);
-    }
-    &.small {
-        ._FONT_SIZE(12);
-    }
-    &.large {
-        ._FONT_SIZE(18);
-    }
-    &.huge {
-        ._FONT_SIZE(22);
-    } 
+    &.tiny { ._FONT_SIZE(10); }
+    &.small { ._FONT_SIZE(12); }
+    &.large { ._FONT_SIZE(18); }
+    &.huge { ._FONT_SIZE(22); } 
 }

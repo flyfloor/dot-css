@@ -28,6 +28,27 @@ export default class Progress extends Component {
                             <div className="bar" style={{width: '30%'}}>
                             </div>
                         </div>
+                        <pre>
+                            <code>
+{`
+<div class="${CN('progress')}">
+    <div class="bar" style="width:30%"></div>
+</div>
+
+<div class="${CN('success progress')}">
+    <div class="bar"></div>
+</div>
+
+<div class="${CN('error progress')}">
+    <div class="bar" style="width:30%"></div>
+</div>
+
+<div class="${CN('warning progress')}">
+    <div class="bar" style="width:30%"></div>
+</div>
+`}                            
+                            </code>
+                        </pre>
                         <h4>Progress Size</h4>
                         <h5>small</h5>
                         <div className={CN('small progress')}>
@@ -44,6 +65,15 @@ export default class Progress extends Component {
                             <div className="bar" style={{'width': '30%'}}>
                             </div>
                         </div>
+                        <pre>
+                            <code>
+{`
+<div class="${CN('large progress')}">
+    <div class="bar" style="width:30%"></div>
+</div>
+`}                                
+                            </code>
+                        </pre>
                     </li>
                 </ul>
             </div>

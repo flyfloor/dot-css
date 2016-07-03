@@ -30,9 +30,31 @@ export default class Crumb extends Component {
                 <ul>
                     <li>
                         {makeCrumbList()}
+                        <pre>
+                            <code>
+{`
+<div class="${CN('crumb')}">
+    <a class="section" href="#">home</a>
+    <a class="section" href="#">blog</a>
+    <a class="section" href="#">last year</a>
+</div>
+`}                                
+                            </code>
+                        </pre>
                         <h4>Slashed crumb</h4>
                         <br/>
                         {makeCrumbList('slash')}
+                        <pre>
+                            <code>
+{`
+<div class="${CN('slash crumb')}">
+    <a class="section" href="#">home</a>
+    <a class="section" href="#">blog</a>
+    <a class="section" href="#">last year</a>
+</div>
+`}                                             
+                            </code>
+                        </pre>
                     </li>
                 </ul>
             </div>
