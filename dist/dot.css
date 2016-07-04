@@ -393,6 +393,9 @@ pre {
   overflow-y: hidden;
   word-wrap: normal;
 }
+code {
+  white-space: pre;
+}
 .dot.container {
   margin: 0 auto;
   display: block;
@@ -1284,7 +1287,7 @@ i.dot.icon:hover {
   top: 0;
   bottom: 0;
   margin: auto;
-  line-height: initial;
+  line-height: inherit;
 }
 .dot.button.circle,
 .dot.button.round {
@@ -1344,7 +1347,7 @@ i.dot.icon:hover {
   top: 0;
   bottom: 0;
   margin: auto;
-  line-height: initial;
+  line-height: inherit;
 }
 .dot.button.tiny.circle,
 .dot.button.tiny.round {
@@ -1404,7 +1407,7 @@ i.dot.icon:hover {
   top: 0;
   bottom: 0;
   margin: auto;
-  line-height: initial;
+  line-height: inherit;
 }
 .dot.button.small.circle,
 .dot.button.small.round {
@@ -1464,7 +1467,7 @@ i.dot.icon:hover {
   top: 0;
   bottom: 0;
   margin: auto;
-  line-height: initial;
+  line-height: inherit;
 }
 .dot.button.large.circle,
 .dot.button.large.round {
@@ -1524,7 +1527,7 @@ i.dot.icon:hover {
   top: 0;
   bottom: 0;
   margin: auto;
-  line-height: initial;
+  line-height: inherit;
 }
 .dot.button.huge.circle,
 .dot.button.huge.round {
@@ -2010,7 +2013,7 @@ i.dot.icon:hover {
   top: 0;
   bottom: 0;
   margin: auto;
-  line-height: initial;
+  line-height: inherit;
 }
 .dot.button-group > .button.circle,
 .dot.button-group > .button.round {
@@ -2070,7 +2073,7 @@ i.dot.icon:hover {
   top: 0;
   bottom: 0;
   margin: auto;
-  line-height: initial;
+  line-height: inherit;
 }
 .dot.button-group.tiny > .button.circle,
 .dot.button-group.tiny > .button.round {
@@ -2130,7 +2133,7 @@ i.dot.icon:hover {
   top: 0;
   bottom: 0;
   margin: auto;
-  line-height: initial;
+  line-height: inherit;
 }
 .dot.button-group.small > .button.circle,
 .dot.button-group.small > .button.round {
@@ -2190,7 +2193,7 @@ i.dot.icon:hover {
   top: 0;
   bottom: 0;
   margin: auto;
-  line-height: initial;
+  line-height: inherit;
 }
 .dot.button-group.large > .button.circle,
 .dot.button-group.large > .button.round {
@@ -2250,7 +2253,7 @@ i.dot.icon:hover {
   top: 0;
   bottom: 0;
   margin: auto;
-  line-height: initial;
+  line-height: inherit;
 }
 .dot.button-group.huge > .button.circle,
 .dot.button-group.huge > .button.round {
@@ -3112,7 +3115,7 @@ i.dot.icon:hover {
   top: 0;
   bottom: 0;
   margin: auto;
-  line-height: initial;
+  line-height: inherit;
 }
 .dot.label.circle,
 .dot.label.round {
@@ -3172,7 +3175,7 @@ i.dot.icon:hover {
   top: 0;
   bottom: 0;
   margin: auto;
-  line-height: initial;
+  line-height: inherit;
 }
 .dot.label.tiny.circle,
 .dot.label.tiny.round {
@@ -3232,7 +3235,7 @@ i.dot.icon:hover {
   top: 0;
   bottom: 0;
   margin: auto;
-  line-height: initial;
+  line-height: inherit;
 }
 .dot.label.small.circle,
 .dot.label.small.round {
@@ -3292,7 +3295,7 @@ i.dot.icon:hover {
   top: 0;
   bottom: 0;
   margin: auto;
-  line-height: initial;
+  line-height: inherit;
 }
 .dot.label.large.circle,
 .dot.label.large.round {
@@ -3352,7 +3355,7 @@ i.dot.icon:hover {
   top: 0;
   bottom: 0;
   margin: auto;
-  line-height: initial;
+  line-height: inherit;
 }
 .dot.label.huge.circle,
 .dot.label.huge.round {
@@ -3806,7 +3809,7 @@ i.dot.icon:hover {
   top: 0;
   bottom: 0;
   margin: auto;
-  line-height: initial;
+  line-height: inherit;
 }
 .dot.label-group > .label.circle,
 .dot.label-group > .label.round {
@@ -3866,7 +3869,7 @@ i.dot.icon:hover {
   top: 0;
   bottom: 0;
   margin: auto;
-  line-height: initial;
+  line-height: inherit;
 }
 .dot.label-group.tiny > .label.circle,
 .dot.label-group.tiny > .label.round {
@@ -3926,7 +3929,7 @@ i.dot.icon:hover {
   top: 0;
   bottom: 0;
   margin: auto;
-  line-height: initial;
+  line-height: inherit;
 }
 .dot.label-group.small > .label.circle,
 .dot.label-group.small > .label.round {
@@ -3986,7 +3989,7 @@ i.dot.icon:hover {
   top: 0;
   bottom: 0;
   margin: auto;
-  line-height: initial;
+  line-height: inherit;
 }
 .dot.label-group.large > .label.circle,
 .dot.label-group.large > .label.round {
@@ -4046,7 +4049,7 @@ i.dot.icon:hover {
   top: 0;
   bottom: 0;
   margin: auto;
-  line-height: initial;
+  line-height: inherit;
 }
 .dot.label-group.huge > .label.circle,
 .dot.label-group.huge > .label.round {
@@ -4642,7 +4645,7 @@ img.dot.image.massive.circle {
   top: 0;
   bottom: 0;
   margin: auto;
-  line-height: initial;
+  line-height: inherit;
 }
 .dot.message.circle,
 .dot.message.round {
@@ -4702,7 +4705,7 @@ img.dot.image.massive.circle {
   top: 0;
   bottom: 0;
   margin: auto;
-  line-height: initial;
+  line-height: inherit;
 }
 .dot.message.tiny.circle,
 .dot.message.tiny.round {
@@ -4762,7 +4765,7 @@ img.dot.image.massive.circle {
   top: 0;
   bottom: 0;
   margin: auto;
-  line-height: initial;
+  line-height: inherit;
 }
 .dot.message.small.circle,
 .dot.message.small.round {
@@ -4822,7 +4825,7 @@ img.dot.image.massive.circle {
   top: 0;
   bottom: 0;
   margin: auto;
-  line-height: initial;
+  line-height: inherit;
 }
 .dot.message.large.circle,
 .dot.message.large.round {
@@ -4882,7 +4885,7 @@ img.dot.image.massive.circle {
   top: 0;
   bottom: 0;
   margin: auto;
-  line-height: initial;
+  line-height: inherit;
 }
 .dot.message.huge.circle,
 .dot.message.huge.round {
@@ -4982,71 +4985,74 @@ img.dot.image.massive.circle {
 }
 .dot.loader {
   /*shape size*/
-  width: 25px;
-  height: 25px;
-  border-radius: 12.5px;
-  color: #616161;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  border-width: 2px;
   display: block;
   position: relative;
-}
-.dot.loader:before,
-.dot.loader:after {
-  border-radius: 25px;
-  border-width: 2px;
-  margin: -12.5px 0 0 -12.5px;
-}
-.dot.loader.small {
-  width: 15px;
-  height: 15px;
-  border-radius: 7.5px;
-}
-.dot.loader.small:before,
-.dot.loader.small:after {
-  border-radius: 15px;
-  border-width: 1.2px;
-  margin: -7.5px 0 0 -7.5px;
-}
-.dot.loader.large {
-  width: 35px;
-  height: 35px;
-  border-radius: 17.5px;
-}
-.dot.loader.large:before,
-.dot.loader.large:after {
-  border-radius: 35px;
-  border-width: 2.8px;
-  margin: -17.5px 0 0 -17.5px;
-}
-.dot.loader:before,
-.dot.loader:after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
   border-style: solid;
+  border-color: rgba(150, 150, 150, 0.2);
 }
 .dot.loader:before {
-  border-color: rgba(100, 100, 100, 0.2);
+  border-radius: 12px;
+  border-width: 2px;
+  width: 24px;
+  height: 24px;
+  left: -2px;
+  top: -2px;
 }
-.dot.loader:after {
+.dot.loader.small {
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  border-width: 1px;
+}
+.dot.loader.small:before {
+  border-radius: 6px;
+  border-width: 1px;
+  width: 12px;
+  height: 12px;
+  left: -1px;
+  top: -1px;
+}
+.dot.loader.large {
+  width: 36px;
+  height: 36px;
+  border-radius: 18px;
+  border-width: 3px;
+}
+.dot.loader.large:before {
+  border-radius: 18px;
+  border-width: 3px;
+  width: 36px;
+  height: 36px;
+  left: -3px;
+  top: -3px;
+}
+.dot.loader:before {
+  content: '';
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  border-style: solid;
   border-color: transparent;
-  border-top-color: inherit;
-  -webkit-animation: 1s linear infinite spin_loader;
-  -moz-animation: 1s linear infinite spin_loader;
-  -o-animation: 1s linear infinite spin_loader;
-  animation: 1s linear infinite spin_loader;
+  border-top-color: #999999;
+  -webkit-animation: .7s linear infinite spin_loader;
+  -moz-animation: .7s linear infinite spin_loader;
+  -o-animation: .7s linear infinite spin_loader;
+  animation: .7s linear infinite spin_loader;
 }
 .dot.loader.inverted {
-  color: #ffffff;
+  border-color: rgba(200, 200, 200, 0.2);
 }
 .dot.loader.inverted:before {
-  border-color: rgba(200, 200, 200, 0.2);
+  border-top-color: #ffffff;
 }
 .dot.bounce.loader {
   width: auto;
   height: auto;
+  border: 0;
   /*shape size*/
 }
 .dot.bounce.loader:before,
@@ -5057,28 +5063,35 @@ img.dot.image.massive.circle {
   width: 10px;
   height: 10px;
   border-radius: 5px;
+  border-width: 1px;
 }
-.dot.bounce.loader.small > .bounce:before,
-.dot.bounce.loader.small > .bounce:after {
-  border-radius: 10px;
-  border-width: 0.8px;
-  margin: -5px 0 0 -5px;
+.dot.bounce.loader.small > .bounce:before {
+  border-radius: 5px;
+  border-width: 1px;
+  width: 10px;
+  height: 10px;
+  left: -1px;
+  top: -1px;
 }
 .dot.bounce.loader.large > .bounce {
   width: 30px;
   height: 30px;
   border-radius: 15px;
+  border-width: 3px;
 }
-.dot.bounce.loader.large > .bounce:before,
-.dot.bounce.loader.large > .bounce:after {
-  border-radius: 30px;
-  border-width: 2.4px;
-  margin: -15px 0 0 -15px;
+.dot.bounce.loader.large > .bounce:before {
+  border-radius: 15px;
+  border-width: 3px;
+  width: 30px;
+  height: 30px;
+  left: -3px;
+  top: -3px;
 }
 .dot.bounce.loader > .bounce {
   width: 20px;
   height: 20px;
   border-radius: 10px;
+  border-width: 2px;
   display: inline-block;
   -webkit-animation: spin_bounce 2s infinite ease-in-out both;
   -moz-animation: spin_bounce 2s infinite ease-in-out both;
@@ -5086,11 +5099,13 @@ img.dot.image.massive.circle {
   animation: spin_bounce 2s infinite ease-in-out both;
   background: #42A5F5;
 }
-.dot.bounce.loader > .bounce:before,
-.dot.bounce.loader > .bounce:after {
-  border-radius: 20px;
-  border-width: 1.6px;
-  margin: -10px 0 0 -10px;
+.dot.bounce.loader > .bounce:before {
+  border-radius: 10px;
+  border-width: 2px;
+  width: 20px;
+  height: 20px;
+  left: -2px;
+  top: -2px;
 }
 .dot.bounce.loader > .bounce + .bounce {
   margin-left: .1em;
@@ -5109,102 +5124,102 @@ img.dot.image.massive.circle {
 }
 .dot.google.spinner {
   position: relative;
-  width: 30px;
-  height: 30px;
-  border-radius: 15px;
-  border: 3px solid #616161;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  border: 2px solid #616161;
   background-color: #ffffff;
 }
 .dot.google.spinner:before,
 .dot.google.spinner:after {
-  width: 16.5px;
-  height: 33px;
-  left: -4.5px;
-  top: -4.5px;
+  width: 14px;
+  height: 28px;
+  left: -4px;
+  top: -4px;
 }
 .dot.google.spinner:before {
-  border-radius: 30px 0 0 30px;
-  -webkit-transform-origin: 16.5px 16.5px;
-  -ms-transform-origin: 16.5px 16.5px;
-  -o-transform-origin: 16.5px 16.5px;
-  transform-origin: 16.5px 16.5px;
+  border-radius: 24px 0 0 24px;
+  -webkit-transform-origin: 14px 14px;
+  -ms-transform-origin: 14px 14px;
+  -o-transform-origin: 14px 14px;
+  transform-origin: 14px 14px;
 }
 .dot.google.spinner:after {
-  left: 12px;
-  border-radius: 0 30px 30px 0;
+  left: 10px;
+  border-radius: 0 24px 24px 0;
 }
 .dot.google.spinner.small {
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
-  border: 2px solid #616161;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  border: 1px solid #616161;
 }
 .dot.google.spinner.small:before,
 .dot.google.spinner.small:after {
-  width: 11px;
-  height: 22px;
-  left: -3px;
-  top: -3px;
+  width: 7px;
+  height: 14px;
+  left: -2px;
+  top: -2px;
 }
 .dot.google.spinner.small:before {
-  border-radius: 20px 0 0 20px;
-  -webkit-transform-origin: 11px 11px;
-  -ms-transform-origin: 11px 11px;
-  -o-transform-origin: 11px 11px;
-  transform-origin: 11px 11px;
+  border-radius: 12px 0 0 12px;
+  -webkit-transform-origin: 7px 7px;
+  -ms-transform-origin: 7px 7px;
+  -o-transform-origin: 7px 7px;
+  transform-origin: 7px 7px;
 }
 .dot.google.spinner.small:after {
-  left: 8px;
-  border-radius: 0 20px 20px 0;
+  left: 5px;
+  border-radius: 0 12px 12px 0;
 }
 .dot.google.spinner.large {
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-  border: 5px solid #616161;
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+  border: 4px solid #616161;
 }
 .dot.google.spinner.large:before,
 .dot.google.spinner.large:after {
-  width: 27.5px;
-  height: 55px;
-  left: -7.5px;
-  top: -7.5px;
+  width: 28px;
+  height: 56px;
+  left: -8px;
+  top: -8px;
 }
 .dot.google.spinner.large:before {
-  border-radius: 50px 0 0 50px;
-  -webkit-transform-origin: 27.5px 27.5px;
-  -ms-transform-origin: 27.5px 27.5px;
-  -o-transform-origin: 27.5px 27.5px;
-  transform-origin: 27.5px 27.5px;
+  border-radius: 48px 0 0 48px;
+  -webkit-transform-origin: 28px 28px;
+  -ms-transform-origin: 28px 28px;
+  -o-transform-origin: 28px 28px;
+  transform-origin: 28px 28px;
 }
 .dot.google.spinner.large:after {
   left: 20px;
-  border-radius: 0 50px 50px 0;
+  border-radius: 0 48px 48px 0;
 }
 .dot.google.spinner:before,
 .dot.google.spinner:after {
   content: "";
   position: absolute;
   background-color: inherit;
-  -webkit-animation: spin_loader 2s infinite ease-in-out;
-  -o-animation: spin_loader 2s infinite ease-in-out;
-  animation: spin_loader 2s infinite ease-in-out;
+  -webkit-animation: spin_loader 1.6s infinite ease-in-out;
+  -o-animation: spin_loader 1.6s infinite ease-in-out;
+  animation: spin_loader 1.6s infinite ease-in-out;
 }
 .dot.google.spinner:after {
   -webkit-transform-origin: 0;
   -ms-transform-origin: 0;
   -o-transform-origin: 0;
   transform-origin: 0;
-  -webkit-animation-delay: -1.5s;
-  -o-animation-delay: -1.5s;
-  animation-delay: -1.5s;
+  -webkit-animation-delay: -1.2s;
+  -o-animation-delay: -1.2s;
+  animation-delay: -1.2s;
 }
 @-webkit-keyframes spin_loader {
   from {
     -webkit-transform: rotate(0);
   }
   to {
-    -webkit-transform: rotate(360deg);
+    -webkit-transform: rotate(359deg);
   }
 }
 @-moz-keyframes spin_loader {
@@ -5212,7 +5227,7 @@ img.dot.image.massive.circle {
     -ms-transform: rotate(0);
   }
   to {
-    -ms-transform: rotate(360deg);
+    -ms-transform: rotate(359deg);
   }
 }
 @-o-keyframes spin_loader {
@@ -5220,7 +5235,7 @@ img.dot.image.massive.circle {
     -o-transform: rotate(0);
   }
   to {
-    -o-transform: rotate(360deg);
+    -o-transform: rotate(359deg);
   }
 }
 @keyframes spin_loader {
@@ -5228,7 +5243,7 @@ img.dot.image.massive.circle {
     transform: rotate(0);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(359deg);
   }
 }
 @-webkit-keyframes spin_bounce {
