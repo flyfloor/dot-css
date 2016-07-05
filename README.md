@@ -1,10 +1,6 @@
 ## Dot css
 
-Very basic css scaffold.
-
-###Demo
-
-[dot-css](http://braavos.me/dot-css)
+Very basic css scaffold. [dot-css](http://braavos.me/dot-css)
 
 ###Usage
 
@@ -21,6 +17,7 @@ single import:
 ```
 import dot from 'dot-css/src/button.less'
 ```
+
 all import:
 
 ```
