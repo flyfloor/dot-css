@@ -71,6 +71,10 @@ export default class Progress extends Component {
 `}                                
                             </code>
                         </pre>
+                        <h5>Active</h5>
+                        <div className={CN('active progress')}>
+                            <div className="bar" style={{'width': '30%'}}></div>
+                        </div>
                     </li>
                 </ul>
             </div>

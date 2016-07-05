@@ -4558,7 +4558,6 @@ img.dot.image.massive.circle {
   width: calc(100%/16 - 10px* 2);
 }
 .dot.message {
-  padding: 10px;
   margin: 10px 0;
   color: #616161;
   border-radius: 3px;
@@ -4567,6 +4566,8 @@ img.dot.image.massive.circle {
   padding: 9px 18px;
   font-size: 15px;
   line-height: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .dot.message > .header {
   line-height: initial;
@@ -4655,6 +4656,8 @@ img.dot.image.massive.circle {
   padding: 6px 12px;
   font-size: 10px;
   line-height: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .dot.message.tiny > .dot.icon {
   cursor: pointer;
@@ -4715,6 +4718,8 @@ img.dot.image.massive.circle {
   padding: 7px 14px;
   font-size: 12px;
   line-height: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .dot.message.small > .dot.icon {
   cursor: pointer;
@@ -4775,6 +4780,8 @@ img.dot.image.massive.circle {
   padding: 12px 24px;
   font-size: 20px;
   line-height: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .dot.message.large > .dot.icon {
   cursor: pointer;
@@ -4835,6 +4842,8 @@ img.dot.image.massive.circle {
   padding: 15px 30px;
   font-size: 25px;
   line-height: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .dot.message.huge > .dot.icon {
   cursor: pointer;
@@ -4894,10 +4903,10 @@ img.dot.image.massive.circle {
 .dot.progress {
   position: relative;
   display: block;
-  height: 10px;
-  font-size: 10px;
+  height: 5px;
+  font-size: 5px;
   background-color: #F5F5F5;
-  border-radius: 5px;
+  border-radius: 2.5px;
   overflow: hidden;
   margin-bottom: 10px;
 }
@@ -4929,18 +4938,59 @@ img.dot.image.massive.circle {
   background-color: #FFA726;
 }
 .dot.progress.small {
-  height: 5px;
-  font-size: 5px;
+  height: 2px;
+  font-size: 2px;
 }
 .dot.progress.small > .bar {
-  height: 5px;
+  height: 2px;
 }
 .dot.progress.large {
-  height: 15px;
-  font-size: 15px;
+  height: 10px;
+  font-size: 10px;
 }
 .dot.progress.large > .bar {
-  height: 15px;
+  height: 10px;
+}
+.dot.progress.active:before {
+  content: '';
+  position: absolute;
+  border-radius: inherit;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  max-width: 25%;
+  z-index: 1;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-animation: progress_bar 3s linear infinite;
+  -o-animation: progress_bar 3s linear infinite;
+  animation: progress_bar 3s linear infinite;
+}
+@-webkit-keyframes progress_bar {
+  0% {
+    left: -25%;
+  }
+  100% {
+    left: 125%;
+  }
+}
+@-o-keyframes progress_bar {
+  0% {
+    left: -25%;
+  }
+  100% {
+    left: 125%;
+  }
+}
+@keyframes progress_bar {
+  0% {
+    left: -25%;
+  }
+  100% {
+    left: 125%;
+  }
 }
 .dot.crumb {
   /*shape size*/

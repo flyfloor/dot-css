@@ -1,23 +1,34 @@
 @import url('meta');
 @import url('color');
+@import url('_font_padding');
+
 
 @{NS}.message {
+    .__resetMsgPadding(){
+        padding-left: @padding;
+        padding-right: @padding;
+    }
     .__messageSize() {
         ._FONT_PADDING(15, 9);
+        .__resetMsgPadding();
         &.tiny {
             ._FONT_PADDING(10, 6);
+            .__resetMsgPadding();
         }
         &.small {
             ._FONT_PADDING(12, 7);
+            .__resetMsgPadding();
         }
         &.large {
             ._FONT_PADDING(20, 12);
+            .__resetMsgPadding();
         }
         &.huge {
             ._FONT_PADDING(25, 15);
+            .__resetMsgPadding();
         }
     }
-    padding: @padding;
+    
     margin: @padding 0;
     color: @dark_gray;
     border-radius: @radius;

@@ -180,38 +180,6 @@ export default class Grid extends Component {
                             </code>
                         </pre>
                     </li>
-                    <li>
-                        <h3>Auto fold column</h3>
-                        <div className={CN('grid')}>
-                            <div className="column">
-                                <p>1</p>
-                            </div>
-                            <div className="column">
-                                <p>2</p>
-                            </div>
-                            <div className="column">
-                                <p>3</p>
-                            </div>
-                            <div className="column">
-                                <p>4</p>
-                            </div>
-                            <div className="column">
-                                <p>5</p>
-                            </div>
-                            <div className="column">
-                                <p>6</p>
-                            </div>
-                            <div className="column">
-                                <p>7</p>
-                            </div>
-                            <div className="column">
-                                <p>8</p>
-                            </div>
-                            <div className="column">
-                                <p>9</p>
-                            </div>
-                        </div>
-                    </li>
                 </ul>
             </div>
         );
