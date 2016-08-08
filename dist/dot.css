@@ -2590,34 +2590,49 @@ i.dot.icon:hover {
   overflow: hidden;
   display: inline;
 }
-.dot.input input {
+.dot.input input,
+.dot.inputinput {
   vertical-align: middle;
   -webkit-transition: all .3s;
   -o-transition: all .3s;
   transition: all .3s;
 }
-.dot.input.angled input[type='text'],
-.dot.input.angled input[type='number'],
-.dot.input.angled input[type='url'],
-.dot.input.angled input[type='tel'],
-.dot.input.angled input[type='password'],
-.dot.input.angled input[type='email'] {
+.dot.input.angled > input[type='text'],
+input.dot.input.angled[type='text'],
+.dot.input.angled > input[type='number'],
+input.dot.input.angled[type='number'],
+.dot.input.angled > input[type='url'],
+input.dot.input.angled[type='url'],
+.dot.input.angled > input[type='tel'],
+input.dot.input.angled[type='tel'],
+.dot.input.angled > input[type='password'],
+input.dot.input.angled[type='password'],
+.dot.input.angled > input[type='email'],
+input.dot.input.angled[type='email'] {
   border-radius: 0;
 }
-.dot.input.angled textarea,
-.dot.input.angled .button,
-.dot.input.angled .icon {
+.dot.input.angled > textarea,
+.dot.input.angled > .button,
+.dot.input.angled > .icon,
+textarea.dot.input.angled {
   border-radius: 0;
 }
-.dot.input.fluid input[type='text'],
-.dot.input.fluid input[type='number'],
-.dot.input.fluid input[type='url'],
-.dot.input.fluid input[type='tel'],
-.dot.input.fluid input[type='password'],
-.dot.input.fluid input[type='email'] {
+.dot.input.fluid > input[type='text'],
+input.dot.input.fluid[type='text'],
+.dot.input.fluid > input[type='number'],
+input.dot.input.fluid[type='number'],
+.dot.input.fluid > input[type='url'],
+input.dot.input.fluid[type='url'],
+.dot.input.fluid > input[type='tel'],
+input.dot.input.fluid[type='tel'],
+.dot.input.fluid > input[type='password'],
+input.dot.input.fluid[type='password'],
+.dot.input.fluid > input[type='email'],
+input.dot.input.fluid[type='email'] {
   width: 100%;
 }
-.dot.input.fluid textarea {
+.dot.input.fluid > textarea,
+textarea.dot.input.fluid {
   width: 100%;
 }
 .dot.input.action {
@@ -2666,7 +2681,8 @@ i.dot.icon:hover {
   width: 5em;
 }
 .dot.input input,
-.dot.input .button {
+.dot.input .button,
+input.dot.input {
   font-size: 14px;
   padding: 7px;
   line-height: 14px;
@@ -2710,7 +2726,8 @@ i.dot.icon:hover {
   border-bottom-right-radius: 21px;
 }
 .dot.input.tiny input,
-.dot.input.tiny .button {
+.dot.input.tiny .button,
+input.dot.input.tiny {
   font-size: 10px;
   padding: 5px;
   line-height: 10px;
@@ -2754,7 +2771,8 @@ i.dot.icon:hover {
   border-bottom-right-radius: 15px;
 }
 .dot.input.small input,
-.dot.input.small .button {
+.dot.input.small .button,
+input.dot.input.small {
   font-size: 12px;
   padding: 6px;
   line-height: 12px;
@@ -2798,7 +2816,8 @@ i.dot.icon:hover {
   border-bottom-right-radius: 18px;
 }
 .dot.input.large input,
-.dot.input.large .button {
+.dot.input.large .button,
+input.dot.input.large {
   font-size: 18px;
   padding: 9px;
   line-height: 18px;
@@ -2842,7 +2861,8 @@ i.dot.icon:hover {
   border-bottom-right-radius: 27px;
 }
 .dot.input.huge input,
-.dot.input.huge .button {
+.dot.input.huge .button,
+input.dot.input.huge {
   font-size: 22px;
   padding: 11px;
   line-height: 22px;
@@ -2886,11 +2906,17 @@ i.dot.icon:hover {
   border-bottom-right-radius: 33px;
 }
 .dot.input input[type='text']:focus,
+input.dot.input[type='text']:focus,
 .dot.input input[type='number']:focus,
+input.dot.input[type='number']:focus,
 .dot.input input[type='url']:focus,
+input.dot.input[type='url']:focus,
 .dot.input input[type='tel']:focus,
+input.dot.input[type='tel']:focus,
 .dot.input input[type='password']:focus,
-.dot.input input[type='email']:focus {
+input.dot.input[type='password']:focus,
+.dot.input input[type='email']:focus,
+input.dot.input[type='email']:focus {
   border-color: #03A9F4;
 }
 .dot.input textarea:focus {
@@ -5336,6 +5362,64 @@ img.dot.image.massive.circle {
     transform: scale(1);
   }
 }
+.dot.form {
+  padding: 20px;
+  width: 100%;
+}
+.dot.form.basic {
+  padding: 0;
+}
+.dot.form.fluid {
+  width: 100%;
+}
+.dot.form .field {
+  margin-bottom: 16px;
+}
+.dot.form .field label,
+.dot.form .field .label {
+  word-wrap: break-word;
+  display: block;
+}
+.dot.form .field input[type='text'],
+.dot.form .field input[type='number'],
+.dot.form .field input[type='url'],
+.dot.form .field input[type='tel'],
+.dot.form .field input[type='password'],
+.dot.form .field input[type='email'] {
+  width: 100%;
+}
+.dot.form.inline > .field {
+  width: 100%;
+  display: table;
+}
+.dot.form.inline.trim .label,
+.dot.form.inline.trim label {
+  text-align: right;
+}
+.dot.form.inline label,
+.dot.form.inline .label {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100px;
+  padding-right: 10px;
+}
+.dot.form.inline .action {
+  margin-left: 100px;
+}
+.dot.form.inline input[type='text'],
+.dot.form.inline input[type='number'],
+.dot.form.inline input[type='url'],
+.dot.form.inline input[type='tel'],
+.dot.form.inline input[type='password'],
+.dot.form.inline input[type='email'] {
+  display: table-cell;
+  vertical-align: middle;
+}
+@media only screen and (min-width: 992px) {
+  .dot.form {
+    width: 500px;
+  }
+}
 .dot.figure {
   padding-bottom: 100%;
   position: relative;
@@ -5390,4 +5474,13 @@ img.dot.image.massive.circle {
 }
 .dot.figure.figure\:16x10 {
   padding-bottom: 62.5%;
+}
+.dot.chunk {
+  display: block;
+  padding: 20px;
+  margin-bottom: 10px;
+  border: 1px solid #EEEEEE;
+}
+.dot.chunk.basic {
+  border: 0;
 }

@@ -5,7 +5,7 @@
     @_padding: @padding * @_pd / 10;
     @_lh: @line_height * @size / 15;
     @_border_radius: @line_height * @size / 15 + @padding * @_pd / 10;
-    input, .button {
+    input, .button, input& {
         font-size: @_lh;
         padding: @_padding;
         line-height: @_lh;
@@ -57,33 +57,29 @@
     position: relative;
     overflow: hidden;
     display: inline;
-    input {
+    input, &input {
         vertical-align: middle;
         -webkit-transition: all .3s;
         -o-transition: all .3s;
         transition: all .3s;
     }
 
-    &.angled {
-        input {
-            &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
-                border-radius: 0;
-            }
-        }
-        textarea, .button, .icon {
+    &.angled>input, input&.angled {
+        &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
             border-radius: 0;
         }
     }
+    &.angled>textarea, &.angled>.button, &.angled>.icon, textarea&.angled {
+        border-radius: 0;
+    }
 
-    &.fluid {
-        input {
-            &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
-                width: 100%;
-            }
-        }
-        textarea {
+    &.fluid>input, input&.fluid {
+        &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
             width: 100%;
         }
+    }
+    &.fluid>textarea, textarea&.fluid {
+        width: 100%;
     }
 
     &.action {
@@ -143,7 +139,7 @@
     &.huge {
         .__inputSize(22, 11);
     }
-    input {
+    input, input& {
         &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
             &:focus {
                 border-color: @light_blue;

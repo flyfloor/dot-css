@@ -35,3 +35,13 @@
     .__paddingFigure(16, 9);
     .__paddingFigure(16, 10);
 }
+
+@{NS}.chunk {
+    display: block;
+    padding: @padding * 2;
+    margin-bottom: @padding;
+    border: 1px solid @light_gray;
+    &.basic {
+        border: 0;
+    }
+}

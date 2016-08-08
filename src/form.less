@@ -1,0 +1,57 @@
+@import url('meta');
+@import url('media');
+
+@{NS}.form {
+    padding: @padding * 2;
+    width: 100%;
+    &.basic {
+        padding: 0;
+    }
+    &.fluid {
+        width: 100%;
+    }
+    .field {
+        margin-bottom: @padding * 1.6;
+        label, .label {
+            word-wrap: break-word;
+            display: block;
+        }
+        input {
+            &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
+                width: 100%;
+            }
+        }
+    }
+
+    &.inline {
+        >.field {
+            width: 100%;
+            display: table;
+        }
+        &.trim {
+            .label, label {
+                text-align: right;
+            }
+        }
+        label, .label {
+            display: table-cell;
+            vertical-align: middle;
+            width: @padding * 10;
+            padding-right: @padding;
+        }
+        .action {
+            margin-left: @padding * 10;
+        }
+        input {
+            &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
+                display: table-cell;
+                vertical-align: middle;
+            }
+        } 
+    }
+}
+@media @desktop_view {
+    @{NS}.form {
+        width: 500px;
+    }
+}

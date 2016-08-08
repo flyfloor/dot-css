@@ -21,6 +21,7 @@ import Message from './example/Message';
 import Progress from './example/Progress';
 import Crumb from './example/Crumb';
 import Loader from './example/Loader';
+import Form from './example/Form';
 import Other from './example/Other';
 
 const NavLink = (props) => {
@@ -39,9 +40,11 @@ class App extends Component {
                     <div>
                         <header className={CN('padding')}>
                             <h1>
-                                <span>D</span>
-                                <i className={CN('icon dot-icon')}>invert_colors</i>
-                                <span>t css</span>
+                                <Link to="/basic" className={CN('color-deep_gray')}>
+                                    <span>D</span>
+                                    <i className={CN('icon dot-icon')}>invert_colors</i>
+                                    <span>t css</span>
+                                </Link>
                             </h1>
                         </header>
                         <div className={CN('grid')}>
@@ -63,6 +66,7 @@ class App extends Component {
                                 <NavLink className={CN('block')} to="/progress">progress</NavLink>
                                 <NavLink className={CN('block')} to="/crumb">crumb</NavLink>
                                 <NavLink className={CN('block')} to="/loader">loader</NavLink>
+                                <NavLink className={CN('block')} to="/form">form</NavLink>
                                 <NavLink className={CN('block')} to="/other">other</NavLink>
                             </aside>
                             <artical className="column column-13 main-content">
@@ -120,6 +124,7 @@ ReactDOM.render(<Router history={hashHistory}>
                         <Route path="/progress" component={Progress}></Route>
                         <Route path="/crumb" component={Crumb}></Route>
                         <Route path="/loader" component={Loader}></Route>
+                        <Route path="/form" component={Form}></Route>
                         <Route path="/other" component={Other}></Route>
                     </Route>
                 </Router>, document.getElementById('root'));

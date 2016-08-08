@@ -88,6 +88,16 @@ export default class Other extends Component {
                             </div>
                         </div>
                     </li>
+                    <li>
+                        <h4>chunk</h4>
+                        <div className={CN('chunk')}>
+                            <p>content</p>
+                        </div>
+                        <h4>basic chunk</h4>
+                        <div className={CN('basic chunk')}>
+                            <p>content</p>
+                        </div>
+                    </li>
                 </ul>
             </div>
         );
