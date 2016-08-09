@@ -182,7 +182,7 @@
             opacity: .85;
         }
     }
-    &.error>input, input& {
+    &.error>input, input&.error {
         &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
             border-color: @red;
             &:focus {
@@ -190,7 +190,7 @@
             }
         }
     }
-    &.error>textarea, textarea& {
+    &.error>textarea, textarea&.error {
         border-color: @red;
         &:focus {
             border-color: @light_red;

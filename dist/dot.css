@@ -2956,39 +2956,39 @@ input.dot.input[type='email']:focus {
   opacity: .85;
 }
 .dot.input.error > input[type='text'],
-input.dot.input[type='text'],
+input.dot.input.error[type='text'],
 .dot.input.error > input[type='number'],
-input.dot.input[type='number'],
+input.dot.input.error[type='number'],
 .dot.input.error > input[type='url'],
-input.dot.input[type='url'],
+input.dot.input.error[type='url'],
 .dot.input.error > input[type='tel'],
-input.dot.input[type='tel'],
+input.dot.input.error[type='tel'],
 .dot.input.error > input[type='password'],
-input.dot.input[type='password'],
+input.dot.input.error[type='password'],
 .dot.input.error > input[type='email'],
-input.dot.input[type='email'] {
+input.dot.input.error[type='email'] {
   border-color: #EF5350;
 }
 .dot.input.error > input[type='text']:focus,
-input.dot.input[type='text']:focus,
+input.dot.input.error[type='text']:focus,
 .dot.input.error > input[type='number']:focus,
-input.dot.input[type='number']:focus,
+input.dot.input.error[type='number']:focus,
 .dot.input.error > input[type='url']:focus,
-input.dot.input[type='url']:focus,
+input.dot.input.error[type='url']:focus,
 .dot.input.error > input[type='tel']:focus,
-input.dot.input[type='tel']:focus,
+input.dot.input.error[type='tel']:focus,
 .dot.input.error > input[type='password']:focus,
-input.dot.input[type='password']:focus,
+input.dot.input.error[type='password']:focus,
 .dot.input.error > input[type='email']:focus,
-input.dot.input[type='email']:focus {
+input.dot.input.error[type='email']:focus {
   border-color: #EF9A9A;
 }
 .dot.input.error > textarea,
-textarea.dot.input {
+textarea.dot.input.error {
   border-color: #EF5350;
 }
 .dot.input.error > textarea:focus,
-textarea.dot.input:focus {
+textarea.dot.input.error:focus {
   border-color: #EF9A9A;
 }
 .dot.input.icon {
