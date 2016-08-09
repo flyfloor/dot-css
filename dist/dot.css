@@ -5388,6 +5388,15 @@ img.dot.image.massive.circle {
 .dot.form .field input[type='email'] {
   width: 100%;
 }
+.dot.form .field.inline input[type='text'],
+.dot.form .field.inline input[type='number'],
+.dot.form .field.inline input[type='url'],
+.dot.form .field.inline input[type='tel'],
+.dot.form .field.inline input[type='password'],
+.dot.form .field.inline input[type='email'] {
+  width: 80px;
+  display: inline;
+}
 .dot.form.inline > .field {
   width: 100%;
   display: table;

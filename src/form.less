@@ -21,6 +21,14 @@
                 width: 100%;
             }
         }
+        &.inline {
+            input {
+                &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
+                    width: 80px;
+                    display: inline;
+                }
+            }  
+        }
     }
 
     &.inline {
