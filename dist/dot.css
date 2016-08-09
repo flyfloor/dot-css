@@ -279,6 +279,9 @@ input[type="url"],
 input[type="tel"],
 input[type="password"],
 input[type="email"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="time"],
 textarea {
   margin: 0;
   box-shadow: none;
@@ -299,6 +302,9 @@ input[type="url"]:focus,
 input[type="tel"]:focus,
 input[type="password"]:focus,
 input[type="email"]:focus,
+input[type="date"]:focus,
+input[type="datetime-local"]:focus,
+input[type="time"]:focus,
 textarea:focus {
   color: #383838;
 }
@@ -308,6 +314,9 @@ input[type="url"][disabled],
 input[type="tel"][disabled],
 input[type="password"][disabled],
 input[type="email"][disabled],
+input[type="date"][disabled],
+input[type="datetime-local"][disabled],
+input[type="time"][disabled],
 textarea[disabled] {
   cursor: not-allowed;
   background-color: #FAFAFA;
@@ -2608,7 +2617,13 @@ input.dot.input.angled[type='tel'],
 .dot.input.angled > input[type='password'],
 input.dot.input.angled[type='password'],
 .dot.input.angled > input[type='email'],
-input.dot.input.angled[type='email'] {
+input.dot.input.angled[type='email'],
+.dot.input.angled > input[type='date'],
+input.dot.input.angled[type='date'],
+.dot.input.angled > input[type='datetime-local'],
+input.dot.input.angled[type='datetime-local'],
+.dot.input.angled > input[type='time'],
+input.dot.input.angled[type='time'] {
   border-radius: 0;
 }
 .dot.input.angled > textarea,
@@ -2628,7 +2643,13 @@ input.dot.input.fluid[type='tel'],
 .dot.input.fluid > input[type='password'],
 input.dot.input.fluid[type='password'],
 .dot.input.fluid > input[type='email'],
-input.dot.input.fluid[type='email'] {
+input.dot.input.fluid[type='email'],
+.dot.input.fluid > input[type='date'],
+input.dot.input.fluid[type='date'],
+.dot.input.fluid > input[type='datetime-local'],
+input.dot.input.fluid[type='datetime-local'],
+.dot.input.fluid > input[type='time'],
+input.dot.input.fluid[type='time'] {
   width: 100%;
 }
 .dot.input.fluid > textarea,
@@ -2656,7 +2677,10 @@ textarea.dot.input.fluid {
 .dot.input.action input[type='url'],
 .dot.input.action input[type='tel'],
 .dot.input.action input[type='password'],
-.dot.input.action input[type='email'] {
+.dot.input.action input[type='email'],
+.dot.input.action input[type='date'],
+.dot.input.action input[type='datetime-local'],
+.dot.input.action input[type='time'] {
   width: 100%;
 }
 .dot.input.action textarea {
@@ -2697,7 +2721,10 @@ input.dot.input {
 .dot.input.icon input[type='url'],
 .dot.input.icon input[type='tel'],
 .dot.input.icon input[type='password'],
-.dot.input.icon input[type='email'] {
+.dot.input.icon input[type='email'],
+.dot.input.icon input[type='date'],
+.dot.input.icon input[type='datetime-local'],
+.dot.input.icon input[type='time'] {
   padding-right: 32px;
 }
 .dot.input.icon.left input[type='text'],
@@ -2705,7 +2732,10 @@ input.dot.input {
 .dot.input.icon.left input[type='url'],
 .dot.input.icon.left input[type='tel'],
 .dot.input.icon.left input[type='password'],
-.dot.input.icon.left input[type='email'] {
+.dot.input.icon.left input[type='email'],
+.dot.input.icon.left input[type='date'],
+.dot.input.icon.left input[type='datetime-local'],
+.dot.input.icon.left input[type='time'] {
   padding-left: 32px;
   padding-right: 7px;
 }
@@ -2742,7 +2772,10 @@ input.dot.input.tiny {
 .dot.input.tiny.icon input[type='url'],
 .dot.input.tiny.icon input[type='tel'],
 .dot.input.tiny.icon input[type='password'],
-.dot.input.tiny.icon input[type='email'] {
+.dot.input.tiny.icon input[type='email'],
+.dot.input.tiny.icon input[type='date'],
+.dot.input.tiny.icon input[type='datetime-local'],
+.dot.input.tiny.icon input[type='time'] {
   padding-right: 24px;
 }
 .dot.input.tiny.icon.left input[type='text'],
@@ -2750,7 +2783,10 @@ input.dot.input.tiny {
 .dot.input.tiny.icon.left input[type='url'],
 .dot.input.tiny.icon.left input[type='tel'],
 .dot.input.tiny.icon.left input[type='password'],
-.dot.input.tiny.icon.left input[type='email'] {
+.dot.input.tiny.icon.left input[type='email'],
+.dot.input.tiny.icon.left input[type='date'],
+.dot.input.tiny.icon.left input[type='datetime-local'],
+.dot.input.tiny.icon.left input[type='time'] {
   padding-left: 24px;
   padding-right: 5px;
 }
@@ -2787,7 +2823,10 @@ input.dot.input.small {
 .dot.input.small.icon input[type='url'],
 .dot.input.small.icon input[type='tel'],
 .dot.input.small.icon input[type='password'],
-.dot.input.small.icon input[type='email'] {
+.dot.input.small.icon input[type='email'],
+.dot.input.small.icon input[type='date'],
+.dot.input.small.icon input[type='datetime-local'],
+.dot.input.small.icon input[type='time'] {
   padding-right: 28px;
 }
 .dot.input.small.icon.left input[type='text'],
@@ -2795,7 +2834,10 @@ input.dot.input.small {
 .dot.input.small.icon.left input[type='url'],
 .dot.input.small.icon.left input[type='tel'],
 .dot.input.small.icon.left input[type='password'],
-.dot.input.small.icon.left input[type='email'] {
+.dot.input.small.icon.left input[type='email'],
+.dot.input.small.icon.left input[type='date'],
+.dot.input.small.icon.left input[type='datetime-local'],
+.dot.input.small.icon.left input[type='time'] {
   padding-left: 28px;
   padding-right: 6px;
 }
@@ -2832,7 +2874,10 @@ input.dot.input.large {
 .dot.input.large.icon input[type='url'],
 .dot.input.large.icon input[type='tel'],
 .dot.input.large.icon input[type='password'],
-.dot.input.large.icon input[type='email'] {
+.dot.input.large.icon input[type='email'],
+.dot.input.large.icon input[type='date'],
+.dot.input.large.icon input[type='datetime-local'],
+.dot.input.large.icon input[type='time'] {
   padding-right: 40px;
 }
 .dot.input.large.icon.left input[type='text'],
@@ -2840,7 +2885,10 @@ input.dot.input.large {
 .dot.input.large.icon.left input[type='url'],
 .dot.input.large.icon.left input[type='tel'],
 .dot.input.large.icon.left input[type='password'],
-.dot.input.large.icon.left input[type='email'] {
+.dot.input.large.icon.left input[type='email'],
+.dot.input.large.icon.left input[type='date'],
+.dot.input.large.icon.left input[type='datetime-local'],
+.dot.input.large.icon.left input[type='time'] {
   padding-left: 40px;
   padding-right: 9px;
 }
@@ -2877,7 +2925,10 @@ input.dot.input.huge {
 .dot.input.huge.icon input[type='url'],
 .dot.input.huge.icon input[type='tel'],
 .dot.input.huge.icon input[type='password'],
-.dot.input.huge.icon input[type='email'] {
+.dot.input.huge.icon input[type='email'],
+.dot.input.huge.icon input[type='date'],
+.dot.input.huge.icon input[type='datetime-local'],
+.dot.input.huge.icon input[type='time'] {
   padding-right: 48px;
 }
 .dot.input.huge.icon.left input[type='text'],
@@ -2885,7 +2936,10 @@ input.dot.input.huge {
 .dot.input.huge.icon.left input[type='url'],
 .dot.input.huge.icon.left input[type='tel'],
 .dot.input.huge.icon.left input[type='password'],
-.dot.input.huge.icon.left input[type='email'] {
+.dot.input.huge.icon.left input[type='email'],
+.dot.input.huge.icon.left input[type='date'],
+.dot.input.huge.icon.left input[type='datetime-local'],
+.dot.input.huge.icon.left input[type='time'] {
   padding-left: 48px;
   padding-right: 11px;
 }
@@ -2916,7 +2970,13 @@ input.dot.input[type='tel']:focus,
 .dot.input input[type='password']:focus,
 input.dot.input[type='password']:focus,
 .dot.input input[type='email']:focus,
-input.dot.input[type='email']:focus {
+input.dot.input[type='email']:focus,
+.dot.input input[type='date']:focus,
+input.dot.input[type='date']:focus,
+.dot.input input[type='datetime-local']:focus,
+input.dot.input[type='datetime-local']:focus,
+.dot.input input[type='time']:focus,
+input.dot.input[type='time']:focus {
   border-color: #03A9F4;
 }
 .dot.input textarea:focus {
@@ -2927,7 +2987,10 @@ input.dot.input[type='email']:focus {
 .dot.input.focus input[type='url'],
 .dot.input.focus input[type='tel'],
 .dot.input.focus input[type='password'],
-.dot.input.focus input[type='email'] {
+.dot.input.focus input[type='email'],
+.dot.input.focus input[type='date'],
+.dot.input.focus input[type='datetime-local'],
+.dot.input.focus input[type='time'] {
   border-color: #03A9F4;
 }
 .dot.input.focus textarea {
@@ -2943,7 +3006,10 @@ input.dot.input[type='email']:focus {
 .dot.input.disabled input[type='url'],
 .dot.input.disabled input[type='tel'],
 .dot.input.disabled input[type='password'],
-.dot.input.disabled input[type='email'] {
+.dot.input.disabled input[type='email'],
+.dot.input.disabled input[type='date'],
+.dot.input.disabled input[type='datetime-local'],
+.dot.input.disabled input[type='time'] {
   border-color: #EEEEEE;
   background-color: #FAFAFA;
   opacity: .85;
@@ -2966,7 +3032,13 @@ input.dot.input.error[type='tel'],
 .dot.input.error > input[type='password'],
 input.dot.input.error[type='password'],
 .dot.input.error > input[type='email'],
-input.dot.input.error[type='email'] {
+input.dot.input.error[type='email'],
+.dot.input.error > input[type='date'],
+input.dot.input.error[type='date'],
+.dot.input.error > input[type='datetime-local'],
+input.dot.input.error[type='datetime-local'],
+.dot.input.error > input[type='time'],
+input.dot.input.error[type='time'] {
   border-color: #EF5350;
 }
 .dot.input.error > input[type='text']:focus,
@@ -2980,7 +3052,13 @@ input.dot.input.error[type='tel']:focus,
 .dot.input.error > input[type='password']:focus,
 input.dot.input.error[type='password']:focus,
 .dot.input.error > input[type='email']:focus,
-input.dot.input.error[type='email']:focus {
+input.dot.input.error[type='email']:focus,
+.dot.input.error > input[type='date']:focus,
+input.dot.input.error[type='date']:focus,
+.dot.input.error > input[type='datetime-local']:focus,
+input.dot.input.error[type='datetime-local']:focus,
+.dot.input.error > input[type='time']:focus,
+input.dot.input.error[type='time']:focus {
   border-color: #EF9A9A;
 }
 .dot.input.error > textarea,
@@ -3009,7 +3087,10 @@ textarea.dot.input.error:focus {
 .dot.input.icon input[type='url'],
 .dot.input.icon input[type='tel'],
 .dot.input.icon input[type='password'],
-.dot.input.icon input[type='email'] {
+.dot.input.icon input[type='email'],
+.dot.input.icon input[type='date'],
+.dot.input.icon input[type='datetime-local'],
+.dot.input.icon input[type='time'] {
   width: 100%;
 }
 .dot.checkbox,
