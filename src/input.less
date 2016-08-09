@@ -182,22 +182,21 @@
             opacity: .85;
         }
     }
-    &.error {
-        input {
-            &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
-                border-color: @red;
-                &:focus {
-                    border-color: @light_red;
-                }
-            }
-        }
-        textarea {
+    &.error>input, input& {
+        &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
             border-color: @red;
             &:focus {
                 border-color: @light_red;
             }
         }
     }
+    &.error>textarea, textarea& {
+        border-color: @red;
+        &:focus {
+            border-color: @light_red;
+        }
+    }
+    
     &.icon {
         display: inline-block;
         .icon {
