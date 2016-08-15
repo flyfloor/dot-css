@@ -1207,6 +1207,7 @@ i.dot.icon:hover {
   cursor: pointer;
   display: inline-block;
   text-align: center;
+  text-decoration: none;
   vertical-align: middle;
   color: #383838;
   border-radius: 3px;
@@ -2525,6 +2526,8 @@ i.dot.icon:hover {
   position: relative;
   display: table;
   table-layout: fixed;
+  width: auto;
+  margin: 0;
   border: 1px solid #EEEEEE;
   /*shape size*/
   font-size: 14px;
