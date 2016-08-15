@@ -366,11 +366,10 @@ td {
   font-weight: normal;
   vertical-align: middle;
 }
-caption,
-th,
-td.gutter {
+/*caption, th, td.gutter{
   display: none;
 }
+*/
 q,
 blockquote {
   quotes: none;
