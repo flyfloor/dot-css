@@ -125,7 +125,7 @@
 @black: #000000;
 @white: #ffffff;
 
-.setColor(@color, @attr){
+.__setAttrColor(@color, @attr){
     &-@{color} {
         @_color: '@{color}';
         @{attr}: @@_color;
@@ -156,44 +156,69 @@
     }
 }
 
-@{NS}.color {
-    .setColor(red, color);
-    .setColor(pink, color);
-    .setColor(purple, color);
-    .setColor(indigo, color);
-    .setColor(blue, color);
-    .setColor(cyan, color);
-    .setColor(teal, color);
-    .setColor(green, color);
-    .setColor(lime, color);
-    .setColor(amber, color);
-    .setColor(orange, color);
-    .setColor(brown, color);
-    .setColor(gray, color);
-    .setColor(bluegray, color);
-    .setColor(yellow, color);
-    &-dull_gray { color: @dull_gray }
-    &-soft_gray { color: @soft_gray }
-    &-black { color: @black }
-    &-white { color: @white }
+.__setColor(@color) {
+    @__color: 'light_@{color}';
+    .__setAttrColor(@color, color);
+    &-@{color} {
+        &:hover, &:focus, &:active {
+            color: @@__color;
+        }
+    }
+    &-light_@{color}, &-dark_@{color}, &-deep_@{color}, &-tiny_@{color}, &-mini_@{color}, &-most_@{color}, &-dull_@{color}, &-soft_@{color} {
+        &:hover, &:focus, &:active {
+            color: @color;
+        }
+    }
 }
 
-@{NS}.bg {
-    .setColor(red, background-color);
-    .setColor(pink, background-color);
-    .setColor(purple, background-color);
-    .setColor(indigo, background-color);
-    .setColor(blue, background-color);
-    .setColor(cyan, background-color);
-    .setColor(teal, background-color);
-    .setColor(green, background-color);
-    .setColor(lime, background-color);
-    .setColor(amber, background-color);
-    .setColor(orange, background-color);
-    .setColor(brown, background-color);
-    .setColor(gray, background-color);
-    .setColor(bluegray, background-color);
-    .setColor(yellow, background-color);
+.color {
+    .__setColor(red);
+    .__setColor(pink);
+    .__setColor(purple);
+    .__setColor(indigo);
+    .__setColor(blue);
+    .__setColor(cyan);
+    .__setColor(teal);
+    .__setColor(green);
+    .__setColor(lime);
+    .__setColor(amber);
+    .__setColor(orange);
+    .__setColor(brown);
+    .__setColor(gray);
+    .__setColor(bluegray);
+    .__setColor(yellow);
+    &-dull_gray {color: @dull_gray}
+    &-soft_gray {color: @soft_gray}
+    &-black { 
+        color: @black; 
+        &:focus, &:active,&:hover {
+            color: @most_gray;
+        } 
+    }
+    &-white { 
+        color: @white;
+        &:focus, &:active,&:hover {
+            color: @mini_gray;
+        }  
+    }
+}
+
+.bg {
+    .__setAttrColor(red, background-color);
+    .__setAttrColor(pink, background-color);
+    .__setAttrColor(purple, background-color);
+    .__setAttrColor(indigo, background-color);
+    .__setAttrColor(blue, background-color);
+    .__setAttrColor(cyan, background-color);
+    .__setAttrColor(teal, background-color);
+    .__setAttrColor(green, background-color);
+    .__setAttrColor(lime, background-color);
+    .__setAttrColor(amber, background-color);
+    .__setAttrColor(orange, background-color);
+    .__setAttrColor(brown, background-color);
+    .__setAttrColor(gray, background-color);
+    .__setAttrColor(bluegray, background-color);
+    .__setAttrColor(yellow, background-color);
     &-dull_gray { background-color: @dull_gray }
     &-soft_gray { background-color: @soft_gray }
     &-black { background-color: @black }

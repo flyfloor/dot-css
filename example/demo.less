@@ -6,12 +6,21 @@
     }
 }
 
+.__column(@n, @i: 1) when (@i =< @n) {
+    .column-@{i} {
+      position: relative;
+      background: @tiny_gray;
+      border: 1px solid @light_gray;  
+    }
+ .__column(@n, (@i + 1));
+}
+
 .grid-example {
+    .__column(16);
     .column {
         position: relative;
         background: @tiny_gray;
         border: 1px solid @light_gray;
-        padding: 20px 0;
     }
 }
 

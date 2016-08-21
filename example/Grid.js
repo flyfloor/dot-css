@@ -10,7 +10,7 @@ export default class Grid extends Component {
                 <ul>
                     <li>
                         <h4>Same width column</h4>
-                        <div className={CN('grid grid-5 text-center text-extra')}>
+                        <div className={CN('grid-5 text-center text-extra')}>
                             <div className="row">
                                 <div className="column">
                                     <p>1/5</p>
@@ -33,7 +33,7 @@ export default class Grid extends Component {
                         <pre>
                             <code>
 {`grid-(1~16)
-<div class="${NS} grid grid-5">
+<div class="${NS} grid-5">
     <div class="row">
         <div class="column"></div>
         <div class="column"></div>
@@ -46,7 +46,7 @@ export default class Grid extends Component {
                             </code>
                         </pre>
                         <div className={CN('grid text-center')}>
-                            <div className="row column-3">
+                            <div className="row-3">
                                 <div className="column">
                                     <p>1/3</p>
                                 </div>
@@ -57,7 +57,7 @@ export default class Grid extends Component {
                                     <p>1/3</p>
                                 </div>
                             </div>
-                            <div className="row column-5">
+                            <div className="row-5">
                                 <div className="column">
                                     <p>1/5</p>
                                 </div>
@@ -79,18 +79,21 @@ export default class Grid extends Component {
                         <pre>
                             <code>
 {`<div class="${NS} grid">
-    <div class="row column-3">
+    <div class="row-3">
         <div class="column"></div>
         <div class="column"></div>
         <div class="column"></div>
     </div>
-    <div class="row">
+    <div class="row-5">
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
     </div>
 </div>`
 }                                   
                             </code>
                         </pre>
-                        <ul className={CN('grid grid-4 text-center')}>
+                        <ul className={CN('grid-4 text-center')}>
                             <li className="column">
                                 <p>1/4</p>
                             </li>
@@ -110,27 +113,27 @@ export default class Grid extends Component {
                         <h3>Column width, divide to 16 part</h3>
                         <div className={CN('grid text-center')}>
                             <div className="row">
-                                <div className="column column-2">
+                                <div className="column-2">
                                     <p>2</p>
                                 </div>
-                                <div className="column column-6">
+                                <div className="column-6">
                                     <p>6</p>
                                 </div>
-                                <div className="column column-2">
+                                <div className="column-2">
                                     <p>2</p>
                                 </div>
-                                <div className="column column-2">
+                                <div className="column-2">
                                     <p>2</p>
                                 </div>
-                                <div className="column column-4">
+                                <div className="column-4">
                                     <p>4</p>
                                 </div>
                             </div>
                             <div className="row">
-                                <div className="column column-8">
+                                <div className="column-8">
                                     <p>8</p>
                                 </div>
-                                <div className="column column-8">
+                                <div className="column-8">
                                     <p>8</p>
                                 </div>
                             </div>
@@ -141,11 +144,11 @@ export default class Grid extends Component {
 {`column-(1~16)
 <div class="${NS} grid">
     <div class="row">
-        <div class="column column-2"></div>
-        <div class="column column-6"></div>
-        <div class="column column-2"></div>
-        <div class="column column-2"></div>
-        <div class="column column-4"></div>
+        <div class="column-2"></div>
+        <div class="column-6"></div>
+        <div class="column-2"></div>
+        <div class="column-2"></div>
+        <div class="column-4"></div>
     </div>
 </div>
 `}                                
@@ -156,13 +159,13 @@ export default class Grid extends Component {
                         <h3>Column width, divide to 16 part</h3>
                         <div className={CN('grid text-center')}>
                             <div className="row">
-                                <div className="column column-3">
+                                <div className="column-3">
                                     <p>3</p>
                                 </div>
-                                <div className="column column-5">
+                                <div className="column-5">
                                     <p>5</p>
                                 </div>
-                                <div className={CN('float-right column column-4')}>
+                                <div className="float-right column-4">
                                     <p>4</p>
                                 </div>
                             </div>
@@ -172,9 +175,9 @@ export default class Grid extends Component {
                             <code>
 {`<div class="grid">
     <div class="row">
-        <div class="column column-3"></div>
-        <div class="column column-5"></div>
-        <div class="float-right column column-4"></div>
+        <div class="column-3"></div>
+        <div class="column-5"></div>
+        <div class="float-right column-4"></div>
     </div>
 </div>`}                                
                             </code>

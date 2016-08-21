@@ -1,7 +1,7 @@
 @import url('meta');
 @import url('color');
 
-@{NS}.text {
+.text {
     &-center {
         text-align: center;
     }
@@ -23,11 +23,7 @@
     }
 }
 
-@{NS}.padding {
-    padding: @padding;
-}
-
-@{NS}.float {
+.float {
     &-left {
         float: left !important;
     }
@@ -39,12 +35,12 @@
     }
 }
 
-@{NS}.field {
+.field {
     display: block;
     margin-bottom: @padding !important;
 }
 
-@{NS}.block {
+.block {
     display: block;
     padding: @padding;
 }
@@ -61,18 +57,18 @@
     }
 }
 
-@{NS}.absolute-center {
+.absolute-center {
     width: 100%;
     height: 100%;
     text-align: center;
     ._AB_CENTER();
 }
 
-@{NS}.disabled {
+.disabled {
     ._NO_USER_SELECT();
 }
 
-@{NS}.break-word {
+.break-word {
     /* These are technically the same, but use both */
     overflow-wrap: break-word;
     word-wrap: break-word;
@@ -89,7 +85,7 @@
     hyphens: auto;
 }
 
-@{NS}.truncate {
+.truncate {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
