@@ -16,7 +16,7 @@
             opacity: 0;
             z-index: 1;
             cursor: pointer;
-            & + label {
+            & + * {
                 position: relative;
                 z-index: 0;
                 padding-left: 1.2em;
@@ -48,12 +48,12 @@
 }
 @{NS}.checkbox {
     input[type=checkbox] {
-        &:checked + label{
+        &:checked + *{
             &:before {
                 content: 'check_box';
             }
         }
-        & + label {
+        & + * {
             &:before {
                 content: 'check_box_outline_blank';
             }
@@ -63,12 +63,12 @@
 
 @{NS}.radio {
     input[type=radio] {
-        &:checked + label{
+        &:checked + *{
             &:before {
                 content: 'radio_button_checked';
             }
         }
-        & + label {
+        & + * {
             &:before {
                 content: 'radio_button_unchecked';
             }
