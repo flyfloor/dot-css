@@ -85,7 +85,7 @@ class App extends Component {
 class RootPage extends Component {
     render() {
         return (
-            <div className={CN('basic table intro-page absolute-center')}>
+            <div className={CN('basic fluid table intro-page absolute-center')}>
                 <div className="row">
                     <div className="cell">
                         <h1 className={CN('field')}>
