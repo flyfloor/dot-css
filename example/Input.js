@@ -14,7 +14,7 @@ const labeledInput = (cn='', invert=false) => {
     }
     return <div className={CN(`${cn} input action`)}>
                 <div className="action">
-                    <div className="button">button</div>
+                    <button className="button">button</button>
                 </div>
                 <input type="text" placeholder={cn ? cn : 'search...'}/>
             </div>;
@@ -246,15 +246,23 @@ export default class Input extends Component {
                                 <i className="icon">search</i>
                             </div>
                         </div>
+                        <pre>
+                            <code>
+{`<div class="${NS} huge icon input">
+    <input type="text" />
+    <i class="icon">search</i>
+</div>`}                                           
+                            </code>
+                        </pre>
                         <div className="field">
-                            <div className={CN('icon left input')}>
+                            <div className={CN('icon input')}>
                                 <i className="icon">search</i>
                                 <input type="text" placeholder="search..."/>
                             </div>
                         </div>
                         <pre>
                             <code>
-{`<div class="${NS} icon left input">
+{`<div class="${NS} icon input">
     <i class="icon">search</i>
     <input type="text" />
 </div>`}                                     
@@ -266,6 +274,14 @@ export default class Input extends Component {
                                 <i className="icon">search</i>
                             </div>
                         </div>
+                        <pre>
+                            <code>
+{`<div class="${NS} fluid icon input">
+    <input type="text" />
+    <i class="icon">search</i>
+</div>`}                                           
+                            </code>
+                        </pre>
                     </li>
                 </ul>
             </div>
