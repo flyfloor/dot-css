@@ -22,7 +22,7 @@ export default class Icon extends Component {
         return (
             <ul className={CN('grid grid-5 text-center text-extra')}>
                 {ICONS.map(icon => {
-                    return <li key={icon} onClick={() => this.handleClick(icon)} className={CN('column padding truncate field icon-item')}>
+                    return <li key={icon} onClick={() => this.handleClick(icon)} className={CN('column block truncate field icon-item')}>
                                 <i className={CN('icon')}>{icon}</i>
                                 <p>{icon}</p>
                             </li>
@@ -48,13 +48,16 @@ export default class Icon extends Component {
                 <br/>
                 <h4>Colored icon</h4>
                 <div className={CN('grid grid-10')}>
-                    <div className={CN('column padding')}>
+                    <div className={CN('column block')}>
                         <i className={CN('color-red icon')}>favorite</i>
                     </div>
-                    <div className={CN('column padding')}>
+                    <div className={CN('column block')}>
                         <i className={CN('color-green icon')}>all_inclusive</i>
                     </div>
                 </div>
+                <pre>
+                    <code>{`<i class="${NS} color-red icon">favorite</i>`}</code>
+                </pre>
             </div>
         );
     }

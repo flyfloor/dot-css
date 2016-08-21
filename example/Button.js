@@ -242,9 +242,14 @@ export default class Button extends Component {
                         <pre>
                             <code>
 {`<div class="${NS} tiny button-group">
-    <div class="${NS} button">first</div>
+    <div class="${NS} label button">
+        <i class="${NS} icon">menu</i>
+    </div>
+    <div class="${NS} label button">
+        <i class="${NS} icon">menu</i>
+    </div>
+    ...
     <div class="${NS} button">second</div>
-    <div class="${NS} button">third</div>
 </div>
 `}                                 
                             </code>
