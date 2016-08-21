@@ -20,22 +20,22 @@
 }
 
 .__labelGroupSize(@group) when(@group = true) {
-    &>.label {._FONT_PADDING(12, 6);}
-    &.tiny > .label {
+    & .label {._FONT_PADDING(12, 6);}
+    &.tiny .label {
         ._FONT_PADDING(8, 4);
     }
-    &.small > .label {
+    &.small .label {
         ._FONT_PADDING(10, 5);
     }
-    &.large > .label {
+    &.large .label {
         ._FONT_PADDING(16, 8);
     }
-    &.huge > .label {
+    &.huge .label {
         ._FONT_PADDING(20, 10);
     }
 }
 
-@{NS}.label {
+@{NS}.label, @{NS} .label {
     display: inline-block;
     position: relative;
     color: @most_gray;
