@@ -41,17 +41,17 @@ export default class Icon extends Component {
                                     </span>)}
                 <pre>
                     <code>
-                        &lt;i class="{NS} icon"&gt;{this.state.display}&lt;/i&gt;
+                        {`<i class="${NS} icon">${this.state.display}</i>`}
                     </code>
                 </pre>
                 {this.makeIcons()}
                 <br/>
                 <h4>Colored icon</h4>
-                <div className={CN('grid grid-10')}>
-                    <div className={CN('column block')}>
+                <div className={CN('grid-10')}>
+                    <div className={CN('column')}>
                         <i className={CN('color-red icon')}>favorite</i>
                     </div>
-                    <div className={CN('column block')}>
+                    <div className={CN('column')}>
                         <i className={CN('color-green icon')}>all_inclusive</i>
                     </div>
                 </div>
