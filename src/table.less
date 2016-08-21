@@ -18,20 +18,20 @@
     &.fluid {
         width: 100%;
     }
-    .head {
-        >.cell {
+    .head, thead {
+        .cell, th {
             border-top: 0;
             background-color: @tiny_gray;
         }
     }
-    >.row, tr {
+    .row, tr {
         display: table-row;
         &:nth-child(1) {
-            >.cell, td {
+            .cell, td {
                 border-top: 0;
             }
         }
-        >.cell, td {
+        .cell, td, th {
             border-top: 1px solid @light_gray;
             padding: @padding @padding * 2;
             vertical-align: middle;
@@ -40,8 +40,8 @@
     }
     &.basic {
         border: 0;
-        >.row, tr {
-            >.cell, td {
+        .row, tr {
+            .cell, td {
                 background-color: initial;
                 padding: 0;
                 border: 0;

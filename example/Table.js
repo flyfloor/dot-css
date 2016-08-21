@@ -3,6 +3,37 @@ import {CN, TitleBlock} from './util';
 import {NS} from './setting';
 
 const makeTable = (cn='') => {
+    if (!cn) {
+        return (
+            <table className={CN('table')}>
+                <thead>
+                    <tr>
+                        <th>th1</th>
+                        <th>th2</th>
+                        <th>th3</th>
+                        <th>th4</th>
+                        <th>th5</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>td1</td>
+                        <td>td2</td>
+                        <td>td3</td>
+                        <td>td4</td>
+                        <td>td5</td>
+                    </tr>
+                    <tr>
+                        <td>tr2 td1</td>
+                        <td>tr2 td2</td>
+                        <td>tr2 td3</td>
+                        <td>tr2 td4</td>
+                        <td>tr2 td5</td>
+                    </tr>
+                </tbody>
+            </table>
+        )
+    }
     return (
         <div className={CN(`${cn} table`)}>
             <div className="row head">
@@ -72,8 +103,26 @@ export default class Table extends Component {
                         <br/>
                         <pre>
                             <code>
+{`<table class="${NS} table">
+    <thead class="head">
+        <tr>
+            <th></th><th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</div>`}                                
+                            </code>
+                        </pre>
+                        <h3>Or</h3>
+                        <pre>
+                            <code>
 {`<div class="${NS} table">
-    <div class="head">
+    <div class="thead">
         <div class="cell"></div>
         <div class="cell"></div>
     </div>
@@ -81,7 +130,7 @@ export default class Table extends Component {
         <div class="cell"></div>
         <div class="cell"></div>
     </div>
-</div>`}                                
+</div>`}                                     
                             </code>
                         </pre>
                     </li>

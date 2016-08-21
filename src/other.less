@@ -36,12 +36,12 @@
     .__paddingFigure(16, 10);
 }
 
-@{NS}.chunk {
+@{NS}.block {
     display: block;
-    padding: @padding * 2;
+    padding: @padding;
     margin-bottom: @padding;
-    border: 1px solid @light_gray;
-    &.basic {
-        border: 0;
+    border: 0;
+    &.border {
+        border: 1px solid @light_gray;
     }
 }

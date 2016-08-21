@@ -38,7 +38,7 @@ class App extends Component {
             <page className={CN('container')}>
                 {pathname !== '/' ? 
                     <div>
-                        <header className={CN('padding')}>
+                        <header className={CN('basic block')}>
                             <h1>
                                 <Link to="/basic" className={CN('color-deep_gray')}>
                                     <span>D</span>
@@ -48,26 +48,26 @@ class App extends Component {
                             </h1>
                         </header>
                         <div className={CN('grid')}>
-                            <aside className={CN('column column-3 padding main-aside')}>
-                                <NavLink className={CN('block')} to="/basic">basic</NavLink>
-                                <NavLink className={CN('block')} to="/grid">grid</NavLink>
-                                <NavLink className={CN('block')} to="/button">button</NavLink>
-                                <NavLink className={CN('block')} to="/icon">icon</NavLink>
-                                <NavLink className={CN('block')} to="/table">table</NavLink>
-                                <NavLink className={CN('block')} to="/input">input</NavLink>
-                                <NavLink className={CN('block')} to="/checkbox">checkbox</NavLink>
-                                <NavLink className={CN('block')} to="/label">label</NavLink>
-                                <NavLink className={CN('block')} to="/text">text</NavLink>
-                                <NavLink className={CN('block')} to="/image">image</NavLink>
-                                <NavLink className={CN('block')} to="/comment">comment</NavLink>
-                                <NavLink className={CN('block')} to="/item">item</NavLink>
-                                <NavLink className={CN('block')} to="/card">card</NavLink>
-                                <NavLink className={CN('block')} to="/message">message</NavLink>
-                                <NavLink className={CN('block')} to="/progress">progress</NavLink>
-                                <NavLink className={CN('block')} to="/crumb">crumb</NavLink>
-                                <NavLink className={CN('block')} to="/loader">loader</NavLink>
-                                <NavLink className={CN('block')} to="/form">form</NavLink>
-                                <NavLink className={CN('block')} to="/other">other</NavLink>
+                            <aside className={CN('column-3 main-aside')}>
+                                <NavLink to="/basic">basic</NavLink>
+                                <NavLink to="/grid">grid</NavLink>
+                                <NavLink to="/button">button</NavLink>
+                                <NavLink to="/icon">icon</NavLink>
+                                <NavLink to="/table">table</NavLink>
+                                <NavLink to="/input">input</NavLink>
+                                <NavLink to="/checkbox">checkbox</NavLink>
+                                <NavLink to="/label">label</NavLink>
+                                <NavLink to="/text">text</NavLink>
+                                <NavLink to="/image">image</NavLink>
+                                <NavLink to="/comment">comment</NavLink>
+                                <NavLink to="/item">item</NavLink>
+                                <NavLink to="/card">card</NavLink>
+                                <NavLink to="/message">message</NavLink>
+                                <NavLink to="/progress">progress</NavLink>
+                                <NavLink to="/crumb">crumb</NavLink>
+                                <NavLink to="/loader">loader</NavLink>
+                                <NavLink to="/form">form</NavLink>
+                                <NavLink to="/other">other</NavLink>
                             </aside>
                             <artical className="column column-13 main-content">
                                 {children}

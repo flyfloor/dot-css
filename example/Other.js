@@ -10,18 +10,18 @@ export default class Other extends Component {
                 <ul>
                     <li>
                         <h3>Responsive fixed img(fixed resolution)</h3>
-                        <ul className={CN('grid grid-3')}>
-                            <li className={CN('column padding')}>
+                        <ul className={CN('grid-3')}>
+                            <li className={CN('column')}>
                                 <div className={CN('figure')}>
                                     <img src="https://drscdn.500px.org/photo/138174521/m%3D2048_k%3D1/8d3c34a9316137bfe2150895bda42da1"/>
                                 </div>
                             </li>
-                            <li className={CN('column padding')}>
+                            <li className={CN('column')}>
                                 <div className={CN('figure')}>
                                     <img src="https://drscdn.500px.org/photo/138174521/m%3D2048_k%3D1/8d3c34a9316137bfe2150895bda42da1"/>
                                 </div>
                             </li>
-                            <li className={CN('column padding')}>
+                            <li className={CN('column')}>
                                 <div className={CN('figure')}>
                                     <img src="https://drscdn.500px.org/photo/138174521/m%3D2048_k%3D1/8d3c34a9316137bfe2150895bda42da1"/>
                                 </div>
@@ -35,18 +35,18 @@ export default class Other extends Component {
                             </code>
                         </pre>
                         <h4>Other resolutions</h4>
-                        <ul className={CN('grid grid-3')}>
-                            <li className={CN('column padding')}>
+                        <ul className={CN('grid-3')}>
+                            <li className={CN('column')}>
                                 <div className={CN('figure figure:2x1')}>
                                     <img src="http://braavos.me/dot-css/dist/img/img.png"/>
                                 </div>
                             </li>
-                            <li className={CN('column padding')}>
+                            <li className={CN('column')}>
                                 <div className={CN('figure figure:2x1')}>
                                     <img src="http://braavos.me/dot-css/dist/img/img.png"/>
                                 </div>
                             </li>
-                            <li className={CN('column padding')}>
+                            <li className={CN('column')}>
                                 <div className={CN('figure figure:2x1')}>
                                     <img src="http://braavos.me/dot-css/dist/img/img.png"/>
                                 </div>
@@ -89,12 +89,12 @@ export default class Other extends Component {
                         </div>
                     </li>
                     <li>
-                        <h4>chunk</h4>
-                        <div className={CN('chunk')}>
+                        <h4>block</h4>
+                        <div className={CN('block')}>
                             <p>content</p>
                         </div>
-                        <h4>basic chunk</h4>
-                        <div className={CN('basic chunk')}>
+                        <h4>border block</h4>
+                        <div className={CN('border block')}>
                             <p>content</p>
                         </div>
                     </li>

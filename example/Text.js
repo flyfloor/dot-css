@@ -9,26 +9,18 @@ export default class Text extends Component {
                 {TitleBlock('Text')}
                 <ul>
                     <li>
-                        <h3>Display Block element</h3>
-                        <a href={BLOG_URL} className={CN('bg-orange block')} target="_blank">block</a>
-                        <br/>
-                        <pre>
-                            <code>{`<a href="#" class="${NS} block"></a>`}</code>
-                        </pre>
-                    </li>
-                    <li>
                         <h3>Truncate text</h3>
-                        <div style={{'width': '200'}} className={CN('truncate')}>
+                        <div style={{'width': '200'}} className="truncate">
                             hello, this will not show the fully text.
                         </div>
                         <br/>
                         <pre>
-                            <code>{`<div class="${NS} truncate">content</div>`}</code>
+                            <code>{`<div class="truncate">content</div>`}</code>
                         </pre>
                     </li>
                     <li>
                         <h3>Break word</h3>
-                        <div style={{'width': '200'}} className={CN('break-word')}>
+                        <div style={{'width': '200'}} className="break-word">
                             <a href="https://www.google.com/design/spec/style/color.html" target="_blank">
                                 https://www.google.com/design/spec/style/color.html
                             </a>
@@ -36,7 +28,7 @@ export default class Text extends Component {
                         <br/>
                         <pre>
                             <code>
-{`<div class="${NS} break-word">
+{`<div class="break-word">
     <a href="#">href</a>
 </div>`}
                             </code>
@@ -44,44 +36,44 @@ export default class Text extends Component {
                     </li>
                     <li>
                         <h3>Text Align</h3>
-                        <div className={CN('bg-tiny_gray grid grid-3')}>
-                            <p className={CN('padding text-left column')}>
+                        <div className={CN('bg-tiny_gray grid-3')}>
+                            <p className="text-left column">
                                 Aligh left
                             </p>
-                            <p className={CN('padding text-center column')}>
+                            <p className="text-center column">
                                 Aligh center
                             </p>
-                            <p className={CN('padding text-right column')}>
+                            <p className="text-right column">
                                 Aligh right
                             </p>
                         </div>
                         <br/>
                         <pre>
-                            <code>{`<div class="${NS} text-left">left</div>`}</code>
+                            <code>{`<div class="text-left">left</div>`}</code>
                         </pre>
                     </li>
                     <li>
                         <h3>Float</h3>
-                        <div className={CN('padding bg-tiny_gray')}>
-                            <span className={CN('float-none')}>Float none</span>
-                            <span className={CN('float-left')}>Float left</span>
-                            <span className={CN('float-right')}>Float right</span>
+                        <div className={CN('bg-tiny_gray block')}>
+                            <span className="float-none">Float none</span>
+                            <span className="float-left">Float left</span>
+                            <span className="float-right">Float right</span>
                         </div>
                         <br/>
                         <pre>
-                            <code>{`<div class="${NS} float-left">left</div>`}</code>
+                            <code>{`<div class="float-left">left</div>`}</code>
                         </pre>
                     </li>
                     <li>
                         <h3>Text size</h3>
-                        <div className={CN('padding bg-tiny_gray')}>
-                            <p className={CN('text-major')}>Text major</p>
-                            <p className={CN('text-content')}>Text content</p>
-                            <p className={CN('text-extra')}>Text extra</p>
+                        <div className={CN('bg-tiny_gray block')}>
+                            <p className="text-major">Text major</p>
+                            <p className="text-content">Text content</p>
+                            <p className="text-extra">Text extra</p>
                         </div>
                         <br/>
                         <pre>
-                            <code>{`<div class="${NS} text-major">text</div>`}</code>
+                            <code>{`<div class="text-major">text</div>`}</code>
                         </pre>
                     </li>
                 </ul>

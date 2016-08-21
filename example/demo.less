@@ -42,6 +42,12 @@
     }
 }
 
+.color-demo {
+    .color-item {
+        padding: @padding;
+    }
+}
+
 .dot-icon {
     width: @line_height * 2;
     text-align: center;
@@ -50,6 +56,7 @@
 .main-aside {
     >a {
         padding: @padding/2 0 @padding/2 @padding*2;
+        display: block;
         &.active {
             color: @light_green;
         }

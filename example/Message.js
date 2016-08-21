@@ -48,7 +48,7 @@ export default class Message extends Component {
                     <li>
                         <h4>Icon Message</h4>
                         <div className={CN('icon message')}>
-                            <i className={CN('icon')}>translate</i>
+                            <i className="icon">translate</i>
                             <div className="content">
                                 <p>Edit your feed by updating the users you follow and repositories you watch.</p>
                             </div>
@@ -57,7 +57,7 @@ export default class Message extends Component {
                             <code>
 {`
 <div class="${CN('icon message')}">
-    <i class="${CN('icon')}">translate</i>
+    <i class="icon">translate</i>
     <div class="content"></div>
 </div>
 `}                                

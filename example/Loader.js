@@ -24,7 +24,7 @@ export default class Loader extends Component {
                             <code>{`<div class="${CN('large loader')}"></div>`}</code>
                         </pre>
                         <h4>Inverted loader</h4>
-                        <div className={CN('bg-deep_gray padding')}>
+                        <div className={CN('bg-deep_gray block')}>
                             <div className={CN('inverted loader')}></div>
                         </div>
                         <pre>

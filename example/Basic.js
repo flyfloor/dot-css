@@ -6,31 +6,31 @@ import {CN, TitleBlock} from './util';
 const makeColor = (color) => {
     switch (color) {
         case 'white':
-        return <div className={CN(`block bg-${color}`)}>{color}</div>;
+            return <div className={`color-item bg-${color}`}>{color}</div>;
         case 'black':
-        return <div className={CN(`block bg-${color} color-white`)}>{color}</div>;
+            return <div className={`color-item bg-${color} color-white`}>{color}</div>;
         case 'gray':
             return <div>
-                <div className={CN(`block bg-mini_${color}`)}>{`mini_${color}`}</div>
-                <div className={CN(`block bg-tiny_${color}`)}>{`tiny_${color}`}</div>
-                <div className={CN(`block bg-light_${color}`)}>{`light_${color}`}</div>
-                <div className={CN(`block bg-soft_${color}`)}>{`soft_${color}`}</div>
-                <div className={CN(`block bg-${color}`)}>{color}</div>
-                <div className={CN(`block bg-dull_${color}`)}>{`dull_${color}`}</div>
-                <div className={CN(`block bg-dark_${color}`)}>{`dark_${color}`}</div>
-                <div className={CN(`block color-white bg-deep_${color}`)}>{`deep_${color}`}</div>
-                <div className={CN(`block color-white bg-most_${color}`)}>{`most_${color}`}</div>
+                <div className={`color-item bg-mini_${color}`}>{`mini_${color}`}</div>
+                <div className={`color-item bg-tiny_${color}`}>{`tiny_${color}`}</div>
+                <div className={`color-item bg-light_${color}`}>{`light_${color}`}</div>
+                <div className={`color-item bg-soft_${color}`}>{`soft_${color}`}</div>
+                <div className={`color-item bg-${color}`}>{color}</div>
+                <div className={`color-item bg-dull_${color}`}>{`dull_${color}`}</div>
+                <div className={`color-item bg-dark_${color}`}>{`dark_${color}`}</div>
+                <div className={`color-item color-white bg-deep_${color}`}>{`deep_${color}`}</div>
+                <div className={`color-item color-white bg-most_${color}`}>{`most_${color}`}</div>
                 </div>;
 
         default:
             return <div>
-                <div className={CN(`block bg-mini_${color}`)}>{`mini_${color}`}</div>
-                <div className={CN(`block bg-tiny_${color}`)}>{`tiny_${color}`}</div>
-                <div className={CN(`block bg-light_${color}`)}>{`light_${color}`}</div>
-                <div className={CN(`block bg-${color}`)}>{color}</div>
-                <div className={CN(`block bg-dark_${color}`)}>{`dark_${color}`}</div>
-                <div className={CN(`block bg-deep_${color}`)}>{`deep_${color}`}</div>
-                <div className={CN(`block color-white bg-most_${color}`)}>{`most_${color}`}</div>
+                <div className={`color-item bg-mini_${color}`}>{`mini_${color}`}</div>
+                <div className={`color-item bg-tiny_${color}`}>{`tiny_${color}`}</div>
+                <div className={`color-item bg-light_${color}`}>{`light_${color}`}</div>
+                <div className={`color-item bg-${color}`}>{color}</div>
+                <div className={`color-item bg-dark_${color}`}>{`dark_${color}`}</div>
+                <div className={`color-item bg-deep_${color}`}>{`deep_${color}`}</div>
+                <div className={`color-item color-white bg-most_${color}`}>{`most_${color}`}</div>
                 </div>;
     }
 };
@@ -65,14 +65,14 @@ export default class Basic extends Component {
                     </li>
                     <li>
                         <h3>Colors</h3>
-                        <ul className={CN('grid text-extra text-center')}>
+                        <ul className={CN('grid color-demo text-extra text-center')}>
                             {nodes}
                         </ul>
                         <pre>
                             <code>
-                                {`<div class="${NS} color-red"></div>`}
+                                {`<div class="color-red"></div>`}
                                 <br/>
-                                {`<div class="${NS} bg-red"></div>`}
+                                {`<div class="bg-red"></div>`}
                             </code>
                         </pre>
                         <br/>
