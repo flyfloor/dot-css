@@ -5,14 +5,14 @@ import {NS, COLORS} from './setting';
 const labelBtnGroup = (cn='') => {
     return <div className={CN(`${cn} button-group`)}>
                 <div className={CN('labeled button')}>
-                    <i className={CN('icon')}>photo_camera</i>
+                    <i className="icon">photo_camera</i>
                 </div>
                 <div className={CN('labeled button')}>
-                    <i className={CN('icon')}>extension</i>
+                    <i className="icon">extension</i>
                 </div>
                 <div className={CN('button')}>normal button</div>
                 <div className={CN('labeled button')}>
-                    <i className={CN('icon')}>layers</i>
+                    <i className="icon">layers</i>
                 </div>
             </div>;
 };
@@ -57,38 +57,38 @@ export default class Button extends Component {
                         <h4>Icon button</h4>
                         <div>
                             <button className={CN('button tiny icon')}>
-                                <i className={CN('icon')}>refresh</i>
+                                <i className="icon">refresh</i>
                                 refresh
                             </button>
                             <button className={CN('button small icon')}>
-                                <i className={CN('icon')}>star</i>
+                                <i className="icon">star</i>
                                 star
                             </button>
                             <button className={CN('button icon')}>
-                                <i className={CN('icon')}>home</i>
+                                <i className="icon">home</i>
                                 home
                             </button>
                             <button className={CN('button large icon')}>
-                                <i className={CN('icon')}>contact_mail</i>
+                                <i className="icon">contact_mail</i>
                                 mail
                             </button>
                             <button className={CN('button huge icon')}>
-                                <i className={CN('icon')}>group</i>
+                                <i className="icon">group</i>
                                 group
                             </button>
                             <button className={CN('button red icon')}>
-                                <i className={CN('icon')}>watch</i>
+                                <i className="icon">watch</i>
                                 watch
                             </button>
                             <button className={CN('button basic amber icon')}>
-                                <i className={CN('icon')}>keyboard</i>
+                                <i className="icon">keyboard</i>
                                 keyboard
                             </button>
                         </div>
                         <pre>
                             <code>
 {`<div class="${NS} icon button">
-    <i class="${NS} icon">star</i>
+    <i class="icon">star</i>
     star
 </div>
 `}                                
@@ -104,31 +104,31 @@ export default class Button extends Component {
                         <h4>Circle button</h4>
                         <div>
                             <div className={CN('circle tiny button')}>
-                                <i className={CN('icon')}>apps</i>
+                                <i className="icon">apps</i>
                             </div>
                             <div className={CN('circle small button')}>
-                                <i className={CN('icon')}>share</i>
+                                <i className="icon">share</i>
                             </div>
                             <div className={CN('circle button')}>
-                                <i className={CN('icon')}>clear</i>
+                                <i className="icon">clear</i>
                             </div>
                             <div className={CN('circle large button')}>
-                                <i className={CN('icon')}>reply</i>
+                                <i className="icon">reply</i>
                             </div>
                             <div className={CN('circle huge button')}>
-                                <i className={CN('icon')}>plus_one</i>
+                                <i className="icon">plus_one</i>
                             </div>
                             <div className={CN('circle green button')}>
-                                <i className={CN('icon')}>arrow_back</i>
+                                <i className="icon">arrow_back</i>
                             </div>
                             <div className={CN('circle basic blue button')}>
-                                <i className={CN('icon')}>more_vert</i>
+                                <i className="icon">more_vert</i>
                             </div>
                         </div>
                         <pre>
                             <code>
 {`<div class="${NS} circle button">
-    <i class="${NS} icon">apps</i>
+    <i class="icon">apps</i>
 </div>
 `}                                
                             </code>
@@ -138,7 +138,7 @@ export default class Button extends Component {
                             button
                         </div>
                         <div className={CN('round icon blue button')}>
-                            <i className={CN('icon')}>more_vert</i>
+                            <i className="icon">more_vert</i>
                             more
                         </div>
                         <div className={CN('round basic green button')}>
@@ -151,12 +151,12 @@ export default class Button extends Component {
                         </pre>
                         <h4>Labeled button</h4>
                         <div className={CN('labeled button')}>
-                            <i className={CN('icon')}>menu</i>
+                            <i className="icon">menu</i>
                         </div>
                         <pre>
                             <code>
 {`<div class="${NS} labeled button">
-    <i class="${NS} icon">menu</i>
+    <i class="icon">menu</i>
 </div>
 `}                                
                             </code>
@@ -179,33 +179,33 @@ export default class Button extends Component {
                     <li>
                         <h3>Button group share same size</h3>
                         <div className={CN('button-group')}>
-                            <div className={CN('button')}>first</div>
-                            <div className={CN('button')}>second</div>
-                            <div className={CN('button')}>thrid</div>
+                            <div className="button">first</div>
+                            <div className="button">second</div>
+                            <div className="button">thrid</div>
                         </div>
                         <br/>
                         <pre>
                             <code>
 {`<div class="${NS} button-group">
-    <div class="${NS} button">first</div>
-    <div class="${NS} button">second</div>
-    <div class="${NS} button">third</div>
+    <div class="button">first</div>
+    <div class="button">second</div>
+    <div class="button">third</div>
 </div>
 `}                                
                             </code>
                         </pre>
                         <div className={CN('vertical button-group')}>
-                            <div className={CN('button')}>first</div>
-                            <div className={CN('button')}>second</div>
-                            <div className={CN('button')}>thrid</div>
+                            <div className="button">first</div>
+                            <div className="button">second</div>
+                            <div className="button">thrid</div>
                         </div>
                         <br/>
                         <pre>
                             <code>
 {`<div class="${NS} vertical button-group">
-    <div class="${NS} button">button</div>
-    <div class="${NS} button">button</div>
-    <div class="${NS} button">button</div>
+    <div class="button">button</div>
+    <div class="button">button</div>
+    <div class="button">button</div>
 </div>
 `}                                
                             </code>
@@ -214,14 +214,14 @@ export default class Button extends Component {
                     <li>
                         <h3>Labeled button group</h3>
                         <div className={CN('vertical button-group')}>
-                            <div className={CN('labeled button')}>
-                                <i className={CN('icon')}>laptop</i>
+                            <div className="labeled button">
+                                <i className="icon">laptop</i>
                             </div>
-                            <div className={CN('labeled button')}>
-                                <i className={CN('icon')}>watch</i>
+                            <div className="labeled button">
+                                <i className="icon">watch</i>
                             </div>
-                            <div className={CN('labeled button')}>
-                                <i className={CN('icon')}>headset</i>
+                            <div className="labeled button">
+                                <i className="icon">headset</i>
                             </div>
                         </div>
                         <div>
@@ -242,14 +242,14 @@ export default class Button extends Component {
                         <pre>
                             <code>
 {`<div class="${NS} tiny button-group">
-    <div class="${NS} label button">
-        <i class="${NS} icon">menu</i>
+    <div class="label button">
+        <i class="icon">menu</i>
     </div>
-    <div class="${NS} label button">
-        <i class="${NS} icon">menu</i>
+    <div class="label button">
+        <i class="icon">menu</i>
     </div>
     ...
-    <div class="${NS} button">second</div>
+    <div class="button">second</div>
 </div>
 `}                                 
                             </code>
