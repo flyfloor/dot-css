@@ -7,19 +7,26 @@ const makeForm = (cn = '') => {
         <div className={CN(`${cn} form`)}>
             <div className="field">
                 <label htmlFor="">name:</label>
-                <input type="text" className={CN('input')}/>
+                <input type="text"/>
             </div>
             <div className="field">
                 <label htmlFor="">sex:</label>
-                <input type="text" className={CN('input')}/>
+                <label className={CN('input')}>
+                    <input type="checkbox"/>
+                    original checkbox
+                </label>
+                <label className={CN('checkbox')}>
+                    <input type="checkbox"/>
+                    checkbox
+                </label>
             </div>
             <div className="field">
                 <label htmlFor="">first name:</label>
-                <input type="text" className={CN('input')}/>
+                <input type="text"/>
             </div>
             <div className="field">
                 <label htmlFor="">address:</label>
-                <input type="text" className={CN('input')}/>
+                <input type="text"/>
             </div>
             <div className="field action">
                 <button className={CN('button')}>提交</button>

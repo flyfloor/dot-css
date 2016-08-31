@@ -53,10 +53,14 @@
         }
     }
 }
-@{NS}.input {
+
+@{NS}.input, @{NS} .input {
     position: relative;
     overflow: hidden;
     display: inline;
+}
+
+@{NS}.input {
     input, &input {
         vertical-align: middle;
         -webkit-transition: all .3s;

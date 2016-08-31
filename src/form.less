@@ -11,8 +11,8 @@
         width: 100%;
     }
     .field {
-        margin-bottom: @padding * 1.6;
-        label, .label {
+        margin-bottom: @padding * 1.4;
+        label:nth-child(1), .label:nth-child(1) {
             word-wrap: break-word;
             display: block;
         }
@@ -24,28 +24,32 @@
         &.inline {
             input {
                 &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
-                    width: 80px;
+                    width: 100px;
                     display: inline;
+                    margin-right: @padding * .5;
                 }
             }  
         }
     }
 
     &.inline {
-        >.field {
+        .field {
             width: 100%;
             display: table;
         }
-        &.trim {
-            .label, label {
+        &.trim .field {
+            .label:nth-child(1), label:nth-child(1) {
                 text-align: right;
             }
         }
-        label, .label {
-            display: table-cell;
-            vertical-align: middle;
-            width: @padding * 10;
-            padding-right: @padding;
+        .field {
+            label:nth-child(1), .label:nth-child(1) {
+                display: table-cell;
+                vertical-align: top;
+                width: @padding * 10;
+                padding: @padding * 4/10 0;
+                padding-right: @padding;
+            }
         }
         .action {
             margin-left: @padding * 10;
@@ -53,13 +57,13 @@
         input {
             &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
                 display: table-cell;
-                vertical-align: middle;
+                vertical-align: top;
             }
         } 
     }
 }
 @media @desktop_view {
     @{NS}.form {
-        width: 500px;
+        width: 600px;
     }
 }
