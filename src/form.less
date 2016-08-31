@@ -1,5 +1,6 @@
 @import url('meta');
 @import url('media');
+@import url('_input_size');
 
 @{NS}.form {
     padding: @padding * 2;
@@ -16,6 +17,7 @@
             word-wrap: break-word;
             display: block;
         }
+        ._INPUT_SIZE(14, 7);
         input {
             &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
                 width: 100%;
