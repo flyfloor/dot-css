@@ -104,7 +104,7 @@ export default class Table extends Component {
                         <pre>
                             <code>
 {`<table class="${NS} table">
-    <thead class="head">
+    <thead>
         <tr>
             <th></th><th></th>
         </tr>
