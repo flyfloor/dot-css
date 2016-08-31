@@ -1,6 +1,5 @@
 @import url('meta');
 @import url('media');
-@import url('_input_size');
 
 @{NS}.form {
     padding: @padding * 2;
@@ -12,24 +11,33 @@
         width: 100%;
     }
     .field {
-        margin-bottom: @padding * 1.4;
-        label:nth-child(1), .label:nth-child(1) {
+        @__margin_bottom: @padding * 1.4;
+        line-height: @line_height * 2;
+        .field {
+            margin-bottom: 0 !important;
+            &+.field {
+                margin-top: @__margin_bottom;
+            }
+        }
+        margin-bottom: @__margin_bottom;
+        .label:nth-child(1) {
+            background: initial;
+            font-size: @line_height;
+            color: @most_gray;
             word-wrap: break-word;
             display: block;
         }
-        ._INPUT_SIZE(14, 7);
         input {
-            &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
+            ._INPUT_SIZE(14, 7);
+            &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'], &[type='date'], &[type='datetime-local'], &[type='time'] {
                 width: 100%;
             }
         }
         &.inline {
             input {
-                &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
-                    width: 100px;
-                    display: inline;
-                    margin-right: @padding * .5;
-                }
+                width: 100px;
+                display: inline;
+                margin-right: @padding * .5;
             }  
         }
     }
@@ -40,16 +48,16 @@
             display: table;
         }
         &.trim .field {
-            .label:nth-child(1), label:nth-child(1) {
+            .label:nth-child(1) {
                 text-align: right;
             }
         }
         .field {
-            label:nth-child(1), .label:nth-child(1) {
+            .label:nth-child(1) {
                 display: table-cell;
                 vertical-align: top;
                 width: @padding * 10;
-                padding: @padding * 4/10 0;
+                padding: @padding 0;
                 padding-right: @padding;
             }
         }
@@ -57,10 +65,8 @@
             margin-left: @padding * 10;
         }
         input {
-            &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'] {
-                display: table-cell;
-                vertical-align: top;
-            }
+            display: table-cell;
+            vertical-align: top;
         } 
     }
 }

@@ -70,6 +70,18 @@ export default class Checkbox extends Component {
                             <input type="radio" className="show"/>
                             <span>radio</span>
                         </label>
+                        <pre>
+                            <code>
+{`<label class="${NS} radio">
+    <input type="radio" class="show"/>
+    <span>radio</span>
+</label>
+<label class="${NS} checkbox">
+    <input type="checkbox" class="show"/>
+    <span>radio</span>
+</label>`}                                
+                            </code>
+                        </pre>
                     </li>
                 </ul>
             </div>

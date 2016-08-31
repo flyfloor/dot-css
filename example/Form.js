@@ -6,26 +6,36 @@ const makeForm = (cn = '') => {
     return (
         <div className={CN(`${cn} form`)}>
             <div className="field">
-                <label htmlFor="">name:</label>
+                <label className="label" htmlFor="">name:</label>
                 <input type="text"/>
             </div>
             <div className="field">
-                <label htmlFor="">sex:</label>
-                <label className={CN('input')}>
-                    <input type="checkbox"/>
-                    original checkbox
-                </label>
-                <label className={CN('checkbox')}>
-                    <input type="checkbox"/>
-                    checkbox
-                </label>
+                <label className="label" htmlFor="">sex:</label>
+                <div className="field">
+                    <label className={CN('checkbox')}>
+                        <input type="checkbox" className="show"/>
+                        origin checkbox
+                    </label>
+                    <label className={CN('radio')}>
+                        <input type="radio" className="show"/>
+                        origin radio
+                    </label>
+                    <label className={CN('checkbox')}>
+                        <input type="checkbox"/>
+                        checkbox
+                    </label>
+                    <label className={CN('radio')}>
+                        <input type="radio"/>
+                        radio
+                    </label>
+                </div>
             </div>
             <div className="field">
-                <label htmlFor="">first name:</label>
+                <label className="label" htmlFor="">first name:</label>
                 <input type="text"/>
             </div>
             <div className="field">
-                <label htmlFor="">address:</label>
+                <label className="label" htmlFor="">address:</label>
                 <input type="text"/>
             </div>
             <div className="field action">

@@ -3,37 +3,22 @@ import {CN, TitleBlock} from './util';
 import {NS} from './setting';
 const SIZE = ['tiny', 'small', '', 'large', 'huge'];
 
-const labeledInput = (cn='', invert=false) => {
-    if (invert) {
-        return (<div className={CN(`${cn} input action`)}>
-                    <input type="text" placeholder={cn ? cn : 'search...'}/>
-                    <div className="action">
-                        <button className="button">button</button>
-                    </div>
-                </div>);
-    }
-    return <div className={CN(`${cn} input action`)}>
-                <div className="action">
-                    <button className="button">button</button>
-                </div>
-                <input type="text" placeholder={cn ? cn : 'search...'}/>
-            </div>;
-}
-
 const makeInput = (cn='') => {
     return <div className="field">
-                <div className={CN(`${cn} input`)}>
-                    <input type="text" placeholder={cn ? cn : 'search...'}/>
-                </div>
+                <input type="text" placeholder={cn ? cn : 'input...'} className={CN(`${cn} input`)}/>
             </div>;
 };
 
-const actionInputs =  (invert=false) => {
+const actionInputs =  () => {
     let node = [];
     for (var i = 0; i < SIZE.length; i++) {
-        node.push(<div key={`${SIZE[i]}-action-button`}>
-                    {labeledInput(SIZE[i], invert)}
-                    <br/>
+        node.push(<div className="field" key={`${SIZE[i]}-action-button`}>
+                    <div className={CN(`${SIZE[i]} input`)}>
+                        <input type="text" placeholder='input...'/>
+                        <div className="action">
+                            <button>button</button>
+                        </div>
+                    </div>
                 </div>);
     }
 
@@ -47,17 +32,6 @@ export default class Input extends Component {
                 {TitleBlock('Input')}
                 <ul>
                     <li>
-                        <pre>
-                            <p>Use in two ways</p>
-                            <ol>
-                                <li>{`<input class="${NS} input"/>`}</li>
-                                <li>
-                                    <div>{`<div class="${NS} input">`}</div>
-                                    <div>{`   <input/>`}</div>
-                                    <div>{`</div>`}</div>
-                                </li>
-                            </ol>
-                        </pre>
                         <h3>Default input</h3>
                         {makeInput()}
                         <pre>
@@ -67,21 +41,15 @@ export default class Input extends Component {
                         {makeInput('angled')}
                         <pre>
                             <code>
-{`<div class="${NS} angled input">
-    <input type="text" />
-</div>`}                                
+{`<input type="text" class="${NS} angled input"/>`}                                
                             </code>
                         </pre>
                         <h3>Default textarea</h3>
-                        <div className={CN('input')}>
-                            <textarea cols="30" rows="10" placeholder='type in something...'>
-                            </textarea>
-                        </div>
+                        <textarea className={CN('input')} placeholder='type in something...'>
+                        </textarea>
                         <pre>
                             <code>
-{`<div class="${NS} input">
-    <textarea name="" id="" cols="30" rows="10"></textarea>
-</div>`}                                
+{`<textarea name="" id="" class="${NS} input"></textarea>`}                                
                             </code>
                         </pre>
                         <h4>Error input</h4>
@@ -151,28 +119,15 @@ export default class Input extends Component {
                         {actionInputs()}
                         <pre>
                             <code>
-{`<div class="${NS} action input">
-    <div class="action">
-        <button class="button">button</button>
-    </div>
+{`<div class="${NS} input">
     <input type="text" />
-</div>`}                                
-                            </code>
-                        </pre>
-                        {actionInputs(true)}
-                        <pre>
-                            <code>
-{`<div class="${NS} action input">
-    <input type="text" />
-    <div class="action">
-        <button class="button">button</button>
-    </div>
+    <button class="button">button</button>
 </div>`}                         
                             </code>
                         </pre>
-                        <h4>Round action input</h4>
-                        <div className={CN('input round action')}>
-                            <input type="text" placeholder='search...'/>
+                        <h4>Round input</h4>
+                        <div className={CN('input round')}>
+                            <input type="text" placeholder='input...'/>
                             <div className="action">
                                 <div className="button">button</div>
                             </div>
@@ -180,7 +135,7 @@ export default class Input extends Component {
                         <br/>
                         <pre>
                             <code>
-{`<div class="${NS} input round action">
+{`<div class="${NS} input round">
     <input type="text" />
     <div class="action">
         <div class="button">button</div>
@@ -189,8 +144,8 @@ export default class Input extends Component {
                             </code>
                         </pre>
                         <h4>Fluid action input</h4>
-                        <div className={CN('fluid action input')}>
-                            <input type="text" placeholder='search...'/>
+                        <div className={CN('fluid input')}>
+                            <input type="text" placeholder='input...'/>
                             <div className="action">
                                 <div className="button">button</div>
                             </div>
@@ -198,7 +153,7 @@ export default class Input extends Component {
                         <br/>
                         <pre>
                             <code>
-{`<div class="${NS} fluid action input">
+{`<div class="${NS} fluid input">
     <input type="text" />
     <div class="action">
         <div class="button">button</div>
@@ -206,16 +161,16 @@ export default class Input extends Component {
 </div>`}                                
                             </code>
                         </pre>
-                        <div className={CN('fluid huge action input')}>
+                        <div className={CN('fluid huge input')}>
                             <div className="action">
                                 <div className="button">button</div>
                             </div>
-                            <input type="text" placeholder='search...'/>
+                            <input type="text" placeholder='input...'/>
                         </div>
                         <br/>
                         <pre>
                             <code>
-{`<div class="${NS} fluid action input">
+{`<div class="${NS} fluid input">
     <div class="action">
         <div class="button">button</div>
     </div>
@@ -227,56 +182,56 @@ export default class Input extends Component {
                     <li>
                         <h3>Icon input</h3>
                         <div className="field">
-                            <div className={CN('icon input')}>
-                                <input type="text" placeholder="search..."/>
+                            <div className={CN('input icon')}>
+                                <input type="text" placeholder="input..."/>
                                 <i className="icon">search</i>
                             </div>
                         </div>
                         <pre>
                             <code>
-{`<div class="${NS} icon input">
+{`<div class="${NS} input icon">
     <input type="text" />
     <i class="icon">search</i>
 </div>`}                                
                             </code>
                         </pre>
                         <div className="field">
-                            <div className={CN('huge icon input')}>
-                                <input type="text" placeholder="search..."/>
+                            <div className={CN('huge input icon')}>
+                                <input type="text" placeholder="input..."/>
                                 <i className="icon">search</i>
                             </div>
                         </div>
                         <pre>
                             <code>
-{`<div class="${NS} huge icon input">
+{`<div class="${NS} huge input icon">
     <input type="text" />
     <i class="icon">search</i>
 </div>`}                                           
                             </code>
                         </pre>
                         <div className="field">
-                            <div className={CN('icon input')}>
+                            <div className={CN('input icon')}>
                                 <i className="icon">search</i>
-                                <input type="text" placeholder="search..."/>
+                                <input type="text" placeholder="input..."/>
                             </div>
                         </div>
                         <pre>
                             <code>
-{`<div class="${NS} icon input">
+{`<div class="${NS} input icon">
     <i class="icon">search</i>
     <input type="text" />
 </div>`}                                     
                             </code>
                         </pre>
                         <div className="field">
-                            <div className={CN('fluid icon input')}>
-                                <input type="text" placeholder="search..."/>
+                            <div className={CN('fluid input icon')}>
+                                <input type="text" placeholder="input..."/>
                                 <i className="icon">search</i>
                             </div>
                         </div>
                         <pre>
                             <code>
-{`<div class="${NS} fluid icon input">
+{`<div class="${NS} fluid input icon">
     <input type="text" />
     <i class="icon">search</i>
 </div>`}                                           
