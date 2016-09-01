@@ -159,16 +159,6 @@
 .__setColor(@color) {
     @__color: 'light_@{color}';
     .__setAttrColor(@color, color);
-    &-@{color} {
-        &:hover, &:focus, &:active {
-            color: @@__color;
-        }
-    }
-    &-light_@{color}, &-dark_@{color}, &-deep_@{color}, &-tiny_@{color}, &-mini_@{color}, &-most_@{color}, &-dull_@{color}, &-soft_@{color} {
-        &:hover, &:focus, &:active {
-            color: @color;
-        }
-    }
 }
 
 .color {
@@ -191,15 +181,9 @@
     &-soft_gray {color: @soft_gray}
     &-black { 
         color: @black; 
-        &:focus, &:active,&:hover {
-            color: @most_gray;
-        } 
     }
     &-white { 
         color: @white;
-        &:focus, &:active,&:hover {
-            color: @mini_gray;
-        }  
     }
 }
 
