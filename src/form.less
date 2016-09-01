@@ -17,24 +17,37 @@
             padding: 0 @padding/2;
         }
     }
-    .__makeFields(@n, (@i + 1));
-}
-
-.__unequalFields(@n, @i: 1) when (@i =< @n) {
     .fields {
-        &>:first-child {
-            padding-left: 0;
-        }
-        &>:last-child {
-            padding-right: 0;
-        }
         .field-@{i} {
             padding: 0 @__inline_paadding;
             float: left;
             width: (@i / @column_count) * 100%;
         }
     }
-    .__unequalFields(@n, (@i + 1));
+    .__makeFields(@n, (@i + 1));
+}
+
+.__mobileFields(@n, @i: 1) when (@i =< @n) {
+    .fields-@{i} {
+        .field {
+            width: auto;
+            float: none;
+            padding: 0;
+            margin-bottom: @__margin_bottom;
+        }
+        &>.field:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .fields {
+        .field-@{i} {
+            width: auto;
+            float: none;
+            padding: 0;
+            margin-bottom: @__margin_bottom;
+        }
+    }
+    .__mobileFields(@n, (@i + 1));
 }
 
 @{NS}.form {
@@ -64,10 +77,15 @@
             display: block;
         }
         .__makeFields(16);
-        .__unequalFields(16);
         .fields {
             overflow: hidden;
             position: relative;
+            &>:first-child {
+                padding-left: 0;
+            }
+            &>:last-child {
+                padding-right: 0;
+            }
             >.field {
                 margin-bottom: @__margin_bottom;
                 &:last-child {
@@ -102,5 +120,17 @@
         .action {
             margin-left: @padding * 10;
         }
+    }
+}
+
+@media @mobile_view {
+    @__margin_bottom: @padding * 1.4;
+    @__inline_paadding: @padding * .5;
+    @{NS}.inline.form>.field>.label:nth-child(1) {
+        float: none;
+        width: auto;
+    }
+    @{NS}.form .field {
+        .__mobileFields(16);
     }
 }

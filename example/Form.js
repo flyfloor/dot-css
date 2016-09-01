@@ -185,29 +185,81 @@ export default class Form extends Component {
                         {makeForm()}
                         <pre>
                             <code>
-{`
-<div class="${NS} form">
+{`<div class="${NS} form">
     <div class="field">
-        <label>name:</label>
-        <input type="text" class="${NS} input"/>
+        <label class="label" placeholder="input name...">name:</label>
+        <input type="text"/>
     </div>
     <div class="field">
-        <label>sex:</label>
-        <input type="text" class="${NS} input"/>
+        <label class="label">radio:</label>
+        <div class="fields-4">
+            <div class="field">
+                <label class="${NS} checkbox">
+                    <input type="checkbox" class="show"/>
+                    origin checkbox
+                </label>
+            </div>
+            <div class="field">
+                <label class="${NS} radio">
+                    <input type="radio" class="show"/>
+                    origin radio
+                </label>
+            </div>
+            <div class="field">
+                <label class="${NS} checkbox">
+                    <input type="checkbox"/>
+                    checkbox
+                </label>
+            </div>
+            <div class="field">
+                <label class="${NS} radio">
+                    <input type="radio"/>
+                    radio
+                </label>
+            </div>
+        </div>
     </div>
     <div class="field">
-        <label>first name:</label>
-        <input type="text" class="${NS} input"/>
+        <div class="fields-2">
+            <div class="field">
+                <label class="label">first name:</label>
+                <input type="text"/>
+            </div>
+            <div class="field">
+            <label class="label">last name:</label>
+                <input type="email"/>
+            </div>
+        </div>
     </div>
     <div class="field">
-        <label>address:</label>
-        <input type="text" class="${NS} input"/>
+        <label class="label">mix:</label>
+        <div class="fields">
+            <div class="field-3">
+                <select name="" id="">
+                    <option value="a">ember</option>
+                    <option value="b">react</option>
+                    <option value="c">angular</option>
+                </select>
+            </div>
+            <div class="field-6">
+                <input type="date"/>
+            </div>
+            <div class="field-1 text-center">
+                至
+            </div>
+            <div class="field-6">
+                <input type="datetime-local"/>
+            </div>
+        </div>
+    </div>
+    <div class="field">
+        <label class="label">address:</label>
+        <textarea></textarea>
     </div>
     <div class="field action">
         <button class="${NS} button">提交</button>
     </div>
-</div>
-`}                                
+</div>`}                                
                             </code>
                         </pre>
                     </li>
@@ -216,29 +268,94 @@ export default class Form extends Component {
                         {makeForm('inline')}
                         <pre>
                             <code>
-{`
-<div class="${NS} inline form">
-    <div class="field">
-        <label>name:</label>
-        <input type="text" class="${NS} input"/>
+{`<div className="${NS} inline form">
+    <div className="field">
+        <label className="label" placeholder="input name...">name:</label>
+        <div className="field">
+            <input type="text"/>
+        </div>
     </div>
-    <div class="field">
-        <label>sex:</label>
-        <input type="text" class="${NS} input"/>
+    <div className="field">
+        <label className="label">radio:</label>
+        <div className="fields-4">
+            <div className="field">
+                <label className="${NS} checkbox">
+                    <input type="checkbox" className="show"/>
+                    origin checkbox
+                </label>
+            </div>
+            <div className="field">
+                <label className="${NS} radio">
+                    <input type="radio" className="show"/>
+                    origin radio
+                </label>
+            </div>
+            <div className="field">
+                <label className="${NS} checkbox">
+                    <input type="checkbox"/>
+                    checkbox
+                </label>
+            </div>
+            <div className="field">
+                <label className="${NS} radio">
+                    <input type="radio"/>
+                    radio
+                </label>
+            </div>
+        </div>
     </div>
-    <div class="field">
-        <label>first name:</label>
-        <input type="text" class="${NS} input"/>
+    <div className="field">
+        <label className="label">career:</label>
+        <div className="fields">
+            <div className="field">
+                <input type="text"/>
+            </div>
+            <div className="field">
+                <input type="email"/>
+            </div>
+            <div className="fields-2">
+                <div className="field">
+                    <label className="label">company:</label>
+                    <input type="text"/>
+                </div>
+                <div className="field">
+                    <label className="label">year:</label>
+                    <input type="number"/>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="field">
-        <label>address:</label>
-        <input type="text" class="${NS} input"/>
+    <div className="field">
+        <label className="label">mix:</label>
+        <div className="fields">
+            <div className="field-3">
+                <select name="" id="">
+                    <option value="a">ember</option>
+                    <option value="b">react</option>
+                    <option value="c">angular</option>
+                </select>
+            </div>
+            <div className="field-6">
+                <input type="date"/>
+            </div>
+            <div className="field-1 text-center">
+                至
+            </div>
+            <div className="field-6">
+                <input type="datetime-local"/>
+            </div>
+        </div>
     </div>
-    <div class="field action">
-        <button class="${NS} button">提交</button>
+    <div className="field">
+        <label className="label">address:</label>
+        <div className="field">
+            <textarea></textarea>
+        </div>
     </div>
-</div>
-`}                                    
+    <div className="field action">
+        <button className="${NS} button">提交</button>
+    </div>
+</div>`}                                    
                             </code>
                         </pre>
                     </li>
@@ -247,29 +364,94 @@ export default class Form extends Component {
                         {makeForm('inline trim')}
                         <pre>
                             <code>
-{`
-<div class="${NS} inline trim form">
-    <div class="field">
-        <label>name:</label>
-        <input type="text" class="${NS} input"/>
+{`<div className="${NS} inline trim form">
+    <div className="field">
+        <label className="label" placeholder="input name...">name:</label>
+        <div className="field">
+            <input type="text"/>
+        </div>
     </div>
-    <div class="field">
-        <label>sex:</label>
-        <input type="text" class="${NS} input"/>
+    <div className="field">
+        <label className="label">radio:</label>
+        <div className="fields-4">
+            <div className="field">
+                <label className="${NS} checkbox">
+                    <input type="checkbox" className="show"/>
+                    origin checkbox
+                </label>
+            </div>
+            <div className="field">
+                <label className="${NS} radio">
+                    <input type="radio" className="show"/>
+                    origin radio
+                </label>
+            </div>
+            <div className="field">
+                <label className="${NS} checkbox">
+                    <input type="checkbox"/>
+                    checkbox
+                </label>
+            </div>
+            <div className="field">
+                <label className="${NS} radio">
+                    <input type="radio"/>
+                    radio
+                </label>
+            </div>
+        </div>
     </div>
-    <div class="field">
-        <label>first name:</label>
-        <input type="text" class="${NS} input"/>
+    <div className="field">
+        <label className="label">career:</label>
+        <div className="fields">
+            <div className="field">
+                <input type="text"/>
+            </div>
+            <div className="field">
+                <input type="email"/>
+            </div>
+            <div className="fields-2">
+                <div className="field">
+                    <label className="label">company:</label>
+                    <input type="text"/>
+                </div>
+                <div className="field">
+                    <label className="label">year:</label>
+                    <input type="number"/>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="field">
-        <label>address:</label>
-        <input type="text" class="${NS} input"/>
+    <div className="field">
+        <label className="label">mix:</label>
+        <div className="fields">
+            <div className="field-3">
+                <select name="" id="">
+                    <option value="a">ember</option>
+                    <option value="b">react</option>
+                    <option value="c">angular</option>
+                </select>
+            </div>
+            <div className="field-6">
+                <input type="date"/>
+            </div>
+            <div className="field-1 text-center">
+                至
+            </div>
+            <div className="field-6">
+                <input type="datetime-local"/>
+            </div>
+        </div>
     </div>
-    <div class="field action">
-        <button class="${NS} button">提交</button>
+    <div className="field">
+        <label className="label">address:</label>
+        <div className="field">
+            <textarea></textarea>
+        </div>
     </div>
-</div>
-`}                                    
+    <div className="field action">
+        <button className="${NS} button">提交</button>
+    </div>
+</div>`}                                    
                             </code>
                         </pre>
                     </li>

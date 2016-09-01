@@ -11,8 +11,18 @@
     margin-bottom: @padding;
 }
 
-.__gridColumns(@n, @i: 1) when (@i =< @n) {
-    &-@{i} {
+.__makeColumns(@n, @i: 1) when (@i =< @n) {
+    .row-@{i} {
+        .__defaultRow();
+        .column {
+            width: 100% / @i;
+        }
+    }
+    .column-@{i} {
+        .__defaultColumn();
+        width: (@i / @column_count) * 100%;
+    }
+    .grid-@{i} {
         overflow: hidden;
         position: relative;
         .column {
@@ -20,25 +30,7 @@
             width: 100% / @i;
         }
     }
-    .__gridColumns(@n, (@i + 1));
-}
-
-.__unequalColumns(@n, @i: 1) when (@i =< @n) {
-    .column-@{i} {
-        .__defaultColumn();
-        width: (@i / @column_count) * 100%;
-    }
-    .__unequalColumns(@n, (@i + 1));
-}
-
-.__rowColumn(@n, @i: 1) when (@i =< @n) {
-    .row-@{i} {
-        .__defaultRow();
-        .column {
-            width: 100% / @i;
-        }
-    }
-    .__rowColumn(@n, (@i + 1));
+    .__makeColumns(@n, (@i + 1));
 }
 
 @{NS}.grid {
@@ -51,7 +43,5 @@
         .__defaultRow();
     }
 
-    .__unequalColumns(@column_count);
-    .__gridColumns(@column_count);
-    .__rowColumn(@column_count);
+    .__makeColumns(@column_count);
 }
