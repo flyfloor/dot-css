@@ -3010,13 +3010,15 @@ i.dot.icon:hover,
 .dot.table {
   position: relative;
   display: table;
-  table-layout: fixed;
   width: auto;
   margin: 0;
   border: 1px solid #EEEEEE;
   /*shape size*/
   font-size: 14px;
   line-height: 14px;
+}
+.dot.table.fixed {
+  table-layout: fixed;
 }
 .dot.table.small {
   font-size: 12px;

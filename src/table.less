@@ -5,7 +5,9 @@
 @{NS}.table {
     position: relative;
     display: table;
-    table-layout: fixed;
+    &.fixed {
+        table-layout: fixed;
+    }
     width: auto;
     margin: 0;
     border: 1px solid @light_gray;
