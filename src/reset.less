@@ -272,9 +272,21 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 
-button[disabled],
-html input[disabled] {
-    cursor: default;
+button,
+input, 
+select, 
+textarea, 
+input, 
+select, 
+textarea {
+    &[readonly], &[disabled] {
+        cursor: default;
+        opacity: .8;
+        background-color: @white;
+    }
+    &[disabled] {
+        cursor: not-allowed;
+    }
 }
 
 

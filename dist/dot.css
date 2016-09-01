@@ -340,9 +340,32 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+button[readonly],
+input[readonly],
+select[readonly],
+textarea[readonly],
+input[readonly],
+select[readonly],
+textarea[readonly],
 button[disabled],
-html input[disabled] {
+input[disabled],
+select[disabled],
+textarea[disabled],
+input[disabled],
+select[disabled],
+textarea[disabled] {
   cursor: default;
+  opacity: .8;
+  background-color: #ffffff;
+}
+button[disabled],
+input[disabled],
+select[disabled],
+textarea[disabled],
+input[disabled],
+select[disabled],
+textarea[disabled] {
+  cursor: not-allowed;
 }
 input[type="checkbox"],
 input[type="radio"] {
@@ -6460,7 +6483,7 @@ img.dot.image.massive.circle {
 .dot.form .field .field {
   margin-bottom: 0;
 }
-.dot.form .field .label:nth-child(1) {
+.dot.form .field .label:nth-child(1):not(.dot) {
   padding: 0 0 4px;
   background: initial;
   text-shadow: none;
