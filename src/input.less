@@ -78,9 +78,24 @@
     input, select, textarea, button, .button {
         .__input_size(@_lh, @_padding);
     }
+    &.round {
+        >:first-child {
+            border-top-left-radius: @_border_radius;
+            border-bottom-left-radius: @_border_radius;
+        }
+        >:last-child {
+            border-top-right-radius: @_border_radius;
+            border-bottom-right-radius: @_border_radius;
+        }
+    }
     &.icon {
         &.fluid {
             display: block;
+        }
+        &.round {
+            input {
+                border-radius: @_border_radius;
+            }
         }
         input {
             padding-left: @_padding;
@@ -100,17 +115,6 @@
         line-height: @_padding * 2 + @_lh + 2px;
         font-size: @_lh + 2px;
     }
-
-    &.round {
-        >:first-child {
-            border-top-left-radius: @_border_radius;
-            border-bottom-left-radius: @_border_radius;
-        }
-        >:last-child {
-            border-top-right-radius: @_border_radius;
-            border-bottom-right-radius: @_border_radius;
-        }
-    }
 }
 
 ._INPUT_SIZE(@size, @_pd, @group) when(@group=false) {
@@ -118,6 +122,9 @@
     @_lh: @line_height * @size / 15;
     @_border_radius: @line_height * @size / 15 + @padding * @_pd / 10;
     .__input_size(@_lh, @_padding);
+    &.round {
+        border-radius: @_border_radius;
+    }
 }
 
 
