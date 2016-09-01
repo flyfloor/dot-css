@@ -3881,6 +3881,10 @@ i.dot.icon:hover,
 }
 .dot.checkbox,
 .dot.radio {
+  float: none;
+  min-height: initial;
+  padding: 0;
+  margin: 0;
   position: relative;
   display: inline-block;
   line-height: 1em;
@@ -6807,6 +6811,13 @@ img.dot.image.massive.circle {
 .dot.form .field textarea,
 .dot.form .field select {
   width: 100%;
+}
+.dot.form .field.inline input,
+.dot.form .field.inline textarea,
+.dot.form .field.inline select {
+  width: auto;
+  display: inline;
+  padding: 0 5px;
 }
 .dot.form.inline.trim > .field > .label:nth-child(1) {
   text-align: right;

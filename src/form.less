@@ -96,6 +96,13 @@
         input, textarea, select {
             width: 100%;
         }
+        &.inline {
+           input, textarea, select {
+               width: auto;
+               display: inline;
+               padding: 0 @__inline_paadding;
+           } 
+        }
     }
 
     &.inline {
