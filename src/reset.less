@@ -231,7 +231,7 @@ input[type="email"],
 input[type="date"], 
 input[type="datetime-local"], 
 input[type="time"], 
-textarea {
+textarea, select {
   margin: 0;
   box-shadow: none;
   -webkit-appearance: none;
@@ -240,8 +240,8 @@ textarea {
   -webkit-transition: all .2s;
   -o-transition: all .2s;
   transition: all .2s;
-  line-height: 1em;
-  font-size: 1em;
+  line-height: @line_height;
+  font-size: @line_height;
   border-radius: @radius;
   color: @most_gray;
   &:focus {
@@ -255,7 +255,13 @@ textarea {
   }
 }
 
+select {
+  background-color: transparent;
+  -webkit-appearance: menulist;
+}
+
 textarea {
+  min-height: 100px;
   resize: vertical;
 }
 

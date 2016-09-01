@@ -14,7 +14,7 @@
         margin-right: 0;
     }
 
-    >.action, input {
+    >.action, input, select {
         display: table-cell;
         vertical-align: bottom;
     }
@@ -24,7 +24,7 @@
         display: block;
         border-radius: inherit;
     }
-    input, textarea {
+    input, select, textarea {
         width: 100%;
     }
 
@@ -66,7 +66,8 @@
     @_padding: @padding * @_pd / 10;
     @_lh: @line_height * @size / 15;
     @_border_radius: @line_height * @size / 15 + @padding * @_pd / 10;
-    .button, input, button {
+
+    .button, button, & {
         font-size: @_lh;
         padding: @_padding;
         line-height: @_lh;
@@ -111,7 +112,7 @@
     }
 }
 
-@{NS} input, @{NS}.input, @{NS} textarea {
+@{NS} input, @{NS}.input, @{NS} textarea, @{NS} select {
     vertical-align: middle;
     -webkit-transition: all .3s;
     -o-transition: all .3s;
@@ -153,17 +154,5 @@
     }
     &.error {
         border-color: @red;
-    }
-}
-
-@media @desktop_view, @tablet_view {
-    @{NS} textarea, @{NS} input, input@{NS}.input {
-        min-width: 400px;
-    }
-}
-
-@media @mobile_view {
-    @{NS} textarea, @{NS} input, input@{NS}.input {
-        min-width: 250px;
     }
 }

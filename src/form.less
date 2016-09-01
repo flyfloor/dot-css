@@ -1,77 +1,106 @@
 @import url('meta');
 @import url('media');
 
+.__makeFields(@n, @i: 1) when (@i =< @n) {
+    .fields-@{i} {
+        overflow: hidden;
+        position: relative;
+        &>.field:first-child {
+            padding-left: 0;
+        }
+        &>.field:last-child {
+            padding-right: 0;
+        }
+        .field {
+            width: 100% / @i;
+            float: left;
+            padding: 0 @padding/2;
+        }
+    }
+    .__makeFields(@n, (@i + 1));
+}
+
+.__unequalFields(@n, @i: 1) when (@i =< @n) {
+    .fields {
+        &>:first-child {
+            padding-left: 0;
+        }
+        &>:last-child {
+            padding-right: 0;
+        }
+        .field-@{i} {
+            padding: 0 @__inline_paadding;
+            float: left;
+            width: (@i / @column_count) * 100%;
+        }
+    }
+    .__unequalFields(@n, (@i + 1));
+}
+
 @{NS}.form {
+    @__margin_bottom: @padding * 1.4;
+    @__inline_paadding: @padding * .5;
     padding: @padding * 2;
     width: 100%;
-    &.basic {
-        padding: 0;
-    }
-    &.fluid {
-        width: 100%;
-    }
     .field {
-        @__margin_bottom: @padding * 1.4;
+        overflow: hidden;
         line-height: @line_height * 2;
-        .field {
-            margin-bottom: 0 !important;
-            &+.field {
-                margin-top: @__margin_bottom;
-            }
-        }
         margin-bottom: @__margin_bottom;
+        input, textarea {
+            width: 100%;
+        }
+        .field {
+            margin-bottom: 0;
+        }
         .label:nth-child(1) {
+            padding: 0 0 @padding * 4/10;
             background: initial;
+            border-radius: 0;
+            margin: 0;
+            line-height: @line_height;
             font-size: @line_height;
             color: @most_gray;
             word-wrap: break-word;
             display: block;
         }
-        input {
-            ._INPUT_SIZE(14, 7);
-            &[type='text'], &[type='number'], &[type='url'], &[type='tel'], &[type='password'], &[type='email'], &[type='date'], &[type='datetime-local'], &[type='time'] {
-                width: 100%;
+        .__makeFields(16);
+        .__unequalFields(16);
+        .fields {
+            overflow: hidden;
+            position: relative;
+            >.field {
+                margin-bottom: @__margin_bottom;
+                &:last-child {
+                    margin-bottom: 0;
+                }
             }
         }
-        &.inline {
-            input {
-                width: 100px;
-                display: inline;
-                margin-right: @padding * .5;
-            }  
+        input, textarea, select {
+            width: 100%;
         }
     }
 
     &.inline {
-        .field {
-            width: 100%;
-            display: table;
-        }
-        &.trim .field {
-            .label:nth-child(1) {
+        &.trim>.field {
+            >.label:nth-child(1) {
                 text-align: right;
             }
         }
-        .field {
-            .label:nth-child(1) {
-                display: table-cell;
+        >.field {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            >.label:nth-child(1) {
+                width: 100px;
                 vertical-align: top;
                 width: @padding * 10;
-                padding: @padding 0;
+                padding: @padding * 8/10 0;
                 padding-right: @padding;
+                float: left;
             }
         }
         .action {
             margin-left: @padding * 10;
         }
-        input {
-            display: table-cell;
-            vertical-align: top;
-        } 
-    }
-}
-@media @desktop_view {
-    @{NS}.form {
-        width: 600px;
     }
 }

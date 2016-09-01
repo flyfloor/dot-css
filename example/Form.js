@@ -3,40 +3,169 @@ import {CN, TitleBlock} from './util';
 import {NS} from './setting';
 
 const makeForm = (cn = '') => {
+    if (cn.indexOf('inline') === -1) {
+        return (
+            <div className={CN(`${cn} form`)}>
+                <div className="field">
+                    <label className="label" placeholder="input name...">name:</label>
+                    <input type="text"/>
+                </div>
+                <div className="field">
+                    <label className="label">radio:</label>
+                    <div className="fields-4">
+                        <div className="field">
+                            <label className={CN('checkbox')}>
+                                <input type="checkbox" className="show"/>
+                                origin checkbox
+                            </label>
+                        </div>
+                        <div className="field">
+                            <label className={CN('radio')}>
+                                <input type="radio" className="show"/>
+                                origin radio
+                            </label>
+                        </div>
+                        <div className="field">
+                            <label className={CN('checkbox')}>
+                                <input type="checkbox"/>
+                                checkbox
+                            </label>
+                        </div>
+                        <div className="field">
+                            <label className={CN('radio')}>
+                                <input type="radio"/>
+                                radio
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div className="field">
+                    <div className="fields-2">
+                        <div className="field">
+                            <label className="label">first name:</label>
+                            <input type="text"/>
+                        </div>
+                        <div className="field">
+                        <label className="label">last name:</label>
+                            <input type="email"/>
+                        </div>
+                    </div>
+                </div>
+                <div className="field">
+                    <label className="label">mix:</label>
+                    <div className="fields">
+                        <div className="field-3">
+                            <select name="" id="">
+                                <option value="a">ember</option>
+                                <option value="b">react</option>
+                                <option value="c">angular</option>
+                            </select>
+                        </div>
+                        <div className="field-6">
+                            <input type="date"/>
+                        </div>
+                        <div className="field-1 text-center">
+                            至
+                        </div>
+                        <div className="field-6">
+                            <input type="datetime-local"/>
+                        </div>
+                    </div>
+                </div>
+                <div className="field">
+                    <label className="label">address:</label>
+                    <textarea></textarea>
+                </div>
+                <div className="field action">
+                    <button className={CN('button')}>提交</button>
+                </div>
+            </div>
+        )
+    }
     return (
         <div className={CN(`${cn} form`)}>
             <div className="field">
-                <label className="label" htmlFor="">name:</label>
-                <input type="text"/>
-            </div>
-            <div className="field">
-                <label className="label" htmlFor="">sex:</label>
+                <label className="label" placeholder="input name...">name:</label>
                 <div className="field">
-                    <label className={CN('checkbox')}>
-                        <input type="checkbox" className="show"/>
-                        origin checkbox
-                    </label>
-                    <label className={CN('radio')}>
-                        <input type="radio" className="show"/>
-                        origin radio
-                    </label>
-                    <label className={CN('checkbox')}>
-                        <input type="checkbox"/>
-                        checkbox
-                    </label>
-                    <label className={CN('radio')}>
-                        <input type="radio"/>
-                        radio
-                    </label>
+                    <input type="text"/>
                 </div>
             </div>
             <div className="field">
-                <label className="label" htmlFor="">first name:</label>
-                <input type="text"/>
+                <label className="label">radio:</label>
+                <div className="fields-4">
+                    <div className="field">
+                        <label className={CN('checkbox')}>
+                            <input type="checkbox" className="show"/>
+                            origin checkbox
+                        </label>
+                    </div>
+                    <div className="field">
+                        <label className={CN('radio')}>
+                            <input type="radio" className="show"/>
+                            origin radio
+                        </label>
+                    </div>
+                    <div className="field">
+                        <label className={CN('checkbox')}>
+                            <input type="checkbox"/>
+                            checkbox
+                        </label>
+                    </div>
+                    <div className="field">
+                        <label className={CN('radio')}>
+                            <input type="radio"/>
+                            radio
+                        </label>
+                    </div>
+                </div>
             </div>
             <div className="field">
-                <label className="label" htmlFor="">address:</label>
-                <input type="text"/>
+                <label className="label">career:</label>
+                <div className="fields">
+                    <div className="field">
+                        <input type="text"/>
+                    </div>
+                    <div className="field">
+                        <input type="email"/>
+                    </div>
+                    <div className="fields-2">
+                        <div className="field">
+                            <label className="label">company:</label>
+                            <input type="text"/>
+                        </div>
+                        <div className="field">
+                            <label className="label">year:</label>
+                            <input type="number"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="field">
+                <label className="label">mix:</label>
+                <div className="fields">
+                    <div className="field-3">
+                        <select name="" id="">
+                            <option value="a">ember</option>
+                            <option value="b">react</option>
+                            <option value="c">angular</option>
+                        </select>
+                    </div>
+                    <div className="field-6">
+                        <input type="date"/>
+                    </div>
+                    <div className="field-1 text-center">
+                        至
+                    </div>
+                    <div className="field-6">
+                        <input type="datetime-local"/>
+                    </div>
+                </div>
+            </div>
+            <div className="field">
+                <label className="label">address:</label>
+                <div className="field">
+                    <textarea></textarea>
+                </div>
             </div>
             <div className="field action">
                 <button className={CN('button')}>提交</button>
@@ -120,37 +249,6 @@ export default class Form extends Component {
                             <code>
 {`
 <div class="${NS} inline trim form">
-    <div class="field">
-        <label>name:</label>
-        <input type="text" class="${NS} input"/>
-    </div>
-    <div class="field">
-        <label>sex:</label>
-        <input type="text" class="${NS} input"/>
-    </div>
-    <div class="field">
-        <label>first name:</label>
-        <input type="text" class="${NS} input"/>
-    </div>
-    <div class="field">
-        <label>address:</label>
-        <input type="text" class="${NS} input"/>
-    </div>
-    <div class="field action">
-        <button class="${NS} button">提交</button>
-    </div>
-</div>
-`}                                    
-                            </code>
-                        </pre>
-                    </li>
-                    <li>
-                        <h4>Fluid form</h4>
-                        {makeForm('fluid')}
-                        <pre>
-                            <code>
-{`
-<div class="${NS} fluid form">
     <div class="field">
         <label>name:</label>
         <input type="text" class="${NS} input"/>
