@@ -6463,11 +6463,12 @@ img.dot.image.massive.circle {
 .dot.form .field .label:nth-child(1) {
   padding: 0 0 4px;
   background: initial;
+  text-shadow: none;
   border-radius: 0;
   margin: 0;
   line-height: 15px;
   font-size: 15px;
-  color: #212121;
+  color: #383838;
   word-wrap: break-word;
   display: block;
 }
