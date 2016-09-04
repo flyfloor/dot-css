@@ -30,12 +30,26 @@ export default class Menu extends Component {
                 {TitleBlock('Menu')}
                 <ul>
                     <li>
-                        <h3>Default menu</h3>
+                        <h4>Default menu</h4>
                         {makeMenu()}
+                        <h4>colored menu</h4>
+                        {makeMenu('green')}
                     </li>
                     <li>
-                        <h3>Lined menu</h3>
+                        <h4>Angled menu</h4>
+                        {makeMenu('angled')}
+                    </li>
+                    <li>
+                        <h4>Lined menu</h4>
                         {makeMenu('lined')}
+                        <h4>colored menu</h4>
+                        {makeMenu('red lined')}
+                    </li>
+                    <li>
+                        <h4>Menu bar</h4>
+                        {makeMenu('bar')}
+                        <h4>colored menu</h4>
+                        {makeMenu('blue bar')}
                     </li>
                 </ul>
             </div>

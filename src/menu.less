@@ -2,15 +2,20 @@
 @import url('color');
 
 @{NS}.menu {
-    margin: 0 @padding * -0.5;
+    margin: 0 @padding * -0.5 @padding;
     padding: 0;
+    position: relative;
     line-height: @line_height * 4;
+    &.angled {
+        .item {
+            border-radius: 0 !important;
+        }
+    }
     .item {
         vertical-align: middle;
         display: inline-block;
         font-size: @line_height;
         line-height: @line_height * 2;
-        overflow: hidden;
         padding: 0 @padding * 12/10;
     }
     >.item, @{NS}.item {
@@ -24,32 +29,144 @@
         &:hover, &.active {
             color: @black;
             background: @light_gray;
+        } 
+    }
+
+    &.red {
+        >.item, @{NS}.item {
+            &:hover, &.active {
+                background: @red;
+                color: @white;
+            }
         }
     }
+    &.black{
+        >.item, @{NS}.item {
+            &:hover, &.active {
+                background: @black;
+                color: @white;
+            }
+        }
+    }
+    &.green{
+        >.item, @{NS}.item {
+            &:hover, &.active {
+                background: @green;
+                color: @white;
+            }
+        }
+    }
+    &.yellow{
+        >.item, @{NS}.item {
+            &:hover, &.active {
+                background: @yellow;
+            }
+        }
+    }
+    &.blue{
+        >.item, @{NS}.item {
+            &:hover, &.active {
+                background: @blue;
+                color: @white;
+            }
+        }
+    }   
+
     .menu {
         &.right {
             display: inline;
             float: right;
         }
     }
-    &.lined {
+}
+
+@{NS}.menu.lined {
+    margin: 0 0 @padding;
+    line-height: @line_height * 3;
+    >.item, @{NS}.item {
+        color: @deep_gray;
+        background: transparent !important;
+        border-radius: 0;
+        line-height: @line_height * 2.4;
+        border-bottom: 2px solid transparent;
+        padding: 0 @padding * 1.2;
         margin: 0;
-        line-height: @line_height * 3;
+        &.active{
+            border-color: @black;
+            color: @black;
+        }
+        &:hover {
+            color: initial;
+            background: initial;
+        }
+    }
+    &.red{
         >.item, @{NS}.item {
-            color: @deep_gray;
-            background: transparent;
-            border-radius: 0;
-            line-height: @line_height * 3;
-            border-bottom: 2px solid transparent;
-            padding: 0 @padding * 2;
-            margin: 0;
-            &.active, &:hover {
-                border-color: @black;
-                color: @black;
-            }
-            &:hover {
-                border-color: @dark_gray;
+            &.active {
+                border-color: @red;
             }
         }
+    }
+    &.black{
+        >.item, @{NS}.item {
+            &.active {
+                border-color: @black;
+            }
+        }
+    }
+    &.green{
+        >.item, @{NS}.item {
+            &.active {
+                border-color: @green;
+            }
+        }
+    }
+    &.yellow{
+        >.item, @{NS}.item {
+            &.active {
+                border-color: @yellow;
+            }
+        }
+    }
+    &.blue{
+        >.item, @{NS}.item {
+            &.active {
+                border-color: @blue;
+            }
+        }
+    }   
+}
+
+@{NS}.menu.bar {
+    margin: 0 0 @padding;
+    padding: 0;
+    border-radius: @radius;
+    @__lh: @line_height * 2.4;
+    height: @__lh;
+    line-height: @__lh;
+    border: 1px solid @light_gray;
+    &>.item, @{NS}.item {
+        &:first-child {
+            border-top-left-radius: @radius;
+            border-bottom-left-radius: @radius;
+        }
+        &:last-child {
+            border-top-right-radius: @radius;
+            border-bottom-right-radius: @radius;
+        }
+    }
+    >.item, @{NS}.item {
+        margin: 0;
+        vertical-align: middle;
+        border-radius: 0;
+        line-height: @__lh - 2px;
+        height: 100%;
+    }
+    >.item {
+        float: left;
+    }
+    .menu {
+        height: 100%;
+        line-height: 100%;
     }
 }
