@@ -24,6 +24,7 @@ import Loader from './example/Loader';
 import Form from './example/Form';
 import Other from './example/Other';
 import Menu from './example/Menu';
+import Tab from './example/Tab';
 
 const NavLink = (props) => {
     return (
@@ -69,6 +70,7 @@ class App extends Component {
                                 <NavLink to="/loader">loader</NavLink>
                                 <NavLink to="/form">form</NavLink>
                                 <NavLink to="/menu">menu</NavLink>
+                                <NavLink to="/tab">tab</NavLink>
                                 <NavLink to="/other">other</NavLink>
                             </aside>
                             <artical className="column column-13 main-content">
@@ -128,6 +130,7 @@ ReactDOM.render(<Router history={hashHistory}>
                         <Route path="/loader" component={Loader}></Route>
                         <Route path="/form" component={Form}></Route>
                         <Route path="/menu" component={Menu}></Route>
+                        <Route path="/tab" component={Tab}></Route>
                         <Route path="/other" component={Other}></Route>
                     </Route>
                 </Router>, document.getElementById('root'));

@@ -28,7 +28,7 @@
         cursor: pointer;
         &:hover, &.active {
             color: @black;
-            background: @light_gray;
+            background: @tiny_gray;
         } 
     }
 
@@ -146,6 +146,9 @@
     line-height: @__lh;
     border: 1px solid @light_gray;
     &>.item, @{NS}.item {
+        +.item {
+            border-left: 1px solid @light_gray;
+        }
         &:first-child {
             border-top-left-radius: @radius;
             border-bottom-left-radius: @radius;
