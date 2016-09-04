@@ -17,6 +17,11 @@ export default class Tab extends Component {
                         </div>
                         <div className="dot module">
                             <h3>This is content</h3>
+                            <p>test</p>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
                         </div>
                     </li>
                     <li>
@@ -28,9 +33,29 @@ export default class Tab extends Component {
                         </div>
                         <div className="dot module">
                             <h3>This is content</h3>
+                            <p>test...</p>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
                         </div>
                     </li>
-                    <li></li>
+                    <li>
+                        <h4>Vertical tab</h4>
+                        <div className={CN('vertical tab')}>
+                            <div className="item active">tab 1</div>
+                            <div className="item">tab 2</div>
+                            <div className="item">tab 3</div>
+                        </div>
+                        <div className="dot module">
+                            <h3>This is content</h3>
+                            <p>test...</p>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
+                        </div>
+                    </li>
                     <li></li>
                 </ul>
             </div>

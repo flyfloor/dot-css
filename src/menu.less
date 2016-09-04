@@ -173,3 +173,49 @@
         line-height: 100%;
     }
 }
+
+@{NS}.vertical.menu {
+    margin: 0;
+    width: 200px;
+    border: 1px solid @light_gray;
+    border-radius: @radius;
+    .item {
+        display: block;
+        margin: 0;
+        border-radius: 0;
+        line-height: @line_height * 2.4;
+        &+.item {
+            border-top: 1px solid @light_gray;
+        }
+        &:first-child {
+            border-top-left-radius: @radius;
+            border-top-right-radius: @radius;
+        }
+        &:last-child {
+            border-bottom-left-radius: @radius;
+            border-bottom-right-radius: @radius;
+        }
+    }
+    &.angled {
+        border-radius: 0;
+        .item {
+            border-radius: 0;
+        }
+    }
+}
+
+@{NS}.vertical.lined.menu {
+    border: 0;
+    margin: 0;
+    border-radius: 0;
+    border-right: 2px solid @light_gray;
+    .item {
+        border: 0;
+        margin-right: -2px;
+        border-right: 2px solid transparent;
+        border-radius: 0;
+        &.active {
+            border-color: @deep_gray;
+        }
+    }
+}

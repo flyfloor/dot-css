@@ -41,3 +41,23 @@
         }
     }
 }
+
+@{NS}.vertical.tab {
+    width: 200px;
+    float: left;
+    .item {
+        display: block;
+        border: 1px solid transparent;
+        border-right: 0;
+        margin-right: -1px;
+        border-radius: @radius;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        &.active {
+            border-color: @light_gray;
+        }
+    }
+    &+.module {
+        overflow: hidden;
+    }
+}

@@ -51,6 +51,24 @@ export default class Menu extends Component {
                         <h4>colored menu</h4>
                         {makeMenu('blue bar')}
                     </li>
+                    <li>
+                        <h4>Vertical menu</h4>
+                        <div className={CN('vertical menu')}>
+                            <a href="javascript:;" className="item active">home</a>
+                            <a href="javascript:;" className="item">blog</a>
+                            <a href="javascript:;" className="item">about</a>
+                        </div>
+                        <br/>
+                    </li>
+                    <li>
+                        <h4>Lined vertical menu</h4>
+                        <div className={CN('vertical lined menu')}>
+                            <a href="javascript:;" className="item active">home</a>
+                            <a href="javascript:;" className="item">blog</a>
+                            <a href="javascript:;" className="item">about</a>
+                        </div>
+                        <br/>
+                    </li>
                 </ul>
             </div>
         );
