@@ -1160,7 +1160,7 @@ code {
 .dot.module {
   display: block;
   padding: 10px;
-  border: 1px solid #F5F5F5;
+  border: 1px solid #EEEEEE;
   background-color: #ffffff;
   margin-bottom: 10px;
 }
@@ -2643,7 +2643,8 @@ i.dot.icon:hover,
   border-radius: 33px;
 }
 .dot.grid {
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   position: relative;
 }
 .dot.grid .column {
@@ -2652,12 +2653,14 @@ i.dot.icon:hover,
 }
 .dot.grid .row {
   display: block;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   margin-bottom: 10px;
 }
 .dot.grid .row-1 {
   display: block;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   margin-bottom: 10px;
 }
 .dot.grid .row-1 .column {
@@ -2669,7 +2672,8 @@ i.dot.icon:hover,
   width: 6.25%;
 }
 .dot.grid .grid-1 {
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   position: relative;
 }
 .dot.grid .grid-1 .column {
@@ -2679,7 +2683,8 @@ i.dot.icon:hover,
 }
 .dot.grid .row-2 {
   display: block;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   margin-bottom: 10px;
 }
 .dot.grid .row-2 .column {
@@ -2691,7 +2696,8 @@ i.dot.icon:hover,
   width: 12.5%;
 }
 .dot.grid .grid-2 {
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   position: relative;
 }
 .dot.grid .grid-2 .column {
@@ -2701,7 +2707,8 @@ i.dot.icon:hover,
 }
 .dot.grid .row-3 {
   display: block;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   margin-bottom: 10px;
 }
 .dot.grid .row-3 .column {
@@ -2713,7 +2720,8 @@ i.dot.icon:hover,
   width: 18.75%;
 }
 .dot.grid .grid-3 {
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   position: relative;
 }
 .dot.grid .grid-3 .column {
@@ -2723,7 +2731,8 @@ i.dot.icon:hover,
 }
 .dot.grid .row-4 {
   display: block;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   margin-bottom: 10px;
 }
 .dot.grid .row-4 .column {
@@ -2735,7 +2744,8 @@ i.dot.icon:hover,
   width: 25%;
 }
 .dot.grid .grid-4 {
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   position: relative;
 }
 .dot.grid .grid-4 .column {
@@ -2745,7 +2755,8 @@ i.dot.icon:hover,
 }
 .dot.grid .row-5 {
   display: block;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   margin-bottom: 10px;
 }
 .dot.grid .row-5 .column {
@@ -2757,7 +2768,8 @@ i.dot.icon:hover,
   width: 31.25%;
 }
 .dot.grid .grid-5 {
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   position: relative;
 }
 .dot.grid .grid-5 .column {
@@ -2767,7 +2779,8 @@ i.dot.icon:hover,
 }
 .dot.grid .row-6 {
   display: block;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   margin-bottom: 10px;
 }
 .dot.grid .row-6 .column {
@@ -2779,7 +2792,8 @@ i.dot.icon:hover,
   width: 37.5%;
 }
 .dot.grid .grid-6 {
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   position: relative;
 }
 .dot.grid .grid-6 .column {
@@ -2789,7 +2803,8 @@ i.dot.icon:hover,
 }
 .dot.grid .row-7 {
   display: block;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   margin-bottom: 10px;
 }
 .dot.grid .row-7 .column {
@@ -2801,7 +2816,8 @@ i.dot.icon:hover,
   width: 43.75%;
 }
 .dot.grid .grid-7 {
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   position: relative;
 }
 .dot.grid .grid-7 .column {
@@ -2811,7 +2827,8 @@ i.dot.icon:hover,
 }
 .dot.grid .row-8 {
   display: block;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   margin-bottom: 10px;
 }
 .dot.grid .row-8 .column {
@@ -2823,7 +2840,8 @@ i.dot.icon:hover,
   width: 50%;
 }
 .dot.grid .grid-8 {
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   position: relative;
 }
 .dot.grid .grid-8 .column {
@@ -2833,7 +2851,8 @@ i.dot.icon:hover,
 }
 .dot.grid .row-9 {
   display: block;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   margin-bottom: 10px;
 }
 .dot.grid .row-9 .column {
@@ -2845,7 +2864,8 @@ i.dot.icon:hover,
   width: 56.25%;
 }
 .dot.grid .grid-9 {
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   position: relative;
 }
 .dot.grid .grid-9 .column {
@@ -2855,7 +2875,8 @@ i.dot.icon:hover,
 }
 .dot.grid .row-10 {
   display: block;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   margin-bottom: 10px;
 }
 .dot.grid .row-10 .column {
@@ -2867,7 +2888,8 @@ i.dot.icon:hover,
   width: 62.5%;
 }
 .dot.grid .grid-10 {
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   position: relative;
 }
 .dot.grid .grid-10 .column {
@@ -2877,7 +2899,8 @@ i.dot.icon:hover,
 }
 .dot.grid .row-11 {
   display: block;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   margin-bottom: 10px;
 }
 .dot.grid .row-11 .column {
@@ -2889,7 +2912,8 @@ i.dot.icon:hover,
   width: 68.75%;
 }
 .dot.grid .grid-11 {
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   position: relative;
 }
 .dot.grid .grid-11 .column {
@@ -2899,7 +2923,8 @@ i.dot.icon:hover,
 }
 .dot.grid .row-12 {
   display: block;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   margin-bottom: 10px;
 }
 .dot.grid .row-12 .column {
@@ -2911,7 +2936,8 @@ i.dot.icon:hover,
   width: 75%;
 }
 .dot.grid .grid-12 {
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   position: relative;
 }
 .dot.grid .grid-12 .column {
@@ -2921,7 +2947,8 @@ i.dot.icon:hover,
 }
 .dot.grid .row-13 {
   display: block;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   margin-bottom: 10px;
 }
 .dot.grid .row-13 .column {
@@ -2933,7 +2960,8 @@ i.dot.icon:hover,
   width: 81.25%;
 }
 .dot.grid .grid-13 {
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   position: relative;
 }
 .dot.grid .grid-13 .column {
@@ -2943,7 +2971,8 @@ i.dot.icon:hover,
 }
 .dot.grid .row-14 {
   display: block;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   margin-bottom: 10px;
 }
 .dot.grid .row-14 .column {
@@ -2955,7 +2984,8 @@ i.dot.icon:hover,
   width: 87.5%;
 }
 .dot.grid .grid-14 {
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   position: relative;
 }
 .dot.grid .grid-14 .column {
@@ -2965,7 +2995,8 @@ i.dot.icon:hover,
 }
 .dot.grid .row-15 {
   display: block;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   margin-bottom: 10px;
 }
 .dot.grid .row-15 .column {
@@ -2977,7 +3008,8 @@ i.dot.icon:hover,
   width: 93.75%;
 }
 .dot.grid .grid-15 {
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   position: relative;
 }
 .dot.grid .grid-15 .column {
@@ -2987,7 +3019,8 @@ i.dot.icon:hover,
 }
 .dot.grid .row-16 {
   display: block;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   margin-bottom: 10px;
 }
 .dot.grid .row-16 .column {
@@ -2999,7 +3032,8 @@ i.dot.icon:hover,
   width: 100%;
 }
 .dot.grid .grid-16 {
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   position: relative;
 }
 .dot.grid .grid-16 .column {
@@ -3010,15 +3044,20 @@ i.dot.icon:hover,
 .dot.table {
   position: relative;
   display: table;
-  width: auto;
   margin: 0;
   border: 1px solid #EEEEEE;
+  width: 100%;
   /*shape size*/
   font-size: 14px;
   line-height: 14px;
 }
 .dot.table.fixed {
   table-layout: fixed;
+}
+.dot.table.celled td + td,
+.dot.table.celled .cell + .cell {
+  border-left: 1px solid #EEEEEE;
+  border-top: 1px solid #EEEEEE;
 }
 .dot.table.small {
   font-size: 12px;
@@ -3028,13 +3067,11 @@ i.dot.icon:hover,
   font-size: 18px;
   line-height: 18px;
 }
-.dot.table.fluid {
-  width: 100%;
-}
 .dot.table .head .cell,
 .dot.table thead .cell,
 .dot.table .head th,
 .dot.table thead th {
+  font-weight: 500;
   border-top: 0;
   background-color: #F5F5F5;
 }
@@ -3064,8 +3101,16 @@ i.dot.icon:hover,
 }
 .dot.table.basic .row .cell,
 .dot.table.basic tr .cell,
+.dot.table.basic thead .cell,
+.dot.table.basic .head .cell,
 .dot.table.basic .row td,
-.dot.table.basic tr td {
+.dot.table.basic tr td,
+.dot.table.basic thead td,
+.dot.table.basic .head td,
+.dot.table.basic .row th,
+.dot.table.basic tr th,
+.dot.table.basic thead th,
+.dot.table.basic .head th {
   background-color: initial;
   padding: 0;
   border: 0;
@@ -3162,8 +3207,19 @@ i.dot.icon:hover,
   height: 30px;
   overflow: hidden;
 }
+.dot.input.round > :first-child {
+  border-top-left-radius: 21px;
+  border-bottom-left-radius: 21px;
+}
+.dot.input.round > :last-child {
+  border-top-right-radius: 21px;
+  border-bottom-right-radius: 21px;
+}
 .dot.input.icon.fluid {
   display: block;
+}
+.dot.input.icon.round input {
+  border-radius: 21px;
 }
 .dot.input.icon input {
   padding-left: 7px;
@@ -3180,14 +3236,6 @@ i.dot.icon:hover,
   line-height: 30px;
   font-size: 16px;
 }
-.dot.input.round > :first-child {
-  border-top-left-radius: 21px;
-  border-bottom-left-radius: 21px;
-}
-.dot.input.round > :last-child {
-  border-top-right-radius: 21px;
-  border-bottom-right-radius: 21px;
-}
 .dot.input.tiny input,
 .dot.input.tiny select,
 .dot.input.tiny textarea,
@@ -3199,8 +3247,19 @@ i.dot.icon:hover,
   height: 22px;
   overflow: hidden;
 }
+.dot.input.tiny.round > :first-child {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+.dot.input.tiny.round > :last-child {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
 .dot.input.tiny.icon.fluid {
   display: block;
+}
+.dot.input.tiny.icon.round input {
+  border-radius: 15px;
 }
 .dot.input.tiny.icon input {
   padding-left: 5px;
@@ -3217,14 +3276,6 @@ i.dot.icon:hover,
   line-height: 22px;
   font-size: 12px;
 }
-.dot.input.tiny.round > :first-child {
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
-}
-.dot.input.tiny.round > :last-child {
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-}
 .dot.input.small input,
 .dot.input.small select,
 .dot.input.small textarea,
@@ -3236,8 +3287,19 @@ i.dot.icon:hover,
   height: 26px;
   overflow: hidden;
 }
+.dot.input.small.round > :first-child {
+  border-top-left-radius: 18px;
+  border-bottom-left-radius: 18px;
+}
+.dot.input.small.round > :last-child {
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+}
 .dot.input.small.icon.fluid {
   display: block;
+}
+.dot.input.small.icon.round input {
+  border-radius: 18px;
 }
 .dot.input.small.icon input {
   padding-left: 6px;
@@ -3254,14 +3316,6 @@ i.dot.icon:hover,
   line-height: 26px;
   font-size: 14px;
 }
-.dot.input.small.round > :first-child {
-  border-top-left-radius: 18px;
-  border-bottom-left-radius: 18px;
-}
-.dot.input.small.round > :last-child {
-  border-top-right-radius: 18px;
-  border-bottom-right-radius: 18px;
-}
 .dot.input.large input,
 .dot.input.large select,
 .dot.input.large textarea,
@@ -3273,8 +3327,19 @@ i.dot.icon:hover,
   height: 38px;
   overflow: hidden;
 }
+.dot.input.large.round > :first-child {
+  border-top-left-radius: 27px;
+  border-bottom-left-radius: 27px;
+}
+.dot.input.large.round > :last-child {
+  border-top-right-radius: 27px;
+  border-bottom-right-radius: 27px;
+}
 .dot.input.large.icon.fluid {
   display: block;
+}
+.dot.input.large.icon.round input {
+  border-radius: 27px;
 }
 .dot.input.large.icon input {
   padding-left: 9px;
@@ -3291,14 +3356,6 @@ i.dot.icon:hover,
   line-height: 38px;
   font-size: 20px;
 }
-.dot.input.large.round > :first-child {
-  border-top-left-radius: 27px;
-  border-bottom-left-radius: 27px;
-}
-.dot.input.large.round > :last-child {
-  border-top-right-radius: 27px;
-  border-bottom-right-radius: 27px;
-}
 .dot.input.huge input,
 .dot.input.huge select,
 .dot.input.huge textarea,
@@ -3310,8 +3367,19 @@ i.dot.icon:hover,
   height: 46px;
   overflow: hidden;
 }
+.dot.input.huge.round > :first-child {
+  border-top-left-radius: 33px;
+  border-bottom-left-radius: 33px;
+}
+.dot.input.huge.round > :last-child {
+  border-top-right-radius: 33px;
+  border-bottom-right-radius: 33px;
+}
 .dot.input.huge.icon.fluid {
   display: block;
+}
+.dot.input.huge.icon.round input {
+  border-radius: 33px;
 }
 .dot.input.huge.icon input {
   padding-left: 11px;
@@ -3327,14 +3395,6 @@ i.dot.icon:hover,
   text-align: center;
   line-height: 46px;
   font-size: 24px;
-}
-.dot.input.huge.round > :first-child {
-  border-top-left-radius: 33px;
-  border-bottom-left-radius: 33px;
-}
-.dot.input.huge.round > :last-child {
-  border-top-right-radius: 33px;
-  border-bottom-right-radius: 33px;
 }
 .dot input,
 .dotinput.input,
@@ -3372,6 +3432,12 @@ i.dot.icon:hover,
 .dot select.fluid {
   width: 100%;
 }
+.dot input.round,
+.dotinput.input.round,
+.dot textarea.round,
+.dot select.round {
+  border-radius: 21px;
+}
 .dot input.tiny,
 .dotinput.input.tiny,
 .dot textarea.tiny,
@@ -3381,6 +3447,12 @@ i.dot.icon:hover,
   line-height: 10px;
   height: 22px;
   overflow: hidden;
+}
+.dot input.tiny.round,
+.dotinput.input.tiny.round,
+.dot textarea.tiny.round,
+.dot select.tiny.round {
+  border-radius: 15px;
 }
 .dot input.small,
 .dotinput.input.small,
@@ -3392,6 +3464,12 @@ i.dot.icon:hover,
   height: 26px;
   overflow: hidden;
 }
+.dot input.small.round,
+.dotinput.input.small.round,
+.dot textarea.small.round,
+.dot select.small.round {
+  border-radius: 18px;
+}
 .dot input.large,
 .dotinput.input.large,
 .dot textarea.large,
@@ -3402,6 +3480,12 @@ i.dot.icon:hover,
   height: 38px;
   overflow: hidden;
 }
+.dot input.large.round,
+.dotinput.input.large.round,
+.dot textarea.large.round,
+.dot select.large.round {
+  border-radius: 27px;
+}
 .dot input.huge,
 .dotinput.input.huge,
 .dot textarea.huge,
@@ -3411,6 +3495,12 @@ i.dot.icon:hover,
   line-height: 22px;
   height: 46px;
   overflow: hidden;
+}
+.dot input.huge.round,
+.dotinput.input.huge.round,
+.dot textarea.huge.round,
+.dot select.huge.round {
+  border-radius: 33px;
 }
 .dot input.disabled,
 .dotinput.input.disabled,
@@ -3438,7 +3528,7 @@ i.dot.icon:hover,
   position: relative;
   display: inline-block;
   line-height: 1em;
-  font-size: 16px;
+  font-size: 15px;
   margin-right: 10px;
   vertical-align: middle;
 }
@@ -3465,8 +3555,9 @@ i.dot.icon:hover,
 .dot.radio input[type=radio].show {
   opacity: 1;
   top: 2px;
-  width: 15px;
-  height: 15px;
+  left: 1px;
+  width: 14px;
+  height: 14px;
 }
 .dot.checkbox input[type=checkbox].show + *,
 .dot.radio input[type=checkbox].show + *,
@@ -6633,6 +6724,261 @@ img.dot.image.massive.circle {
     padding: 0;
     margin-bottom: 14px;
   }
+}
+.dot.menu {
+  margin: 0 -5px 10px;
+  padding: 0;
+  position: relative;
+  line-height: 60px;
+}
+.dot.menu.angled .item {
+  border-radius: 0 !important;
+}
+.dot.menu .item {
+  vertical-align: middle;
+  display: inline-block;
+  font-size: 15px;
+  line-height: 30px;
+  padding: 0 12px;
+}
+.dot.menu > .item,
+.dot.menu .dot.item {
+  color: #383838;
+  border-radius: 3px;
+  margin: 0 5px;
+  -webkit-transition: background 0.3s, opacity 0.3s, color 0.3s, border-color 0.3s;
+  -o-transition: background 0.3s, opacity 0.3s, color 0.3s, border-color 0.3s;
+  transition: background 0.3s, opacity 0.3s, color 0.3s, border-color 0.3s;
+  cursor: pointer;
+}
+.dot.menu > .item:hover,
+.dot.menu .dot.item:hover,
+.dot.menu > .item.active,
+.dot.menu .dot.item.active {
+  color: #000000;
+  background: #F5F5F5;
+}
+.dot.menu.red > .item:hover,
+.dot.menu.red .dot.item:hover,
+.dot.menu.red > .item.active,
+.dot.menu.red .dot.item.active {
+  background: #EF5350;
+  color: #ffffff;
+}
+.dot.menu.black > .item:hover,
+.dot.menu.black .dot.item:hover,
+.dot.menu.black > .item.active,
+.dot.menu.black .dot.item.active {
+  background: #000000;
+  color: #ffffff;
+}
+.dot.menu.green > .item:hover,
+.dot.menu.green .dot.item:hover,
+.dot.menu.green > .item.active,
+.dot.menu.green .dot.item.active {
+  background: #66BB6A;
+  color: #ffffff;
+}
+.dot.menu.yellow > .item:hover,
+.dot.menu.yellow .dot.item:hover,
+.dot.menu.yellow > .item.active,
+.dot.menu.yellow .dot.item.active {
+  background: #FFEE58;
+}
+.dot.menu.blue > .item:hover,
+.dot.menu.blue .dot.item:hover,
+.dot.menu.blue > .item.active,
+.dot.menu.blue .dot.item.active {
+  background: #42A5F5;
+  color: #ffffff;
+}
+.dot.menu .menu.right {
+  display: inline;
+  float: right;
+}
+.dot.menu.lined {
+  margin: 0 0 10px;
+  line-height: 45px;
+}
+.dot.menu.lined > .item,
+.dot.menu.lined .dot.item {
+  color: #383838;
+  background: transparent !important;
+  border-radius: 0;
+  line-height: 36px;
+  border-bottom: 2px solid transparent;
+  padding: 0 12px;
+  margin: 0;
+}
+.dot.menu.lined > .item.active,
+.dot.menu.lined .dot.item.active {
+  border-color: #000000;
+  color: #000000;
+}
+.dot.menu.lined > .item:hover,
+.dot.menu.lined .dot.item:hover {
+  color: initial;
+  background: initial;
+}
+.dot.menu.lined.red > .item.active,
+.dot.menu.lined.red .dot.item.active {
+  border-color: #EF5350;
+}
+.dot.menu.lined.black > .item.active,
+.dot.menu.lined.black .dot.item.active {
+  border-color: #000000;
+}
+.dot.menu.lined.green > .item.active,
+.dot.menu.lined.green .dot.item.active {
+  border-color: #66BB6A;
+}
+.dot.menu.lined.yellow > .item.active,
+.dot.menu.lined.yellow .dot.item.active {
+  border-color: #FFEE58;
+}
+.dot.menu.lined.blue > .item.active,
+.dot.menu.lined.blue .dot.item.active {
+  border-color: #42A5F5;
+}
+.dot.menu.bar {
+  margin: 0 0 10px;
+  padding: 0;
+  border-radius: 3px;
+  height: 36px;
+  line-height: 36px;
+  border: 1px solid #EEEEEE;
+}
+.dot.menu.bar > .item + .item,
+.dot.menu.bar .dot.item + .item {
+  border-left: 1px solid #EEEEEE;
+}
+.dot.menu.bar > .item:first-child,
+.dot.menu.bar .dot.item:first-child {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.dot.menu.bar > .item:last-child,
+.dot.menu.bar .dot.item:last-child {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.dot.menu.bar > .item,
+.dot.menu.bar .dot.item {
+  margin: 0;
+  vertical-align: middle;
+  border-radius: 0;
+  line-height: 34px;
+  height: 100%;
+}
+.dot.menu.bar > .item {
+  float: left;
+}
+.dot.menu.bar .menu {
+  height: 100%;
+  line-height: 100%;
+}
+.dot.vertical.menu {
+  margin: 0;
+  width: 200px;
+  border: 1px solid #EEEEEE;
+  border-radius: 3px;
+}
+.dot.vertical.menu .item {
+  display: block;
+  margin: 0;
+  border-radius: 0;
+  line-height: 36px;
+}
+.dot.vertical.menu .item + .item {
+  border-top: 1px solid #EEEEEE;
+}
+.dot.vertical.menu .item:first-child {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.dot.vertical.menu .item:last-child {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.dot.vertical.menu.angled {
+  border-radius: 0;
+}
+.dot.vertical.menu.angled .item {
+  border-radius: 0;
+}
+.dot.vertical.lined.menu {
+  border: 0;
+  margin: 0;
+  border-radius: 0;
+  border-right: 2px solid #EEEEEE;
+}
+.dot.vertical.lined.menu .item {
+  border: 0;
+  margin-right: -2px;
+  border-right: 2px solid transparent;
+  border-radius: 0;
+}
+.dot.vertical.lined.menu .item.active {
+  border-color: #383838;
+}
+.dot.tab {
+  position: relative;
+}
+.dot.tab > .item {
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-bottom: 0;
+  padding: 0 12px;
+  margin: 0 0 -1px;
+  display: inline-block;
+  line-height: 36px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.dot.tab > .item.active {
+  border-color: #EEEEEE;
+  background: #ffffff;
+}
+.dot.section.tab {
+  border: 1px solid #EEEEEE;
+  border-bottom: 0;
+}
+.dot.section.tab > .item {
+  border: 0;
+  margin: 0;
+  border-radius: 0;
+  -webkit-transition: background .3s, color .3s;
+  -o-transition: background .3s, color .3s;
+  transition: background .3s, color .3s;
+}
+.dot.section.tab > .item + .item {
+  border-left: 1px solid #EEEEEE;
+}
+.dot.section.tab > .item:last-child {
+  border-right: 1px solid #EEEEEE;
+}
+.dot.section.tab > .item.active,
+.dot.section.tab > .item:hover {
+  background: #F5F5F5;
+}
+.dot.vertical.tab {
+  width: 200px;
+  float: left;
+}
+.dot.vertical.tab .item {
+  display: block;
+  border: 1px solid transparent;
+  border-right: 0;
+  margin-right: -1px;
+  border-radius: 3px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.dot.vertical.tab .item.active {
+  border-color: #EEEEEE;
+}
+.dot.vertical.tab + .module {
+  overflow: hidden;
 }
 .dot.figure {
   padding-bottom: 100%;
