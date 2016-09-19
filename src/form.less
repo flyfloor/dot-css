@@ -65,19 +65,17 @@
         .field {
             margin-bottom: 0;
         }
-        .label:nth-child(1) {
-            &:not(@{NS}) {
-                padding: 0 0 @padding * 4/10;
-                background: initial;
-                text-shadow: none;
-                border-radius: 0;
-                margin: 0;
-                line-height: @line_height;
-                font-size: @line_height;
-                color: @deep_gray;
-                word-wrap: break-word;
-                display: block;
-            }
+        .label:not(@{NS}) {
+            padding: 0 0 @padding * 4/10;
+            background: initial;
+            text-shadow: none;
+            border-radius: 0;
+            margin: 0;
+            line-height: @line_height;
+            font-size: @line_height;
+            color: @deep_gray;
+            word-wrap: break-word;
+            display: block;
         }
         .__makeFields(16);
         .fields {

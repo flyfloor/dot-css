@@ -6101,7 +6101,7 @@ img.dot.image.massive.circle {
 .dot.form .field .field {
   margin-bottom: 0;
 }
-.dot.form .field .label:nth-child(1):not(.dot) {
+.dot.form .field .label:not(.dot) {
   padding: 0 0 4px;
   background: initial;
   text-shadow: none;
