@@ -2306,6 +2306,8 @@ i.dot.icon:hover,
 .dot.button-group {
   display: inline-block;
   margin: 0 10px 10px 0;
+  font-size: 0;
+  vertical-align: middle;
   /*floar right clear padding*/
   /*button group size*/
 }
@@ -6090,7 +6092,6 @@ img.dot.image.massive.circle {
   width: 100%;
 }
 .dot.form .field {
-  overflow: hidden;
   line-height: 30px;
   margin-bottom: 14px;
 }
@@ -6116,7 +6117,7 @@ img.dot.image.massive.circle {
   display: block;
 }
 .dot.form .field .fields-1 {
-  overflow: hidden;
+  font-size: 0;
   position: relative;
 }
 .dot.form .field .fields-1 > .field:first-child {
@@ -6126,17 +6127,19 @@ img.dot.image.massive.circle {
   padding-right: 0;
 }
 .dot.form .field .fields-1 .field {
+  font-size: 15px;
   width: 100%;
-  float: left;
+  display: inline-block;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-1 {
+  font-size: 15px;
   padding: 0 5px;
-  float: left;
+  display: inline-block;
   width: 6.25%;
 }
 .dot.form .field .fields-2 {
-  overflow: hidden;
+  font-size: 0;
   position: relative;
 }
 .dot.form .field .fields-2 > .field:first-child {
@@ -6146,17 +6149,19 @@ img.dot.image.massive.circle {
   padding-right: 0;
 }
 .dot.form .field .fields-2 .field {
+  font-size: 15px;
   width: 50%;
-  float: left;
+  display: inline-block;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-2 {
+  font-size: 15px;
   padding: 0 5px;
-  float: left;
+  display: inline-block;
   width: 12.5%;
 }
 .dot.form .field .fields-3 {
-  overflow: hidden;
+  font-size: 0;
   position: relative;
 }
 .dot.form .field .fields-3 > .field:first-child {
@@ -6166,17 +6171,19 @@ img.dot.image.massive.circle {
   padding-right: 0;
 }
 .dot.form .field .fields-3 .field {
+  font-size: 15px;
   width: 33.33333333%;
-  float: left;
+  display: inline-block;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-3 {
+  font-size: 15px;
   padding: 0 5px;
-  float: left;
+  display: inline-block;
   width: 18.75%;
 }
 .dot.form .field .fields-4 {
-  overflow: hidden;
+  font-size: 0;
   position: relative;
 }
 .dot.form .field .fields-4 > .field:first-child {
@@ -6186,17 +6193,19 @@ img.dot.image.massive.circle {
   padding-right: 0;
 }
 .dot.form .field .fields-4 .field {
+  font-size: 15px;
   width: 25%;
-  float: left;
+  display: inline-block;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-4 {
+  font-size: 15px;
   padding: 0 5px;
-  float: left;
+  display: inline-block;
   width: 25%;
 }
 .dot.form .field .fields-5 {
-  overflow: hidden;
+  font-size: 0;
   position: relative;
 }
 .dot.form .field .fields-5 > .field:first-child {
@@ -6206,17 +6215,19 @@ img.dot.image.massive.circle {
   padding-right: 0;
 }
 .dot.form .field .fields-5 .field {
+  font-size: 15px;
   width: 20%;
-  float: left;
+  display: inline-block;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-5 {
+  font-size: 15px;
   padding: 0 5px;
-  float: left;
+  display: inline-block;
   width: 31.25%;
 }
 .dot.form .field .fields-6 {
-  overflow: hidden;
+  font-size: 0;
   position: relative;
 }
 .dot.form .field .fields-6 > .field:first-child {
@@ -6226,17 +6237,19 @@ img.dot.image.massive.circle {
   padding-right: 0;
 }
 .dot.form .field .fields-6 .field {
+  font-size: 15px;
   width: 16.66666667%;
-  float: left;
+  display: inline-block;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-6 {
+  font-size: 15px;
   padding: 0 5px;
-  float: left;
+  display: inline-block;
   width: 37.5%;
 }
 .dot.form .field .fields-7 {
-  overflow: hidden;
+  font-size: 0;
   position: relative;
 }
 .dot.form .field .fields-7 > .field:first-child {
@@ -6246,17 +6259,19 @@ img.dot.image.massive.circle {
   padding-right: 0;
 }
 .dot.form .field .fields-7 .field {
+  font-size: 15px;
   width: 14.28571429%;
-  float: left;
+  display: inline-block;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-7 {
+  font-size: 15px;
   padding: 0 5px;
-  float: left;
+  display: inline-block;
   width: 43.75%;
 }
 .dot.form .field .fields-8 {
-  overflow: hidden;
+  font-size: 0;
   position: relative;
 }
 .dot.form .field .fields-8 > .field:first-child {
@@ -6266,17 +6281,19 @@ img.dot.image.massive.circle {
   padding-right: 0;
 }
 .dot.form .field .fields-8 .field {
+  font-size: 15px;
   width: 12.5%;
-  float: left;
+  display: inline-block;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-8 {
+  font-size: 15px;
   padding: 0 5px;
-  float: left;
+  display: inline-block;
   width: 50%;
 }
 .dot.form .field .fields-9 {
-  overflow: hidden;
+  font-size: 0;
   position: relative;
 }
 .dot.form .field .fields-9 > .field:first-child {
@@ -6286,17 +6303,19 @@ img.dot.image.massive.circle {
   padding-right: 0;
 }
 .dot.form .field .fields-9 .field {
+  font-size: 15px;
   width: 11.11111111%;
-  float: left;
+  display: inline-block;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-9 {
+  font-size: 15px;
   padding: 0 5px;
-  float: left;
+  display: inline-block;
   width: 56.25%;
 }
 .dot.form .field .fields-10 {
-  overflow: hidden;
+  font-size: 0;
   position: relative;
 }
 .dot.form .field .fields-10 > .field:first-child {
@@ -6306,17 +6325,19 @@ img.dot.image.massive.circle {
   padding-right: 0;
 }
 .dot.form .field .fields-10 .field {
+  font-size: 15px;
   width: 10%;
-  float: left;
+  display: inline-block;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-10 {
+  font-size: 15px;
   padding: 0 5px;
-  float: left;
+  display: inline-block;
   width: 62.5%;
 }
 .dot.form .field .fields-11 {
-  overflow: hidden;
+  font-size: 0;
   position: relative;
 }
 .dot.form .field .fields-11 > .field:first-child {
@@ -6326,17 +6347,19 @@ img.dot.image.massive.circle {
   padding-right: 0;
 }
 .dot.form .field .fields-11 .field {
+  font-size: 15px;
   width: 9.09090909%;
-  float: left;
+  display: inline-block;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-11 {
+  font-size: 15px;
   padding: 0 5px;
-  float: left;
+  display: inline-block;
   width: 68.75%;
 }
 .dot.form .field .fields-12 {
-  overflow: hidden;
+  font-size: 0;
   position: relative;
 }
 .dot.form .field .fields-12 > .field:first-child {
@@ -6346,17 +6369,19 @@ img.dot.image.massive.circle {
   padding-right: 0;
 }
 .dot.form .field .fields-12 .field {
+  font-size: 15px;
   width: 8.33333333%;
-  float: left;
+  display: inline-block;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-12 {
+  font-size: 15px;
   padding: 0 5px;
-  float: left;
+  display: inline-block;
   width: 75%;
 }
 .dot.form .field .fields-13 {
-  overflow: hidden;
+  font-size: 0;
   position: relative;
 }
 .dot.form .field .fields-13 > .field:first-child {
@@ -6366,17 +6391,19 @@ img.dot.image.massive.circle {
   padding-right: 0;
 }
 .dot.form .field .fields-13 .field {
+  font-size: 15px;
   width: 7.69230769%;
-  float: left;
+  display: inline-block;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-13 {
+  font-size: 15px;
   padding: 0 5px;
-  float: left;
+  display: inline-block;
   width: 81.25%;
 }
 .dot.form .field .fields-14 {
-  overflow: hidden;
+  font-size: 0;
   position: relative;
 }
 .dot.form .field .fields-14 > .field:first-child {
@@ -6386,17 +6413,19 @@ img.dot.image.massive.circle {
   padding-right: 0;
 }
 .dot.form .field .fields-14 .field {
+  font-size: 15px;
   width: 7.14285714%;
-  float: left;
+  display: inline-block;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-14 {
+  font-size: 15px;
   padding: 0 5px;
-  float: left;
+  display: inline-block;
   width: 87.5%;
 }
 .dot.form .field .fields-15 {
-  overflow: hidden;
+  font-size: 0;
   position: relative;
 }
 .dot.form .field .fields-15 > .field:first-child {
@@ -6406,17 +6435,19 @@ img.dot.image.massive.circle {
   padding-right: 0;
 }
 .dot.form .field .fields-15 .field {
+  font-size: 15px;
   width: 6.66666667%;
-  float: left;
+  display: inline-block;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-15 {
+  font-size: 15px;
   padding: 0 5px;
-  float: left;
+  display: inline-block;
   width: 93.75%;
 }
 .dot.form .field .fields-16 {
-  overflow: hidden;
+  font-size: 0;
   position: relative;
 }
 .dot.form .field .fields-16 > .field:first-child {
@@ -6426,18 +6457,20 @@ img.dot.image.massive.circle {
   padding-right: 0;
 }
 .dot.form .field .fields-16 .field {
+  font-size: 15px;
   width: 6.25%;
-  float: left;
+  display: inline-block;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-16 {
+  font-size: 15px;
   padding: 0 5px;
-  float: left;
+  display: inline-block;
   width: 100%;
 }
 .dot.form .field .fields {
-  overflow: hidden;
   position: relative;
+  font-size: 0;
 }
 .dot.form .field .fields > :first-child {
   padding-left: 0;
@@ -6467,9 +6500,10 @@ img.dot.image.massive.circle {
   text-align: right;
 }
 .dot.form.inline > .field {
-  width: 100%;
-  overflow: hidden;
   position: relative;
+}
+.dot.form.inline > .field > .field {
+  margin-left: 100px;
 }
 .dot.form.inline > .field > .label:nth-child(1) {
   vertical-align: top;
@@ -6478,17 +6512,66 @@ img.dot.image.massive.circle {
   padding-right: 10px;
   float: left;
 }
+.dot.form.inline > .field > .fields-1 {
+  margin-left: 100px;
+}
+.dot.form.inline > .field > .fields-2 {
+  margin-left: 100px;
+}
+.dot.form.inline > .field > .fields-3 {
+  margin-left: 100px;
+}
+.dot.form.inline > .field > .fields-4 {
+  margin-left: 100px;
+}
+.dot.form.inline > .field > .fields-5 {
+  margin-left: 100px;
+}
+.dot.form.inline > .field > .fields-6 {
+  margin-left: 100px;
+}
+.dot.form.inline > .field > .fields-7 {
+  margin-left: 100px;
+}
+.dot.form.inline > .field > .fields-8 {
+  margin-left: 100px;
+}
+.dot.form.inline > .field > .fields-9 {
+  margin-left: 100px;
+}
+.dot.form.inline > .field > .fields-10 {
+  margin-left: 100px;
+}
+.dot.form.inline > .field > .fields-11 {
+  margin-left: 100px;
+}
+.dot.form.inline > .field > .fields-12 {
+  margin-left: 100px;
+}
+.dot.form.inline > .field > .fields-13 {
+  margin-left: 100px;
+}
+.dot.form.inline > .field > .fields-14 {
+  margin-left: 100px;
+}
+.dot.form.inline > .field > .fields-15 {
+  margin-left: 100px;
+}
+.dot.form.inline > .field > .fields-16 {
+  margin-left: 100px;
+}
+.dot.form.inline > .field > .fields {
+  margin-left: 100px;
+}
 .dot.form.inline .action {
   margin-left: 100px;
 }
 @media only screen and (max-width: 768px) {
   .dot.inline.form > .field > .label:nth-child(1) {
-    float: none;
     width: auto;
   }
   .dot.form .field .fields-1 .field {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
     margin-bottom: 14px;
   }
@@ -6496,14 +6579,12 @@ img.dot.image.massive.circle {
     margin-bottom: 0;
   }
   .dot.form .field .fields .field-1 {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
     margin-bottom: 14px;
   }
   .dot.form .field .fields-2 .field {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
     margin-bottom: 14px;
   }
@@ -6511,14 +6592,12 @@ img.dot.image.massive.circle {
     margin-bottom: 0;
   }
   .dot.form .field .fields .field-2 {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
     margin-bottom: 14px;
   }
   .dot.form .field .fields-3 .field {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
     margin-bottom: 14px;
   }
@@ -6526,14 +6605,12 @@ img.dot.image.massive.circle {
     margin-bottom: 0;
   }
   .dot.form .field .fields .field-3 {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
     margin-bottom: 14px;
   }
   .dot.form .field .fields-4 .field {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
     margin-bottom: 14px;
   }
@@ -6541,14 +6618,12 @@ img.dot.image.massive.circle {
     margin-bottom: 0;
   }
   .dot.form .field .fields .field-4 {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
     margin-bottom: 14px;
   }
   .dot.form .field .fields-5 .field {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
     margin-bottom: 14px;
   }
@@ -6556,14 +6631,12 @@ img.dot.image.massive.circle {
     margin-bottom: 0;
   }
   .dot.form .field .fields .field-5 {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
     margin-bottom: 14px;
   }
   .dot.form .field .fields-6 .field {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
     margin-bottom: 14px;
   }
@@ -6571,14 +6644,12 @@ img.dot.image.massive.circle {
     margin-bottom: 0;
   }
   .dot.form .field .fields .field-6 {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
     margin-bottom: 14px;
   }
   .dot.form .field .fields-7 .field {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
     margin-bottom: 14px;
   }
@@ -6586,14 +6657,12 @@ img.dot.image.massive.circle {
     margin-bottom: 0;
   }
   .dot.form .field .fields .field-7 {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
     margin-bottom: 14px;
   }
   .dot.form .field .fields-8 .field {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
     margin-bottom: 14px;
   }
@@ -6601,14 +6670,12 @@ img.dot.image.massive.circle {
     margin-bottom: 0;
   }
   .dot.form .field .fields .field-8 {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
     margin-bottom: 14px;
   }
   .dot.form .field .fields-9 .field {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
     margin-bottom: 14px;
   }
@@ -6616,14 +6683,12 @@ img.dot.image.massive.circle {
     margin-bottom: 0;
   }
   .dot.form .field .fields .field-9 {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
     margin-bottom: 14px;
   }
   .dot.form .field .fields-10 .field {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
     margin-bottom: 14px;
   }
@@ -6631,14 +6696,12 @@ img.dot.image.massive.circle {
     margin-bottom: 0;
   }
   .dot.form .field .fields .field-10 {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
     margin-bottom: 14px;
   }
   .dot.form .field .fields-11 .field {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
     margin-bottom: 14px;
   }
@@ -6646,14 +6709,12 @@ img.dot.image.massive.circle {
     margin-bottom: 0;
   }
   .dot.form .field .fields .field-11 {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
     margin-bottom: 14px;
   }
   .dot.form .field .fields-12 .field {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
     margin-bottom: 14px;
   }
@@ -6661,14 +6722,12 @@ img.dot.image.massive.circle {
     margin-bottom: 0;
   }
   .dot.form .field .fields .field-12 {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
     margin-bottom: 14px;
   }
   .dot.form .field .fields-13 .field {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
     margin-bottom: 14px;
   }
@@ -6676,14 +6735,12 @@ img.dot.image.massive.circle {
     margin-bottom: 0;
   }
   .dot.form .field .fields .field-13 {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
     margin-bottom: 14px;
   }
   .dot.form .field .fields-14 .field {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
     margin-bottom: 14px;
   }
@@ -6691,14 +6748,12 @@ img.dot.image.massive.circle {
     margin-bottom: 0;
   }
   .dot.form .field .fields .field-14 {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
     margin-bottom: 14px;
   }
   .dot.form .field .fields-15 .field {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
     margin-bottom: 14px;
   }
@@ -6706,14 +6761,12 @@ img.dot.image.massive.circle {
     margin-bottom: 0;
   }
   .dot.form .field .fields .field-15 {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
     margin-bottom: 14px;
   }
   .dot.form .field .fields-16 .field {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
     margin-bottom: 14px;
   }
@@ -6721,8 +6774,7 @@ img.dot.image.massive.circle {
     margin-bottom: 0;
   }
   .dot.form .field .fields .field-16 {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
     margin-bottom: 14px;
   }
