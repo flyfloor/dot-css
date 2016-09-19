@@ -3,7 +3,9 @@ import {CN, TitleBlock} from './util';
 import {NS, COLORS} from './setting';
 
 const labelBtnGroup = (cn='') => {
-    return <div className={CN(`${cn} button-group`)}>
+    return (
+        <div className="field">
+            <div className={CN(`${cn} button-group`)}>
                 <div className={CN('labeled button')}>
                     <i className="icon">photo_camera</i>
                 </div>
@@ -14,7 +16,10 @@ const labelBtnGroup = (cn='') => {
                 <div className={CN('labeled button')}>
                     <i className="icon">layers</i>
                 </div>
-            </div>;
+            </div>
+            <br/>
+        </div>
+    )
 };
 
 const colorBtns = (cn='') => {
@@ -213,32 +218,24 @@ export default class Button extends Component {
                     </li>
                     <li>
                         <h3>Labeled button group</h3>
-                        <div className={CN('vertical button-group')}>
-                            <div className="labeled button">
-                                <i className="icon">laptop</i>
+                        <div className="field">
+                            <div className={CN('vertical button-group')}>
+                                <div className="labeled button">
+                                    <i className="icon">laptop</i>
+                                </div>
+                                <div className="labeled button">
+                                    <i className="icon">watch</i>
+                                </div>
+                                <div className="labeled button">
+                                    <i className="icon">headset</i>
+                                </div>
                             </div>
-                            <div className="labeled button">
-                                <i className="icon">watch</i>
-                            </div>
-                            <div className="labeled button">
-                                <i className="icon">headset</i>
-                            </div>
                         </div>
-                        <div>
-                            {labelBtnGroup('tiny')}
-                        </div>
-                        <div>
-                            {labelBtnGroup('small')}
-                        </div>
-                        <div>
-                            {labelBtnGroup()}
-                        </div>
-                        <div>
-                            {labelBtnGroup('large')}
-                        </div>
-                        <div>
-                            {labelBtnGroup('huge')}
-                        </div>
+                        {labelBtnGroup('tiny')}
+                        {labelBtnGroup('small')}
+                        {labelBtnGroup()}
+                        {labelBtnGroup('large')}
+                        {labelBtnGroup('huge')}
                         <pre>
                             <code>
 {`<div class="${NS} tiny button-group">

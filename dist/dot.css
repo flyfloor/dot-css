@@ -2305,7 +2305,7 @@ i.dot.icon:hover,
 }
 .dot.button-group {
   display: inline-block;
-  margin: 0 10px 10px 0;
+  margin: 0 10px 0 0;
   font-size: 0;
   vertical-align: middle;
   /*floar right clear padding*/
@@ -2326,7 +2326,7 @@ i.dot.icon:hover,
 }
 .dot.button-group.vertical {
   border-radius: 0;
-  margin: 0 10px 10px 0;
+  margin: 0 10px 0 0;
 }
 .dot.button-group.vertical > .button {
   width: 100%;
