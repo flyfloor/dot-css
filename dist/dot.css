@@ -6111,6 +6111,8 @@ img.dot.image.massive.circle {
   font-size: 15px;
   color: #383838;
   word-wrap: break-word;
+}
+.dot.form .field .label:not(.dot):nth-child(1) {
   display: block;
 }
 .dot.form .field .fields-1 {

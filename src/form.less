@@ -75,7 +75,9 @@
             font-size: @line_height;
             color: @deep_gray;
             word-wrap: break-word;
-            display: block;
+            &:nth-child(1) {
+                display: block;
+            }
         }
         .__makeFields(16);
         .fields {
