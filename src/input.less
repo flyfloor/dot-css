@@ -5,7 +5,6 @@
 @{NS}.input {
     display: table;
     position: relative;
-    overflow: hidden;
     vertical-align: middle;
     .button, button {
         margin: auto;
@@ -67,11 +66,10 @@
     padding: @_padding;
     line-height: @_lh;
     height: @_lh + @_padding * 2 + 2px;
-    overflow: hidden;
 }
 
 
-._INPUT_SIZE(@size, @_pd, @group) when(@group=true) {
+._INPUT_SIZE(@size, @_pd, @wrapper) when(@wrapper=true) {
     @_padding: @padding * @_pd / 10;
     @_lh: @line_height * @size / 15;
     @_border_radius: @line_height * @size / 15 + @padding * @_pd / 10;
@@ -117,7 +115,7 @@
     }
 }
 
-._INPUT_SIZE(@size, @_pd, @group) when(@group=false) {
+._INPUT_SIZE(@size, @_pd, @wrapper) when(@wrapper=false) {
     @_padding: @padding * @_pd / 10;
     @_lh: @line_height * @size / 15;
     @_border_radius: @line_height * @size / 15 + @padding * @_pd / 10;
@@ -129,7 +127,9 @@
 
 
 @{NS}.input {
+    /*only wrapper style*/
     ._INPUT_SIZE(14, 7, true);
+    overflow: hidden;
     &.tiny {
         ._INPUT_SIZE(10, 5, true);
     }

@@ -36,3 +36,13 @@
     display: block;
     width: 100%;
 }
+
+.clearfix {
+    &:after {
+        content: ".";
+        clear: both;
+        visibility: hidden;
+        display: block;
+        height: 0;
+    }
+}

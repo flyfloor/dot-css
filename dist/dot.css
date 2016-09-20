@@ -1,3 +1,10 @@
+.clearfix:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
 /* reset css */
 * {
   outline: none;
@@ -1157,12 +1164,26 @@ code {
   display: block;
   margin-bottom: 10px;
 }
+.field:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
 .dot.module {
   display: block;
   padding: 10px;
   border: 1px solid #EEEEEE;
   background-color: #ffffff;
   margin-bottom: 10px;
+}
+.dot.module:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.module.basic {
   border: none;
@@ -2645,9 +2666,14 @@ i.dot.icon:hover,
   border-radius: 33px;
 }
 .dot.grid {
-  overflow-x: hidden;
-  overflow-y: auto;
   position: relative;
+}
+.dot.grid:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.grid .column {
   float: left;
@@ -2655,15 +2681,25 @@ i.dot.icon:hover,
 }
 .dot.grid .row {
   display: block;
-  overflow-x: hidden;
-  overflow-y: auto;
   margin-bottom: 10px;
+}
+.dot.grid .row:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.grid .row-1 {
   display: block;
-  overflow-x: hidden;
-  overflow-y: auto;
   margin-bottom: 10px;
+}
+.dot.grid .row-1:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.grid .row-1 .column {
   width: 100%;
@@ -2674,8 +2710,6 @@ i.dot.icon:hover,
   width: 6.25%;
 }
 .dot.grid .grid-1 {
-  overflow-x: hidden;
-  overflow-y: auto;
   position: relative;
 }
 .dot.grid .grid-1 .column {
@@ -2683,11 +2717,23 @@ i.dot.icon:hover,
   padding: 10px;
   width: 100%;
 }
+.dot.grid .grid-1:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
 .dot.grid .row-2 {
   display: block;
-  overflow-x: hidden;
-  overflow-y: auto;
   margin-bottom: 10px;
+}
+.dot.grid .row-2:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.grid .row-2 .column {
   width: 50%;
@@ -2698,8 +2744,6 @@ i.dot.icon:hover,
   width: 12.5%;
 }
 .dot.grid .grid-2 {
-  overflow-x: hidden;
-  overflow-y: auto;
   position: relative;
 }
 .dot.grid .grid-2 .column {
@@ -2707,11 +2751,23 @@ i.dot.icon:hover,
   padding: 10px;
   width: 50%;
 }
+.dot.grid .grid-2:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
 .dot.grid .row-3 {
   display: block;
-  overflow-x: hidden;
-  overflow-y: auto;
   margin-bottom: 10px;
+}
+.dot.grid .row-3:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.grid .row-3 .column {
   width: 33.33333333%;
@@ -2722,8 +2778,6 @@ i.dot.icon:hover,
   width: 18.75%;
 }
 .dot.grid .grid-3 {
-  overflow-x: hidden;
-  overflow-y: auto;
   position: relative;
 }
 .dot.grid .grid-3 .column {
@@ -2731,11 +2785,23 @@ i.dot.icon:hover,
   padding: 10px;
   width: 33.33333333%;
 }
+.dot.grid .grid-3:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
 .dot.grid .row-4 {
   display: block;
-  overflow-x: hidden;
-  overflow-y: auto;
   margin-bottom: 10px;
+}
+.dot.grid .row-4:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.grid .row-4 .column {
   width: 25%;
@@ -2746,8 +2812,6 @@ i.dot.icon:hover,
   width: 25%;
 }
 .dot.grid .grid-4 {
-  overflow-x: hidden;
-  overflow-y: auto;
   position: relative;
 }
 .dot.grid .grid-4 .column {
@@ -2755,11 +2819,23 @@ i.dot.icon:hover,
   padding: 10px;
   width: 25%;
 }
+.dot.grid .grid-4:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
 .dot.grid .row-5 {
   display: block;
-  overflow-x: hidden;
-  overflow-y: auto;
   margin-bottom: 10px;
+}
+.dot.grid .row-5:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.grid .row-5 .column {
   width: 20%;
@@ -2770,8 +2846,6 @@ i.dot.icon:hover,
   width: 31.25%;
 }
 .dot.grid .grid-5 {
-  overflow-x: hidden;
-  overflow-y: auto;
   position: relative;
 }
 .dot.grid .grid-5 .column {
@@ -2779,11 +2853,23 @@ i.dot.icon:hover,
   padding: 10px;
   width: 20%;
 }
+.dot.grid .grid-5:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
 .dot.grid .row-6 {
   display: block;
-  overflow-x: hidden;
-  overflow-y: auto;
   margin-bottom: 10px;
+}
+.dot.grid .row-6:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.grid .row-6 .column {
   width: 16.66666667%;
@@ -2794,8 +2880,6 @@ i.dot.icon:hover,
   width: 37.5%;
 }
 .dot.grid .grid-6 {
-  overflow-x: hidden;
-  overflow-y: auto;
   position: relative;
 }
 .dot.grid .grid-6 .column {
@@ -2803,11 +2887,23 @@ i.dot.icon:hover,
   padding: 10px;
   width: 16.66666667%;
 }
+.dot.grid .grid-6:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
 .dot.grid .row-7 {
   display: block;
-  overflow-x: hidden;
-  overflow-y: auto;
   margin-bottom: 10px;
+}
+.dot.grid .row-7:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.grid .row-7 .column {
   width: 14.28571429%;
@@ -2818,8 +2914,6 @@ i.dot.icon:hover,
   width: 43.75%;
 }
 .dot.grid .grid-7 {
-  overflow-x: hidden;
-  overflow-y: auto;
   position: relative;
 }
 .dot.grid .grid-7 .column {
@@ -2827,11 +2921,23 @@ i.dot.icon:hover,
   padding: 10px;
   width: 14.28571429%;
 }
+.dot.grid .grid-7:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
 .dot.grid .row-8 {
   display: block;
-  overflow-x: hidden;
-  overflow-y: auto;
   margin-bottom: 10px;
+}
+.dot.grid .row-8:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.grid .row-8 .column {
   width: 12.5%;
@@ -2842,8 +2948,6 @@ i.dot.icon:hover,
   width: 50%;
 }
 .dot.grid .grid-8 {
-  overflow-x: hidden;
-  overflow-y: auto;
   position: relative;
 }
 .dot.grid .grid-8 .column {
@@ -2851,11 +2955,23 @@ i.dot.icon:hover,
   padding: 10px;
   width: 12.5%;
 }
+.dot.grid .grid-8:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
 .dot.grid .row-9 {
   display: block;
-  overflow-x: hidden;
-  overflow-y: auto;
   margin-bottom: 10px;
+}
+.dot.grid .row-9:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.grid .row-9 .column {
   width: 11.11111111%;
@@ -2866,8 +2982,6 @@ i.dot.icon:hover,
   width: 56.25%;
 }
 .dot.grid .grid-9 {
-  overflow-x: hidden;
-  overflow-y: auto;
   position: relative;
 }
 .dot.grid .grid-9 .column {
@@ -2875,11 +2989,23 @@ i.dot.icon:hover,
   padding: 10px;
   width: 11.11111111%;
 }
+.dot.grid .grid-9:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
 .dot.grid .row-10 {
   display: block;
-  overflow-x: hidden;
-  overflow-y: auto;
   margin-bottom: 10px;
+}
+.dot.grid .row-10:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.grid .row-10 .column {
   width: 10%;
@@ -2890,8 +3016,6 @@ i.dot.icon:hover,
   width: 62.5%;
 }
 .dot.grid .grid-10 {
-  overflow-x: hidden;
-  overflow-y: auto;
   position: relative;
 }
 .dot.grid .grid-10 .column {
@@ -2899,11 +3023,23 @@ i.dot.icon:hover,
   padding: 10px;
   width: 10%;
 }
+.dot.grid .grid-10:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
 .dot.grid .row-11 {
   display: block;
-  overflow-x: hidden;
-  overflow-y: auto;
   margin-bottom: 10px;
+}
+.dot.grid .row-11:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.grid .row-11 .column {
   width: 9.09090909%;
@@ -2914,8 +3050,6 @@ i.dot.icon:hover,
   width: 68.75%;
 }
 .dot.grid .grid-11 {
-  overflow-x: hidden;
-  overflow-y: auto;
   position: relative;
 }
 .dot.grid .grid-11 .column {
@@ -2923,11 +3057,23 @@ i.dot.icon:hover,
   padding: 10px;
   width: 9.09090909%;
 }
+.dot.grid .grid-11:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
 .dot.grid .row-12 {
   display: block;
-  overflow-x: hidden;
-  overflow-y: auto;
   margin-bottom: 10px;
+}
+.dot.grid .row-12:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.grid .row-12 .column {
   width: 8.33333333%;
@@ -2938,8 +3084,6 @@ i.dot.icon:hover,
   width: 75%;
 }
 .dot.grid .grid-12 {
-  overflow-x: hidden;
-  overflow-y: auto;
   position: relative;
 }
 .dot.grid .grid-12 .column {
@@ -2947,11 +3091,23 @@ i.dot.icon:hover,
   padding: 10px;
   width: 8.33333333%;
 }
+.dot.grid .grid-12:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
 .dot.grid .row-13 {
   display: block;
-  overflow-x: hidden;
-  overflow-y: auto;
   margin-bottom: 10px;
+}
+.dot.grid .row-13:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.grid .row-13 .column {
   width: 7.69230769%;
@@ -2962,8 +3118,6 @@ i.dot.icon:hover,
   width: 81.25%;
 }
 .dot.grid .grid-13 {
-  overflow-x: hidden;
-  overflow-y: auto;
   position: relative;
 }
 .dot.grid .grid-13 .column {
@@ -2971,11 +3125,23 @@ i.dot.icon:hover,
   padding: 10px;
   width: 7.69230769%;
 }
+.dot.grid .grid-13:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
 .dot.grid .row-14 {
   display: block;
-  overflow-x: hidden;
-  overflow-y: auto;
   margin-bottom: 10px;
+}
+.dot.grid .row-14:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.grid .row-14 .column {
   width: 7.14285714%;
@@ -2986,8 +3152,6 @@ i.dot.icon:hover,
   width: 87.5%;
 }
 .dot.grid .grid-14 {
-  overflow-x: hidden;
-  overflow-y: auto;
   position: relative;
 }
 .dot.grid .grid-14 .column {
@@ -2995,11 +3159,23 @@ i.dot.icon:hover,
   padding: 10px;
   width: 7.14285714%;
 }
+.dot.grid .grid-14:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
 .dot.grid .row-15 {
   display: block;
-  overflow-x: hidden;
-  overflow-y: auto;
   margin-bottom: 10px;
+}
+.dot.grid .row-15:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.grid .row-15 .column {
   width: 6.66666667%;
@@ -3010,8 +3186,6 @@ i.dot.icon:hover,
   width: 93.75%;
 }
 .dot.grid .grid-15 {
-  overflow-x: hidden;
-  overflow-y: auto;
   position: relative;
 }
 .dot.grid .grid-15 .column {
@@ -3019,11 +3193,23 @@ i.dot.icon:hover,
   padding: 10px;
   width: 6.66666667%;
 }
+.dot.grid .grid-15:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
 .dot.grid .row-16 {
   display: block;
-  overflow-x: hidden;
-  overflow-y: auto;
   margin-bottom: 10px;
+}
+.dot.grid .row-16:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.grid .row-16 .column {
   width: 6.25%;
@@ -3034,14 +3220,19 @@ i.dot.icon:hover,
   width: 100%;
 }
 .dot.grid .grid-16 {
-  overflow-x: hidden;
-  overflow-y: auto;
   position: relative;
 }
 .dot.grid .grid-16 .column {
   float: left;
   padding: 10px;
   width: 6.25%;
+}
+.dot.grid .grid-16:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.table {
   position: relative;
@@ -3138,7 +3329,6 @@ i.dot.icon:hover,
 .dot.input {
   display: table;
   position: relative;
-  overflow: hidden;
   vertical-align: middle;
 }
 .dot.input .button,
@@ -3198,6 +3388,10 @@ i.dot.icon:hover,
   left: initial;
   right: 0;
 }
+.dot.input {
+  /*only wrapper style*/
+  overflow: hidden;
+}
 .dot.input input,
 .dot.input select,
 .dot.input textarea,
@@ -3207,7 +3401,6 @@ i.dot.icon:hover,
   padding: 7px;
   line-height: 14px;
   height: 30px;
-  overflow: hidden;
 }
 .dot.input.round > :first-child {
   border-top-left-radius: 21px;
@@ -3247,7 +3440,6 @@ i.dot.icon:hover,
   padding: 5px;
   line-height: 10px;
   height: 22px;
-  overflow: hidden;
 }
 .dot.input.tiny.round > :first-child {
   border-top-left-radius: 15px;
@@ -3287,7 +3479,6 @@ i.dot.icon:hover,
   padding: 6px;
   line-height: 12px;
   height: 26px;
-  overflow: hidden;
 }
 .dot.input.small.round > :first-child {
   border-top-left-radius: 18px;
@@ -3327,7 +3518,6 @@ i.dot.icon:hover,
   padding: 9px;
   line-height: 18px;
   height: 38px;
-  overflow: hidden;
 }
 .dot.input.large.round > :first-child {
   border-top-left-radius: 27px;
@@ -3367,7 +3557,6 @@ i.dot.icon:hover,
   padding: 11px;
   line-height: 22px;
   height: 46px;
-  overflow: hidden;
 }
 .dot.input.huge.round > :first-child {
   border-top-left-radius: 33px;
@@ -3410,7 +3599,6 @@ i.dot.icon:hover,
   padding: 7px;
   line-height: 14px;
   height: 30px;
-  overflow: hidden;
 }
 .dot input:focus,
 .dotinput.input:focus,
@@ -3448,7 +3636,6 @@ i.dot.icon:hover,
   padding: 5px;
   line-height: 10px;
   height: 22px;
-  overflow: hidden;
 }
 .dot input.tiny.round,
 .dotinput.input.tiny.round,
@@ -3464,7 +3651,6 @@ i.dot.icon:hover,
   padding: 6px;
   line-height: 12px;
   height: 26px;
-  overflow: hidden;
 }
 .dot input.small.round,
 .dotinput.input.small.round,
@@ -3480,7 +3666,6 @@ i.dot.icon:hover,
   padding: 9px;
   line-height: 18px;
   height: 38px;
-  overflow: hidden;
 }
 .dot input.large.round,
 .dotinput.input.large.round,
@@ -3496,7 +3681,6 @@ i.dot.icon:hover,
   padding: 11px;
   line-height: 22px;
   height: 46px;
-  overflow: hidden;
 }
 .dot input.huge.round,
 .dotinput.input.huge.round,
@@ -4830,10 +5014,10 @@ img.dot.image.middle.circle {
   border-radius: 150px;
 }
 img.dot.image.mini {
-  width: 30px;
+  width: 35px;
 }
 img.dot.image.mini.circle {
-  border-radius: 15px;
+  border-radius: 17.5px;
 }
 img.dot.image.tiny {
   width: 60px;
@@ -4922,8 +5106,8 @@ img.dot.image.massive.circle {
 .dot.image.mini.circle.landscape,
 .dot.image.mini.circle.portrait {
   overflow: hidden;
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
 }
 .dot.image.mini.circle.landscape > img,
 .dot.image.mini.circle.portrait > img {
@@ -4931,7 +5115,7 @@ img.dot.image.massive.circle {
   max-width: none;
   width: auto;
   height: 100%;
-  margin-left: -7.5px;
+  margin-left: -8.75px;
 }
 .dot.image.mini.circle.portrait > img {
   width: 100%;
@@ -4939,10 +5123,10 @@ img.dot.image.massive.circle {
   margin: 0;
 }
 .dot.image.mini > img {
-  width: 30px;
+  width: 35px;
 }
 .dot.image.mini > img.circle {
-  border-radius: 15px;
+  border-radius: 17.5px;
 }
 .dot.image.tiny.circle {
   border-radius: 50%;
@@ -5138,7 +5322,13 @@ img.dot.image.massive.circle {
   width: 35px;
   height: 35px;
   margin: 5px 0 0;
-  overflow: hidden;
+}
+.dot.comment > .avatar:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.comment > .avatar img {
   float: left;
@@ -5207,8 +5397,12 @@ img.dot.image.massive.circle {
 .dot.item.bottom > .content {
   vertical-align: bottom;
 }
-.dot.item > .image {
-  overflow: hidden;
+.dot.item > .image:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.item > .image > img {
   float: left;
@@ -5235,7 +5429,13 @@ img.dot.image.massive.circle {
 }
 .dot.cards {
   margin: 0 -10px;
-  overflow: hidden;
+}
+.dot.cards:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.cards > .card {
   display: block;
@@ -6091,6 +6291,13 @@ img.dot.image.massive.circle {
   padding: 20px;
   width: 100%;
 }
+.dot.form:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
 .dot.form .field {
   line-height: 30px;
   margin-bottom: 14px;
@@ -6785,6 +6992,13 @@ img.dot.image.massive.circle {
   position: relative;
   line-height: 60px;
 }
+.dot.menu:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
 .dot.menu.angled .item {
   border-radius: 0 !important;
 }
@@ -7032,7 +7246,7 @@ img.dot.image.massive.circle {
   border-color: #EEEEEE;
 }
 .dot.vertical.tab + .module {
-  overflow: hidden;
+  margin-left: 200px;
 }
 .dot.figure {
   padding-bottom: 100%;

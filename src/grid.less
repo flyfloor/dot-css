@@ -7,9 +7,8 @@
 
 .__defaultRow(){
     display: block;
-    overflow-x: hidden;
-    overflow-y: auto;
     margin-bottom: @padding;
+    .clearfix;
 }
 
 .__makeColumns(@n, @i: 1) when (@i =< @n) {
@@ -24,21 +23,19 @@
         width: (@i / @column_count) * 100%;
     }
     .grid-@{i} {
-        overflow-x: hidden;
-        overflow-y: auto;
         position: relative;
         .column {
             .__defaultColumn();
             width: 100% / @i;
         }
+        .clearfix;
     }
     .__makeColumns(@n, (@i + 1));
 }
 
 @{NS}.grid {
-    overflow-x: hidden;
-    overflow-y: auto;
     position: relative;
+    .clearfix;
     .column {
         .__defaultColumn();
     }
