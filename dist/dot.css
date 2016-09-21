@@ -6327,6 +6327,13 @@ img.dot.image.massive.circle {
   font-size: 0;
   position: relative;
 }
+.dot.form .field .fields-1:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
 .dot.form .field .fields-1 > .field:first-child {
   padding-left: 0;
 }
@@ -6337,17 +6344,26 @@ img.dot.image.massive.circle {
   font-size: 15px;
   width: 100%;
   display: inline-block;
+  float: left;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-1 {
   font-size: 15px;
   padding: 0 5px;
   display: inline-block;
+  float: left;
   width: 6.25%;
 }
 .dot.form .field .fields-2 {
   font-size: 0;
   position: relative;
+}
+.dot.form .field .fields-2:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.form .field .fields-2 > .field:first-child {
   padding-left: 0;
@@ -6359,17 +6375,26 @@ img.dot.image.massive.circle {
   font-size: 15px;
   width: 50%;
   display: inline-block;
+  float: left;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-2 {
   font-size: 15px;
   padding: 0 5px;
   display: inline-block;
+  float: left;
   width: 12.5%;
 }
 .dot.form .field .fields-3 {
   font-size: 0;
   position: relative;
+}
+.dot.form .field .fields-3:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.form .field .fields-3 > .field:first-child {
   padding-left: 0;
@@ -6381,17 +6406,26 @@ img.dot.image.massive.circle {
   font-size: 15px;
   width: 33.33333333%;
   display: inline-block;
+  float: left;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-3 {
   font-size: 15px;
   padding: 0 5px;
   display: inline-block;
+  float: left;
   width: 18.75%;
 }
 .dot.form .field .fields-4 {
   font-size: 0;
   position: relative;
+}
+.dot.form .field .fields-4:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.form .field .fields-4 > .field:first-child {
   padding-left: 0;
@@ -6403,17 +6437,26 @@ img.dot.image.massive.circle {
   font-size: 15px;
   width: 25%;
   display: inline-block;
+  float: left;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-4 {
   font-size: 15px;
   padding: 0 5px;
   display: inline-block;
+  float: left;
   width: 25%;
 }
 .dot.form .field .fields-5 {
   font-size: 0;
   position: relative;
+}
+.dot.form .field .fields-5:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.form .field .fields-5 > .field:first-child {
   padding-left: 0;
@@ -6425,17 +6468,26 @@ img.dot.image.massive.circle {
   font-size: 15px;
   width: 20%;
   display: inline-block;
+  float: left;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-5 {
   font-size: 15px;
   padding: 0 5px;
   display: inline-block;
+  float: left;
   width: 31.25%;
 }
 .dot.form .field .fields-6 {
   font-size: 0;
   position: relative;
+}
+.dot.form .field .fields-6:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.form .field .fields-6 > .field:first-child {
   padding-left: 0;
@@ -6447,17 +6499,26 @@ img.dot.image.massive.circle {
   font-size: 15px;
   width: 16.66666667%;
   display: inline-block;
+  float: left;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-6 {
   font-size: 15px;
   padding: 0 5px;
   display: inline-block;
+  float: left;
   width: 37.5%;
 }
 .dot.form .field .fields-7 {
   font-size: 0;
   position: relative;
+}
+.dot.form .field .fields-7:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.form .field .fields-7 > .field:first-child {
   padding-left: 0;
@@ -6469,17 +6530,26 @@ img.dot.image.massive.circle {
   font-size: 15px;
   width: 14.28571429%;
   display: inline-block;
+  float: left;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-7 {
   font-size: 15px;
   padding: 0 5px;
   display: inline-block;
+  float: left;
   width: 43.75%;
 }
 .dot.form .field .fields-8 {
   font-size: 0;
   position: relative;
+}
+.dot.form .field .fields-8:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.form .field .fields-8 > .field:first-child {
   padding-left: 0;
@@ -6491,17 +6561,26 @@ img.dot.image.massive.circle {
   font-size: 15px;
   width: 12.5%;
   display: inline-block;
+  float: left;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-8 {
   font-size: 15px;
   padding: 0 5px;
   display: inline-block;
+  float: left;
   width: 50%;
 }
 .dot.form .field .fields-9 {
   font-size: 0;
   position: relative;
+}
+.dot.form .field .fields-9:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.form .field .fields-9 > .field:first-child {
   padding-left: 0;
@@ -6513,17 +6592,26 @@ img.dot.image.massive.circle {
   font-size: 15px;
   width: 11.11111111%;
   display: inline-block;
+  float: left;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-9 {
   font-size: 15px;
   padding: 0 5px;
   display: inline-block;
+  float: left;
   width: 56.25%;
 }
 .dot.form .field .fields-10 {
   font-size: 0;
   position: relative;
+}
+.dot.form .field .fields-10:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.form .field .fields-10 > .field:first-child {
   padding-left: 0;
@@ -6535,17 +6623,26 @@ img.dot.image.massive.circle {
   font-size: 15px;
   width: 10%;
   display: inline-block;
+  float: left;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-10 {
   font-size: 15px;
   padding: 0 5px;
   display: inline-block;
+  float: left;
   width: 62.5%;
 }
 .dot.form .field .fields-11 {
   font-size: 0;
   position: relative;
+}
+.dot.form .field .fields-11:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.form .field .fields-11 > .field:first-child {
   padding-left: 0;
@@ -6557,17 +6654,26 @@ img.dot.image.massive.circle {
   font-size: 15px;
   width: 9.09090909%;
   display: inline-block;
+  float: left;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-11 {
   font-size: 15px;
   padding: 0 5px;
   display: inline-block;
+  float: left;
   width: 68.75%;
 }
 .dot.form .field .fields-12 {
   font-size: 0;
   position: relative;
+}
+.dot.form .field .fields-12:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.form .field .fields-12 > .field:first-child {
   padding-left: 0;
@@ -6579,17 +6685,26 @@ img.dot.image.massive.circle {
   font-size: 15px;
   width: 8.33333333%;
   display: inline-block;
+  float: left;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-12 {
   font-size: 15px;
   padding: 0 5px;
   display: inline-block;
+  float: left;
   width: 75%;
 }
 .dot.form .field .fields-13 {
   font-size: 0;
   position: relative;
+}
+.dot.form .field .fields-13:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.form .field .fields-13 > .field:first-child {
   padding-left: 0;
@@ -6601,17 +6716,26 @@ img.dot.image.massive.circle {
   font-size: 15px;
   width: 7.69230769%;
   display: inline-block;
+  float: left;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-13 {
   font-size: 15px;
   padding: 0 5px;
   display: inline-block;
+  float: left;
   width: 81.25%;
 }
 .dot.form .field .fields-14 {
   font-size: 0;
   position: relative;
+}
+.dot.form .field .fields-14:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.form .field .fields-14 > .field:first-child {
   padding-left: 0;
@@ -6623,17 +6747,26 @@ img.dot.image.massive.circle {
   font-size: 15px;
   width: 7.14285714%;
   display: inline-block;
+  float: left;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-14 {
   font-size: 15px;
   padding: 0 5px;
   display: inline-block;
+  float: left;
   width: 87.5%;
 }
 .dot.form .field .fields-15 {
   font-size: 0;
   position: relative;
+}
+.dot.form .field .fields-15:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.form .field .fields-15 > .field:first-child {
   padding-left: 0;
@@ -6645,17 +6778,26 @@ img.dot.image.massive.circle {
   font-size: 15px;
   width: 6.66666667%;
   display: inline-block;
+  float: left;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-15 {
   font-size: 15px;
   padding: 0 5px;
   display: inline-block;
+  float: left;
   width: 93.75%;
 }
 .dot.form .field .fields-16 {
   font-size: 0;
   position: relative;
+}
+.dot.form .field .fields-16:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.form .field .fields-16 > .field:first-child {
   padding-left: 0;
@@ -6667,17 +6809,26 @@ img.dot.image.massive.circle {
   font-size: 15px;
   width: 6.25%;
   display: inline-block;
+  float: left;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-16 {
   font-size: 15px;
   padding: 0 5px;
   display: inline-block;
+  float: left;
   width: 100%;
 }
 .dot.form .field .fields {
   position: relative;
   font-size: 0;
+}
+.dot.form .field .fields:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.form .field .fields > :first-child {
   padding-left: 0;
@@ -6770,7 +6921,7 @@ img.dot.image.massive.circle {
 .dot.form.inline > .field > .fields {
   margin-left: 100px;
 }
-.dot.form.inline .action {
+.dot.form.inline > .action {
   margin-left: 100px;
 }
 @media only screen and (max-width: 768px) {

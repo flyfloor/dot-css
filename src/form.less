@@ -5,6 +5,7 @@
 
 .__makeFields(@n, @i: 1) when (@i =< @n) {
     .fields-@{i} {
+        .clearfix;
         font-size: 0;
         position: relative;
         &>.field:first-child {
@@ -17,6 +18,7 @@
             font-size: @line_height;
             width: 100% / @i;
             display: inline-block;
+            float: left;
             padding: 0 @padding/2;
         }
     }
@@ -25,6 +27,7 @@
             font-size: @line_height;
             padding: 0 @__inline_paadding;
             display: inline-block;
+            float: left;
             width: (@i / @column_count) * 100%;
         }
     }
@@ -90,6 +93,7 @@
         }
         .__makeFields(16);
         .fields {
+            .clearfix;
             position: relative;
             font-size: 0;
             &>:first-child {
@@ -142,7 +146,7 @@
             }
         }
 
-        .action {
+        >.action {
             margin-left: @padding * 10;
         }
     }
