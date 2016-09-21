@@ -65,7 +65,7 @@
     font-size: @_lh;
     padding: @_padding;
     line-height: @_lh;
-    height: @_lh + @_padding * 2 + 2px;
+    height: @_lh + @_padding * 2 + 4px;
 }
 
 
@@ -128,19 +128,19 @@
 
 @{NS}.input {
     /*only wrapper style*/
-    ._INPUT_SIZE(14, 7, true);
+    ._INPUT_SIZE(14, 6, true);
     overflow: hidden;
     &.tiny {
-        ._INPUT_SIZE(10, 5, true);
+        ._INPUT_SIZE(10, 4, true);
     }
     &.small {
-        ._INPUT_SIZE(12, 6, true);
+        ._INPUT_SIZE(12, 5, true);
     }
     &.large {
-        ._INPUT_SIZE(18, 9, true);
+        ._INPUT_SIZE(18, 8, true);
     }
     &.huge {
-        ._INPUT_SIZE(22, 11, true);
+        ._INPUT_SIZE(22, 10, true);
     }
 }
 
@@ -161,19 +161,18 @@
     &.fluid {
         width: 100%;
     }
-    
-    ._INPUT_SIZE(14, 7, false);
+    ._INPUT_SIZE(14, 6, false);
     &.tiny {
-        ._INPUT_SIZE(10, 5, false);
+        ._INPUT_SIZE(10, 4, false);
     }
     &.small {
-        ._INPUT_SIZE(12, 6, false);
+        ._INPUT_SIZE(12, 5, false);
     }
     &.large {
-        ._INPUT_SIZE(18, 9, false);
+        ._INPUT_SIZE(18, 8, false);
     }
     &.huge {
-        ._INPUT_SIZE(22, 11, false);
+        ._INPUT_SIZE(22, 10, false);
     }
     
     &.disabled {

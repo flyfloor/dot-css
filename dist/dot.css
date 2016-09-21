@@ -3398,37 +3398,37 @@ i.dot.icon:hover,
 .dot.input button,
 .dot.input .button {
   font-size: 14px;
-  padding: 7px;
+  padding: 6px;
   line-height: 14px;
   height: 30px;
 }
 .dot.input.round > :first-child {
-  border-top-left-radius: 21px;
-  border-bottom-left-radius: 21px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 .dot.input.round > :last-child {
-  border-top-right-radius: 21px;
-  border-bottom-right-radius: 21px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 .dot.input.icon.fluid {
   display: block;
 }
 .dot.input.icon.round input {
-  border-radius: 21px;
+  border-radius: 20px;
 }
 .dot.input.icon input {
-  padding-left: 7px;
-  padding-right: 32px;
+  padding-left: 6px;
+  padding-right: 30px;
 }
 .dot.input.icon .icon + input {
-  padding-left: 32px;
-  padding-right: 7px;
+  padding-left: 30px;
+  padding-right: 6px;
 }
 .dot.input .icon {
   cursor: pointer;
-  width: 30px;
+  width: 28px;
   text-align: center;
-  line-height: 30px;
+  line-height: 28px;
   font-size: 16px;
 }
 .dot.input.tiny input,
@@ -3437,37 +3437,37 @@ i.dot.icon:hover,
 .dot.input.tiny button,
 .dot.input.tiny .button {
   font-size: 10px;
-  padding: 5px;
+  padding: 4px;
   line-height: 10px;
   height: 22px;
 }
 .dot.input.tiny.round > :first-child {
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
+  border-top-left-radius: 14px;
+  border-bottom-left-radius: 14px;
 }
 .dot.input.tiny.round > :last-child {
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-top-right-radius: 14px;
+  border-bottom-right-radius: 14px;
 }
 .dot.input.tiny.icon.fluid {
   display: block;
 }
 .dot.input.tiny.icon.round input {
-  border-radius: 15px;
+  border-radius: 14px;
 }
 .dot.input.tiny.icon input {
-  padding-left: 5px;
-  padding-right: 24px;
+  padding-left: 4px;
+  padding-right: 22px;
 }
 .dot.input.tiny.icon .icon + input {
-  padding-left: 24px;
-  padding-right: 5px;
+  padding-left: 22px;
+  padding-right: 4px;
 }
 .dot.input.tiny .icon {
   cursor: pointer;
-  width: 22px;
+  width: 20px;
   text-align: center;
-  line-height: 22px;
+  line-height: 20px;
   font-size: 12px;
 }
 .dot.input.small input,
@@ -3476,37 +3476,37 @@ i.dot.icon:hover,
 .dot.input.small button,
 .dot.input.small .button {
   font-size: 12px;
-  padding: 6px;
+  padding: 5px;
   line-height: 12px;
   height: 26px;
 }
 .dot.input.small.round > :first-child {
-  border-top-left-radius: 18px;
-  border-bottom-left-radius: 18px;
+  border-top-left-radius: 17px;
+  border-bottom-left-radius: 17px;
 }
 .dot.input.small.round > :last-child {
-  border-top-right-radius: 18px;
-  border-bottom-right-radius: 18px;
+  border-top-right-radius: 17px;
+  border-bottom-right-radius: 17px;
 }
 .dot.input.small.icon.fluid {
   display: block;
 }
 .dot.input.small.icon.round input {
-  border-radius: 18px;
+  border-radius: 17px;
 }
 .dot.input.small.icon input {
-  padding-left: 6px;
-  padding-right: 28px;
+  padding-left: 5px;
+  padding-right: 26px;
 }
 .dot.input.small.icon .icon + input {
-  padding-left: 28px;
-  padding-right: 6px;
+  padding-left: 26px;
+  padding-right: 5px;
 }
 .dot.input.small .icon {
   cursor: pointer;
-  width: 26px;
+  width: 24px;
   text-align: center;
-  line-height: 26px;
+  line-height: 24px;
   font-size: 14px;
 }
 .dot.input.large input,
@@ -3515,37 +3515,37 @@ i.dot.icon:hover,
 .dot.input.large button,
 .dot.input.large .button {
   font-size: 18px;
-  padding: 9px;
+  padding: 8px;
   line-height: 18px;
   height: 38px;
 }
 .dot.input.large.round > :first-child {
-  border-top-left-radius: 27px;
-  border-bottom-left-radius: 27px;
+  border-top-left-radius: 26px;
+  border-bottom-left-radius: 26px;
 }
 .dot.input.large.round > :last-child {
-  border-top-right-radius: 27px;
-  border-bottom-right-radius: 27px;
+  border-top-right-radius: 26px;
+  border-bottom-right-radius: 26px;
 }
 .dot.input.large.icon.fluid {
   display: block;
 }
 .dot.input.large.icon.round input {
-  border-radius: 27px;
+  border-radius: 26px;
 }
 .dot.input.large.icon input {
-  padding-left: 9px;
-  padding-right: 40px;
+  padding-left: 8px;
+  padding-right: 38px;
 }
 .dot.input.large.icon .icon + input {
-  padding-left: 40px;
-  padding-right: 9px;
+  padding-left: 38px;
+  padding-right: 8px;
 }
 .dot.input.large .icon {
   cursor: pointer;
-  width: 38px;
+  width: 36px;
   text-align: center;
-  line-height: 38px;
+  line-height: 36px;
   font-size: 20px;
 }
 .dot.input.huge input,
@@ -3554,37 +3554,37 @@ i.dot.icon:hover,
 .dot.input.huge button,
 .dot.input.huge .button {
   font-size: 22px;
-  padding: 11px;
+  padding: 10px;
   line-height: 22px;
   height: 46px;
 }
 .dot.input.huge.round > :first-child {
-  border-top-left-radius: 33px;
-  border-bottom-left-radius: 33px;
+  border-top-left-radius: 32px;
+  border-bottom-left-radius: 32px;
 }
 .dot.input.huge.round > :last-child {
-  border-top-right-radius: 33px;
-  border-bottom-right-radius: 33px;
+  border-top-right-radius: 32px;
+  border-bottom-right-radius: 32px;
 }
 .dot.input.huge.icon.fluid {
   display: block;
 }
 .dot.input.huge.icon.round input {
-  border-radius: 33px;
+  border-radius: 32px;
 }
 .dot.input.huge.icon input {
-  padding-left: 11px;
-  padding-right: 48px;
+  padding-left: 10px;
+  padding-right: 46px;
 }
 .dot.input.huge.icon .icon + input {
-  padding-left: 48px;
-  padding-right: 11px;
+  padding-left: 46px;
+  padding-right: 10px;
 }
 .dot.input.huge .icon {
   cursor: pointer;
-  width: 46px;
+  width: 44px;
   text-align: center;
-  line-height: 46px;
+  line-height: 44px;
   font-size: 24px;
 }
 .dot input,
@@ -3596,7 +3596,7 @@ i.dot.icon:hover,
   -o-transition: all .3s;
   transition: all .3s;
   font-size: 14px;
-  padding: 7px;
+  padding: 6px;
   line-height: 14px;
   height: 30px;
 }
@@ -3626,14 +3626,14 @@ i.dot.icon:hover,
 .dotinput.input.round,
 .dot textarea.round,
 .dot select.round {
-  border-radius: 21px;
+  border-radius: 20px;
 }
 .dot input.tiny,
 .dotinput.input.tiny,
 .dot textarea.tiny,
 .dot select.tiny {
   font-size: 10px;
-  padding: 5px;
+  padding: 4px;
   line-height: 10px;
   height: 22px;
 }
@@ -3641,14 +3641,14 @@ i.dot.icon:hover,
 .dotinput.input.tiny.round,
 .dot textarea.tiny.round,
 .dot select.tiny.round {
-  border-radius: 15px;
+  border-radius: 14px;
 }
 .dot input.small,
 .dotinput.input.small,
 .dot textarea.small,
 .dot select.small {
   font-size: 12px;
-  padding: 6px;
+  padding: 5px;
   line-height: 12px;
   height: 26px;
 }
@@ -3656,14 +3656,14 @@ i.dot.icon:hover,
 .dotinput.input.small.round,
 .dot textarea.small.round,
 .dot select.small.round {
-  border-radius: 18px;
+  border-radius: 17px;
 }
 .dot input.large,
 .dotinput.input.large,
 .dot textarea.large,
 .dot select.large {
   font-size: 18px;
-  padding: 9px;
+  padding: 8px;
   line-height: 18px;
   height: 38px;
 }
@@ -3671,14 +3671,14 @@ i.dot.icon:hover,
 .dotinput.input.large.round,
 .dot textarea.large.round,
 .dot select.large.round {
-  border-radius: 27px;
+  border-radius: 26px;
 }
 .dot input.huge,
 .dotinput.input.huge,
 .dot textarea.huge,
 .dot select.huge {
   font-size: 22px;
-  padding: 11px;
+  padding: 10px;
   line-height: 22px;
   height: 46px;
 }
@@ -3686,7 +3686,7 @@ i.dot.icon:hover,
 .dotinput.input.huge.round,
 .dot textarea.huge.round,
 .dot select.huge.round {
-  border-radius: 33px;
+  border-radius: 32px;
 }
 .dot input.disabled,
 .dotinput.input.disabled,
