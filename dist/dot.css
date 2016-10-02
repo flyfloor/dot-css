@@ -2680,7 +2680,6 @@ i.dot.icon:hover,
   padding: 10px;
 }
 .dot.grid .row {
-  display: block;
   margin-bottom: 10px;
 }
 .dot.grid .row:after {
@@ -2691,7 +2690,6 @@ i.dot.icon:hover,
   height: 0;
 }
 .dot.grid .row-1 {
-  display: block;
   margin-bottom: 10px;
 }
 .dot.grid .row-1:after {
@@ -2701,21 +2699,17 @@ i.dot.icon:hover,
   display: block;
   height: 0;
 }
-.dot.grid .row-1 .column {
+.dot.grid .row-1 > .column {
   width: 100%;
 }
-.dot.grid .column-1 {
+.dot.grid .row > .column-1,
+.dot.grid > .column-1 {
   float: left;
   padding: 10px;
   width: 6.25%;
 }
 .dot.grid .grid-1 {
   position: relative;
-}
-.dot.grid .grid-1 .column {
-  float: left;
-  padding: 10px;
-  width: 100%;
 }
 .dot.grid .grid-1:after {
   content: ".";
@@ -2724,8 +2718,13 @@ i.dot.icon:hover,
   display: block;
   height: 0;
 }
+.dot.grid .grid-1 > .column {
+  width: 100%;
+}
+.dot.grid .grid-1 > .row > .column {
+  width: 100%;
+}
 .dot.grid .row-2 {
-  display: block;
   margin-bottom: 10px;
 }
 .dot.grid .row-2:after {
@@ -2735,21 +2734,17 @@ i.dot.icon:hover,
   display: block;
   height: 0;
 }
-.dot.grid .row-2 .column {
+.dot.grid .row-2 > .column {
   width: 50%;
 }
-.dot.grid .column-2 {
+.dot.grid .row > .column-2,
+.dot.grid > .column-2 {
   float: left;
   padding: 10px;
   width: 12.5%;
 }
 .dot.grid .grid-2 {
   position: relative;
-}
-.dot.grid .grid-2 .column {
-  float: left;
-  padding: 10px;
-  width: 50%;
 }
 .dot.grid .grid-2:after {
   content: ".";
@@ -2758,8 +2753,13 @@ i.dot.icon:hover,
   display: block;
   height: 0;
 }
+.dot.grid .grid-2 > .column {
+  width: 50%;
+}
+.dot.grid .grid-2 > .row > .column {
+  width: 50%;
+}
 .dot.grid .row-3 {
-  display: block;
   margin-bottom: 10px;
 }
 .dot.grid .row-3:after {
@@ -2769,21 +2769,17 @@ i.dot.icon:hover,
   display: block;
   height: 0;
 }
-.dot.grid .row-3 .column {
+.dot.grid .row-3 > .column {
   width: 33.33333333%;
 }
-.dot.grid .column-3 {
+.dot.grid .row > .column-3,
+.dot.grid > .column-3 {
   float: left;
   padding: 10px;
   width: 18.75%;
 }
 .dot.grid .grid-3 {
   position: relative;
-}
-.dot.grid .grid-3 .column {
-  float: left;
-  padding: 10px;
-  width: 33.33333333%;
 }
 .dot.grid .grid-3:after {
   content: ".";
@@ -2792,8 +2788,13 @@ i.dot.icon:hover,
   display: block;
   height: 0;
 }
+.dot.grid .grid-3 > .column {
+  width: 33.33333333%;
+}
+.dot.grid .grid-3 > .row > .column {
+  width: 33.33333333%;
+}
 .dot.grid .row-4 {
-  display: block;
   margin-bottom: 10px;
 }
 .dot.grid .row-4:after {
@@ -2803,21 +2804,17 @@ i.dot.icon:hover,
   display: block;
   height: 0;
 }
-.dot.grid .row-4 .column {
+.dot.grid .row-4 > .column {
   width: 25%;
 }
-.dot.grid .column-4 {
+.dot.grid .row > .column-4,
+.dot.grid > .column-4 {
   float: left;
   padding: 10px;
   width: 25%;
 }
 .dot.grid .grid-4 {
   position: relative;
-}
-.dot.grid .grid-4 .column {
-  float: left;
-  padding: 10px;
-  width: 25%;
 }
 .dot.grid .grid-4:after {
   content: ".";
@@ -2826,8 +2823,13 @@ i.dot.icon:hover,
   display: block;
   height: 0;
 }
+.dot.grid .grid-4 > .column {
+  width: 25%;
+}
+.dot.grid .grid-4 > .row > .column {
+  width: 25%;
+}
 .dot.grid .row-5 {
-  display: block;
   margin-bottom: 10px;
 }
 .dot.grid .row-5:after {
@@ -2837,21 +2839,17 @@ i.dot.icon:hover,
   display: block;
   height: 0;
 }
-.dot.grid .row-5 .column {
+.dot.grid .row-5 > .column {
   width: 20%;
 }
-.dot.grid .column-5 {
+.dot.grid .row > .column-5,
+.dot.grid > .column-5 {
   float: left;
   padding: 10px;
   width: 31.25%;
 }
 .dot.grid .grid-5 {
   position: relative;
-}
-.dot.grid .grid-5 .column {
-  float: left;
-  padding: 10px;
-  width: 20%;
 }
 .dot.grid .grid-5:after {
   content: ".";
@@ -2860,8 +2858,13 @@ i.dot.icon:hover,
   display: block;
   height: 0;
 }
+.dot.grid .grid-5 > .column {
+  width: 20%;
+}
+.dot.grid .grid-5 > .row > .column {
+  width: 20%;
+}
 .dot.grid .row-6 {
-  display: block;
   margin-bottom: 10px;
 }
 .dot.grid .row-6:after {
@@ -2871,21 +2874,17 @@ i.dot.icon:hover,
   display: block;
   height: 0;
 }
-.dot.grid .row-6 .column {
+.dot.grid .row-6 > .column {
   width: 16.66666667%;
 }
-.dot.grid .column-6 {
+.dot.grid .row > .column-6,
+.dot.grid > .column-6 {
   float: left;
   padding: 10px;
   width: 37.5%;
 }
 .dot.grid .grid-6 {
   position: relative;
-}
-.dot.grid .grid-6 .column {
-  float: left;
-  padding: 10px;
-  width: 16.66666667%;
 }
 .dot.grid .grid-6:after {
   content: ".";
@@ -2894,8 +2893,13 @@ i.dot.icon:hover,
   display: block;
   height: 0;
 }
+.dot.grid .grid-6 > .column {
+  width: 16.66666667%;
+}
+.dot.grid .grid-6 > .row > .column {
+  width: 16.66666667%;
+}
 .dot.grid .row-7 {
-  display: block;
   margin-bottom: 10px;
 }
 .dot.grid .row-7:after {
@@ -2905,21 +2909,17 @@ i.dot.icon:hover,
   display: block;
   height: 0;
 }
-.dot.grid .row-7 .column {
+.dot.grid .row-7 > .column {
   width: 14.28571429%;
 }
-.dot.grid .column-7 {
+.dot.grid .row > .column-7,
+.dot.grid > .column-7 {
   float: left;
   padding: 10px;
   width: 43.75%;
 }
 .dot.grid .grid-7 {
   position: relative;
-}
-.dot.grid .grid-7 .column {
-  float: left;
-  padding: 10px;
-  width: 14.28571429%;
 }
 .dot.grid .grid-7:after {
   content: ".";
@@ -2928,8 +2928,13 @@ i.dot.icon:hover,
   display: block;
   height: 0;
 }
+.dot.grid .grid-7 > .column {
+  width: 14.28571429%;
+}
+.dot.grid .grid-7 > .row > .column {
+  width: 14.28571429%;
+}
 .dot.grid .row-8 {
-  display: block;
   margin-bottom: 10px;
 }
 .dot.grid .row-8:after {
@@ -2939,21 +2944,17 @@ i.dot.icon:hover,
   display: block;
   height: 0;
 }
-.dot.grid .row-8 .column {
+.dot.grid .row-8 > .column {
   width: 12.5%;
 }
-.dot.grid .column-8 {
+.dot.grid .row > .column-8,
+.dot.grid > .column-8 {
   float: left;
   padding: 10px;
   width: 50%;
 }
 .dot.grid .grid-8 {
   position: relative;
-}
-.dot.grid .grid-8 .column {
-  float: left;
-  padding: 10px;
-  width: 12.5%;
 }
 .dot.grid .grid-8:after {
   content: ".";
@@ -2962,8 +2963,13 @@ i.dot.icon:hover,
   display: block;
   height: 0;
 }
+.dot.grid .grid-8 > .column {
+  width: 12.5%;
+}
+.dot.grid .grid-8 > .row > .column {
+  width: 12.5%;
+}
 .dot.grid .row-9 {
-  display: block;
   margin-bottom: 10px;
 }
 .dot.grid .row-9:after {
@@ -2973,21 +2979,17 @@ i.dot.icon:hover,
   display: block;
   height: 0;
 }
-.dot.grid .row-9 .column {
+.dot.grid .row-9 > .column {
   width: 11.11111111%;
 }
-.dot.grid .column-9 {
+.dot.grid .row > .column-9,
+.dot.grid > .column-9 {
   float: left;
   padding: 10px;
   width: 56.25%;
 }
 .dot.grid .grid-9 {
   position: relative;
-}
-.dot.grid .grid-9 .column {
-  float: left;
-  padding: 10px;
-  width: 11.11111111%;
 }
 .dot.grid .grid-9:after {
   content: ".";
@@ -2996,8 +2998,13 @@ i.dot.icon:hover,
   display: block;
   height: 0;
 }
+.dot.grid .grid-9 > .column {
+  width: 11.11111111%;
+}
+.dot.grid .grid-9 > .row > .column {
+  width: 11.11111111%;
+}
 .dot.grid .row-10 {
-  display: block;
   margin-bottom: 10px;
 }
 .dot.grid .row-10:after {
@@ -3007,21 +3014,17 @@ i.dot.icon:hover,
   display: block;
   height: 0;
 }
-.dot.grid .row-10 .column {
+.dot.grid .row-10 > .column {
   width: 10%;
 }
-.dot.grid .column-10 {
+.dot.grid .row > .column-10,
+.dot.grid > .column-10 {
   float: left;
   padding: 10px;
   width: 62.5%;
 }
 .dot.grid .grid-10 {
   position: relative;
-}
-.dot.grid .grid-10 .column {
-  float: left;
-  padding: 10px;
-  width: 10%;
 }
 .dot.grid .grid-10:after {
   content: ".";
@@ -3030,8 +3033,13 @@ i.dot.icon:hover,
   display: block;
   height: 0;
 }
+.dot.grid .grid-10 > .column {
+  width: 10%;
+}
+.dot.grid .grid-10 > .row > .column {
+  width: 10%;
+}
 .dot.grid .row-11 {
-  display: block;
   margin-bottom: 10px;
 }
 .dot.grid .row-11:after {
@@ -3041,21 +3049,17 @@ i.dot.icon:hover,
   display: block;
   height: 0;
 }
-.dot.grid .row-11 .column {
+.dot.grid .row-11 > .column {
   width: 9.09090909%;
 }
-.dot.grid .column-11 {
+.dot.grid .row > .column-11,
+.dot.grid > .column-11 {
   float: left;
   padding: 10px;
   width: 68.75%;
 }
 .dot.grid .grid-11 {
   position: relative;
-}
-.dot.grid .grid-11 .column {
-  float: left;
-  padding: 10px;
-  width: 9.09090909%;
 }
 .dot.grid .grid-11:after {
   content: ".";
@@ -3064,8 +3068,13 @@ i.dot.icon:hover,
   display: block;
   height: 0;
 }
+.dot.grid .grid-11 > .column {
+  width: 9.09090909%;
+}
+.dot.grid .grid-11 > .row > .column {
+  width: 9.09090909%;
+}
 .dot.grid .row-12 {
-  display: block;
   margin-bottom: 10px;
 }
 .dot.grid .row-12:after {
@@ -3075,21 +3084,17 @@ i.dot.icon:hover,
   display: block;
   height: 0;
 }
-.dot.grid .row-12 .column {
+.dot.grid .row-12 > .column {
   width: 8.33333333%;
 }
-.dot.grid .column-12 {
+.dot.grid .row > .column-12,
+.dot.grid > .column-12 {
   float: left;
   padding: 10px;
   width: 75%;
 }
 .dot.grid .grid-12 {
   position: relative;
-}
-.dot.grid .grid-12 .column {
-  float: left;
-  padding: 10px;
-  width: 8.33333333%;
 }
 .dot.grid .grid-12:after {
   content: ".";
@@ -3098,8 +3103,13 @@ i.dot.icon:hover,
   display: block;
   height: 0;
 }
+.dot.grid .grid-12 > .column {
+  width: 8.33333333%;
+}
+.dot.grid .grid-12 > .row > .column {
+  width: 8.33333333%;
+}
 .dot.grid .row-13 {
-  display: block;
   margin-bottom: 10px;
 }
 .dot.grid .row-13:after {
@@ -3109,21 +3119,17 @@ i.dot.icon:hover,
   display: block;
   height: 0;
 }
-.dot.grid .row-13 .column {
+.dot.grid .row-13 > .column {
   width: 7.69230769%;
 }
-.dot.grid .column-13 {
+.dot.grid .row > .column-13,
+.dot.grid > .column-13 {
   float: left;
   padding: 10px;
   width: 81.25%;
 }
 .dot.grid .grid-13 {
   position: relative;
-}
-.dot.grid .grid-13 .column {
-  float: left;
-  padding: 10px;
-  width: 7.69230769%;
 }
 .dot.grid .grid-13:after {
   content: ".";
@@ -3132,8 +3138,13 @@ i.dot.icon:hover,
   display: block;
   height: 0;
 }
+.dot.grid .grid-13 > .column {
+  width: 7.69230769%;
+}
+.dot.grid .grid-13 > .row > .column {
+  width: 7.69230769%;
+}
 .dot.grid .row-14 {
-  display: block;
   margin-bottom: 10px;
 }
 .dot.grid .row-14:after {
@@ -3143,21 +3154,17 @@ i.dot.icon:hover,
   display: block;
   height: 0;
 }
-.dot.grid .row-14 .column {
+.dot.grid .row-14 > .column {
   width: 7.14285714%;
 }
-.dot.grid .column-14 {
+.dot.grid .row > .column-14,
+.dot.grid > .column-14 {
   float: left;
   padding: 10px;
   width: 87.5%;
 }
 .dot.grid .grid-14 {
   position: relative;
-}
-.dot.grid .grid-14 .column {
-  float: left;
-  padding: 10px;
-  width: 7.14285714%;
 }
 .dot.grid .grid-14:after {
   content: ".";
@@ -3166,8 +3173,13 @@ i.dot.icon:hover,
   display: block;
   height: 0;
 }
+.dot.grid .grid-14 > .column {
+  width: 7.14285714%;
+}
+.dot.grid .grid-14 > .row > .column {
+  width: 7.14285714%;
+}
 .dot.grid .row-15 {
-  display: block;
   margin-bottom: 10px;
 }
 .dot.grid .row-15:after {
@@ -3177,21 +3189,17 @@ i.dot.icon:hover,
   display: block;
   height: 0;
 }
-.dot.grid .row-15 .column {
+.dot.grid .row-15 > .column {
   width: 6.66666667%;
 }
-.dot.grid .column-15 {
+.dot.grid .row > .column-15,
+.dot.grid > .column-15 {
   float: left;
   padding: 10px;
   width: 93.75%;
 }
 .dot.grid .grid-15 {
   position: relative;
-}
-.dot.grid .grid-15 .column {
-  float: left;
-  padding: 10px;
-  width: 6.66666667%;
 }
 .dot.grid .grid-15:after {
   content: ".";
@@ -3200,8 +3208,13 @@ i.dot.icon:hover,
   display: block;
   height: 0;
 }
+.dot.grid .grid-15 > .column {
+  width: 6.66666667%;
+}
+.dot.grid .grid-15 > .row > .column {
+  width: 6.66666667%;
+}
 .dot.grid .row-16 {
-  display: block;
   margin-bottom: 10px;
 }
 .dot.grid .row-16:after {
@@ -3211,21 +3224,17 @@ i.dot.icon:hover,
   display: block;
   height: 0;
 }
-.dot.grid .row-16 .column {
+.dot.grid .row-16 > .column {
   width: 6.25%;
 }
-.dot.grid .column-16 {
+.dot.grid .row > .column-16,
+.dot.grid > .column-16 {
   float: left;
   padding: 10px;
   width: 100%;
 }
 .dot.grid .grid-16 {
   position: relative;
-}
-.dot.grid .grid-16 .column {
-  float: left;
-  padding: 10px;
-  width: 6.25%;
 }
 .dot.grid .grid-16:after {
   content: ".";
@@ -3234,76 +3243,208 @@ i.dot.icon:hover,
   display: block;
   height: 0;
 }
-.dot.table {
+.dot.grid .grid-16 > .column {
+  width: 6.25%;
+}
+.dot.grid .grid-16 > .row > .column {
+  width: 6.25%;
+}
+.basic.grid > .column,
+.basic.grid > .row > .column {
+  padding: 0;
+}
+.basic.grid > .column-1,
+.basic.grid > .row > .column-1 {
+  padding: 0;
+}
+.basic.grid > .column-2,
+.basic.grid > .row > .column-2 {
+  padding: 0;
+}
+.basic.grid > .column-3,
+.basic.grid > .row > .column-3 {
+  padding: 0;
+}
+.basic.grid > .column-4,
+.basic.grid > .row > .column-4 {
+  padding: 0;
+}
+.basic.grid > .column-5,
+.basic.grid > .row > .column-5 {
+  padding: 0;
+}
+.basic.grid > .column-6,
+.basic.grid > .row > .column-6 {
+  padding: 0;
+}
+.basic.grid > .column-7,
+.basic.grid > .row > .column-7 {
+  padding: 0;
+}
+.basic.grid > .column-8,
+.basic.grid > .row > .column-8 {
+  padding: 0;
+}
+.basic.grid > .column-9,
+.basic.grid > .row > .column-9 {
+  padding: 0;
+}
+.basic.grid > .column-10,
+.basic.grid > .row > .column-10 {
+  padding: 0;
+}
+.basic.grid > .column-11,
+.basic.grid > .row > .column-11 {
+  padding: 0;
+}
+.basic.grid > .column-12,
+.basic.grid > .row > .column-12 {
+  padding: 0;
+}
+.basic.grid > .column-13,
+.basic.grid > .row > .column-13 {
+  padding: 0;
+}
+.basic.grid > .column-14,
+.basic.grid > .row > .column-14 {
+  padding: 0;
+}
+.basic.grid > .column-15,
+.basic.grid > .row > .column-15 {
+  padding: 0;
+}
+.basic.grid > .column-16,
+.basic.grid > .row > .column-16 {
+  padding: 0;
+}
+.basic.grid-1 > .row > .column,
+.basic.grid-1 > .column {
+  padding: 0;
+}
+.basic.grid-2 > .row > .column,
+.basic.grid-2 > .column {
+  padding: 0;
+}
+.basic.grid-3 > .row > .column,
+.basic.grid-3 > .column {
+  padding: 0;
+}
+.basic.grid-4 > .row > .column,
+.basic.grid-4 > .column {
+  padding: 0;
+}
+.basic.grid-5 > .row > .column,
+.basic.grid-5 > .column {
+  padding: 0;
+}
+.basic.grid-6 > .row > .column,
+.basic.grid-6 > .column {
+  padding: 0;
+}
+.basic.grid-7 > .row > .column,
+.basic.grid-7 > .column {
+  padding: 0;
+}
+.basic.grid-8 > .row > .column,
+.basic.grid-8 > .column {
+  padding: 0;
+}
+.basic.grid-9 > .row > .column,
+.basic.grid-9 > .column {
+  padding: 0;
+}
+.basic.grid-10 > .row > .column,
+.basic.grid-10 > .column {
+  padding: 0;
+}
+.basic.grid-11 > .row > .column,
+.basic.grid-11 > .column {
+  padding: 0;
+}
+.basic.grid-12 > .row > .column,
+.basic.grid-12 > .column {
+  padding: 0;
+}
+.basic.grid-13 > .row > .column,
+.basic.grid-13 > .column {
+  padding: 0;
+}
+.basic.grid-14 > .row > .column,
+.basic.grid-14 > .column {
+  padding: 0;
+}
+.basic.grid-15 > .row > .column,
+.basic.grid-15 > .column {
+  padding: 0;
+}
+.basic.grid-16 > .row > .column,
+.basic.grid-16 > .column {
+  padding: 0;
+}
+.table {
+  /*shape size*/
+  font-size: 14px;
+  line-height: 14px;
+  /*basic table layout*/
+}
+.table.dot {
   position: relative;
   display: table;
   margin: 0;
   border: 1px solid #EEEEEE;
   width: 100%;
-  /*shape size*/
-  font-size: 14px;
-  line-height: 14px;
 }
-.dot.table.fixed {
+.table.fixed {
   table-layout: fixed;
 }
-.dot.table.celled td + td,
-.dot.table.celled .cell + .cell {
+.table.celled td + td,
+.table.celled .cell + .cell {
   border-left: 1px solid #EEEEEE;
   border-top: 1px solid #EEEEEE;
 }
-.dot.table.small {
+.table.small {
   font-size: 12px;
   line-height: 12px;
 }
-.dot.table.large {
+.table.large {
   font-size: 18px;
   line-height: 18px;
 }
-.dot.table .head .cell,
-.dot.table thead .cell,
-.dot.table .head th,
-.dot.table thead th {
+.table .head .cell,
+.table thead .cell,
+.table .head th,
+.table thead th {
   font-weight: 500;
   border-top: 0;
   background-color: #F5F5F5;
 }
-.dot.table .row,
-.dot.table tr {
+.table .row,
+.table tr {
   display: table-row;
 }
-.dot.table .row:nth-child(1) .cell,
-.dot.table tr:nth-child(1) .cell,
-.dot.table .row:nth-child(1) td,
-.dot.table tr:nth-child(1) td {
+.table .row:nth-child(1) .cell,
+.table tr:nth-child(1) .cell,
+.table .row:nth-child(1) td,
+.table tr:nth-child(1) td {
   border-top: 0;
 }
-.dot.table .row .cell,
-.dot.table tr .cell,
-.dot.table .row td,
-.dot.table tr td,
-.dot.table .row th,
-.dot.table tr th {
+.table .row .cell,
+.table tr .cell,
+.table .row td,
+.table tr td,
+.table .row th,
+.table tr th {
   border-top: 1px solid #EEEEEE;
   padding: 10px 20px;
   vertical-align: middle;
   display: table-cell;
 }
-.dot.table.basic {
+.table.basic {
   border: 0;
 }
-.dot.table.basic .row .cell,
-.dot.table.basic tr .cell,
-.dot.table.basic thead .cell,
-.dot.table.basic .head .cell,
-.dot.table.basic .row td,
-.dot.table.basic tr td,
-.dot.table.basic thead td,
-.dot.table.basic .head td,
-.dot.table.basic .row th,
-.dot.table.basic tr th,
-.dot.table.basic thead th,
-.dot.table.basic .head th {
+.table.basic .cell,
+.table.basic td,
+.table.basic th {
   background-color: initial;
   padding: 0;
   border: 0;

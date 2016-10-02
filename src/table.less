@@ -2,12 +2,14 @@
 @import url('color');
 @import url('_font_padding');
 
-@{NS}.table {
-    position: relative;
-    display: table;
-    margin: 0;
-    border: 1px solid @light_gray;
-    width: 100%;
+.table {
+    &@{NS} {
+        position: relative;
+        display: table;
+        margin: 0;
+        border: 1px solid @light_gray;
+        width: 100%;
+    }
     &.fixed {
         table-layout: fixed;
     }
@@ -44,14 +46,13 @@
             display: table-cell;
         }
     }
+    /*basic table layout*/
     &.basic {
         border: 0;
-        .row, tr, thead, .head {
-            .cell, td, th {
-                background-color: initial;
-                padding: 0;
-                border: 0;
-            }
+        .cell, td, th {
+            background-color: initial;
+            padding: 0;
+            border: 0;
         }
     }
 }

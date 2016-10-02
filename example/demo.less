@@ -18,9 +18,12 @@
 .grid-example {
     .__column(16);
     .column {
-        position: relative;
         background: @tiny_gray;
         border: 1px solid @light_gray;
+    }
+    .basic .column {
+        background: initial;
+        border: initial;
     }
 }
 
