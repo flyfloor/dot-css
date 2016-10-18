@@ -73,7 +73,7 @@ class App extends Component {
                                 <NavLink to="/tab">tab</NavLink>
                                 <NavLink to="/other">other</NavLink>
                             </aside>
-                            <artical className="column column-13 main-content">
+                            <artical className="column-13 main-content">
                                 {children}
                             </artical>
                         </div>

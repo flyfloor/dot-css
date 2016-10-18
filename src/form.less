@@ -71,7 +71,15 @@
     .field {
         line-height: @line_height * 2;
         margin-bottom: @__margin_bottom;
-        input, textarea {
+        input[type="text"], 
+        input[type="number"], 
+        input[type="url"], 
+        input[type="tel"], 
+        input[type="password"], 
+        input[type="email"], 
+        input[type="date"], 
+        input[type="datetime-local"], 
+        input[type="time"], textarea {
             width: 100%;
         }
         .field {
@@ -109,7 +117,15 @@
                 }
             }
         }
-        input, textarea, select {
+        input[type="text"], 
+        input[type="number"], 
+        input[type="url"], 
+        input[type="tel"], 
+        input[type="password"], 
+        input[type="email"], 
+        input[type="date"], 
+        input[type="datetime-local"], 
+        input[type="time"], textarea, select {
             width: 100%;
         }
         &.inline {
@@ -149,6 +165,9 @@
         >.action {
             margin-left: @padding * 10;
         }
+    }
+    &.basic {
+        padding: 0;
     }
 }
 

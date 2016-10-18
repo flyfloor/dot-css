@@ -21,7 +21,11 @@
         .__defaultColumn();
         width: (@i / @column_count) * 100%;
     }
-    .grid-@{i} {
+    .__makeColumns(@n, (@i + 1));
+}
+
+.__makeGrid(@n, @i: 1) when (@i =< @n) {
+    @{NS}.grid-@{i} {
         .clearfix;
         position: relative;
         >.column {
@@ -31,20 +35,28 @@
             width: 100% / @i;
         }
     }
-    .__makeColumns(@n, (@i + 1));
+    .__makeGrid(@n, (@i + 1));
 }
 
+/* default column */
+@{NS} .column {
+    .__defaultColumn();
+}
+
+/* default row */
+@{NS} .row {
+    .__defaultRow();
+}
+
+/* grid */
 @{NS}.grid {
     position: relative;
     .clearfix;
-    .column {
-        .__defaultColumn();
-    }
-    .row {
-        .__defaultRow();
-    }
     .__makeColumns(@column_count);
 }
+
+/* grid- */
+.__makeGrid(@column_count);
 
 .__noPaddingColumns(@n, @i: 1) when (@i =< @n) {
     >.column-@{i}, >.row>.column-@{i} {
@@ -62,6 +74,7 @@
     .__basicGrid(@n, (@i + 1));
 }
 
+/* basic grid */
 .basic {
     &.grid {
         >.column, >.row>.column {

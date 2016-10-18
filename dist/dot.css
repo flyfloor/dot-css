@@ -180,6 +180,7 @@ h6 {
   text-transform: none;
   font-weight: 500;
   font-style: normal;
+  line-height: 1.5;
 }
 h1 {
   font-size: 32px;
@@ -2665,24 +2666,27 @@ i.dot.icon:hover,
 .dot.button-group.huge > .button.round {
   border-radius: 33px;
 }
-.dot.grid {
-  position: relative;
+/* default column */
+.dot .column {
+  float: left;
+  padding: 10px;
 }
-.dot.grid:after {
+/* default row */
+.dot .row {
+  margin-bottom: 10px;
+}
+.dot .row:after {
   content: ".";
   clear: both;
   visibility: hidden;
   display: block;
   height: 0;
 }
-.dot.grid .column {
-  float: left;
-  padding: 10px;
+/* grid */
+.dot.grid {
+  position: relative;
 }
-.dot.grid .row {
-  margin-bottom: 10px;
-}
-.dot.grid .row:after {
+.dot.grid:after {
   content: ".";
   clear: both;
   visibility: hidden;
@@ -2708,22 +2712,6 @@ i.dot.icon:hover,
   padding: 10px;
   width: 6.25%;
 }
-.dot.grid .grid-1 {
-  position: relative;
-}
-.dot.grid .grid-1:after {
-  content: ".";
-  clear: both;
-  visibility: hidden;
-  display: block;
-  height: 0;
-}
-.dot.grid .grid-1 > .column {
-  width: 100%;
-}
-.dot.grid .grid-1 > .row > .column {
-  width: 100%;
-}
 .dot.grid .row-2 {
   margin-bottom: 10px;
 }
@@ -2742,22 +2730,6 @@ i.dot.icon:hover,
   float: left;
   padding: 10px;
   width: 12.5%;
-}
-.dot.grid .grid-2 {
-  position: relative;
-}
-.dot.grid .grid-2:after {
-  content: ".";
-  clear: both;
-  visibility: hidden;
-  display: block;
-  height: 0;
-}
-.dot.grid .grid-2 > .column {
-  width: 50%;
-}
-.dot.grid .grid-2 > .row > .column {
-  width: 50%;
 }
 .dot.grid .row-3 {
   margin-bottom: 10px;
@@ -2778,22 +2750,6 @@ i.dot.icon:hover,
   padding: 10px;
   width: 18.75%;
 }
-.dot.grid .grid-3 {
-  position: relative;
-}
-.dot.grid .grid-3:after {
-  content: ".";
-  clear: both;
-  visibility: hidden;
-  display: block;
-  height: 0;
-}
-.dot.grid .grid-3 > .column {
-  width: 33.33333333%;
-}
-.dot.grid .grid-3 > .row > .column {
-  width: 33.33333333%;
-}
 .dot.grid .row-4 {
   margin-bottom: 10px;
 }
@@ -2811,22 +2767,6 @@ i.dot.icon:hover,
 .dot.grid > .column-4 {
   float: left;
   padding: 10px;
-  width: 25%;
-}
-.dot.grid .grid-4 {
-  position: relative;
-}
-.dot.grid .grid-4:after {
-  content: ".";
-  clear: both;
-  visibility: hidden;
-  display: block;
-  height: 0;
-}
-.dot.grid .grid-4 > .column {
-  width: 25%;
-}
-.dot.grid .grid-4 > .row > .column {
   width: 25%;
 }
 .dot.grid .row-5 {
@@ -2848,22 +2788,6 @@ i.dot.icon:hover,
   padding: 10px;
   width: 31.25%;
 }
-.dot.grid .grid-5 {
-  position: relative;
-}
-.dot.grid .grid-5:after {
-  content: ".";
-  clear: both;
-  visibility: hidden;
-  display: block;
-  height: 0;
-}
-.dot.grid .grid-5 > .column {
-  width: 20%;
-}
-.dot.grid .grid-5 > .row > .column {
-  width: 20%;
-}
 .dot.grid .row-6 {
   margin-bottom: 10px;
 }
@@ -2882,22 +2806,6 @@ i.dot.icon:hover,
   float: left;
   padding: 10px;
   width: 37.5%;
-}
-.dot.grid .grid-6 {
-  position: relative;
-}
-.dot.grid .grid-6:after {
-  content: ".";
-  clear: both;
-  visibility: hidden;
-  display: block;
-  height: 0;
-}
-.dot.grid .grid-6 > .column {
-  width: 16.66666667%;
-}
-.dot.grid .grid-6 > .row > .column {
-  width: 16.66666667%;
 }
 .dot.grid .row-7 {
   margin-bottom: 10px;
@@ -2918,22 +2826,6 @@ i.dot.icon:hover,
   padding: 10px;
   width: 43.75%;
 }
-.dot.grid .grid-7 {
-  position: relative;
-}
-.dot.grid .grid-7:after {
-  content: ".";
-  clear: both;
-  visibility: hidden;
-  display: block;
-  height: 0;
-}
-.dot.grid .grid-7 > .column {
-  width: 14.28571429%;
-}
-.dot.grid .grid-7 > .row > .column {
-  width: 14.28571429%;
-}
 .dot.grid .row-8 {
   margin-bottom: 10px;
 }
@@ -2952,22 +2844,6 @@ i.dot.icon:hover,
   float: left;
   padding: 10px;
   width: 50%;
-}
-.dot.grid .grid-8 {
-  position: relative;
-}
-.dot.grid .grid-8:after {
-  content: ".";
-  clear: both;
-  visibility: hidden;
-  display: block;
-  height: 0;
-}
-.dot.grid .grid-8 > .column {
-  width: 12.5%;
-}
-.dot.grid .grid-8 > .row > .column {
-  width: 12.5%;
 }
 .dot.grid .row-9 {
   margin-bottom: 10px;
@@ -2988,22 +2864,6 @@ i.dot.icon:hover,
   padding: 10px;
   width: 56.25%;
 }
-.dot.grid .grid-9 {
-  position: relative;
-}
-.dot.grid .grid-9:after {
-  content: ".";
-  clear: both;
-  visibility: hidden;
-  display: block;
-  height: 0;
-}
-.dot.grid .grid-9 > .column {
-  width: 11.11111111%;
-}
-.dot.grid .grid-9 > .row > .column {
-  width: 11.11111111%;
-}
 .dot.grid .row-10 {
   margin-bottom: 10px;
 }
@@ -3022,22 +2882,6 @@ i.dot.icon:hover,
   float: left;
   padding: 10px;
   width: 62.5%;
-}
-.dot.grid .grid-10 {
-  position: relative;
-}
-.dot.grid .grid-10:after {
-  content: ".";
-  clear: both;
-  visibility: hidden;
-  display: block;
-  height: 0;
-}
-.dot.grid .grid-10 > .column {
-  width: 10%;
-}
-.dot.grid .grid-10 > .row > .column {
-  width: 10%;
 }
 .dot.grid .row-11 {
   margin-bottom: 10px;
@@ -3058,22 +2902,6 @@ i.dot.icon:hover,
   padding: 10px;
   width: 68.75%;
 }
-.dot.grid .grid-11 {
-  position: relative;
-}
-.dot.grid .grid-11:after {
-  content: ".";
-  clear: both;
-  visibility: hidden;
-  display: block;
-  height: 0;
-}
-.dot.grid .grid-11 > .column {
-  width: 9.09090909%;
-}
-.dot.grid .grid-11 > .row > .column {
-  width: 9.09090909%;
-}
 .dot.grid .row-12 {
   margin-bottom: 10px;
 }
@@ -3092,22 +2920,6 @@ i.dot.icon:hover,
   float: left;
   padding: 10px;
   width: 75%;
-}
-.dot.grid .grid-12 {
-  position: relative;
-}
-.dot.grid .grid-12:after {
-  content: ".";
-  clear: both;
-  visibility: hidden;
-  display: block;
-  height: 0;
-}
-.dot.grid .grid-12 > .column {
-  width: 8.33333333%;
-}
-.dot.grid .grid-12 > .row > .column {
-  width: 8.33333333%;
 }
 .dot.grid .row-13 {
   margin-bottom: 10px;
@@ -3128,22 +2940,6 @@ i.dot.icon:hover,
   padding: 10px;
   width: 81.25%;
 }
-.dot.grid .grid-13 {
-  position: relative;
-}
-.dot.grid .grid-13:after {
-  content: ".";
-  clear: both;
-  visibility: hidden;
-  display: block;
-  height: 0;
-}
-.dot.grid .grid-13 > .column {
-  width: 7.69230769%;
-}
-.dot.grid .grid-13 > .row > .column {
-  width: 7.69230769%;
-}
 .dot.grid .row-14 {
   margin-bottom: 10px;
 }
@@ -3162,22 +2958,6 @@ i.dot.icon:hover,
   float: left;
   padding: 10px;
   width: 87.5%;
-}
-.dot.grid .grid-14 {
-  position: relative;
-}
-.dot.grid .grid-14:after {
-  content: ".";
-  clear: both;
-  visibility: hidden;
-  display: block;
-  height: 0;
-}
-.dot.grid .grid-14 > .column {
-  width: 7.14285714%;
-}
-.dot.grid .grid-14 > .row > .column {
-  width: 7.14285714%;
 }
 .dot.grid .row-15 {
   margin-bottom: 10px;
@@ -3198,22 +2978,6 @@ i.dot.icon:hover,
   padding: 10px;
   width: 93.75%;
 }
-.dot.grid .grid-15 {
-  position: relative;
-}
-.dot.grid .grid-15:after {
-  content: ".";
-  clear: both;
-  visibility: hidden;
-  display: block;
-  height: 0;
-}
-.dot.grid .grid-15 > .column {
-  width: 6.66666667%;
-}
-.dot.grid .grid-15 > .row > .column {
-  width: 6.66666667%;
-}
 .dot.grid .row-16 {
   margin-bottom: 10px;
 }
@@ -3233,22 +2997,264 @@ i.dot.icon:hover,
   padding: 10px;
   width: 100%;
 }
-.dot.grid .grid-16 {
+/* grid- */
+.dot.grid-1 {
   position: relative;
 }
-.dot.grid .grid-16:after {
+.dot.grid-1:after {
   content: ".";
   clear: both;
   visibility: hidden;
   display: block;
   height: 0;
 }
-.dot.grid .grid-16 > .column {
+.dot.grid-1 > .column {
+  width: 100%;
+}
+.dot.grid-1 > .row > .column {
+  width: 100%;
+}
+.dot.grid-2 {
+  position: relative;
+}
+.dot.grid-2:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid-2 > .column {
+  width: 50%;
+}
+.dot.grid-2 > .row > .column {
+  width: 50%;
+}
+.dot.grid-3 {
+  position: relative;
+}
+.dot.grid-3:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid-3 > .column {
+  width: 33.33333333%;
+}
+.dot.grid-3 > .row > .column {
+  width: 33.33333333%;
+}
+.dot.grid-4 {
+  position: relative;
+}
+.dot.grid-4:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid-4 > .column {
+  width: 25%;
+}
+.dot.grid-4 > .row > .column {
+  width: 25%;
+}
+.dot.grid-5 {
+  position: relative;
+}
+.dot.grid-5:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid-5 > .column {
+  width: 20%;
+}
+.dot.grid-5 > .row > .column {
+  width: 20%;
+}
+.dot.grid-6 {
+  position: relative;
+}
+.dot.grid-6:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid-6 > .column {
+  width: 16.66666667%;
+}
+.dot.grid-6 > .row > .column {
+  width: 16.66666667%;
+}
+.dot.grid-7 {
+  position: relative;
+}
+.dot.grid-7:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid-7 > .column {
+  width: 14.28571429%;
+}
+.dot.grid-7 > .row > .column {
+  width: 14.28571429%;
+}
+.dot.grid-8 {
+  position: relative;
+}
+.dot.grid-8:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid-8 > .column {
+  width: 12.5%;
+}
+.dot.grid-8 > .row > .column {
+  width: 12.5%;
+}
+.dot.grid-9 {
+  position: relative;
+}
+.dot.grid-9:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid-9 > .column {
+  width: 11.11111111%;
+}
+.dot.grid-9 > .row > .column {
+  width: 11.11111111%;
+}
+.dot.grid-10 {
+  position: relative;
+}
+.dot.grid-10:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid-10 > .column {
+  width: 10%;
+}
+.dot.grid-10 > .row > .column {
+  width: 10%;
+}
+.dot.grid-11 {
+  position: relative;
+}
+.dot.grid-11:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid-11 > .column {
+  width: 9.09090909%;
+}
+.dot.grid-11 > .row > .column {
+  width: 9.09090909%;
+}
+.dot.grid-12 {
+  position: relative;
+}
+.dot.grid-12:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid-12 > .column {
+  width: 8.33333333%;
+}
+.dot.grid-12 > .row > .column {
+  width: 8.33333333%;
+}
+.dot.grid-13 {
+  position: relative;
+}
+.dot.grid-13:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid-13 > .column {
+  width: 7.69230769%;
+}
+.dot.grid-13 > .row > .column {
+  width: 7.69230769%;
+}
+.dot.grid-14 {
+  position: relative;
+}
+.dot.grid-14:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid-14 > .column {
+  width: 7.14285714%;
+}
+.dot.grid-14 > .row > .column {
+  width: 7.14285714%;
+}
+.dot.grid-15 {
+  position: relative;
+}
+.dot.grid-15:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid-15 > .column {
+  width: 6.66666667%;
+}
+.dot.grid-15 > .row > .column {
+  width: 6.66666667%;
+}
+.dot.grid-16 {
+  position: relative;
+}
+.dot.grid-16:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid-16 > .column {
   width: 6.25%;
 }
-.dot.grid .grid-16 > .row > .column {
+.dot.grid-16 > .row > .column {
   width: 6.25%;
 }
+/* basic grid */
 .basic.grid > .column,
 .basic.grid > .row > .column {
   padding: 0;
@@ -3881,7 +3887,7 @@ i.dot.icon:hover,
 .dot.checkbox input[type=radio].show,
 .dot.radio input[type=radio].show {
   opacity: 1;
-  top: 2px;
+  top: 1px;
   left: 1px;
   width: 14px;
   height: 14px;
@@ -6443,7 +6449,15 @@ img.dot.image.massive.circle {
   line-height: 30px;
   margin-bottom: 14px;
 }
-.dot.form .field input,
+.dot.form .field input[type="text"],
+.dot.form .field input[type="number"],
+.dot.form .field input[type="url"],
+.dot.form .field input[type="tel"],
+.dot.form .field input[type="password"],
+.dot.form .field input[type="email"],
+.dot.form .field input[type="date"],
+.dot.form .field input[type="datetime-local"],
+.dot.form .field input[type="time"],
 .dot.form .field textarea {
   width: 100%;
 }
@@ -6983,7 +6997,15 @@ img.dot.image.massive.circle {
 .dot.form .field .fields > .field:last-child {
   margin-bottom: 0;
 }
-.dot.form .field input,
+.dot.form .field input[type="text"],
+.dot.form .field input[type="number"],
+.dot.form .field input[type="url"],
+.dot.form .field input[type="tel"],
+.dot.form .field input[type="password"],
+.dot.form .field input[type="email"],
+.dot.form .field input[type="date"],
+.dot.form .field input[type="datetime-local"],
+.dot.form .field input[type="time"],
 .dot.form .field textarea,
 .dot.form .field select {
   width: 100%;
@@ -7064,6 +7086,9 @@ img.dot.image.massive.circle {
 }
 .dot.form.inline > .action {
   margin-left: 100px;
+}
+.dot.form.basic {
+  padding: 0;
 }
 @media only screen and (max-width: 768px) {
   .dot.inline.form > .field > .label:nth-child(1) {
