@@ -3932,16 +3932,21 @@ i.dot.icon:hover,
 }
 .dot.checkbox.disabled,
 .dot.radio.disabled {
-  opacity: .8;
-  color: #BDBDBD;
+  cursor: not-allowed;
 }
 .dot.checkbox.disabled input[type=checkbox],
 .dot.radio.disabled input[type=checkbox],
 .dot.checkbox.disabled input[type=radio],
 .dot.radio.disabled input[type=radio] {
-  cursor: not-allowed;
   width: 0;
   pointer-events: none;
+}
+.dot.checkbox.disabled input[type=checkbox] + *:before,
+.dot.radio.disabled input[type=checkbox] + *:before,
+.dot.checkbox.disabled input[type=radio] + *:before,
+.dot.radio.disabled input[type=radio] + *:before {
+  opacity: .7;
+  color: #BDBDBD;
 }
 .dot.checkbox input[type=checkbox]:checked + *:before {
   content: 'check_box';
