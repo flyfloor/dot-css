@@ -193,19 +193,19 @@ fieldset {
 
 ::-webkit-input-placeholder { 
   /* Chrome/Opera/Safari */
-  color: @gray;
+  color: #ccc;
 }
 ::-moz-placeholder { 
   /* Firefox 19+ */
-  color: @gray;
+  color: #ccc;
 }
 :-ms-input-placeholder { 
   /* IE 10+ */
-  color: @gray;
+  color: #ccc;
 }
 :-moz-placeholder { 
   /* Firefox 18- */
-  color: @gray;
+  color: #ccc;
 }
 
 button,
@@ -237,7 +237,7 @@ textarea, select {
   box-shadow: none;
   -webkit-appearance: none;
   padding: @padding * 8/10 @padding;
-  border: 1px solid @soft_gray;
+  border: 1px solid rgba(50,50,50,0.16);
   -webkit-transition: all .2s;
   -o-transition: all .2s;
   transition: all .2s;
@@ -251,7 +251,6 @@ textarea, select {
   &[disabled] {
     cursor: not-allowed;
     background-color: @mini_gray;
-    border-color: @light_gray;
     opacity: .85;
   }
 }

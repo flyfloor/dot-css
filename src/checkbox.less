@@ -58,13 +58,15 @@
     }
 
     &.disabled {
-        opacity: .8;
-        color: @gray;
+        cursor: not-allowed;
         input {
             &[type=checkbox], &[type=radio] {
-                cursor: not-allowed;
                 width: 0;
                 pointer-events: none;
+                &+*:before {
+                    opacity: .7;
+                    color: @gray;
+                }
             }
         }
     }
