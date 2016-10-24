@@ -255,19 +255,19 @@ fieldset {
 }
 ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
-  color: #BDBDBD;
+  color: #ccc;
 }
 ::-moz-placeholder {
   /* Firefox 19+ */
-  color: #BDBDBD;
+  color: #ccc;
 }
 :-ms-input-placeholder {
   /* IE 10+ */
-  color: #BDBDBD;
+  color: #ccc;
 }
 :-moz-placeholder {
   /* Firefox 18- */
-  color: #BDBDBD;
+  color: #ccc;
 }
 button,
 html input[type="button"],
@@ -297,13 +297,13 @@ select {
   box-shadow: none;
   -webkit-appearance: none;
   padding: 8px 10px;
-  border: 1px solid #DDDDDD;
+  border: 1px solid rgba(50, 50, 50, 0.16);
   -webkit-transition: all .2s;
   -o-transition: all .2s;
   transition: all .2s;
   line-height: 15px;
   font-size: 15px;
-  border-radius: 3px;
+  border-radius: 5px;
   color: #212121;
 }
 input[type="text"]:focus,
@@ -332,7 +332,6 @@ textarea[disabled],
 select[disabled] {
   cursor: not-allowed;
   background-color: #FAFAFA;
-  border-color: #EEEEEE;
   opacity: .85;
 }
 select {
@@ -1163,7 +1162,7 @@ code {
 }
 .field {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 .field:after {
   content: ".";
@@ -1270,7 +1269,7 @@ i.dot.icon:hover,
   text-decoration: none;
   vertical-align: middle;
   color: #383838;
-  border-radius: 3px;
+  border-radius: 5px;
   background-color: #F5F5F5;
   font-weight: 500;
   font-size: 15px;
@@ -1282,9 +1281,9 @@ i.dot.icon:hover,
   -o-transition: all .2s;
   transition: all .2s;
   /*button size*/
-  padding: 7px 14px;
-  font-size: 14px;
-  line-height: 14px;
+  padding: 8px 16px;
+  font-size: 16px;
+  line-height: 16px;
   /*color button*/
   /*floar right clear padding*/
 }
@@ -1319,17 +1318,17 @@ i.dot.icon:hover,
 .dot .button > .icon,
 .dot button > .icon {
   cursor: pointer;
-  font-size: 14px;
-  line-height: 14px;
-  width: 14px;
-  height: 14px;
+  font-size: 16px;
+  line-height: 16px;
+  width: 16px;
+  height: 16px;
 }
 .dot.button.icon .icon,
 .dot .button.icon .icon,
 .dot button.icon .icon {
   vertical-align: top;
   /*default icon left*/
-  margin: 0 5px 0 -5px;
+  margin: 0 6px 0 -6px;
   opacity: .95;
 }
 .dot.button.icon .icon:hover,
@@ -1340,7 +1339,7 @@ i.dot.icon:hover,
 .dot.button.icon :last-child.icon,
 .dot .button.icon :last-child.icon,
 .dot button.icon :last-child.icon {
-  margin: 0 -5px 0 5px;
+  margin: 0 -6px 0 6px;
 }
 .dot.button.image img,
 .dot .button.image img,
@@ -1348,16 +1347,16 @@ i.dot.icon:hover,
   max-width: none;
   max-height: none;
   display: inline-block;
-  height: 28px;
-  margin: -7px 7px -7px -14px;
-  border-radius: 3px 0 0 3px;
+  height: 32px;
+  margin: -8px 8px -8px -16px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.button.image :last-child.image,
 .dot .button.image :last-child.image,
 .dot button.image :last-child.image {
-  border-radius: 0 3px 3px 0;
-  margin: -7px -14px -7px 7px;
+  border-radius: 0 5px 5px 0;
+  margin: -8px -16px -8px 8px;
 }
 .dot.button.circle,
 .dot .button.circle,
@@ -1365,7 +1364,7 @@ i.dot.icon:hover,
 .dot.button.labeled,
 .dot .button.labeled,
 .dot button.labeled {
-  padding: 14px;
+  padding: 16px;
 }
 .dot.button.circle,
 .dot .button.circle,
@@ -1396,7 +1395,7 @@ i.dot.icon:hover,
 .dot.button.round,
 .dot .button.round,
 .dot button.round {
-  border-radius: 21px;
+  border-radius: 24px;
 }
 .dot.button.tiny,
 .dot .button.tiny,
@@ -1440,13 +1439,13 @@ i.dot.icon:hover,
   display: inline-block;
   height: 20px;
   margin: -5px 5px -5px -10px;
-  border-radius: 3px 0 0 3px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.button.tiny.image :last-child.image,
 .dot .button.tiny.image :last-child.image,
 .dot button.tiny.image :last-child.image {
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 5px 5px 0;
   margin: -5px -10px -5px 5px;
 }
 .dot.button.tiny.circle,
@@ -1491,25 +1490,25 @@ i.dot.icon:hover,
 .dot.button.small,
 .dot .button.small,
 .dot button.small {
-  padding: 6px 12px;
-  font-size: 12px;
-  line-height: 12px;
+  padding: 7px 14px;
+  font-size: 14px;
+  line-height: 14px;
 }
 .dot.button.small > .icon,
 .dot .button.small > .icon,
 .dot button.small > .icon {
   cursor: pointer;
-  font-size: 12px;
-  line-height: 12px;
-  width: 12px;
-  height: 12px;
+  font-size: 14px;
+  line-height: 14px;
+  width: 14px;
+  height: 14px;
 }
 .dot.button.small.icon .icon,
 .dot .button.small.icon .icon,
 .dot button.small.icon .icon {
   vertical-align: top;
   /*default icon left*/
-  margin: 0 4px 0 -4px;
+  margin: 0 5px 0 -5px;
   opacity: .95;
 }
 .dot.button.small.icon .icon:hover,
@@ -1520,7 +1519,7 @@ i.dot.icon:hover,
 .dot.button.small.icon :last-child.icon,
 .dot .button.small.icon :last-child.icon,
 .dot button.small.icon :last-child.icon {
-  margin: 0 -4px 0 4px;
+  margin: 0 -5px 0 5px;
 }
 .dot.button.small.image img,
 .dot .button.small.image img,
@@ -1528,16 +1527,16 @@ i.dot.icon:hover,
   max-width: none;
   max-height: none;
   display: inline-block;
-  height: 24px;
-  margin: -6px 6px -6px -12px;
-  border-radius: 3px 0 0 3px;
+  height: 28px;
+  margin: -7px 7px -7px -14px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.button.small.image :last-child.image,
 .dot .button.small.image :last-child.image,
 .dot button.small.image :last-child.image {
-  border-radius: 0 3px 3px 0;
-  margin: -6px -12px -6px 6px;
+  border-radius: 0 5px 5px 0;
+  margin: -7px -14px -7px 7px;
 }
 .dot.button.small.circle,
 .dot .button.small.circle,
@@ -1545,7 +1544,7 @@ i.dot.icon:hover,
 .dot.button.small.labeled,
 .dot .button.small.labeled,
 .dot button.small.labeled {
-  padding: 12px;
+  padding: 14px;
 }
 .dot.button.small.circle,
 .dot .button.small.circle,
@@ -1576,30 +1575,30 @@ i.dot.icon:hover,
 .dot.button.small.round,
 .dot .button.small.round,
 .dot button.small.round {
-  border-radius: 18px;
+  border-radius: 21px;
 }
 .dot.button.large,
 .dot .button.large,
 .dot button.large {
-  padding: 9px 18px;
-  font-size: 18px;
-  line-height: 18px;
+  padding: 10px 20px;
+  font-size: 20px;
+  line-height: 20px;
 }
 .dot.button.large > .icon,
 .dot .button.large > .icon,
 .dot button.large > .icon {
   cursor: pointer;
-  font-size: 18px;
-  line-height: 18px;
-  width: 18px;
-  height: 18px;
+  font-size: 20px;
+  line-height: 20px;
+  width: 20px;
+  height: 20px;
 }
 .dot.button.large.icon .icon,
 .dot .button.large.icon .icon,
 .dot button.large.icon .icon {
   vertical-align: top;
   /*default icon left*/
-  margin: 0 7px 0 -7px;
+  margin: 0 8px 0 -8px;
   opacity: .95;
 }
 .dot.button.large.icon .icon:hover,
@@ -1610,7 +1609,7 @@ i.dot.icon:hover,
 .dot.button.large.icon :last-child.icon,
 .dot .button.large.icon :last-child.icon,
 .dot button.large.icon :last-child.icon {
-  margin: 0 -7px 0 7px;
+  margin: 0 -8px 0 8px;
 }
 .dot.button.large.image img,
 .dot .button.large.image img,
@@ -1618,16 +1617,16 @@ i.dot.icon:hover,
   max-width: none;
   max-height: none;
   display: inline-block;
-  height: 36px;
-  margin: -9px 9px -9px -18px;
-  border-radius: 3px 0 0 3px;
+  height: 40px;
+  margin: -10px 10px -10px -20px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.button.large.image :last-child.image,
 .dot .button.large.image :last-child.image,
 .dot button.large.image :last-child.image {
-  border-radius: 0 3px 3px 0;
-  margin: -9px -18px -9px 9px;
+  border-radius: 0 5px 5px 0;
+  margin: -10px -20px -10px 10px;
 }
 .dot.button.large.circle,
 .dot .button.large.circle,
@@ -1635,7 +1634,7 @@ i.dot.icon:hover,
 .dot.button.large.labeled,
 .dot .button.large.labeled,
 .dot button.large.labeled {
-  padding: 18px;
+  padding: 20px;
 }
 .dot.button.large.circle,
 .dot .button.large.circle,
@@ -1666,30 +1665,30 @@ i.dot.icon:hover,
 .dot.button.large.round,
 .dot .button.large.round,
 .dot button.large.round {
-  border-radius: 27px;
+  border-radius: 30px;
 }
 .dot.button.huge,
 .dot .button.huge,
 .dot button.huge {
-  padding: 11px 22px;
-  font-size: 22px;
-  line-height: 22px;
+  padding: 12px 24px;
+  font-size: 24px;
+  line-height: 24px;
 }
 .dot.button.huge > .icon,
 .dot .button.huge > .icon,
 .dot button.huge > .icon {
   cursor: pointer;
-  font-size: 22px;
-  line-height: 22px;
-  width: 22px;
-  height: 22px;
+  font-size: 24px;
+  line-height: 24px;
+  width: 24px;
+  height: 24px;
 }
 .dot.button.huge.icon .icon,
 .dot .button.huge.icon .icon,
 .dot button.huge.icon .icon {
   vertical-align: top;
   /*default icon left*/
-  margin: 0 9px 0 -9px;
+  margin: 0 10px 0 -10px;
   opacity: .95;
 }
 .dot.button.huge.icon .icon:hover,
@@ -1700,7 +1699,7 @@ i.dot.icon:hover,
 .dot.button.huge.icon :last-child.icon,
 .dot .button.huge.icon :last-child.icon,
 .dot button.huge.icon :last-child.icon {
-  margin: 0 -9px 0 9px;
+  margin: 0 -10px 0 10px;
 }
 .dot.button.huge.image img,
 .dot .button.huge.image img,
@@ -1708,16 +1707,16 @@ i.dot.icon:hover,
   max-width: none;
   max-height: none;
   display: inline-block;
-  height: 44px;
-  margin: -11px 11px -11px -22px;
-  border-radius: 3px 0 0 3px;
+  height: 48px;
+  margin: -12px 12px -12px -24px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.button.huge.image :last-child.image,
 .dot .button.huge.image :last-child.image,
 .dot button.huge.image :last-child.image {
-  border-radius: 0 3px 3px 0;
-  margin: -11px -22px -11px 11px;
+  border-radius: 0 5px 5px 0;
+  margin: -12px -24px -12px 12px;
 }
 .dot.button.huge.circle,
 .dot .button.huge.circle,
@@ -1725,7 +1724,7 @@ i.dot.icon:hover,
 .dot.button.huge.labeled,
 .dot .button.huge.labeled,
 .dot button.huge.labeled {
-  padding: 22px;
+  padding: 24px;
 }
 .dot.button.huge.circle,
 .dot .button.huge.circle,
@@ -1756,7 +1755,7 @@ i.dot.icon:hover,
 .dot.button.huge.round,
 .dot .button.huge.round,
 .dot button.huge.round {
-  border-radius: 33px;
+  border-radius: 36px;
 }
 .dot.button.red,
 .dot .button.red,
@@ -2338,12 +2337,12 @@ i.dot.icon:hover,
   margin: 0 !important;
 }
 .dot.button-group > .button:first-child {
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 .dot.button-group > .button:last-child {
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   margin-right: 10px;
 }
 .dot.button-group.vertical {
@@ -2356,56 +2355,56 @@ i.dot.icon:hover,
   border-radius: 0;
 }
 .dot.button-group.vertical > .button:first-child {
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 .dot.button-group.vertical > .button:last-child {
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 .dot.button-group.float-right {
   margin-right: 0;
 }
 .dot.button-group > .button {
-  padding: 7px 14px;
-  font-size: 14px;
-  line-height: 14px;
+  padding: 8px 16px;
+  font-size: 16px;
+  line-height: 16px;
 }
 .dot.button-group > .button > .icon {
   cursor: pointer;
-  font-size: 14px;
-  line-height: 14px;
-  width: 14px;
-  height: 14px;
+  font-size: 16px;
+  line-height: 16px;
+  width: 16px;
+  height: 16px;
 }
 .dot.button-group > .button.icon .icon {
   vertical-align: top;
   /*default icon left*/
-  margin: 0 5px 0 -5px;
+  margin: 0 6px 0 -6px;
   opacity: .95;
 }
 .dot.button-group > .button.icon .icon:hover {
   opacity: 1;
 }
 .dot.button-group > .button.icon :last-child.icon {
-  margin: 0 -5px 0 5px;
+  margin: 0 -6px 0 6px;
 }
 .dot.button-group > .button.image img {
   max-width: none;
   max-height: none;
   display: inline-block;
-  height: 28px;
-  margin: -7px 7px -7px -14px;
-  border-radius: 3px 0 0 3px;
+  height: 32px;
+  margin: -8px 8px -8px -16px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.button-group > .button.image :last-child.image {
-  border-radius: 0 3px 3px 0;
-  margin: -7px -14px -7px 7px;
+  border-radius: 0 5px 5px 0;
+  margin: -8px -16px -8px 8px;
 }
 .dot.button-group > .button.circle,
 .dot.button-group > .button.labeled {
-  padding: 14px;
+  padding: 16px;
 }
 .dot.button-group > .button.circle,
 .dot.button-group > .button.labeled {
@@ -2424,7 +2423,7 @@ i.dot.icon:hover,
 }
 .dot.button-group > .button.circle,
 .dot.button-group > .button.round {
-  border-radius: 21px;
+  border-radius: 24px;
 }
 .dot.button-group.tiny > .button {
   padding: 5px 10px;
@@ -2456,11 +2455,11 @@ i.dot.icon:hover,
   display: inline-block;
   height: 20px;
   margin: -5px 5px -5px -10px;
-  border-radius: 3px 0 0 3px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.button-group.tiny > .button.image :last-child.image {
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 5px 5px 0;
   margin: -5px -10px -5px 5px;
 }
 .dot.button-group.tiny > .button.circle,
@@ -2487,45 +2486,45 @@ i.dot.icon:hover,
   border-radius: 15px;
 }
 .dot.button-group.small > .button {
-  padding: 6px 12px;
-  font-size: 12px;
-  line-height: 12px;
+  padding: 7px 14px;
+  font-size: 14px;
+  line-height: 14px;
 }
 .dot.button-group.small > .button > .icon {
   cursor: pointer;
-  font-size: 12px;
-  line-height: 12px;
-  width: 12px;
-  height: 12px;
+  font-size: 14px;
+  line-height: 14px;
+  width: 14px;
+  height: 14px;
 }
 .dot.button-group.small > .button.icon .icon {
   vertical-align: top;
   /*default icon left*/
-  margin: 0 4px 0 -4px;
+  margin: 0 5px 0 -5px;
   opacity: .95;
 }
 .dot.button-group.small > .button.icon .icon:hover {
   opacity: 1;
 }
 .dot.button-group.small > .button.icon :last-child.icon {
-  margin: 0 -4px 0 4px;
+  margin: 0 -5px 0 5px;
 }
 .dot.button-group.small > .button.image img {
   max-width: none;
   max-height: none;
   display: inline-block;
-  height: 24px;
-  margin: -6px 6px -6px -12px;
-  border-radius: 3px 0 0 3px;
+  height: 28px;
+  margin: -7px 7px -7px -14px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.button-group.small > .button.image :last-child.image {
-  border-radius: 0 3px 3px 0;
-  margin: -6px -12px -6px 6px;
+  border-radius: 0 5px 5px 0;
+  margin: -7px -14px -7px 7px;
 }
 .dot.button-group.small > .button.circle,
 .dot.button-group.small > .button.labeled {
-  padding: 12px;
+  padding: 14px;
 }
 .dot.button-group.small > .button.circle,
 .dot.button-group.small > .button.labeled {
@@ -2544,48 +2543,48 @@ i.dot.icon:hover,
 }
 .dot.button-group.small > .button.circle,
 .dot.button-group.small > .button.round {
-  border-radius: 18px;
+  border-radius: 21px;
 }
 .dot.button-group.large > .button {
-  padding: 9px 18px;
-  font-size: 18px;
-  line-height: 18px;
+  padding: 10px 20px;
+  font-size: 20px;
+  line-height: 20px;
 }
 .dot.button-group.large > .button > .icon {
   cursor: pointer;
-  font-size: 18px;
-  line-height: 18px;
-  width: 18px;
-  height: 18px;
+  font-size: 20px;
+  line-height: 20px;
+  width: 20px;
+  height: 20px;
 }
 .dot.button-group.large > .button.icon .icon {
   vertical-align: top;
   /*default icon left*/
-  margin: 0 7px 0 -7px;
+  margin: 0 8px 0 -8px;
   opacity: .95;
 }
 .dot.button-group.large > .button.icon .icon:hover {
   opacity: 1;
 }
 .dot.button-group.large > .button.icon :last-child.icon {
-  margin: 0 -7px 0 7px;
+  margin: 0 -8px 0 8px;
 }
 .dot.button-group.large > .button.image img {
   max-width: none;
   max-height: none;
   display: inline-block;
-  height: 36px;
-  margin: -9px 9px -9px -18px;
-  border-radius: 3px 0 0 3px;
+  height: 40px;
+  margin: -10px 10px -10px -20px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.button-group.large > .button.image :last-child.image {
-  border-radius: 0 3px 3px 0;
-  margin: -9px -18px -9px 9px;
+  border-radius: 0 5px 5px 0;
+  margin: -10px -20px -10px 10px;
 }
 .dot.button-group.large > .button.circle,
 .dot.button-group.large > .button.labeled {
-  padding: 18px;
+  padding: 20px;
 }
 .dot.button-group.large > .button.circle,
 .dot.button-group.large > .button.labeled {
@@ -2604,48 +2603,48 @@ i.dot.icon:hover,
 }
 .dot.button-group.large > .button.circle,
 .dot.button-group.large > .button.round {
-  border-radius: 27px;
+  border-radius: 30px;
 }
 .dot.button-group.huge > .button {
-  padding: 11px 22px;
-  font-size: 22px;
-  line-height: 22px;
+  padding: 12px 24px;
+  font-size: 24px;
+  line-height: 24px;
 }
 .dot.button-group.huge > .button > .icon {
   cursor: pointer;
-  font-size: 22px;
-  line-height: 22px;
-  width: 22px;
-  height: 22px;
+  font-size: 24px;
+  line-height: 24px;
+  width: 24px;
+  height: 24px;
 }
 .dot.button-group.huge > .button.icon .icon {
   vertical-align: top;
   /*default icon left*/
-  margin: 0 9px 0 -9px;
+  margin: 0 10px 0 -10px;
   opacity: .95;
 }
 .dot.button-group.huge > .button.icon .icon:hover {
   opacity: 1;
 }
 .dot.button-group.huge > .button.icon :last-child.icon {
-  margin: 0 -9px 0 9px;
+  margin: 0 -10px 0 10px;
 }
 .dot.button-group.huge > .button.image img {
   max-width: none;
   max-height: none;
   display: inline-block;
-  height: 44px;
-  margin: -11px 11px -11px -22px;
-  border-radius: 3px 0 0 3px;
+  height: 48px;
+  margin: -12px 12px -12px -24px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.button-group.huge > .button.image :last-child.image {
-  border-radius: 0 3px 3px 0;
-  margin: -11px -22px -11px 11px;
+  border-radius: 0 5px 5px 0;
+  margin: -12px -24px -12px 12px;
 }
 .dot.button-group.huge > .button.circle,
 .dot.button-group.huge > .button.labeled {
-  padding: 22px;
+  padding: 24px;
 }
 .dot.button-group.huge > .button.circle,
 .dot.button-group.huge > .button.labeled {
@@ -2664,7 +2663,7 @@ i.dot.icon:hover,
 }
 .dot.button-group.huge > .button.circle,
 .dot.button-group.huge > .button.round {
-  border-radius: 33px;
+  border-radius: 36px;
 }
 /* default column */
 .dot .column {
@@ -3504,16 +3503,16 @@ i.dot.icon:hover,
   width: 100%;
 }
 .dot.input > :first-child {
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 .dot.input > :last-child {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 .dot.input.fluid {
   width: 100%;
@@ -3522,7 +3521,7 @@ i.dot.icon:hover,
   width: 5em;
 }
 .dot.input.icon > input {
-  border-radius: 3px;
+  border-radius: 5px;
 }
 .dot.input .icon {
   position: absolute;
@@ -3545,45 +3544,45 @@ i.dot.icon:hover,
 .dot.input button,
 .dot.input .button {
   font-size: 14px;
-  padding: 6px;
-  line-height: 14px;
-  height: 30px;
+  padding: 8px;
+  line-height: 16px;
+  height: 36px;
 }
 .dot.input.round > :first-child {
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
 }
 .dot.input.round > :last-child {
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
 }
 .dot.input.icon.fluid {
   display: block;
 }
 .dot.input.icon.round input {
-  border-radius: 20px;
+  border-radius: 24px;
 }
 .dot.input.icon input {
-  padding-left: 6px;
-  padding-right: 30px;
+  padding-left: 8px;
+  padding-right: 36px;
 }
 .dot.input.icon .icon + input {
-  padding-left: 30px;
-  padding-right: 6px;
+  padding-left: 36px;
+  padding-right: 8px;
 }
 .dot.input .icon {
   cursor: pointer;
-  width: 28px;
+  width: 34px;
   text-align: center;
-  line-height: 28px;
-  font-size: 16px;
+  line-height: 34px;
+  font-size: 18px;
 }
 .dot.input.tiny input,
 .dot.input.tiny select,
 .dot.input.tiny textarea,
 .dot.input.tiny button,
 .dot.input.tiny .button {
-  font-size: 10px;
+  font-size: 8px;
   padding: 4px;
   line-height: 10px;
   height: 22px;
@@ -3623,38 +3622,38 @@ i.dot.icon:hover,
 .dot.input.small button,
 .dot.input.small .button {
   font-size: 12px;
-  padding: 5px;
-  line-height: 12px;
-  height: 26px;
+  padding: 7px;
+  line-height: 14px;
+  height: 32px;
 }
 .dot.input.small.round > :first-child {
-  border-top-left-radius: 17px;
-  border-bottom-left-radius: 17px;
+  border-top-left-radius: 21px;
+  border-bottom-left-radius: 21px;
 }
 .dot.input.small.round > :last-child {
-  border-top-right-radius: 17px;
-  border-bottom-right-radius: 17px;
+  border-top-right-radius: 21px;
+  border-bottom-right-radius: 21px;
 }
 .dot.input.small.icon.fluid {
   display: block;
 }
 .dot.input.small.icon.round input {
-  border-radius: 17px;
+  border-radius: 21px;
 }
 .dot.input.small.icon input {
-  padding-left: 5px;
-  padding-right: 26px;
+  padding-left: 7px;
+  padding-right: 32px;
 }
 .dot.input.small.icon .icon + input {
-  padding-left: 26px;
-  padding-right: 5px;
+  padding-left: 32px;
+  padding-right: 7px;
 }
 .dot.input.small .icon {
   cursor: pointer;
-  width: 24px;
+  width: 30px;
   text-align: center;
-  line-height: 24px;
-  font-size: 14px;
+  line-height: 30px;
+  font-size: 16px;
 }
 .dot.input.large input,
 .dot.input.large select,
@@ -3662,38 +3661,38 @@ i.dot.icon:hover,
 .dot.input.large button,
 .dot.input.large .button {
   font-size: 18px;
-  padding: 8px;
-  line-height: 18px;
-  height: 38px;
+  padding: 10px;
+  line-height: 20px;
+  height: 44px;
 }
 .dot.input.large.round > :first-child {
-  border-top-left-radius: 26px;
-  border-bottom-left-radius: 26px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
 }
 .dot.input.large.round > :last-child {
-  border-top-right-radius: 26px;
-  border-bottom-right-radius: 26px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 .dot.input.large.icon.fluid {
   display: block;
 }
 .dot.input.large.icon.round input {
-  border-radius: 26px;
+  border-radius: 30px;
 }
 .dot.input.large.icon input {
-  padding-left: 8px;
-  padding-right: 38px;
+  padding-left: 10px;
+  padding-right: 44px;
 }
 .dot.input.large.icon .icon + input {
-  padding-left: 38px;
-  padding-right: 8px;
+  padding-left: 44px;
+  padding-right: 10px;
 }
 .dot.input.large .icon {
   cursor: pointer;
-  width: 36px;
+  width: 42px;
   text-align: center;
-  line-height: 36px;
-  font-size: 20px;
+  line-height: 42px;
+  font-size: 22px;
 }
 .dot.input.huge input,
 .dot.input.huge select,
@@ -3701,38 +3700,38 @@ i.dot.icon:hover,
 .dot.input.huge button,
 .dot.input.huge .button {
   font-size: 22px;
-  padding: 10px;
-  line-height: 22px;
-  height: 46px;
+  padding: 12px;
+  line-height: 24px;
+  height: 52px;
 }
 .dot.input.huge.round > :first-child {
-  border-top-left-radius: 32px;
-  border-bottom-left-radius: 32px;
+  border-top-left-radius: 36px;
+  border-bottom-left-radius: 36px;
 }
 .dot.input.huge.round > :last-child {
-  border-top-right-radius: 32px;
-  border-bottom-right-radius: 32px;
+  border-top-right-radius: 36px;
+  border-bottom-right-radius: 36px;
 }
 .dot.input.huge.icon.fluid {
   display: block;
 }
 .dot.input.huge.icon.round input {
-  border-radius: 32px;
+  border-radius: 36px;
 }
 .dot.input.huge.icon input {
-  padding-left: 10px;
-  padding-right: 46px;
+  padding-left: 12px;
+  padding-right: 52px;
 }
 .dot.input.huge.icon .icon + input {
-  padding-left: 46px;
-  padding-right: 10px;
+  padding-left: 52px;
+  padding-right: 12px;
 }
 .dot.input.huge .icon {
   cursor: pointer;
-  width: 44px;
+  width: 50px;
   text-align: center;
-  line-height: 44px;
-  font-size: 24px;
+  line-height: 50px;
+  font-size: 26px;
 }
 .dot input,
 .dotinput.input,
@@ -3743,9 +3742,9 @@ i.dot.icon:hover,
   -o-transition: all .3s;
   transition: all .3s;
   font-size: 14px;
-  padding: 6px;
-  line-height: 14px;
-  height: 30px;
+  padding: 8px;
+  line-height: 16px;
+  height: 36px;
 }
 .dot input:focus,
 .dotinput.input:focus,
@@ -3773,13 +3772,13 @@ i.dot.icon:hover,
 .dotinput.input.round,
 .dot textarea.round,
 .dot select.round {
-  border-radius: 20px;
+  border-radius: 24px;
 }
 .dot input.tiny,
 .dotinput.input.tiny,
 .dot textarea.tiny,
 .dot select.tiny {
-  font-size: 10px;
+  font-size: 8px;
   padding: 4px;
   line-height: 10px;
   height: 22px;
@@ -3795,45 +3794,45 @@ i.dot.icon:hover,
 .dot textarea.small,
 .dot select.small {
   font-size: 12px;
-  padding: 5px;
-  line-height: 12px;
-  height: 26px;
+  padding: 7px;
+  line-height: 14px;
+  height: 32px;
 }
 .dot input.small.round,
 .dotinput.input.small.round,
 .dot textarea.small.round,
 .dot select.small.round {
-  border-radius: 17px;
+  border-radius: 21px;
 }
 .dot input.large,
 .dotinput.input.large,
 .dot textarea.large,
 .dot select.large {
   font-size: 18px;
-  padding: 8px;
-  line-height: 18px;
-  height: 38px;
+  padding: 10px;
+  line-height: 20px;
+  height: 44px;
 }
 .dot input.large.round,
 .dotinput.input.large.round,
 .dot textarea.large.round,
 .dot select.large.round {
-  border-radius: 26px;
+  border-radius: 30px;
 }
 .dot input.huge,
 .dotinput.input.huge,
 .dot textarea.huge,
 .dot select.huge {
   font-size: 22px;
-  padding: 10px;
-  line-height: 22px;
-  height: 46px;
+  padding: 12px;
+  line-height: 24px;
+  height: 52px;
 }
 .dot input.huge.round,
 .dotinput.input.huge.round,
 .dot textarea.huge.round,
 .dot select.huge.round {
-  border-radius: 32px;
+  border-radius: 36px;
 }
 .dot input.disabled,
 .dotinput.input.disabled,
@@ -3965,7 +3964,7 @@ i.dot.icon:hover,
   border: 0;
   background-color: #F5F5F5;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 5px;
   cursor: pointer;
   /*size*/
   padding: 6px 12px;
@@ -4013,12 +4012,12 @@ i.dot.icon:hover,
   display: inline-block;
   height: 24px;
   margin: -6px 6px -6px -12px;
-  border-radius: 3px 0 0 3px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.label.image :last-child.image,
 .dot .label.image :last-child.image {
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 5px 5px 0;
   margin: -6px -12px -6px 6px;
 }
 .dot.label.circle,
@@ -4088,12 +4087,12 @@ i.dot.icon:hover,
   display: inline-block;
   height: 16px;
   margin: -4px 4px -4px -8px;
-  border-radius: 3px 0 0 3px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.label.tiny.image :last-child.image,
 .dot .label.tiny.image :last-child.image {
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 5px 5px 0;
   margin: -4px -8px -4px 4px;
 }
 .dot.label.tiny.circle,
@@ -4163,12 +4162,12 @@ i.dot.icon:hover,
   display: inline-block;
   height: 20px;
   margin: -5px 5px -5px -10px;
-  border-radius: 3px 0 0 3px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.label.small.image :last-child.image,
 .dot .label.small.image :last-child.image {
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 5px 5px 0;
   margin: -5px -10px -5px 5px;
 }
 .dot.label.small.circle,
@@ -4238,12 +4237,12 @@ i.dot.icon:hover,
   display: inline-block;
   height: 32px;
   margin: -8px 8px -8px -16px;
-  border-radius: 3px 0 0 3px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.label.large.image :last-child.image,
 .dot .label.large.image :last-child.image {
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 5px 5px 0;
   margin: -8px -16px -8px 8px;
 }
 .dot.label.large.circle,
@@ -4313,12 +4312,12 @@ i.dot.icon:hover,
   display: inline-block;
   height: 40px;
   margin: -10px 10px -10px -20px;
-  border-radius: 3px 0 0 3px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.label.huge.image :last-child.image,
 .dot .label.huge.image :last-child.image {
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 5px 5px 0;
   margin: -10px -20px -10px 10px;
 }
 .dot.label.huge.circle,
@@ -4867,11 +4866,11 @@ i.dot.icon:hover,
   display: inline-block;
   height: 24px;
   margin: -6px 6px -6px -12px;
-  border-radius: 3px 0 0 3px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.label-group .label.image :last-child.image {
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 5px 5px 0;
   margin: -6px -12px -6px 6px;
 }
 .dot.label-group .label.circle,
@@ -4927,11 +4926,11 @@ i.dot.icon:hover,
   display: inline-block;
   height: 16px;
   margin: -4px 4px -4px -8px;
-  border-radius: 3px 0 0 3px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.label-group.tiny .label.image :last-child.image {
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 5px 5px 0;
   margin: -4px -8px -4px 4px;
 }
 .dot.label-group.tiny .label.circle,
@@ -4987,11 +4986,11 @@ i.dot.icon:hover,
   display: inline-block;
   height: 20px;
   margin: -5px 5px -5px -10px;
-  border-radius: 3px 0 0 3px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.label-group.small .label.image :last-child.image {
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 5px 5px 0;
   margin: -5px -10px -5px 5px;
 }
 .dot.label-group.small .label.circle,
@@ -5047,11 +5046,11 @@ i.dot.icon:hover,
   display: inline-block;
   height: 32px;
   margin: -8px 8px -8px -16px;
-  border-radius: 3px 0 0 3px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.label-group.large .label.image :last-child.image {
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 5px 5px 0;
   margin: -8px -16px -8px 8px;
 }
 .dot.label-group.large .label.circle,
@@ -5107,11 +5106,11 @@ i.dot.icon:hover,
   display: inline-block;
   height: 40px;
   margin: -10px 10px -10px -20px;
-  border-radius: 3px 0 0 3px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.label-group.huge .label.image :last-child.image {
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 5px 5px 0;
   margin: -10px -20px -10px 10px;
 }
 .dot.label-group.huge .label.circle,
@@ -5148,7 +5147,7 @@ img.dot.image {
   height: auto;
 }
 img.dot.image.round {
-  border-radius: 3px;
+  border-radius: 5px;
 }
 img.dot.image.fluid {
   display: block;
@@ -5211,7 +5210,7 @@ img.dot.image.massive.circle {
   width: 100%;
 }
 .dot.image.round > img {
-  border-radius: 3px;
+  border-radius: 5px;
 }
 .dot.image.middle.circle {
   border-radius: 50%;
@@ -5482,7 +5481,7 @@ img.dot.image.massive.circle {
   width: 100%;
   height: 100%;
   background-color: #F5F5F5;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 .dot.comment > .avatar.angled img {
   border-radius: 0;
@@ -5658,7 +5657,7 @@ img.dot.image.massive.circle {
 .dot.message {
   margin: 10px 0;
   color: #616161;
-  border-radius: 3px;
+  border-radius: 5px;
   background-color: #FAFAFA;
   border: 1px solid #EEEEEE;
   padding: 9px 18px;
@@ -5720,11 +5719,11 @@ img.dot.image.massive.circle {
   display: inline-block;
   height: 33px;
   margin: -9px 9px -9px -18px;
-  border-radius: 3px 0 0 3px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.message.image :last-child.image {
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 5px 5px 0;
   margin: -9px -18px -9px 9px;
 }
 .dot.message.circle,
@@ -5782,11 +5781,11 @@ img.dot.image.massive.circle {
   display: inline-block;
   height: 22px;
   margin: -6px 6px -6px -12px;
-  border-radius: 3px 0 0 3px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.message.tiny.image :last-child.image {
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 5px 5px 0;
   margin: -6px -12px -6px 6px;
 }
 .dot.message.tiny.circle,
@@ -5844,11 +5843,11 @@ img.dot.image.massive.circle {
   display: inline-block;
   height: 26px;
   margin: -7px 7px -7px -14px;
-  border-radius: 3px 0 0 3px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.message.small.image :last-child.image {
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 5px 5px 0;
   margin: -7px -14px -7px 7px;
 }
 .dot.message.small.circle,
@@ -5906,11 +5905,11 @@ img.dot.image.massive.circle {
   display: inline-block;
   height: 44px;
   margin: -12px 12px -12px -24px;
-  border-radius: 3px 0 0 3px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.message.large.image :last-child.image {
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 5px 5px 0;
   margin: -12px -24px -12px 12px;
 }
 .dot.message.large.circle,
@@ -5968,11 +5967,11 @@ img.dot.image.massive.circle {
   display: inline-block;
   height: 55px;
   margin: -15px 15px -15px -30px;
-  border-radius: 3px 0 0 3px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.message.huge.image :last-child.image {
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 5px 5px 0;
   margin: -15px -30px -15px 15px;
 }
 .dot.message.huge.circle,
@@ -6446,8 +6445,8 @@ img.dot.image.massive.circle {
   height: 0;
 }
 .dot.form .field {
-  line-height: 30px;
-  margin-bottom: 14px;
+  line-height: 36px;
+  margin-bottom: 16px;
 }
 .dot.form .field input[type="text"],
 .dot.form .field input[type="number"],
@@ -6992,7 +6991,7 @@ img.dot.image.massive.circle {
   padding-right: 0;
 }
 .dot.form .field .fields > .field {
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 .dot.form .field .fields > .field:last-child {
   margin-bottom: 0;
@@ -7029,7 +7028,7 @@ img.dot.image.massive.circle {
 .dot.form.inline > .field > .label:nth-child(1) {
   vertical-align: top;
   width: 100px;
-  padding: 8px 0;
+  padding: 10px 0;
   padding-right: 10px;
   float: left;
 }
@@ -7097,7 +7096,7 @@ img.dot.image.massive.circle {
   .dot.form .field .fields-1 .field {
     width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-1 > .field:last-child {
     margin-bottom: 0;
@@ -7105,12 +7104,12 @@ img.dot.image.massive.circle {
   .dot.form .field .fields .field-1 {
     width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-2 .field {
     width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-2 > .field:last-child {
     margin-bottom: 0;
@@ -7118,12 +7117,12 @@ img.dot.image.massive.circle {
   .dot.form .field .fields .field-2 {
     width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-3 .field {
     width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-3 > .field:last-child {
     margin-bottom: 0;
@@ -7131,12 +7130,12 @@ img.dot.image.massive.circle {
   .dot.form .field .fields .field-3 {
     width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-4 .field {
     width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-4 > .field:last-child {
     margin-bottom: 0;
@@ -7144,12 +7143,12 @@ img.dot.image.massive.circle {
   .dot.form .field .fields .field-4 {
     width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-5 .field {
     width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-5 > .field:last-child {
     margin-bottom: 0;
@@ -7157,12 +7156,12 @@ img.dot.image.massive.circle {
   .dot.form .field .fields .field-5 {
     width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-6 .field {
     width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-6 > .field:last-child {
     margin-bottom: 0;
@@ -7170,12 +7169,12 @@ img.dot.image.massive.circle {
   .dot.form .field .fields .field-6 {
     width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-7 .field {
     width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-7 > .field:last-child {
     margin-bottom: 0;
@@ -7183,12 +7182,12 @@ img.dot.image.massive.circle {
   .dot.form .field .fields .field-7 {
     width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-8 .field {
     width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-8 > .field:last-child {
     margin-bottom: 0;
@@ -7196,12 +7195,12 @@ img.dot.image.massive.circle {
   .dot.form .field .fields .field-8 {
     width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-9 .field {
     width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-9 > .field:last-child {
     margin-bottom: 0;
@@ -7209,12 +7208,12 @@ img.dot.image.massive.circle {
   .dot.form .field .fields .field-9 {
     width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-10 .field {
     width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-10 > .field:last-child {
     margin-bottom: 0;
@@ -7222,12 +7221,12 @@ img.dot.image.massive.circle {
   .dot.form .field .fields .field-10 {
     width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-11 .field {
     width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-11 > .field:last-child {
     margin-bottom: 0;
@@ -7235,12 +7234,12 @@ img.dot.image.massive.circle {
   .dot.form .field .fields .field-11 {
     width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-12 .field {
     width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-12 > .field:last-child {
     margin-bottom: 0;
@@ -7248,12 +7247,12 @@ img.dot.image.massive.circle {
   .dot.form .field .fields .field-12 {
     width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-13 .field {
     width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-13 > .field:last-child {
     margin-bottom: 0;
@@ -7261,12 +7260,12 @@ img.dot.image.massive.circle {
   .dot.form .field .fields .field-13 {
     width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-14 .field {
     width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-14 > .field:last-child {
     margin-bottom: 0;
@@ -7274,12 +7273,12 @@ img.dot.image.massive.circle {
   .dot.form .field .fields .field-14 {
     width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-15 .field {
     width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-15 > .field:last-child {
     margin-bottom: 0;
@@ -7287,12 +7286,12 @@ img.dot.image.massive.circle {
   .dot.form .field .fields .field-15 {
     width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-16 .field {
     width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-16 > .field:last-child {
     margin-bottom: 0;
@@ -7300,7 +7299,7 @@ img.dot.image.massive.circle {
   .dot.form .field .fields .field-16 {
     width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
 }
 .dot.menu {
@@ -7329,7 +7328,7 @@ img.dot.image.massive.circle {
 .dot.menu > .item,
 .dot.menu .dot.item {
   color: #383838;
-  border-radius: 3px;
+  border-radius: 5px;
   margin: 0 5px;
   -webkit-transition: background 0.3s, opacity 0.3s, color 0.3s, border-color 0.3s;
   -o-transition: background 0.3s, opacity 0.3s, color 0.3s, border-color 0.3s;
@@ -7428,7 +7427,7 @@ img.dot.image.massive.circle {
 .dot.menu.bar {
   margin: 0 0 10px;
   padding: 0;
-  border-radius: 3px;
+  border-radius: 5px;
   height: 36px;
   line-height: 36px;
   border: 1px solid #EEEEEE;
@@ -7439,13 +7438,13 @@ img.dot.image.massive.circle {
 }
 .dot.menu.bar > .item:first-child,
 .dot.menu.bar .dot.item:first-child {
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 .dot.menu.bar > .item:last-child,
 .dot.menu.bar .dot.item:last-child {
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 .dot.menu.bar > .item,
 .dot.menu.bar .dot.item {
@@ -7466,7 +7465,7 @@ img.dot.image.massive.circle {
   margin: 0;
   width: 200px;
   border: 1px solid #EEEEEE;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 .dot.vertical.menu .item {
   display: block;
@@ -7478,12 +7477,12 @@ img.dot.image.massive.circle {
   border-top: 1px solid #EEEEEE;
 }
 .dot.vertical.menu .item:first-child {
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 .dot.vertical.menu .item:last-child {
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 .dot.vertical.menu.angled {
   border-radius: 0;
@@ -7517,8 +7516,8 @@ img.dot.image.massive.circle {
   margin: 0 0 -1px;
   display: inline-block;
   line-height: 36px;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 .dot.tab > .item.active {
   border-color: #EEEEEE;
@@ -7555,7 +7554,7 @@ img.dot.image.massive.circle {
   border: 1px solid transparent;
   border-right: 0;
   margin-right: -1px;
-  border-radius: 3px;
+  border-radius: 5px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }

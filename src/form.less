@@ -63,13 +63,13 @@
 }
 
 @{NS}.form {
-    @__margin_bottom: @padding * 1.4;
+    @__margin_bottom: @padding * 1.6;
     @__inline_paadding: @padding * .5;
     padding: @padding * 2;
     width: 100%;
     .clearfix;
     .field {
-        line-height: @line_height * 2;
+        line-height: @__margin_bottom * 2 + 4;
         margin-bottom: @__margin_bottom;
         input[type="text"], 
         input[type="number"], 
@@ -152,7 +152,7 @@
                 width: @__form_label_width;
                 vertical-align: top;
                 width: @padding * 10;
-                padding: @padding * 8/10 0;
+                padding: @padding 0;
                 padding-right: @padding;
                 float: left;
             }
@@ -172,7 +172,7 @@
 }
 
 @media @mobile_view {
-    @__margin_bottom: @padding * 1.4;
+    @__margin_bottom: @padding * 1.6;
     @__inline_paadding: @padding * .5;
     @{NS}.inline.form>.field>.label:nth-child(1) {
         width: auto;
