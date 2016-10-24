@@ -1282,7 +1282,7 @@ i.dot.icon:hover,
   transition: all .2s;
   /*button size*/
   padding: 8px 16px;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 16px;
   /*color button*/
   /*floar right clear padding*/
@@ -1401,7 +1401,7 @@ i.dot.icon:hover,
 .dot .button.tiny,
 .dot button.tiny {
   padding: 5px 10px;
-  font-size: 10px;
+  font-size: 8px;
   line-height: 10px;
 }
 .dot.button.tiny > .icon,
@@ -1491,7 +1491,7 @@ i.dot.icon:hover,
 .dot .button.small,
 .dot button.small {
   padding: 7px 14px;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 14px;
 }
 .dot.button.small > .icon,
@@ -1581,7 +1581,7 @@ i.dot.icon:hover,
 .dot .button.large,
 .dot button.large {
   padding: 10px 20px;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 20px;
 }
 .dot.button.large > .icon,
@@ -1671,7 +1671,7 @@ i.dot.icon:hover,
 .dot .button.huge,
 .dot button.huge {
   padding: 12px 24px;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 24px;
 }
 .dot.button.huge > .icon,
@@ -2367,7 +2367,7 @@ i.dot.icon:hover,
 }
 .dot.button-group > .button {
   padding: 8px 16px;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 16px;
 }
 .dot.button-group > .button > .icon {
@@ -2427,7 +2427,7 @@ i.dot.icon:hover,
 }
 .dot.button-group.tiny > .button {
   padding: 5px 10px;
-  font-size: 10px;
+  font-size: 8px;
   line-height: 10px;
 }
 .dot.button-group.tiny > .button > .icon {
@@ -2487,7 +2487,7 @@ i.dot.icon:hover,
 }
 .dot.button-group.small > .button {
   padding: 7px 14px;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 14px;
 }
 .dot.button-group.small > .button > .icon {
@@ -2547,7 +2547,7 @@ i.dot.icon:hover,
 }
 .dot.button-group.large > .button {
   padding: 10px 20px;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 20px;
 }
 .dot.button-group.large > .button > .icon {
@@ -2607,7 +2607,7 @@ i.dot.icon:hover,
 }
 .dot.button-group.huge > .button {
   padding: 12px 24px;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 24px;
 }
 .dot.button-group.huge > .button > .icon {
@@ -3974,7 +3974,7 @@ i.dot.icon:hover,
   /*size*/
   padding: 6px 12px;
   font-size: 12px;
-  line-height: 12px;
+  line-height: 14px;
   /*color label*/
   /*floar right clear padding*/
 }
@@ -3990,10 +3990,10 @@ i.dot.icon:hover,
 .dot.label > .icon,
 .dot .label > .icon {
   cursor: pointer;
-  font-size: 12px;
-  line-height: 12px;
-  width: 12px;
-  height: 12px;
+  font-size: 14px;
+  line-height: 14px;
+  width: 14px;
+  height: 14px;
 }
 .dot.label.icon .icon,
 .dot .label.icon .icon {
@@ -4015,7 +4015,7 @@ i.dot.icon:hover,
   max-width: none;
   max-height: none;
   display: inline-block;
-  height: 24px;
+  height: 26px;
   margin: -6px 6px -6px -12px;
   border-radius: 5px 0 0 5px;
   vertical-align: top;
@@ -4029,7 +4029,7 @@ i.dot.icon:hover,
 .dot .label.circle,
 .dot.label.labeled,
 .dot .label.labeled {
-  padding: 12px;
+  padding: 14px;
 }
 .dot.label.circle,
 .dot .label.circle,
@@ -4054,27 +4054,27 @@ i.dot.icon:hover,
 .dot .label.circle,
 .dot.label.round,
 .dot .label.round {
-  border-radius: 18px;
+  border-radius: 21px;
 }
 .dot.label.tiny,
 .dot .label.tiny {
-  padding: 4px 8px;
+  padding: 5px 10px;
   font-size: 8px;
-  line-height: 8px;
+  line-height: 10px;
 }
 .dot.label.tiny > .icon,
 .dot .label.tiny > .icon {
   cursor: pointer;
-  font-size: 8px;
-  line-height: 8px;
-  width: 8px;
-  height: 8px;
+  font-size: 10px;
+  line-height: 10px;
+  width: 10px;
+  height: 10px;
 }
 .dot.label.tiny.icon .icon,
 .dot .label.tiny.icon .icon {
   vertical-align: top;
   /*default icon left*/
-  margin: 0 2px 0 -2px;
+  margin: 0 3px 0 -3px;
   opacity: .95;
 }
 .dot.label.tiny.icon .icon:hover,
@@ -4083,28 +4083,28 @@ i.dot.icon:hover,
 }
 .dot.label.tiny.icon :last-child.icon,
 .dot .label.tiny.icon :last-child.icon {
-  margin: 0 -2px 0 2px;
+  margin: 0 -3px 0 3px;
 }
 .dot.label.tiny.image img,
 .dot .label.tiny.image img {
   max-width: none;
   max-height: none;
   display: inline-block;
-  height: 16px;
-  margin: -4px 4px -4px -8px;
+  height: 20px;
+  margin: -5px 5px -5px -10px;
   border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.label.tiny.image :last-child.image,
 .dot .label.tiny.image :last-child.image {
   border-radius: 0 5px 5px 0;
-  margin: -4px -8px -4px 4px;
+  margin: -5px -10px -5px 5px;
 }
 .dot.label.tiny.circle,
 .dot .label.tiny.circle,
 .dot.label.tiny.labeled,
 .dot .label.tiny.labeled {
-  padding: 8px;
+  padding: 10px;
 }
 .dot.label.tiny.circle,
 .dot .label.tiny.circle,
@@ -4129,27 +4129,27 @@ i.dot.icon:hover,
 .dot .label.tiny.circle,
 .dot.label.tiny.round,
 .dot .label.tiny.round {
-  border-radius: 12px;
+  border-radius: 15px;
 }
 .dot.label.small,
 .dot .label.small {
-  padding: 5px 10px;
+  padding: 6px 12px;
   font-size: 10px;
-  line-height: 10px;
+  line-height: 12px;
 }
 .dot.label.small > .icon,
 .dot .label.small > .icon {
   cursor: pointer;
-  font-size: 10px;
-  line-height: 10px;
-  width: 10px;
-  height: 10px;
+  font-size: 12px;
+  line-height: 12px;
+  width: 12px;
+  height: 12px;
 }
 .dot.label.small.icon .icon,
 .dot .label.small.icon .icon {
   vertical-align: top;
   /*default icon left*/
-  margin: 0 3px 0 -3px;
+  margin: 0 4px 0 -4px;
   opacity: .95;
 }
 .dot.label.small.icon .icon:hover,
@@ -4158,28 +4158,28 @@ i.dot.icon:hover,
 }
 .dot.label.small.icon :last-child.icon,
 .dot .label.small.icon :last-child.icon {
-  margin: 0 -3px 0 3px;
+  margin: 0 -4px 0 4px;
 }
 .dot.label.small.image img,
 .dot .label.small.image img {
   max-width: none;
   max-height: none;
   display: inline-block;
-  height: 20px;
-  margin: -5px 5px -5px -10px;
+  height: 24px;
+  margin: -6px 6px -6px -12px;
   border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.label.small.image :last-child.image,
 .dot .label.small.image :last-child.image {
   border-radius: 0 5px 5px 0;
-  margin: -5px -10px -5px 5px;
+  margin: -6px -12px -6px 6px;
 }
 .dot.label.small.circle,
 .dot .label.small.circle,
 .dot.label.small.labeled,
 .dot .label.small.labeled {
-  padding: 10px;
+  padding: 12px;
 }
 .dot.label.small.circle,
 .dot .label.small.circle,
@@ -4204,27 +4204,27 @@ i.dot.icon:hover,
 .dot .label.small.circle,
 .dot.label.small.round,
 .dot .label.small.round {
-  border-radius: 15px;
+  border-radius: 18px;
 }
 .dot.label.large,
 .dot .label.large {
-  padding: 8px 16px;
+  padding: 9px 18px;
   font-size: 16px;
-  line-height: 16px;
+  line-height: 18px;
 }
 .dot.label.large > .icon,
 .dot .label.large > .icon {
   cursor: pointer;
-  font-size: 16px;
-  line-height: 16px;
-  width: 16px;
-  height: 16px;
+  font-size: 18px;
+  line-height: 18px;
+  width: 18px;
+  height: 18px;
 }
 .dot.label.large.icon .icon,
 .dot .label.large.icon .icon {
   vertical-align: top;
   /*default icon left*/
-  margin: 0 6px 0 -6px;
+  margin: 0 7px 0 -7px;
   opacity: .95;
 }
 .dot.label.large.icon .icon:hover,
@@ -4233,28 +4233,28 @@ i.dot.icon:hover,
 }
 .dot.label.large.icon :last-child.icon,
 .dot .label.large.icon :last-child.icon {
-  margin: 0 -6px 0 6px;
+  margin: 0 -7px 0 7px;
 }
 .dot.label.large.image img,
 .dot .label.large.image img {
   max-width: none;
   max-height: none;
   display: inline-block;
-  height: 32px;
-  margin: -8px 8px -8px -16px;
+  height: 36px;
+  margin: -9px 9px -9px -18px;
   border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.label.large.image :last-child.image,
 .dot .label.large.image :last-child.image {
   border-radius: 0 5px 5px 0;
-  margin: -8px -16px -8px 8px;
+  margin: -9px -18px -9px 9px;
 }
 .dot.label.large.circle,
 .dot .label.large.circle,
 .dot.label.large.labeled,
 .dot .label.large.labeled {
-  padding: 16px;
+  padding: 18px;
 }
 .dot.label.large.circle,
 .dot .label.large.circle,
@@ -4279,27 +4279,27 @@ i.dot.icon:hover,
 .dot .label.large.circle,
 .dot.label.large.round,
 .dot .label.large.round {
-  border-radius: 24px;
+  border-radius: 27px;
 }
 .dot.label.huge,
 .dot .label.huge {
-  padding: 10px 20px;
+  padding: 11px 22px;
   font-size: 20px;
-  line-height: 20px;
+  line-height: 22px;
 }
 .dot.label.huge > .icon,
 .dot .label.huge > .icon {
   cursor: pointer;
-  font-size: 20px;
-  line-height: 20px;
-  width: 20px;
-  height: 20px;
+  font-size: 22px;
+  line-height: 22px;
+  width: 22px;
+  height: 22px;
 }
 .dot.label.huge.icon .icon,
 .dot .label.huge.icon .icon {
   vertical-align: top;
   /*default icon left*/
-  margin: 0 8px 0 -8px;
+  margin: 0 9px 0 -9px;
   opacity: .95;
 }
 .dot.label.huge.icon .icon:hover,
@@ -4308,28 +4308,28 @@ i.dot.icon:hover,
 }
 .dot.label.huge.icon :last-child.icon,
 .dot .label.huge.icon :last-child.icon {
-  margin: 0 -8px 0 8px;
+  margin: 0 -9px 0 9px;
 }
 .dot.label.huge.image img,
 .dot .label.huge.image img {
   max-width: none;
   max-height: none;
   display: inline-block;
-  height: 40px;
-  margin: -10px 10px -10px -20px;
+  height: 44px;
+  margin: -11px 11px -11px -22px;
   border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.label.huge.image :last-child.image,
 .dot .label.huge.image :last-child.image {
   border-radius: 0 5px 5px 0;
-  margin: -10px -20px -10px 10px;
+  margin: -11px -22px -11px 11px;
 }
 .dot.label.huge.circle,
 .dot .label.huge.circle,
 .dot.label.huge.labeled,
 .dot .label.huge.labeled {
-  padding: 20px;
+  padding: 22px;
 }
 .dot.label.huge.circle,
 .dot .label.huge.circle,
@@ -4354,7 +4354,7 @@ i.dot.icon:hover,
 .dot .label.huge.circle,
 .dot.label.huge.round,
 .dot .label.huge.round {
-  border-radius: 30px;
+  border-radius: 33px;
 }
 .dot.label.red,
 .dot .label.red {
@@ -4843,7 +4843,7 @@ i.dot.icon:hover,
 }
 .dot.label-group .label {
   padding: 6px 12px;
-  font-size: 12px;
+  font-size: 10px;
   line-height: 12px;
 }
 .dot.label-group .label > .icon {
@@ -4903,7 +4903,7 @@ i.dot.icon:hover,
 }
 .dot.label-group.tiny .label {
   padding: 4px 8px;
-  font-size: 8px;
+  font-size: 6px;
   line-height: 8px;
 }
 .dot.label-group.tiny .label > .icon {
@@ -4963,7 +4963,7 @@ i.dot.icon:hover,
 }
 .dot.label-group.small .label {
   padding: 5px 10px;
-  font-size: 10px;
+  font-size: 8px;
   line-height: 10px;
 }
 .dot.label-group.small .label > .icon {
@@ -5023,7 +5023,7 @@ i.dot.icon:hover,
 }
 .dot.label-group.large .label {
   padding: 8px 16px;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 16px;
 }
 .dot.label-group.large .label > .icon {
@@ -5083,7 +5083,7 @@ i.dot.icon:hover,
 }
 .dot.label-group.huge .label {
   padding: 10px 20px;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 20px;
 }
 .dot.label-group.huge .label > .icon {
@@ -5666,7 +5666,7 @@ img.dot.image.massive.circle {
   background-color: #FAFAFA;
   border: 1px solid #EEEEEE;
   padding: 9px 18px;
-  font-size: 15px;
+  font-size: 13px;
   line-height: 15px;
   padding-left: 10px;
   padding-right: 10px;
@@ -5756,7 +5756,7 @@ img.dot.image.massive.circle {
 }
 .dot.message.tiny {
   padding: 6px 12px;
-  font-size: 10px;
+  font-size: 8px;
   line-height: 10px;
   padding-left: 10px;
   padding-right: 10px;
@@ -5818,7 +5818,7 @@ img.dot.image.massive.circle {
 }
 .dot.message.small {
   padding: 7px 14px;
-  font-size: 12px;
+  font-size: 10px;
   line-height: 12px;
   padding-left: 10px;
   padding-right: 10px;
@@ -5880,7 +5880,7 @@ img.dot.image.massive.circle {
 }
 .dot.message.large {
   padding: 12px 24px;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 20px;
   padding-left: 10px;
   padding-right: 10px;
@@ -5942,7 +5942,7 @@ img.dot.image.massive.circle {
 }
 .dot.message.huge {
   padding: 15px 30px;
-  font-size: 25px;
+  font-size: 23px;
   line-height: 25px;
   padding-left: 10px;
   padding-right: 10px;
