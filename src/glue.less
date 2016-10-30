@@ -43,6 +43,8 @@
 
 @{NS}.module {
     .clearfix;
+    .bordered;
+    border-radius: 0 0 @radius @radius;
     display: block;
     padding: @padding;
     border: 1px solid @light_gray;
@@ -85,4 +87,37 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+}
+
+.bordered {
+    border: 1px solid @light_gray;
+    box-shadow: 0 1px 1px rgba(0,0,0,.03);
+    border-radius: @radius;
+    &:hover {
+        box-shadow: 1px 1px 1px rgba(0,0,0,.05);
+    }
+}
+
+.link {
+    color: @deep_gray;
+    cursor: pointer;
+    &:hover {
+        color: @dark_gray;
+    }
+}
+
+.blue_link {
+    .link;
+    color: @blue;
+    &:hover {
+        color: @light_blue;
+    }
+}
+
+.revert_link {
+    cursor: pointer;
+    color: @tiny_gray;
+    &:hover {
+        color: @white;
+    }
 }
