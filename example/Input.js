@@ -80,6 +80,35 @@ export default class Input extends Component {
 </div>`}                                
                             </code>
                         </pre>
+                        <div className={CN('round input icon')}>
+                            <input type="text"  placeholder="search..."/>
+                            <i className="icon">search</i>
+                        </div>
+                        <pre>
+                            <code>
+{`<div class="${NS} round input icon">
+    <input type="text" />
+    <i class="icon">search</i>
+</div>`}                                
+                            </code>
+                        </pre>
+                        <div className={CN('input round')}>
+                            <input type="text" placeholder='input...'/>
+                            <div className="action">
+                                <div className="button">button</div>
+                            </div>
+                        </div>
+                        <br/>
+                        <pre>
+                            <code>
+{`<div class="${NS} input round">
+    <input type="text"/>
+    <div class="action">
+        <div class="button">button</div>
+    </div>
+</div>`}                                
+                            </code>
+                        </pre>
                         <h4>Fluid input</h4>
                         {makeInput('fluid')}
                         <pre>
@@ -123,24 +152,6 @@ export default class Input extends Component {
     <input type="text" />
     <button class="button">button</button>
 </div>`}                         
-                            </code>
-                        </pre>
-                        <h4>Round input</h4>
-                        <div className={CN('input round')}>
-                            <input type="text" placeholder='input...'/>
-                            <div className="action">
-                                <div className="button">button</div>
-                            </div>
-                        </div>
-                        <br/>
-                        <pre>
-                            <code>
-{`<div class="${NS} input round">
-    <input type="text" />
-    <div class="action">
-        <div class="button">button</div>
-    </div>
-</div>`}                                
                             </code>
                         </pre>
                         <h4>Fluid action input</h4>

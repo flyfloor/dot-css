@@ -38,7 +38,7 @@
 
 .__imgSize(@group) when(@group = false) {
     &.middle { .__calcImgSize(300); }
-    &.mini { .__calcImgSize(30); }
+    &.mini { .__calcImgSize(35); }
     &.tiny { .__calcImgSize(60); }
     &.small { .__calcImgSize(150); }
     &.large { .__calcImgSize(450); }
@@ -57,7 +57,7 @@
         }
     }
     &.mini {
-        @_width: 30;
+        @_width: 35;
         .__circleImg(@_width);
         &>img {
             .__calcImgSize(@_width); 

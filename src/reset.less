@@ -34,6 +34,7 @@ page, article, picture, section, header, footer, nav, wrapper, pagination, comme
 body {
   font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', SimSun, sans-serif;
   color: @deep_gray;
+
   line-height: 1.5;
   font-size: @line_height;
   width: 100%;
@@ -43,6 +44,7 @@ body {
   padding: 0;
   margin: 0;
   overflow-y: scroll;
+  -webkit-text-size-adjust: none;
   -webkit-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch;
   -webkit-tap-highlight-color: rgba(0,0,0,.08);
@@ -98,6 +100,7 @@ h1,h2,h3,h4,h5, h6 {
   text-transform: none;
   font-weight: 500;
   font-style: normal;
+  line-height: 1.5;
 }
 
 h1 {
@@ -192,19 +195,19 @@ fieldset {
 
 ::-webkit-input-placeholder { 
   /* Chrome/Opera/Safari */
-  color: @gray;
+  color: #ccc;
 }
 ::-moz-placeholder { 
   /* Firefox 19+ */
-  color: @gray;
+  color: #ccc;
 }
 :-ms-input-placeholder { 
   /* IE 10+ */
-  color: @gray;
+  color: #ccc;
 }
 :-moz-placeholder { 
   /* Firefox 18- */
-  color: @gray;
+  color: #ccc;
 }
 
 button,
@@ -236,7 +239,7 @@ textarea, select {
   box-shadow: none;
   -webkit-appearance: none;
   padding: @padding * 8/10 @padding;
-  border: 1px solid @soft_gray;
+  border: 1px solid rgba(50,50,50,0.16);
   -webkit-transition: all .2s;
   -o-transition: all .2s;
   transition: all .2s;
@@ -250,7 +253,6 @@ textarea, select {
   &[disabled] {
     cursor: not-allowed;
     background-color: @mini_gray;
-    border-color: @light_gray;
     opacity: .85;
   }
 }

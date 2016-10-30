@@ -16,25 +16,25 @@ const makeForm = (cn = '') => {
                         <div className="field">
                             <label className={CN('checkbox')}>
                                 <input type="checkbox" className="show"/>
-                                origin checkbox
+                                <span>origin checkbox</span>
                             </label>
                         </div>
                         <div className="field">
                             <label className={CN('radio')}>
                                 <input type="radio" className="show"/>
-                                origin radio
+                                <span>origin radio</span>
                             </label>
                         </div>
                         <div className="field">
                             <label className={CN('checkbox')}>
                                 <input type="checkbox"/>
-                                checkbox
+                                <span>checkbox</span>
                             </label>
                         </div>
                         <div className="field">
                             <label className={CN('radio')}>
                                 <input type="radio"/>
-                                radio
+                                <span>radio</span>
                             </label>
                         </div>
                     </div>

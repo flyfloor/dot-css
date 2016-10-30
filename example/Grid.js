@@ -183,6 +183,17 @@ export default class Grid extends Component {
                             </code>
                         </pre>
                     </li>
+                    <li>
+                        <h3>Basic grid layout</h3>
+                        <div className={CN('basic grid-4')}>
+                            <div className="row">
+                                <div className="column">a</div>
+                                <div className="column">b</div>
+                                <div className="column">c</div>
+                                <div className="column">d</div>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </div>
         );

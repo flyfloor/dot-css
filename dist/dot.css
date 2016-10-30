@@ -1,3 +1,10 @@
+.clearfix:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
 /* reset css */
 * {
   outline: none;
@@ -124,6 +131,7 @@ body {
   padding: 0;
   margin: 0;
   overflow-y: scroll;
+  -webkit-text-size-adjust: none;
   -webkit-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.08);
@@ -173,6 +181,7 @@ h6 {
   text-transform: none;
   font-weight: 500;
   font-style: normal;
+  line-height: 1.5;
 }
 h1 {
   font-size: 32px;
@@ -247,19 +256,19 @@ fieldset {
 }
 ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
-  color: #BDBDBD;
+  color: #ccc;
 }
 ::-moz-placeholder {
   /* Firefox 19+ */
-  color: #BDBDBD;
+  color: #ccc;
 }
 :-ms-input-placeholder {
   /* IE 10+ */
-  color: #BDBDBD;
+  color: #ccc;
 }
 :-moz-placeholder {
   /* Firefox 18- */
-  color: #BDBDBD;
+  color: #ccc;
 }
 button,
 html input[type="button"],
@@ -289,13 +298,13 @@ select {
   box-shadow: none;
   -webkit-appearance: none;
   padding: 8px 10px;
-  border: 1px solid #DDDDDD;
+  border: 1px solid rgba(50, 50, 50, 0.16);
   -webkit-transition: all .2s;
   -o-transition: all .2s;
   transition: all .2s;
   line-height: 15px;
   font-size: 15px;
-  border-radius: 3px;
+  border-radius: 5px;
   color: #212121;
 }
 input[type="text"]:focus,
@@ -324,7 +333,6 @@ textarea[disabled],
 select[disabled] {
   cursor: not-allowed;
   background-color: #FAFAFA;
-  border-color: #EEEEEE;
   opacity: .85;
 }
 select {
@@ -1155,14 +1163,28 @@ code {
 }
 .field {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+}
+.field:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.module {
   display: block;
   padding: 10px;
-  border: 1px solid #F5F5F5;
+  border: 1px solid #EEEEEE;
   background-color: #ffffff;
   margin-bottom: 10px;
+}
+.dot.module:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.module.basic {
   border: none;
@@ -1248,7 +1270,7 @@ i.dot.icon:hover,
   text-decoration: none;
   vertical-align: middle;
   color: #383838;
-  border-radius: 3px;
+  border-radius: 5px;
   background-color: #F5F5F5;
   font-weight: 500;
   font-size: 15px;
@@ -1260,9 +1282,9 @@ i.dot.icon:hover,
   -o-transition: all .2s;
   transition: all .2s;
   /*button size*/
-  padding: 7px 14px;
+  padding: 8px 16px;
   font-size: 14px;
-  line-height: 14px;
+  line-height: 16px;
   /*color button*/
   /*floar right clear padding*/
 }
@@ -1297,17 +1319,17 @@ i.dot.icon:hover,
 .dot .button > .icon,
 .dot button > .icon {
   cursor: pointer;
-  font-size: 14px;
-  line-height: 14px;
-  width: 14px;
-  height: 14px;
+  font-size: 16px;
+  line-height: 16px;
+  width: 16px;
+  height: 16px;
 }
 .dot.button.icon .icon,
 .dot .button.icon .icon,
 .dot button.icon .icon {
   vertical-align: top;
   /*default icon left*/
-  margin: 0 5px 0 -5px;
+  margin: 0 6px 0 -6px;
   opacity: .95;
 }
 .dot.button.icon .icon:hover,
@@ -1318,7 +1340,7 @@ i.dot.icon:hover,
 .dot.button.icon :last-child.icon,
 .dot .button.icon :last-child.icon,
 .dot button.icon :last-child.icon {
-  margin: 0 -5px 0 5px;
+  margin: 0 -6px 0 6px;
 }
 .dot.button.image img,
 .dot .button.image img,
@@ -1326,16 +1348,16 @@ i.dot.icon:hover,
   max-width: none;
   max-height: none;
   display: inline-block;
-  height: 28px;
-  margin: -7px 7px -7px -14px;
-  border-radius: 3px 0 0 3px;
+  height: 32px;
+  margin: -8px 8px -8px -16px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.button.image :last-child.image,
 .dot .button.image :last-child.image,
 .dot button.image :last-child.image {
-  border-radius: 0 3px 3px 0;
-  margin: -7px -14px -7px 7px;
+  border-radius: 0 5px 5px 0;
+  margin: -8px -16px -8px 8px;
 }
 .dot.button.circle,
 .dot .button.circle,
@@ -1343,7 +1365,7 @@ i.dot.icon:hover,
 .dot.button.labeled,
 .dot .button.labeled,
 .dot button.labeled {
-  padding: 14px;
+  padding: 16px;
 }
 .dot.button.circle,
 .dot .button.circle,
@@ -1374,13 +1396,13 @@ i.dot.icon:hover,
 .dot.button.round,
 .dot .button.round,
 .dot button.round {
-  border-radius: 21px;
+  border-radius: 24px;
 }
 .dot.button.tiny,
 .dot .button.tiny,
 .dot button.tiny {
   padding: 5px 10px;
-  font-size: 10px;
+  font-size: 8px;
   line-height: 10px;
 }
 .dot.button.tiny > .icon,
@@ -1418,13 +1440,13 @@ i.dot.icon:hover,
   display: inline-block;
   height: 20px;
   margin: -5px 5px -5px -10px;
-  border-radius: 3px 0 0 3px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.button.tiny.image :last-child.image,
 .dot .button.tiny.image :last-child.image,
 .dot button.tiny.image :last-child.image {
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 5px 5px 0;
   margin: -5px -10px -5px 5px;
 }
 .dot.button.tiny.circle,
@@ -1469,25 +1491,25 @@ i.dot.icon:hover,
 .dot.button.small,
 .dot .button.small,
 .dot button.small {
-  padding: 6px 12px;
+  padding: 7px 14px;
   font-size: 12px;
-  line-height: 12px;
+  line-height: 14px;
 }
 .dot.button.small > .icon,
 .dot .button.small > .icon,
 .dot button.small > .icon {
   cursor: pointer;
-  font-size: 12px;
-  line-height: 12px;
-  width: 12px;
-  height: 12px;
+  font-size: 14px;
+  line-height: 14px;
+  width: 14px;
+  height: 14px;
 }
 .dot.button.small.icon .icon,
 .dot .button.small.icon .icon,
 .dot button.small.icon .icon {
   vertical-align: top;
   /*default icon left*/
-  margin: 0 4px 0 -4px;
+  margin: 0 5px 0 -5px;
   opacity: .95;
 }
 .dot.button.small.icon .icon:hover,
@@ -1498,7 +1520,7 @@ i.dot.icon:hover,
 .dot.button.small.icon :last-child.icon,
 .dot .button.small.icon :last-child.icon,
 .dot button.small.icon :last-child.icon {
-  margin: 0 -4px 0 4px;
+  margin: 0 -5px 0 5px;
 }
 .dot.button.small.image img,
 .dot .button.small.image img,
@@ -1506,16 +1528,16 @@ i.dot.icon:hover,
   max-width: none;
   max-height: none;
   display: inline-block;
-  height: 24px;
-  margin: -6px 6px -6px -12px;
-  border-radius: 3px 0 0 3px;
+  height: 28px;
+  margin: -7px 7px -7px -14px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.button.small.image :last-child.image,
 .dot .button.small.image :last-child.image,
 .dot button.small.image :last-child.image {
-  border-radius: 0 3px 3px 0;
-  margin: -6px -12px -6px 6px;
+  border-radius: 0 5px 5px 0;
+  margin: -7px -14px -7px 7px;
 }
 .dot.button.small.circle,
 .dot .button.small.circle,
@@ -1523,7 +1545,7 @@ i.dot.icon:hover,
 .dot.button.small.labeled,
 .dot .button.small.labeled,
 .dot button.small.labeled {
-  padding: 12px;
+  padding: 14px;
 }
 .dot.button.small.circle,
 .dot .button.small.circle,
@@ -1554,30 +1576,30 @@ i.dot.icon:hover,
 .dot.button.small.round,
 .dot .button.small.round,
 .dot button.small.round {
-  border-radius: 18px;
+  border-radius: 21px;
 }
 .dot.button.large,
 .dot .button.large,
 .dot button.large {
-  padding: 9px 18px;
+  padding: 10px 20px;
   font-size: 18px;
-  line-height: 18px;
+  line-height: 20px;
 }
 .dot.button.large > .icon,
 .dot .button.large > .icon,
 .dot button.large > .icon {
   cursor: pointer;
-  font-size: 18px;
-  line-height: 18px;
-  width: 18px;
-  height: 18px;
+  font-size: 20px;
+  line-height: 20px;
+  width: 20px;
+  height: 20px;
 }
 .dot.button.large.icon .icon,
 .dot .button.large.icon .icon,
 .dot button.large.icon .icon {
   vertical-align: top;
   /*default icon left*/
-  margin: 0 7px 0 -7px;
+  margin: 0 8px 0 -8px;
   opacity: .95;
 }
 .dot.button.large.icon .icon:hover,
@@ -1588,7 +1610,7 @@ i.dot.icon:hover,
 .dot.button.large.icon :last-child.icon,
 .dot .button.large.icon :last-child.icon,
 .dot button.large.icon :last-child.icon {
-  margin: 0 -7px 0 7px;
+  margin: 0 -8px 0 8px;
 }
 .dot.button.large.image img,
 .dot .button.large.image img,
@@ -1596,16 +1618,16 @@ i.dot.icon:hover,
   max-width: none;
   max-height: none;
   display: inline-block;
-  height: 36px;
-  margin: -9px 9px -9px -18px;
-  border-radius: 3px 0 0 3px;
+  height: 40px;
+  margin: -10px 10px -10px -20px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.button.large.image :last-child.image,
 .dot .button.large.image :last-child.image,
 .dot button.large.image :last-child.image {
-  border-radius: 0 3px 3px 0;
-  margin: -9px -18px -9px 9px;
+  border-radius: 0 5px 5px 0;
+  margin: -10px -20px -10px 10px;
 }
 .dot.button.large.circle,
 .dot .button.large.circle,
@@ -1613,7 +1635,7 @@ i.dot.icon:hover,
 .dot.button.large.labeled,
 .dot .button.large.labeled,
 .dot button.large.labeled {
-  padding: 18px;
+  padding: 20px;
 }
 .dot.button.large.circle,
 .dot .button.large.circle,
@@ -1644,30 +1666,30 @@ i.dot.icon:hover,
 .dot.button.large.round,
 .dot .button.large.round,
 .dot button.large.round {
-  border-radius: 27px;
+  border-radius: 30px;
 }
 .dot.button.huge,
 .dot .button.huge,
 .dot button.huge {
-  padding: 11px 22px;
+  padding: 12px 24px;
   font-size: 22px;
-  line-height: 22px;
+  line-height: 24px;
 }
 .dot.button.huge > .icon,
 .dot .button.huge > .icon,
 .dot button.huge > .icon {
   cursor: pointer;
-  font-size: 22px;
-  line-height: 22px;
-  width: 22px;
-  height: 22px;
+  font-size: 24px;
+  line-height: 24px;
+  width: 24px;
+  height: 24px;
 }
 .dot.button.huge.icon .icon,
 .dot .button.huge.icon .icon,
 .dot button.huge.icon .icon {
   vertical-align: top;
   /*default icon left*/
-  margin: 0 9px 0 -9px;
+  margin: 0 10px 0 -10px;
   opacity: .95;
 }
 .dot.button.huge.icon .icon:hover,
@@ -1678,7 +1700,7 @@ i.dot.icon:hover,
 .dot.button.huge.icon :last-child.icon,
 .dot .button.huge.icon :last-child.icon,
 .dot button.huge.icon :last-child.icon {
-  margin: 0 -9px 0 9px;
+  margin: 0 -10px 0 10px;
 }
 .dot.button.huge.image img,
 .dot .button.huge.image img,
@@ -1686,16 +1708,16 @@ i.dot.icon:hover,
   max-width: none;
   max-height: none;
   display: inline-block;
-  height: 44px;
-  margin: -11px 11px -11px -22px;
-  border-radius: 3px 0 0 3px;
+  height: 48px;
+  margin: -12px 12px -12px -24px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.button.huge.image :last-child.image,
 .dot .button.huge.image :last-child.image,
 .dot button.huge.image :last-child.image {
-  border-radius: 0 3px 3px 0;
-  margin: -11px -22px -11px 11px;
+  border-radius: 0 5px 5px 0;
+  margin: -12px -24px -12px 12px;
 }
 .dot.button.huge.circle,
 .dot .button.huge.circle,
@@ -1703,7 +1725,7 @@ i.dot.icon:hover,
 .dot.button.huge.labeled,
 .dot .button.huge.labeled,
 .dot button.huge.labeled {
-  padding: 22px;
+  padding: 24px;
 }
 .dot.button.huge.circle,
 .dot .button.huge.circle,
@@ -1734,7 +1756,7 @@ i.dot.icon:hover,
 .dot.button.huge.round,
 .dot .button.huge.round,
 .dot button.huge.round {
-  border-radius: 33px;
+  border-radius: 36px;
 }
 .dot.button.red,
 .dot .button.red,
@@ -2305,7 +2327,9 @@ i.dot.icon:hover,
 }
 .dot.button-group {
   display: inline-block;
-  margin: 0 10px 10px 0;
+  margin: 0 10px 0 0;
+  font-size: 0;
+  vertical-align: middle;
   /*floar right clear padding*/
   /*button group size*/
 }
@@ -2314,17 +2338,17 @@ i.dot.icon:hover,
   margin: 0 !important;
 }
 .dot.button-group > .button:first-child {
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 .dot.button-group > .button:last-child {
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   margin-right: 10px;
 }
 .dot.button-group.vertical {
   border-radius: 0;
-  margin: 0 10px 10px 0;
+  margin: 0 10px 0 0;
 }
 .dot.button-group.vertical > .button {
   width: 100%;
@@ -2332,56 +2356,56 @@ i.dot.icon:hover,
   border-radius: 0;
 }
 .dot.button-group.vertical > .button:first-child {
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 .dot.button-group.vertical > .button:last-child {
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 .dot.button-group.float-right {
   margin-right: 0;
 }
 .dot.button-group > .button {
-  padding: 7px 14px;
+  padding: 8px 16px;
   font-size: 14px;
-  line-height: 14px;
+  line-height: 16px;
 }
 .dot.button-group > .button > .icon {
   cursor: pointer;
-  font-size: 14px;
-  line-height: 14px;
-  width: 14px;
-  height: 14px;
+  font-size: 16px;
+  line-height: 16px;
+  width: 16px;
+  height: 16px;
 }
 .dot.button-group > .button.icon .icon {
   vertical-align: top;
   /*default icon left*/
-  margin: 0 5px 0 -5px;
+  margin: 0 6px 0 -6px;
   opacity: .95;
 }
 .dot.button-group > .button.icon .icon:hover {
   opacity: 1;
 }
 .dot.button-group > .button.icon :last-child.icon {
-  margin: 0 -5px 0 5px;
+  margin: 0 -6px 0 6px;
 }
 .dot.button-group > .button.image img {
   max-width: none;
   max-height: none;
   display: inline-block;
-  height: 28px;
-  margin: -7px 7px -7px -14px;
-  border-radius: 3px 0 0 3px;
+  height: 32px;
+  margin: -8px 8px -8px -16px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.button-group > .button.image :last-child.image {
-  border-radius: 0 3px 3px 0;
-  margin: -7px -14px -7px 7px;
+  border-radius: 0 5px 5px 0;
+  margin: -8px -16px -8px 8px;
 }
 .dot.button-group > .button.circle,
 .dot.button-group > .button.labeled {
-  padding: 14px;
+  padding: 16px;
 }
 .dot.button-group > .button.circle,
 .dot.button-group > .button.labeled {
@@ -2400,11 +2424,11 @@ i.dot.icon:hover,
 }
 .dot.button-group > .button.circle,
 .dot.button-group > .button.round {
-  border-radius: 21px;
+  border-radius: 24px;
 }
 .dot.button-group.tiny > .button {
   padding: 5px 10px;
-  font-size: 10px;
+  font-size: 8px;
   line-height: 10px;
 }
 .dot.button-group.tiny > .button > .icon {
@@ -2432,11 +2456,11 @@ i.dot.icon:hover,
   display: inline-block;
   height: 20px;
   margin: -5px 5px -5px -10px;
-  border-radius: 3px 0 0 3px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.button-group.tiny > .button.image :last-child.image {
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 5px 5px 0;
   margin: -5px -10px -5px 5px;
 }
 .dot.button-group.tiny > .button.circle,
@@ -2463,45 +2487,45 @@ i.dot.icon:hover,
   border-radius: 15px;
 }
 .dot.button-group.small > .button {
-  padding: 6px 12px;
+  padding: 7px 14px;
   font-size: 12px;
-  line-height: 12px;
+  line-height: 14px;
 }
 .dot.button-group.small > .button > .icon {
   cursor: pointer;
-  font-size: 12px;
-  line-height: 12px;
-  width: 12px;
-  height: 12px;
+  font-size: 14px;
+  line-height: 14px;
+  width: 14px;
+  height: 14px;
 }
 .dot.button-group.small > .button.icon .icon {
   vertical-align: top;
   /*default icon left*/
-  margin: 0 4px 0 -4px;
+  margin: 0 5px 0 -5px;
   opacity: .95;
 }
 .dot.button-group.small > .button.icon .icon:hover {
   opacity: 1;
 }
 .dot.button-group.small > .button.icon :last-child.icon {
-  margin: 0 -4px 0 4px;
+  margin: 0 -5px 0 5px;
 }
 .dot.button-group.small > .button.image img {
   max-width: none;
   max-height: none;
   display: inline-block;
-  height: 24px;
-  margin: -6px 6px -6px -12px;
-  border-radius: 3px 0 0 3px;
+  height: 28px;
+  margin: -7px 7px -7px -14px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.button-group.small > .button.image :last-child.image {
-  border-radius: 0 3px 3px 0;
-  margin: -6px -12px -6px 6px;
+  border-radius: 0 5px 5px 0;
+  margin: -7px -14px -7px 7px;
 }
 .dot.button-group.small > .button.circle,
 .dot.button-group.small > .button.labeled {
-  padding: 12px;
+  padding: 14px;
 }
 .dot.button-group.small > .button.circle,
 .dot.button-group.small > .button.labeled {
@@ -2520,48 +2544,48 @@ i.dot.icon:hover,
 }
 .dot.button-group.small > .button.circle,
 .dot.button-group.small > .button.round {
-  border-radius: 18px;
+  border-radius: 21px;
 }
 .dot.button-group.large > .button {
-  padding: 9px 18px;
+  padding: 10px 20px;
   font-size: 18px;
-  line-height: 18px;
+  line-height: 20px;
 }
 .dot.button-group.large > .button > .icon {
   cursor: pointer;
-  font-size: 18px;
-  line-height: 18px;
-  width: 18px;
-  height: 18px;
+  font-size: 20px;
+  line-height: 20px;
+  width: 20px;
+  height: 20px;
 }
 .dot.button-group.large > .button.icon .icon {
   vertical-align: top;
   /*default icon left*/
-  margin: 0 7px 0 -7px;
+  margin: 0 8px 0 -8px;
   opacity: .95;
 }
 .dot.button-group.large > .button.icon .icon:hover {
   opacity: 1;
 }
 .dot.button-group.large > .button.icon :last-child.icon {
-  margin: 0 -7px 0 7px;
+  margin: 0 -8px 0 8px;
 }
 .dot.button-group.large > .button.image img {
   max-width: none;
   max-height: none;
   display: inline-block;
-  height: 36px;
-  margin: -9px 9px -9px -18px;
-  border-radius: 3px 0 0 3px;
+  height: 40px;
+  margin: -10px 10px -10px -20px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.button-group.large > .button.image :last-child.image {
-  border-radius: 0 3px 3px 0;
-  margin: -9px -18px -9px 9px;
+  border-radius: 0 5px 5px 0;
+  margin: -10px -20px -10px 10px;
 }
 .dot.button-group.large > .button.circle,
 .dot.button-group.large > .button.labeled {
-  padding: 18px;
+  padding: 20px;
 }
 .dot.button-group.large > .button.circle,
 .dot.button-group.large > .button.labeled {
@@ -2580,48 +2604,48 @@ i.dot.icon:hover,
 }
 .dot.button-group.large > .button.circle,
 .dot.button-group.large > .button.round {
-  border-radius: 27px;
+  border-radius: 30px;
 }
 .dot.button-group.huge > .button {
-  padding: 11px 22px;
+  padding: 12px 24px;
   font-size: 22px;
-  line-height: 22px;
+  line-height: 24px;
 }
 .dot.button-group.huge > .button > .icon {
   cursor: pointer;
-  font-size: 22px;
-  line-height: 22px;
-  width: 22px;
-  height: 22px;
+  font-size: 24px;
+  line-height: 24px;
+  width: 24px;
+  height: 24px;
 }
 .dot.button-group.huge > .button.icon .icon {
   vertical-align: top;
   /*default icon left*/
-  margin: 0 9px 0 -9px;
+  margin: 0 10px 0 -10px;
   opacity: .95;
 }
 .dot.button-group.huge > .button.icon .icon:hover {
   opacity: 1;
 }
 .dot.button-group.huge > .button.icon :last-child.icon {
-  margin: 0 -9px 0 9px;
+  margin: 0 -10px 0 10px;
 }
 .dot.button-group.huge > .button.image img {
   max-width: none;
   max-height: none;
   display: inline-block;
-  height: 44px;
-  margin: -11px 11px -11px -22px;
-  border-radius: 3px 0 0 3px;
+  height: 48px;
+  margin: -12px 12px -12px -24px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.button-group.huge > .button.image :last-child.image {
-  border-radius: 0 3px 3px 0;
-  margin: -11px -22px -11px 11px;
+  border-radius: 0 5px 5px 0;
+  margin: -12px -24px -12px 12px;
 }
 .dot.button-group.huge > .button.circle,
 .dot.button-group.huge > .button.labeled {
-  padding: 22px;
+  padding: 24px;
 }
 .dot.button-group.huge > .button.circle,
 .dot.button-group.huge > .button.labeled {
@@ -2640,432 +2664,793 @@ i.dot.icon:hover,
 }
 .dot.button-group.huge > .button.circle,
 .dot.button-group.huge > .button.round {
-  border-radius: 33px;
+  border-radius: 36px;
 }
-.dot.grid {
-  overflow: hidden;
-  position: relative;
-}
-.dot.grid .column {
+/* default column */
+.dot .column {
   float: left;
   padding: 10px;
 }
-.dot.grid .row {
-  display: block;
-  overflow: hidden;
+/* default row */
+.dot .row {
   margin-bottom: 10px;
+}
+.dot .row:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+/* grid */
+.dot.grid {
+  position: relative;
+}
+.dot.grid:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.grid .row-1 {
-  display: block;
-  overflow: hidden;
   margin-bottom: 10px;
 }
-.dot.grid .row-1 .column {
+.dot.grid .row-1:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid .row-1 > .column {
   width: 100%;
 }
-.dot.grid .column-1 {
+.dot.grid .row > .column-1,
+.dot.grid > .column-1 {
   float: left;
   padding: 10px;
   width: 6.25%;
 }
-.dot.grid .grid-1 {
-  overflow: hidden;
-  position: relative;
-}
-.dot.grid .grid-1 .column {
-  float: left;
-  padding: 10px;
-  width: 100%;
-}
 .dot.grid .row-2 {
-  display: block;
-  overflow: hidden;
   margin-bottom: 10px;
 }
-.dot.grid .row-2 .column {
+.dot.grid .row-2:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid .row-2 > .column {
   width: 50%;
 }
-.dot.grid .column-2 {
+.dot.grid .row > .column-2,
+.dot.grid > .column-2 {
   float: left;
   padding: 10px;
   width: 12.5%;
 }
-.dot.grid .grid-2 {
-  overflow: hidden;
-  position: relative;
-}
-.dot.grid .grid-2 .column {
-  float: left;
-  padding: 10px;
-  width: 50%;
-}
 .dot.grid .row-3 {
-  display: block;
-  overflow: hidden;
   margin-bottom: 10px;
 }
-.dot.grid .row-3 .column {
+.dot.grid .row-3:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid .row-3 > .column {
   width: 33.33333333%;
 }
-.dot.grid .column-3 {
+.dot.grid .row > .column-3,
+.dot.grid > .column-3 {
   float: left;
   padding: 10px;
   width: 18.75%;
 }
-.dot.grid .grid-3 {
-  overflow: hidden;
-  position: relative;
-}
-.dot.grid .grid-3 .column {
-  float: left;
-  padding: 10px;
-  width: 33.33333333%;
-}
 .dot.grid .row-4 {
-  display: block;
-  overflow: hidden;
   margin-bottom: 10px;
 }
-.dot.grid .row-4 .column {
+.dot.grid .row-4:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid .row-4 > .column {
   width: 25%;
 }
-.dot.grid .column-4 {
-  float: left;
-  padding: 10px;
-  width: 25%;
-}
-.dot.grid .grid-4 {
-  overflow: hidden;
-  position: relative;
-}
-.dot.grid .grid-4 .column {
+.dot.grid .row > .column-4,
+.dot.grid > .column-4 {
   float: left;
   padding: 10px;
   width: 25%;
 }
 .dot.grid .row-5 {
-  display: block;
-  overflow: hidden;
   margin-bottom: 10px;
 }
-.dot.grid .row-5 .column {
+.dot.grid .row-5:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid .row-5 > .column {
   width: 20%;
 }
-.dot.grid .column-5 {
+.dot.grid .row > .column-5,
+.dot.grid > .column-5 {
   float: left;
   padding: 10px;
   width: 31.25%;
 }
-.dot.grid .grid-5 {
-  overflow: hidden;
-  position: relative;
-}
-.dot.grid .grid-5 .column {
-  float: left;
-  padding: 10px;
-  width: 20%;
-}
 .dot.grid .row-6 {
-  display: block;
-  overflow: hidden;
   margin-bottom: 10px;
 }
-.dot.grid .row-6 .column {
+.dot.grid .row-6:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid .row-6 > .column {
   width: 16.66666667%;
 }
-.dot.grid .column-6 {
+.dot.grid .row > .column-6,
+.dot.grid > .column-6 {
   float: left;
   padding: 10px;
   width: 37.5%;
 }
-.dot.grid .grid-6 {
-  overflow: hidden;
-  position: relative;
-}
-.dot.grid .grid-6 .column {
-  float: left;
-  padding: 10px;
-  width: 16.66666667%;
-}
 .dot.grid .row-7 {
-  display: block;
-  overflow: hidden;
   margin-bottom: 10px;
 }
-.dot.grid .row-7 .column {
+.dot.grid .row-7:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid .row-7 > .column {
   width: 14.28571429%;
 }
-.dot.grid .column-7 {
+.dot.grid .row > .column-7,
+.dot.grid > .column-7 {
   float: left;
   padding: 10px;
   width: 43.75%;
 }
-.dot.grid .grid-7 {
-  overflow: hidden;
-  position: relative;
-}
-.dot.grid .grid-7 .column {
-  float: left;
-  padding: 10px;
-  width: 14.28571429%;
-}
 .dot.grid .row-8 {
-  display: block;
-  overflow: hidden;
   margin-bottom: 10px;
 }
-.dot.grid .row-8 .column {
+.dot.grid .row-8:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid .row-8 > .column {
   width: 12.5%;
 }
-.dot.grid .column-8 {
+.dot.grid .row > .column-8,
+.dot.grid > .column-8 {
   float: left;
   padding: 10px;
   width: 50%;
 }
-.dot.grid .grid-8 {
-  overflow: hidden;
-  position: relative;
-}
-.dot.grid .grid-8 .column {
-  float: left;
-  padding: 10px;
-  width: 12.5%;
-}
 .dot.grid .row-9 {
-  display: block;
-  overflow: hidden;
   margin-bottom: 10px;
 }
-.dot.grid .row-9 .column {
+.dot.grid .row-9:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid .row-9 > .column {
   width: 11.11111111%;
 }
-.dot.grid .column-9 {
+.dot.grid .row > .column-9,
+.dot.grid > .column-9 {
   float: left;
   padding: 10px;
   width: 56.25%;
 }
-.dot.grid .grid-9 {
-  overflow: hidden;
-  position: relative;
-}
-.dot.grid .grid-9 .column {
-  float: left;
-  padding: 10px;
-  width: 11.11111111%;
-}
 .dot.grid .row-10 {
-  display: block;
-  overflow: hidden;
   margin-bottom: 10px;
 }
-.dot.grid .row-10 .column {
+.dot.grid .row-10:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid .row-10 > .column {
   width: 10%;
 }
-.dot.grid .column-10 {
+.dot.grid .row > .column-10,
+.dot.grid > .column-10 {
   float: left;
   padding: 10px;
   width: 62.5%;
 }
-.dot.grid .grid-10 {
-  overflow: hidden;
-  position: relative;
-}
-.dot.grid .grid-10 .column {
-  float: left;
-  padding: 10px;
-  width: 10%;
-}
 .dot.grid .row-11 {
-  display: block;
-  overflow: hidden;
   margin-bottom: 10px;
 }
-.dot.grid .row-11 .column {
+.dot.grid .row-11:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid .row-11 > .column {
   width: 9.09090909%;
 }
-.dot.grid .column-11 {
+.dot.grid .row > .column-11,
+.dot.grid > .column-11 {
   float: left;
   padding: 10px;
   width: 68.75%;
 }
-.dot.grid .grid-11 {
-  overflow: hidden;
-  position: relative;
-}
-.dot.grid .grid-11 .column {
-  float: left;
-  padding: 10px;
-  width: 9.09090909%;
-}
 .dot.grid .row-12 {
-  display: block;
-  overflow: hidden;
   margin-bottom: 10px;
 }
-.dot.grid .row-12 .column {
+.dot.grid .row-12:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid .row-12 > .column {
   width: 8.33333333%;
 }
-.dot.grid .column-12 {
+.dot.grid .row > .column-12,
+.dot.grid > .column-12 {
   float: left;
   padding: 10px;
   width: 75%;
 }
-.dot.grid .grid-12 {
-  overflow: hidden;
-  position: relative;
-}
-.dot.grid .grid-12 .column {
-  float: left;
-  padding: 10px;
-  width: 8.33333333%;
-}
 .dot.grid .row-13 {
-  display: block;
-  overflow: hidden;
   margin-bottom: 10px;
 }
-.dot.grid .row-13 .column {
+.dot.grid .row-13:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid .row-13 > .column {
   width: 7.69230769%;
 }
-.dot.grid .column-13 {
+.dot.grid .row > .column-13,
+.dot.grid > .column-13 {
   float: left;
   padding: 10px;
   width: 81.25%;
 }
-.dot.grid .grid-13 {
-  overflow: hidden;
-  position: relative;
-}
-.dot.grid .grid-13 .column {
-  float: left;
-  padding: 10px;
-  width: 7.69230769%;
-}
 .dot.grid .row-14 {
-  display: block;
-  overflow: hidden;
   margin-bottom: 10px;
 }
-.dot.grid .row-14 .column {
+.dot.grid .row-14:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid .row-14 > .column {
   width: 7.14285714%;
 }
-.dot.grid .column-14 {
+.dot.grid .row > .column-14,
+.dot.grid > .column-14 {
   float: left;
   padding: 10px;
   width: 87.5%;
 }
-.dot.grid .grid-14 {
-  overflow: hidden;
-  position: relative;
-}
-.dot.grid .grid-14 .column {
-  float: left;
-  padding: 10px;
-  width: 7.14285714%;
-}
 .dot.grid .row-15 {
-  display: block;
-  overflow: hidden;
   margin-bottom: 10px;
 }
-.dot.grid .row-15 .column {
+.dot.grid .row-15:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid .row-15 > .column {
   width: 6.66666667%;
 }
-.dot.grid .column-15 {
+.dot.grid .row > .column-15,
+.dot.grid > .column-15 {
   float: left;
   padding: 10px;
   width: 93.75%;
 }
-.dot.grid .grid-15 {
-  overflow: hidden;
-  position: relative;
-}
-.dot.grid .grid-15 .column {
-  float: left;
-  padding: 10px;
-  width: 6.66666667%;
-}
 .dot.grid .row-16 {
-  display: block;
-  overflow: hidden;
   margin-bottom: 10px;
 }
-.dot.grid .row-16 .column {
+.dot.grid .row-16:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid .row-16 > .column {
   width: 6.25%;
 }
-.dot.grid .column-16 {
+.dot.grid .row > .column-16,
+.dot.grid > .column-16 {
   float: left;
   padding: 10px;
   width: 100%;
 }
-.dot.grid .grid-16 {
-  overflow: hidden;
+/* grid- */
+.dot.grid-1 {
   position: relative;
 }
-.dot.grid .grid-16 .column {
-  float: left;
-  padding: 10px;
+.dot.grid-1:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid-1 > .column {
+  width: 100%;
+}
+.dot.grid-1 > .row > .column {
+  width: 100%;
+}
+.dot.grid-2 {
+  position: relative;
+}
+.dot.grid-2:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid-2 > .column {
+  width: 50%;
+}
+.dot.grid-2 > .row > .column {
+  width: 50%;
+}
+.dot.grid-3 {
+  position: relative;
+}
+.dot.grid-3:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid-3 > .column {
+  width: 33.33333333%;
+}
+.dot.grid-3 > .row > .column {
+  width: 33.33333333%;
+}
+.dot.grid-4 {
+  position: relative;
+}
+.dot.grid-4:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid-4 > .column {
+  width: 25%;
+}
+.dot.grid-4 > .row > .column {
+  width: 25%;
+}
+.dot.grid-5 {
+  position: relative;
+}
+.dot.grid-5:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid-5 > .column {
+  width: 20%;
+}
+.dot.grid-5 > .row > .column {
+  width: 20%;
+}
+.dot.grid-6 {
+  position: relative;
+}
+.dot.grid-6:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid-6 > .column {
+  width: 16.66666667%;
+}
+.dot.grid-6 > .row > .column {
+  width: 16.66666667%;
+}
+.dot.grid-7 {
+  position: relative;
+}
+.dot.grid-7:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid-7 > .column {
+  width: 14.28571429%;
+}
+.dot.grid-7 > .row > .column {
+  width: 14.28571429%;
+}
+.dot.grid-8 {
+  position: relative;
+}
+.dot.grid-8:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid-8 > .column {
+  width: 12.5%;
+}
+.dot.grid-8 > .row > .column {
+  width: 12.5%;
+}
+.dot.grid-9 {
+  position: relative;
+}
+.dot.grid-9:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid-9 > .column {
+  width: 11.11111111%;
+}
+.dot.grid-9 > .row > .column {
+  width: 11.11111111%;
+}
+.dot.grid-10 {
+  position: relative;
+}
+.dot.grid-10:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid-10 > .column {
+  width: 10%;
+}
+.dot.grid-10 > .row > .column {
+  width: 10%;
+}
+.dot.grid-11 {
+  position: relative;
+}
+.dot.grid-11:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid-11 > .column {
+  width: 9.09090909%;
+}
+.dot.grid-11 > .row > .column {
+  width: 9.09090909%;
+}
+.dot.grid-12 {
+  position: relative;
+}
+.dot.grid-12:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid-12 > .column {
+  width: 8.33333333%;
+}
+.dot.grid-12 > .row > .column {
+  width: 8.33333333%;
+}
+.dot.grid-13 {
+  position: relative;
+}
+.dot.grid-13:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid-13 > .column {
+  width: 7.69230769%;
+}
+.dot.grid-13 > .row > .column {
+  width: 7.69230769%;
+}
+.dot.grid-14 {
+  position: relative;
+}
+.dot.grid-14:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid-14 > .column {
+  width: 7.14285714%;
+}
+.dot.grid-14 > .row > .column {
+  width: 7.14285714%;
+}
+.dot.grid-15 {
+  position: relative;
+}
+.dot.grid-15:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid-15 > .column {
+  width: 6.66666667%;
+}
+.dot.grid-15 > .row > .column {
+  width: 6.66666667%;
+}
+.dot.grid-16 {
+  position: relative;
+}
+.dot.grid-16:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.grid-16 > .column {
   width: 6.25%;
 }
-.dot.table {
-  position: relative;
-  display: table;
-  width: auto;
-  margin: 0;
-  border: 1px solid #EEEEEE;
+.dot.grid-16 > .row > .column {
+  width: 6.25%;
+}
+/* basic grid */
+.basic.grid > .column,
+.basic.grid > .row > .column {
+  padding: 0;
+}
+.basic.grid > .column-1,
+.basic.grid > .row > .column-1 {
+  padding: 0;
+}
+.basic.grid > .column-2,
+.basic.grid > .row > .column-2 {
+  padding: 0;
+}
+.basic.grid > .column-3,
+.basic.grid > .row > .column-3 {
+  padding: 0;
+}
+.basic.grid > .column-4,
+.basic.grid > .row > .column-4 {
+  padding: 0;
+}
+.basic.grid > .column-5,
+.basic.grid > .row > .column-5 {
+  padding: 0;
+}
+.basic.grid > .column-6,
+.basic.grid > .row > .column-6 {
+  padding: 0;
+}
+.basic.grid > .column-7,
+.basic.grid > .row > .column-7 {
+  padding: 0;
+}
+.basic.grid > .column-8,
+.basic.grid > .row > .column-8 {
+  padding: 0;
+}
+.basic.grid > .column-9,
+.basic.grid > .row > .column-9 {
+  padding: 0;
+}
+.basic.grid > .column-10,
+.basic.grid > .row > .column-10 {
+  padding: 0;
+}
+.basic.grid > .column-11,
+.basic.grid > .row > .column-11 {
+  padding: 0;
+}
+.basic.grid > .column-12,
+.basic.grid > .row > .column-12 {
+  padding: 0;
+}
+.basic.grid > .column-13,
+.basic.grid > .row > .column-13 {
+  padding: 0;
+}
+.basic.grid > .column-14,
+.basic.grid > .row > .column-14 {
+  padding: 0;
+}
+.basic.grid > .column-15,
+.basic.grid > .row > .column-15 {
+  padding: 0;
+}
+.basic.grid > .column-16,
+.basic.grid > .row > .column-16 {
+  padding: 0;
+}
+.basic.grid-1 > .row > .column,
+.basic.grid-1 > .column {
+  padding: 0;
+}
+.basic.grid-2 > .row > .column,
+.basic.grid-2 > .column {
+  padding: 0;
+}
+.basic.grid-3 > .row > .column,
+.basic.grid-3 > .column {
+  padding: 0;
+}
+.basic.grid-4 > .row > .column,
+.basic.grid-4 > .column {
+  padding: 0;
+}
+.basic.grid-5 > .row > .column,
+.basic.grid-5 > .column {
+  padding: 0;
+}
+.basic.grid-6 > .row > .column,
+.basic.grid-6 > .column {
+  padding: 0;
+}
+.basic.grid-7 > .row > .column,
+.basic.grid-7 > .column {
+  padding: 0;
+}
+.basic.grid-8 > .row > .column,
+.basic.grid-8 > .column {
+  padding: 0;
+}
+.basic.grid-9 > .row > .column,
+.basic.grid-9 > .column {
+  padding: 0;
+}
+.basic.grid-10 > .row > .column,
+.basic.grid-10 > .column {
+  padding: 0;
+}
+.basic.grid-11 > .row > .column,
+.basic.grid-11 > .column {
+  padding: 0;
+}
+.basic.grid-12 > .row > .column,
+.basic.grid-12 > .column {
+  padding: 0;
+}
+.basic.grid-13 > .row > .column,
+.basic.grid-13 > .column {
+  padding: 0;
+}
+.basic.grid-14 > .row > .column,
+.basic.grid-14 > .column {
+  padding: 0;
+}
+.basic.grid-15 > .row > .column,
+.basic.grid-15 > .column {
+  padding: 0;
+}
+.basic.grid-16 > .row > .column,
+.basic.grid-16 > .column {
+  padding: 0;
+}
+.table {
   /*shape size*/
   font-size: 14px;
   line-height: 14px;
+  /*basic table layout*/
 }
-.dot.table.fixed {
+.table.dot {
+  position: relative;
+  display: table;
+  margin: 0;
+  border: 1px solid #EEEEEE;
+  width: 100%;
+}
+.table.fixed {
   table-layout: fixed;
 }
-.dot.table.small {
+.table.celled td + td,
+.table.celled .cell + .cell {
+  border-left: 1px solid #EEEEEE;
+  border-top: 1px solid #EEEEEE;
+}
+.table.small {
   font-size: 12px;
   line-height: 12px;
 }
-.dot.table.large {
+.table.large {
   font-size: 18px;
   line-height: 18px;
 }
-.dot.table.fluid {
-  width: 100%;
-}
-.dot.table .head .cell,
-.dot.table thead .cell,
-.dot.table .head th,
-.dot.table thead th {
+.table .head .cell,
+.table thead .cell,
+.table .head th,
+.table thead th {
+  font-weight: 500;
   border-top: 0;
   background-color: #F5F5F5;
 }
-.dot.table .row,
-.dot.table tr {
+.table .row,
+.table tr {
   display: table-row;
 }
-.dot.table .row:nth-child(1) .cell,
-.dot.table tr:nth-child(1) .cell,
-.dot.table .row:nth-child(1) td,
-.dot.table tr:nth-child(1) td {
+.table .row:nth-child(1) .cell,
+.table tr:nth-child(1) .cell,
+.table .row:nth-child(1) td,
+.table tr:nth-child(1) td {
   border-top: 0;
 }
-.dot.table .row .cell,
-.dot.table tr .cell,
-.dot.table .row td,
-.dot.table tr td,
-.dot.table .row th,
-.dot.table tr th {
+.table .row .cell,
+.table tr .cell,
+.table .row td,
+.table tr td,
+.table .row th,
+.table tr th {
   border-top: 1px solid #EEEEEE;
   padding: 10px 20px;
   vertical-align: middle;
   display: table-cell;
 }
-.dot.table.basic {
+.table.basic {
   border: 0;
 }
-.dot.table.basic .row .cell,
-.dot.table.basic tr .cell,
-.dot.table.basic .row td,
-.dot.table.basic tr td {
+.table.basic .cell,
+.table.basic td,
+.table.basic th {
   background-color: initial;
   padding: 0;
   border: 0;
@@ -3091,7 +3476,6 @@ i.dot.icon:hover,
 .dot.input {
   display: table;
   position: relative;
-  overflow: hidden;
   vertical-align: middle;
 }
 .dot.input .button,
@@ -3120,16 +3504,16 @@ i.dot.icon:hover,
   width: 100%;
 }
 .dot.input > :first-child {
-  border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 .dot.input > :last-child {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 .dot.input.fluid {
   width: 100%;
@@ -3138,7 +3522,7 @@ i.dot.icon:hover,
   width: 5em;
 }
 .dot.input.icon > input {
-  border-radius: 3px;
+  border-radius: 5px;
 }
 .dot.input .icon {
   position: absolute;
@@ -3151,79 +3535,87 @@ i.dot.icon:hover,
   left: initial;
   right: 0;
 }
+.dot.input {
+  /*only wrapper style*/
+  overflow: hidden;
+}
 .dot.input input,
 .dot.input select,
 .dot.input textarea,
 .dot.input button,
 .dot.input .button {
   font-size: 14px;
-  padding: 7px;
-  line-height: 14px;
-  height: 30px;
-  overflow: hidden;
+  padding: 8px;
+  line-height: 16px;
+  height: 34px;
+}
+.dot.input.round > :first-child {
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+}
+.dot.input.round > :last-child {
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
 }
 .dot.input.icon.fluid {
   display: block;
 }
+.dot.input.icon.round input {
+  border-radius: 24px;
+}
 .dot.input.icon input {
-  padding-left: 7px;
-  padding-right: 32px;
+  padding-left: 8px;
+  padding-right: 36px;
 }
 .dot.input.icon .icon + input {
-  padding-left: 32px;
-  padding-right: 7px;
+  padding-left: 36px;
+  padding-right: 8px;
 }
 .dot.input .icon {
   cursor: pointer;
-  width: 30px;
+  width: 34px;
   text-align: center;
-  line-height: 30px;
-  font-size: 16px;
-}
-.dot.input.round > :first-child {
-  border-top-left-radius: 21px;
-  border-bottom-left-radius: 21px;
-}
-.dot.input.round > :last-child {
-  border-top-right-radius: 21px;
-  border-bottom-right-radius: 21px;
+  line-height: 34px;
+  font-size: 18px;
 }
 .dot.input.tiny input,
 .dot.input.tiny select,
 .dot.input.tiny textarea,
 .dot.input.tiny button,
 .dot.input.tiny .button {
-  font-size: 10px;
-  padding: 5px;
+  font-size: 8px;
+  padding: 4px;
   line-height: 10px;
-  height: 22px;
-  overflow: hidden;
+  height: 20px;
+}
+.dot.input.tiny.round > :first-child {
+  border-top-left-radius: 14px;
+  border-bottom-left-radius: 14px;
+}
+.dot.input.tiny.round > :last-child {
+  border-top-right-radius: 14px;
+  border-bottom-right-radius: 14px;
 }
 .dot.input.tiny.icon.fluid {
   display: block;
 }
+.dot.input.tiny.icon.round input {
+  border-radius: 14px;
+}
 .dot.input.tiny.icon input {
-  padding-left: 5px;
-  padding-right: 24px;
+  padding-left: 4px;
+  padding-right: 22px;
 }
 .dot.input.tiny.icon .icon + input {
-  padding-left: 24px;
-  padding-right: 5px;
+  padding-left: 22px;
+  padding-right: 4px;
 }
 .dot.input.tiny .icon {
   cursor: pointer;
-  width: 22px;
+  width: 20px;
   text-align: center;
-  line-height: 22px;
+  line-height: 20px;
   font-size: 12px;
-}
-.dot.input.tiny.round > :first-child {
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
-}
-.dot.input.tiny.round > :last-child {
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
 }
 .dot.input.small input,
 .dot.input.small select,
@@ -3231,36 +3623,38 @@ i.dot.icon:hover,
 .dot.input.small button,
 .dot.input.small .button {
   font-size: 12px;
-  padding: 6px;
-  line-height: 12px;
-  height: 26px;
-  overflow: hidden;
+  padding: 7px;
+  line-height: 14px;
+  height: 30px;
+}
+.dot.input.small.round > :first-child {
+  border-top-left-radius: 21px;
+  border-bottom-left-radius: 21px;
+}
+.dot.input.small.round > :last-child {
+  border-top-right-radius: 21px;
+  border-bottom-right-radius: 21px;
 }
 .dot.input.small.icon.fluid {
   display: block;
 }
+.dot.input.small.icon.round input {
+  border-radius: 21px;
+}
 .dot.input.small.icon input {
-  padding-left: 6px;
-  padding-right: 28px;
+  padding-left: 7px;
+  padding-right: 32px;
 }
 .dot.input.small.icon .icon + input {
-  padding-left: 28px;
-  padding-right: 6px;
+  padding-left: 32px;
+  padding-right: 7px;
 }
 .dot.input.small .icon {
   cursor: pointer;
-  width: 26px;
+  width: 30px;
   text-align: center;
-  line-height: 26px;
-  font-size: 14px;
-}
-.dot.input.small.round > :first-child {
-  border-top-left-radius: 18px;
-  border-bottom-left-radius: 18px;
-}
-.dot.input.small.round > :last-child {
-  border-top-right-radius: 18px;
-  border-bottom-right-radius: 18px;
+  line-height: 30px;
+  font-size: 16px;
 }
 .dot.input.large input,
 .dot.input.large select,
@@ -3268,36 +3662,38 @@ i.dot.icon:hover,
 .dot.input.large button,
 .dot.input.large .button {
   font-size: 18px;
-  padding: 9px;
-  line-height: 18px;
-  height: 38px;
-  overflow: hidden;
+  padding: 10px;
+  line-height: 20px;
+  height: 42px;
+}
+.dot.input.large.round > :first-child {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.dot.input.large.round > :last-child {
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 .dot.input.large.icon.fluid {
   display: block;
 }
+.dot.input.large.icon.round input {
+  border-radius: 30px;
+}
 .dot.input.large.icon input {
-  padding-left: 9px;
-  padding-right: 40px;
+  padding-left: 10px;
+  padding-right: 44px;
 }
 .dot.input.large.icon .icon + input {
-  padding-left: 40px;
-  padding-right: 9px;
+  padding-left: 44px;
+  padding-right: 10px;
 }
 .dot.input.large .icon {
   cursor: pointer;
-  width: 38px;
+  width: 42px;
   text-align: center;
-  line-height: 38px;
-  font-size: 20px;
-}
-.dot.input.large.round > :first-child {
-  border-top-left-radius: 27px;
-  border-bottom-left-radius: 27px;
-}
-.dot.input.large.round > :last-child {
-  border-top-right-radius: 27px;
-  border-bottom-right-radius: 27px;
+  line-height: 42px;
+  font-size: 22px;
 }
 .dot.input.huge input,
 .dot.input.huge select,
@@ -3305,39 +3701,41 @@ i.dot.icon:hover,
 .dot.input.huge button,
 .dot.input.huge .button {
   font-size: 22px;
-  padding: 11px;
-  line-height: 22px;
-  height: 46px;
-  overflow: hidden;
+  padding: 12px;
+  line-height: 24px;
+  height: 50px;
+}
+.dot.input.huge.round > :first-child {
+  border-top-left-radius: 36px;
+  border-bottom-left-radius: 36px;
+}
+.dot.input.huge.round > :last-child {
+  border-top-right-radius: 36px;
+  border-bottom-right-radius: 36px;
 }
 .dot.input.huge.icon.fluid {
   display: block;
 }
+.dot.input.huge.icon.round input {
+  border-radius: 36px;
+}
 .dot.input.huge.icon input {
-  padding-left: 11px;
-  padding-right: 48px;
+  padding-left: 12px;
+  padding-right: 52px;
 }
 .dot.input.huge.icon .icon + input {
-  padding-left: 48px;
-  padding-right: 11px;
+  padding-left: 52px;
+  padding-right: 12px;
 }
 .dot.input.huge .icon {
   cursor: pointer;
-  width: 46px;
+  width: 50px;
   text-align: center;
-  line-height: 46px;
-  font-size: 24px;
-}
-.dot.input.huge.round > :first-child {
-  border-top-left-radius: 33px;
-  border-bottom-left-radius: 33px;
-}
-.dot.input.huge.round > :last-child {
-  border-top-right-radius: 33px;
-  border-bottom-right-radius: 33px;
+  line-height: 50px;
+  font-size: 26px;
 }
 .dot input,
-.dotinput.input,
+input.dot.input,
 .dot textarea,
 .dot select {
   vertical-align: middle;
@@ -3345,75 +3743,100 @@ i.dot.icon:hover,
   -o-transition: all .3s;
   transition: all .3s;
   font-size: 14px;
-  padding: 7px;
-  line-height: 14px;
-  height: 30px;
-  overflow: hidden;
+  padding: 8px;
+  line-height: 16px;
+  height: 34px;
 }
 .dot input:focus,
-.dotinput.input:focus,
+input.dot.input:focus,
 .dot textarea:focus,
 .dot select:focus,
 .dot input.focus,
-.dotinput.input.focus,
+input.dot.input.focus,
 .dot textarea.focus,
 .dot select.focus {
   border-color: #03A9F4;
 }
 .dot input.angled,
-.dotinput.input.angled,
+input.dot.input.angled,
 .dot textarea.angled,
 .dot select.angled {
   border-radius: 0;
 }
 .dot input.fluid,
-.dotinput.input.fluid,
+input.dot.input.fluid,
 .dot textarea.fluid,
 .dot select.fluid {
   width: 100%;
 }
+.dot input.round,
+input.dot.input.round,
+.dot textarea.round,
+.dot select.round {
+  border-radius: 24px;
+}
 .dot input.tiny,
-.dotinput.input.tiny,
+input.dot.input.tiny,
 .dot textarea.tiny,
 .dot select.tiny {
-  font-size: 10px;
-  padding: 5px;
+  font-size: 8px;
+  padding: 4px;
   line-height: 10px;
-  height: 22px;
-  overflow: hidden;
+  height: 20px;
+}
+.dot input.tiny.round,
+input.dot.input.tiny.round,
+.dot textarea.tiny.round,
+.dot select.tiny.round {
+  border-radius: 14px;
 }
 .dot input.small,
-.dotinput.input.small,
+input.dot.input.small,
 .dot textarea.small,
 .dot select.small {
   font-size: 12px;
-  padding: 6px;
-  line-height: 12px;
-  height: 26px;
-  overflow: hidden;
+  padding: 7px;
+  line-height: 14px;
+  height: 30px;
+}
+.dot input.small.round,
+input.dot.input.small.round,
+.dot textarea.small.round,
+.dot select.small.round {
+  border-radius: 21px;
 }
 .dot input.large,
-.dotinput.input.large,
+input.dot.input.large,
 .dot textarea.large,
 .dot select.large {
   font-size: 18px;
-  padding: 9px;
-  line-height: 18px;
-  height: 38px;
-  overflow: hidden;
+  padding: 10px;
+  line-height: 20px;
+  height: 42px;
+}
+.dot input.large.round,
+input.dot.input.large.round,
+.dot textarea.large.round,
+.dot select.large.round {
+  border-radius: 30px;
 }
 .dot input.huge,
-.dotinput.input.huge,
+input.dot.input.huge,
 .dot textarea.huge,
 .dot select.huge {
   font-size: 22px;
-  padding: 11px;
-  line-height: 22px;
-  height: 46px;
-  overflow: hidden;
+  padding: 12px;
+  line-height: 24px;
+  height: 50px;
+}
+.dot input.huge.round,
+input.dot.input.huge.round,
+.dot textarea.huge.round,
+.dot select.huge.round {
+  border-radius: 36px;
 }
 .dot input.disabled,
-.dotinput.input.disabled,
+input.dot.input.disabled,
 .dot textarea.disabled,
 .dot select.disabled {
   disabled: disabled;
@@ -3424,7 +3847,7 @@ i.dot.icon:hover,
   opacity: .85;
 }
 .dot input.error,
-.dotinput.input.error,
+input.dot.input.error,
 .dot textarea.error,
 .dot select.error {
   border-color: #EF5350;
@@ -3438,7 +3861,7 @@ i.dot.icon:hover,
   position: relative;
   display: inline-block;
   line-height: 1em;
-  font-size: 16px;
+  font-size: 15px;
   margin-right: 10px;
   vertical-align: middle;
 }
@@ -3464,9 +3887,10 @@ i.dot.icon:hover,
 .dot.checkbox input[type=radio].show,
 .dot.radio input[type=radio].show {
   opacity: 1;
-  top: 2px;
-  width: 15px;
-  height: 15px;
+  top: 1px;
+  left: 1px;
+  width: 14px;
+  height: 14px;
 }
 .dot.checkbox input[type=checkbox].show + *,
 .dot.radio input[type=checkbox].show + *,
@@ -3509,16 +3933,21 @@ i.dot.icon:hover,
 }
 .dot.checkbox.disabled,
 .dot.radio.disabled {
-  opacity: .8;
-  color: #BDBDBD;
+  cursor: not-allowed;
 }
 .dot.checkbox.disabled input[type=checkbox],
 .dot.radio.disabled input[type=checkbox],
 .dot.checkbox.disabled input[type=radio],
 .dot.radio.disabled input[type=radio] {
-  cursor: not-allowed;
   width: 0;
   pointer-events: none;
+}
+.dot.checkbox.disabled input[type=checkbox] + *:before,
+.dot.radio.disabled input[type=checkbox] + *:before,
+.dot.checkbox.disabled input[type=radio] + *:before,
+.dot.radio.disabled input[type=radio] + *:before {
+  opacity: .7;
+  color: #BDBDBD;
 }
 .dot.checkbox input[type=checkbox]:checked + *:before {
   content: 'check_box';
@@ -3541,12 +3970,12 @@ i.dot.icon:hover,
   border: 0;
   background-color: #F5F5F5;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 5px;
   cursor: pointer;
   /*size*/
   padding: 6px 12px;
   font-size: 12px;
-  line-height: 12px;
+  line-height: 14px;
   /*color label*/
   /*floar right clear padding*/
 }
@@ -3562,10 +3991,10 @@ i.dot.icon:hover,
 .dot.label > .icon,
 .dot .label > .icon {
   cursor: pointer;
-  font-size: 12px;
-  line-height: 12px;
-  width: 12px;
-  height: 12px;
+  font-size: 14px;
+  line-height: 14px;
+  width: 14px;
+  height: 14px;
 }
 .dot.label.icon .icon,
 .dot .label.icon .icon {
@@ -3587,21 +4016,21 @@ i.dot.icon:hover,
   max-width: none;
   max-height: none;
   display: inline-block;
-  height: 24px;
+  height: 26px;
   margin: -6px 6px -6px -12px;
-  border-radius: 3px 0 0 3px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.label.image :last-child.image,
 .dot .label.image :last-child.image {
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 5px 5px 0;
   margin: -6px -12px -6px 6px;
 }
 .dot.label.circle,
 .dot .label.circle,
 .dot.label.labeled,
 .dot .label.labeled {
-  padding: 12px;
+  padding: 14px;
 }
 .dot.label.circle,
 .dot .label.circle,
@@ -3626,27 +4055,27 @@ i.dot.icon:hover,
 .dot .label.circle,
 .dot.label.round,
 .dot .label.round {
-  border-radius: 18px;
+  border-radius: 21px;
 }
 .dot.label.tiny,
 .dot .label.tiny {
-  padding: 4px 8px;
+  padding: 5px 10px;
   font-size: 8px;
-  line-height: 8px;
+  line-height: 10px;
 }
 .dot.label.tiny > .icon,
 .dot .label.tiny > .icon {
   cursor: pointer;
-  font-size: 8px;
-  line-height: 8px;
-  width: 8px;
-  height: 8px;
+  font-size: 10px;
+  line-height: 10px;
+  width: 10px;
+  height: 10px;
 }
 .dot.label.tiny.icon .icon,
 .dot .label.tiny.icon .icon {
   vertical-align: top;
   /*default icon left*/
-  margin: 0 2px 0 -2px;
+  margin: 0 3px 0 -3px;
   opacity: .95;
 }
 .dot.label.tiny.icon .icon:hover,
@@ -3655,28 +4084,28 @@ i.dot.icon:hover,
 }
 .dot.label.tiny.icon :last-child.icon,
 .dot .label.tiny.icon :last-child.icon {
-  margin: 0 -2px 0 2px;
+  margin: 0 -3px 0 3px;
 }
 .dot.label.tiny.image img,
 .dot .label.tiny.image img {
   max-width: none;
   max-height: none;
   display: inline-block;
-  height: 16px;
-  margin: -4px 4px -4px -8px;
-  border-radius: 3px 0 0 3px;
+  height: 20px;
+  margin: -5px 5px -5px -10px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.label.tiny.image :last-child.image,
 .dot .label.tiny.image :last-child.image {
-  border-radius: 0 3px 3px 0;
-  margin: -4px -8px -4px 4px;
+  border-radius: 0 5px 5px 0;
+  margin: -5px -10px -5px 5px;
 }
 .dot.label.tiny.circle,
 .dot .label.tiny.circle,
 .dot.label.tiny.labeled,
 .dot .label.tiny.labeled {
-  padding: 8px;
+  padding: 10px;
 }
 .dot.label.tiny.circle,
 .dot .label.tiny.circle,
@@ -3701,27 +4130,27 @@ i.dot.icon:hover,
 .dot .label.tiny.circle,
 .dot.label.tiny.round,
 .dot .label.tiny.round {
-  border-radius: 12px;
+  border-radius: 15px;
 }
 .dot.label.small,
 .dot .label.small {
-  padding: 5px 10px;
+  padding: 6px 12px;
   font-size: 10px;
-  line-height: 10px;
+  line-height: 12px;
 }
 .dot.label.small > .icon,
 .dot .label.small > .icon {
   cursor: pointer;
-  font-size: 10px;
-  line-height: 10px;
-  width: 10px;
-  height: 10px;
+  font-size: 12px;
+  line-height: 12px;
+  width: 12px;
+  height: 12px;
 }
 .dot.label.small.icon .icon,
 .dot .label.small.icon .icon {
   vertical-align: top;
   /*default icon left*/
-  margin: 0 3px 0 -3px;
+  margin: 0 4px 0 -4px;
   opacity: .95;
 }
 .dot.label.small.icon .icon:hover,
@@ -3730,28 +4159,28 @@ i.dot.icon:hover,
 }
 .dot.label.small.icon :last-child.icon,
 .dot .label.small.icon :last-child.icon {
-  margin: 0 -3px 0 3px;
+  margin: 0 -4px 0 4px;
 }
 .dot.label.small.image img,
 .dot .label.small.image img {
   max-width: none;
   max-height: none;
   display: inline-block;
-  height: 20px;
-  margin: -5px 5px -5px -10px;
-  border-radius: 3px 0 0 3px;
+  height: 24px;
+  margin: -6px 6px -6px -12px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.label.small.image :last-child.image,
 .dot .label.small.image :last-child.image {
-  border-radius: 0 3px 3px 0;
-  margin: -5px -10px -5px 5px;
+  border-radius: 0 5px 5px 0;
+  margin: -6px -12px -6px 6px;
 }
 .dot.label.small.circle,
 .dot .label.small.circle,
 .dot.label.small.labeled,
 .dot .label.small.labeled {
-  padding: 10px;
+  padding: 12px;
 }
 .dot.label.small.circle,
 .dot .label.small.circle,
@@ -3776,27 +4205,27 @@ i.dot.icon:hover,
 .dot .label.small.circle,
 .dot.label.small.round,
 .dot .label.small.round {
-  border-radius: 15px;
+  border-radius: 18px;
 }
 .dot.label.large,
 .dot .label.large {
-  padding: 8px 16px;
+  padding: 9px 18px;
   font-size: 16px;
-  line-height: 16px;
+  line-height: 18px;
 }
 .dot.label.large > .icon,
 .dot .label.large > .icon {
   cursor: pointer;
-  font-size: 16px;
-  line-height: 16px;
-  width: 16px;
-  height: 16px;
+  font-size: 18px;
+  line-height: 18px;
+  width: 18px;
+  height: 18px;
 }
 .dot.label.large.icon .icon,
 .dot .label.large.icon .icon {
   vertical-align: top;
   /*default icon left*/
-  margin: 0 6px 0 -6px;
+  margin: 0 7px 0 -7px;
   opacity: .95;
 }
 .dot.label.large.icon .icon:hover,
@@ -3805,28 +4234,28 @@ i.dot.icon:hover,
 }
 .dot.label.large.icon :last-child.icon,
 .dot .label.large.icon :last-child.icon {
-  margin: 0 -6px 0 6px;
+  margin: 0 -7px 0 7px;
 }
 .dot.label.large.image img,
 .dot .label.large.image img {
   max-width: none;
   max-height: none;
   display: inline-block;
-  height: 32px;
-  margin: -8px 8px -8px -16px;
-  border-radius: 3px 0 0 3px;
+  height: 36px;
+  margin: -9px 9px -9px -18px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.label.large.image :last-child.image,
 .dot .label.large.image :last-child.image {
-  border-radius: 0 3px 3px 0;
-  margin: -8px -16px -8px 8px;
+  border-radius: 0 5px 5px 0;
+  margin: -9px -18px -9px 9px;
 }
 .dot.label.large.circle,
 .dot .label.large.circle,
 .dot.label.large.labeled,
 .dot .label.large.labeled {
-  padding: 16px;
+  padding: 18px;
 }
 .dot.label.large.circle,
 .dot .label.large.circle,
@@ -3851,27 +4280,27 @@ i.dot.icon:hover,
 .dot .label.large.circle,
 .dot.label.large.round,
 .dot .label.large.round {
-  border-radius: 24px;
+  border-radius: 27px;
 }
 .dot.label.huge,
 .dot .label.huge {
-  padding: 10px 20px;
+  padding: 11px 22px;
   font-size: 20px;
-  line-height: 20px;
+  line-height: 22px;
 }
 .dot.label.huge > .icon,
 .dot .label.huge > .icon {
   cursor: pointer;
-  font-size: 20px;
-  line-height: 20px;
-  width: 20px;
-  height: 20px;
+  font-size: 22px;
+  line-height: 22px;
+  width: 22px;
+  height: 22px;
 }
 .dot.label.huge.icon .icon,
 .dot .label.huge.icon .icon {
   vertical-align: top;
   /*default icon left*/
-  margin: 0 8px 0 -8px;
+  margin: 0 9px 0 -9px;
   opacity: .95;
 }
 .dot.label.huge.icon .icon:hover,
@@ -3880,28 +4309,28 @@ i.dot.icon:hover,
 }
 .dot.label.huge.icon :last-child.icon,
 .dot .label.huge.icon :last-child.icon {
-  margin: 0 -8px 0 8px;
+  margin: 0 -9px 0 9px;
 }
 .dot.label.huge.image img,
 .dot .label.huge.image img {
   max-width: none;
   max-height: none;
   display: inline-block;
-  height: 40px;
-  margin: -10px 10px -10px -20px;
-  border-radius: 3px 0 0 3px;
+  height: 44px;
+  margin: -11px 11px -11px -22px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.label.huge.image :last-child.image,
 .dot .label.huge.image :last-child.image {
-  border-radius: 0 3px 3px 0;
-  margin: -10px -20px -10px 10px;
+  border-radius: 0 5px 5px 0;
+  margin: -11px -22px -11px 11px;
 }
 .dot.label.huge.circle,
 .dot .label.huge.circle,
 .dot.label.huge.labeled,
 .dot .label.huge.labeled {
-  padding: 20px;
+  padding: 22px;
 }
 .dot.label.huge.circle,
 .dot .label.huge.circle,
@@ -3926,7 +4355,7 @@ i.dot.icon:hover,
 .dot .label.huge.circle,
 .dot.label.huge.round,
 .dot .label.huge.round {
-  border-radius: 30px;
+  border-radius: 33px;
 }
 .dot.label.red,
 .dot .label.red {
@@ -4415,7 +4844,7 @@ i.dot.icon:hover,
 }
 .dot.label-group .label {
   padding: 6px 12px;
-  font-size: 12px;
+  font-size: 10px;
   line-height: 12px;
 }
 .dot.label-group .label > .icon {
@@ -4443,11 +4872,11 @@ i.dot.icon:hover,
   display: inline-block;
   height: 24px;
   margin: -6px 6px -6px -12px;
-  border-radius: 3px 0 0 3px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.label-group .label.image :last-child.image {
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 5px 5px 0;
   margin: -6px -12px -6px 6px;
 }
 .dot.label-group .label.circle,
@@ -4475,7 +4904,7 @@ i.dot.icon:hover,
 }
 .dot.label-group.tiny .label {
   padding: 4px 8px;
-  font-size: 8px;
+  font-size: 6px;
   line-height: 8px;
 }
 .dot.label-group.tiny .label > .icon {
@@ -4503,11 +4932,11 @@ i.dot.icon:hover,
   display: inline-block;
   height: 16px;
   margin: -4px 4px -4px -8px;
-  border-radius: 3px 0 0 3px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.label-group.tiny .label.image :last-child.image {
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 5px 5px 0;
   margin: -4px -8px -4px 4px;
 }
 .dot.label-group.tiny .label.circle,
@@ -4535,7 +4964,7 @@ i.dot.icon:hover,
 }
 .dot.label-group.small .label {
   padding: 5px 10px;
-  font-size: 10px;
+  font-size: 8px;
   line-height: 10px;
 }
 .dot.label-group.small .label > .icon {
@@ -4563,11 +4992,11 @@ i.dot.icon:hover,
   display: inline-block;
   height: 20px;
   margin: -5px 5px -5px -10px;
-  border-radius: 3px 0 0 3px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.label-group.small .label.image :last-child.image {
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 5px 5px 0;
   margin: -5px -10px -5px 5px;
 }
 .dot.label-group.small .label.circle,
@@ -4595,7 +5024,7 @@ i.dot.icon:hover,
 }
 .dot.label-group.large .label {
   padding: 8px 16px;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 16px;
 }
 .dot.label-group.large .label > .icon {
@@ -4623,11 +5052,11 @@ i.dot.icon:hover,
   display: inline-block;
   height: 32px;
   margin: -8px 8px -8px -16px;
-  border-radius: 3px 0 0 3px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.label-group.large .label.image :last-child.image {
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 5px 5px 0;
   margin: -8px -16px -8px 8px;
 }
 .dot.label-group.large .label.circle,
@@ -4655,7 +5084,7 @@ i.dot.icon:hover,
 }
 .dot.label-group.huge .label {
   padding: 10px 20px;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 20px;
 }
 .dot.label-group.huge .label > .icon {
@@ -4683,11 +5112,11 @@ i.dot.icon:hover,
   display: inline-block;
   height: 40px;
   margin: -10px 10px -10px -20px;
-  border-radius: 3px 0 0 3px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.label-group.huge .label.image :last-child.image {
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 5px 5px 0;
   margin: -10px -20px -10px 10px;
 }
 .dot.label-group.huge .label.circle,
@@ -4724,7 +5153,7 @@ img.dot.image {
   height: auto;
 }
 img.dot.image.round {
-  border-radius: 3px;
+  border-radius: 5px;
 }
 img.dot.image.fluid {
   display: block;
@@ -4737,10 +5166,10 @@ img.dot.image.middle.circle {
   border-radius: 150px;
 }
 img.dot.image.mini {
-  width: 30px;
+  width: 35px;
 }
 img.dot.image.mini.circle {
-  border-radius: 15px;
+  border-radius: 17.5px;
 }
 img.dot.image.tiny {
   width: 60px;
@@ -4787,7 +5216,7 @@ img.dot.image.massive.circle {
   width: 100%;
 }
 .dot.image.round > img {
-  border-radius: 3px;
+  border-radius: 5px;
 }
 .dot.image.middle.circle {
   border-radius: 50%;
@@ -4829,8 +5258,8 @@ img.dot.image.massive.circle {
 .dot.image.mini.circle.landscape,
 .dot.image.mini.circle.portrait {
   overflow: hidden;
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
 }
 .dot.image.mini.circle.landscape > img,
 .dot.image.mini.circle.portrait > img {
@@ -4838,7 +5267,7 @@ img.dot.image.massive.circle {
   max-width: none;
   width: auto;
   height: 100%;
-  margin-left: -7.5px;
+  margin-left: -8.75px;
 }
 .dot.image.mini.circle.portrait > img {
   width: 100%;
@@ -4846,10 +5275,10 @@ img.dot.image.massive.circle {
   margin: 0;
 }
 .dot.image.mini > img {
-  width: 30px;
+  width: 35px;
 }
 .dot.image.mini > img.circle {
-  border-radius: 15px;
+  border-radius: 17.5px;
 }
 .dot.image.tiny.circle {
   border-radius: 50%;
@@ -5045,14 +5474,20 @@ img.dot.image.massive.circle {
   width: 35px;
   height: 35px;
   margin: 5px 0 0;
-  overflow: hidden;
+}
+.dot.comment > .avatar:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.comment > .avatar img {
   float: left;
   width: 100%;
   height: 100%;
   background-color: #F5F5F5;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 .dot.comment > .avatar.angled img {
   border-radius: 0;
@@ -5114,8 +5549,12 @@ img.dot.image.massive.circle {
 .dot.item.bottom > .content {
   vertical-align: bottom;
 }
-.dot.item > .image {
-  overflow: hidden;
+.dot.item > .image:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.item > .image > img {
   float: left;
@@ -5142,7 +5581,13 @@ img.dot.image.massive.circle {
 }
 .dot.cards {
   margin: 0 -10px;
-  overflow: hidden;
+}
+.dot.cards:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.cards > .card {
   display: block;
@@ -5218,11 +5663,11 @@ img.dot.image.massive.circle {
 .dot.message {
   margin: 10px 0;
   color: #616161;
-  border-radius: 3px;
+  border-radius: 5px;
   background-color: #FAFAFA;
   border: 1px solid #EEEEEE;
   padding: 9px 18px;
-  font-size: 15px;
+  font-size: 13px;
   line-height: 15px;
   padding-left: 10px;
   padding-right: 10px;
@@ -5280,11 +5725,11 @@ img.dot.image.massive.circle {
   display: inline-block;
   height: 33px;
   margin: -9px 9px -9px -18px;
-  border-radius: 3px 0 0 3px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.message.image :last-child.image {
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 5px 5px 0;
   margin: -9px -18px -9px 9px;
 }
 .dot.message.circle,
@@ -5312,7 +5757,7 @@ img.dot.image.massive.circle {
 }
 .dot.message.tiny {
   padding: 6px 12px;
-  font-size: 10px;
+  font-size: 8px;
   line-height: 10px;
   padding-left: 10px;
   padding-right: 10px;
@@ -5342,11 +5787,11 @@ img.dot.image.massive.circle {
   display: inline-block;
   height: 22px;
   margin: -6px 6px -6px -12px;
-  border-radius: 3px 0 0 3px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.message.tiny.image :last-child.image {
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 5px 5px 0;
   margin: -6px -12px -6px 6px;
 }
 .dot.message.tiny.circle,
@@ -5374,7 +5819,7 @@ img.dot.image.massive.circle {
 }
 .dot.message.small {
   padding: 7px 14px;
-  font-size: 12px;
+  font-size: 10px;
   line-height: 12px;
   padding-left: 10px;
   padding-right: 10px;
@@ -5404,11 +5849,11 @@ img.dot.image.massive.circle {
   display: inline-block;
   height: 26px;
   margin: -7px 7px -7px -14px;
-  border-radius: 3px 0 0 3px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.message.small.image :last-child.image {
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 5px 5px 0;
   margin: -7px -14px -7px 7px;
 }
 .dot.message.small.circle,
@@ -5436,7 +5881,7 @@ img.dot.image.massive.circle {
 }
 .dot.message.large {
   padding: 12px 24px;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 20px;
   padding-left: 10px;
   padding-right: 10px;
@@ -5466,11 +5911,11 @@ img.dot.image.massive.circle {
   display: inline-block;
   height: 44px;
   margin: -12px 12px -12px -24px;
-  border-radius: 3px 0 0 3px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.message.large.image :last-child.image {
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 5px 5px 0;
   margin: -12px -24px -12px 12px;
 }
 .dot.message.large.circle,
@@ -5498,7 +5943,7 @@ img.dot.image.massive.circle {
 }
 .dot.message.huge {
   padding: 15px 30px;
-  font-size: 25px;
+  font-size: 23px;
   line-height: 25px;
   padding-left: 10px;
   padding-right: 10px;
@@ -5528,11 +5973,11 @@ img.dot.image.massive.circle {
   display: inline-block;
   height: 55px;
   margin: -15px 15px -15px -30px;
-  border-radius: 3px 0 0 3px;
+  border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
 .dot.message.huge.image :last-child.image {
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 5px 5px 0;
   margin: -15px -30px -15px 15px;
 }
 .dot.message.huge.circle,
@@ -5998,19 +6443,33 @@ img.dot.image.massive.circle {
   padding: 20px;
   width: 100%;
 }
-.dot.form .field {
-  overflow: hidden;
-  line-height: 30px;
-  margin-bottom: 14px;
+.dot.form:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
-.dot.form .field input,
+.dot.form .field {
+  line-height: 36px;
+  margin-bottom: 16px;
+}
+.dot.form .field input[type="text"],
+.dot.form .field input[type="number"],
+.dot.form .field input[type="url"],
+.dot.form .field input[type="tel"],
+.dot.form .field input[type="password"],
+.dot.form .field input[type="email"],
+.dot.form .field input[type="date"],
+.dot.form .field input[type="datetime-local"],
+.dot.form .field input[type="time"],
 .dot.form .field textarea {
   width: 100%;
 }
 .dot.form .field .field {
   margin-bottom: 0;
 }
-.dot.form .field .label:nth-child(1):not(.dot) {
+.dot.form .field .label:not(.dot) {
   padding: 0 0 4px;
   background: initial;
   text-shadow: none;
@@ -6020,11 +6479,20 @@ img.dot.image.massive.circle {
   font-size: 15px;
   color: #383838;
   word-wrap: break-word;
+}
+.dot.form .field .label:not(.dot):nth-child(1) {
   display: block;
 }
 .dot.form .field .fields-1 {
-  overflow: hidden;
+  font-size: 0;
   position: relative;
+}
+.dot.form .field .fields-1:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.form .field .fields-1 > .field:first-child {
   padding-left: 0;
@@ -6033,18 +6501,29 @@ img.dot.image.massive.circle {
   padding-right: 0;
 }
 .dot.form .field .fields-1 .field {
+  font-size: 15px;
   width: 100%;
+  display: inline-block;
   float: left;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-1 {
+  font-size: 15px;
   padding: 0 5px;
+  display: inline-block;
   float: left;
   width: 6.25%;
 }
 .dot.form .field .fields-2 {
-  overflow: hidden;
+  font-size: 0;
   position: relative;
+}
+.dot.form .field .fields-2:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.form .field .fields-2 > .field:first-child {
   padding-left: 0;
@@ -6053,18 +6532,29 @@ img.dot.image.massive.circle {
   padding-right: 0;
 }
 .dot.form .field .fields-2 .field {
+  font-size: 15px;
   width: 50%;
+  display: inline-block;
   float: left;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-2 {
+  font-size: 15px;
   padding: 0 5px;
+  display: inline-block;
   float: left;
   width: 12.5%;
 }
 .dot.form .field .fields-3 {
-  overflow: hidden;
+  font-size: 0;
   position: relative;
+}
+.dot.form .field .fields-3:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.form .field .fields-3 > .field:first-child {
   padding-left: 0;
@@ -6073,18 +6563,29 @@ img.dot.image.massive.circle {
   padding-right: 0;
 }
 .dot.form .field .fields-3 .field {
+  font-size: 15px;
   width: 33.33333333%;
+  display: inline-block;
   float: left;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-3 {
+  font-size: 15px;
   padding: 0 5px;
+  display: inline-block;
   float: left;
   width: 18.75%;
 }
 .dot.form .field .fields-4 {
-  overflow: hidden;
+  font-size: 0;
   position: relative;
+}
+.dot.form .field .fields-4:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.form .field .fields-4 > .field:first-child {
   padding-left: 0;
@@ -6093,18 +6594,29 @@ img.dot.image.massive.circle {
   padding-right: 0;
 }
 .dot.form .field .fields-4 .field {
+  font-size: 15px;
   width: 25%;
+  display: inline-block;
   float: left;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-4 {
+  font-size: 15px;
   padding: 0 5px;
+  display: inline-block;
   float: left;
   width: 25%;
 }
 .dot.form .field .fields-5 {
-  overflow: hidden;
+  font-size: 0;
   position: relative;
+}
+.dot.form .field .fields-5:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.form .field .fields-5 > .field:first-child {
   padding-left: 0;
@@ -6113,18 +6625,29 @@ img.dot.image.massive.circle {
   padding-right: 0;
 }
 .dot.form .field .fields-5 .field {
+  font-size: 15px;
   width: 20%;
+  display: inline-block;
   float: left;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-5 {
+  font-size: 15px;
   padding: 0 5px;
+  display: inline-block;
   float: left;
   width: 31.25%;
 }
 .dot.form .field .fields-6 {
-  overflow: hidden;
+  font-size: 0;
   position: relative;
+}
+.dot.form .field .fields-6:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.form .field .fields-6 > .field:first-child {
   padding-left: 0;
@@ -6133,18 +6656,29 @@ img.dot.image.massive.circle {
   padding-right: 0;
 }
 .dot.form .field .fields-6 .field {
+  font-size: 15px;
   width: 16.66666667%;
+  display: inline-block;
   float: left;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-6 {
+  font-size: 15px;
   padding: 0 5px;
+  display: inline-block;
   float: left;
   width: 37.5%;
 }
 .dot.form .field .fields-7 {
-  overflow: hidden;
+  font-size: 0;
   position: relative;
+}
+.dot.form .field .fields-7:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.form .field .fields-7 > .field:first-child {
   padding-left: 0;
@@ -6153,18 +6687,29 @@ img.dot.image.massive.circle {
   padding-right: 0;
 }
 .dot.form .field .fields-7 .field {
+  font-size: 15px;
   width: 14.28571429%;
+  display: inline-block;
   float: left;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-7 {
+  font-size: 15px;
   padding: 0 5px;
+  display: inline-block;
   float: left;
   width: 43.75%;
 }
 .dot.form .field .fields-8 {
-  overflow: hidden;
+  font-size: 0;
   position: relative;
+}
+.dot.form .field .fields-8:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.form .field .fields-8 > .field:first-child {
   padding-left: 0;
@@ -6173,18 +6718,29 @@ img.dot.image.massive.circle {
   padding-right: 0;
 }
 .dot.form .field .fields-8 .field {
+  font-size: 15px;
   width: 12.5%;
+  display: inline-block;
   float: left;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-8 {
+  font-size: 15px;
   padding: 0 5px;
+  display: inline-block;
   float: left;
   width: 50%;
 }
 .dot.form .field .fields-9 {
-  overflow: hidden;
+  font-size: 0;
   position: relative;
+}
+.dot.form .field .fields-9:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.form .field .fields-9 > .field:first-child {
   padding-left: 0;
@@ -6193,18 +6749,29 @@ img.dot.image.massive.circle {
   padding-right: 0;
 }
 .dot.form .field .fields-9 .field {
+  font-size: 15px;
   width: 11.11111111%;
+  display: inline-block;
   float: left;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-9 {
+  font-size: 15px;
   padding: 0 5px;
+  display: inline-block;
   float: left;
   width: 56.25%;
 }
 .dot.form .field .fields-10 {
-  overflow: hidden;
+  font-size: 0;
   position: relative;
+}
+.dot.form .field .fields-10:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.form .field .fields-10 > .field:first-child {
   padding-left: 0;
@@ -6213,18 +6780,29 @@ img.dot.image.massive.circle {
   padding-right: 0;
 }
 .dot.form .field .fields-10 .field {
+  font-size: 15px;
   width: 10%;
+  display: inline-block;
   float: left;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-10 {
+  font-size: 15px;
   padding: 0 5px;
+  display: inline-block;
   float: left;
   width: 62.5%;
 }
 .dot.form .field .fields-11 {
-  overflow: hidden;
+  font-size: 0;
   position: relative;
+}
+.dot.form .field .fields-11:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.form .field .fields-11 > .field:first-child {
   padding-left: 0;
@@ -6233,18 +6811,29 @@ img.dot.image.massive.circle {
   padding-right: 0;
 }
 .dot.form .field .fields-11 .field {
+  font-size: 15px;
   width: 9.09090909%;
+  display: inline-block;
   float: left;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-11 {
+  font-size: 15px;
   padding: 0 5px;
+  display: inline-block;
   float: left;
   width: 68.75%;
 }
 .dot.form .field .fields-12 {
-  overflow: hidden;
+  font-size: 0;
   position: relative;
+}
+.dot.form .field .fields-12:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.form .field .fields-12 > .field:first-child {
   padding-left: 0;
@@ -6253,18 +6842,29 @@ img.dot.image.massive.circle {
   padding-right: 0;
 }
 .dot.form .field .fields-12 .field {
+  font-size: 15px;
   width: 8.33333333%;
+  display: inline-block;
   float: left;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-12 {
+  font-size: 15px;
   padding: 0 5px;
+  display: inline-block;
   float: left;
   width: 75%;
 }
 .dot.form .field .fields-13 {
-  overflow: hidden;
+  font-size: 0;
   position: relative;
+}
+.dot.form .field .fields-13:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.form .field .fields-13 > .field:first-child {
   padding-left: 0;
@@ -6273,18 +6873,29 @@ img.dot.image.massive.circle {
   padding-right: 0;
 }
 .dot.form .field .fields-13 .field {
+  font-size: 15px;
   width: 7.69230769%;
+  display: inline-block;
   float: left;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-13 {
+  font-size: 15px;
   padding: 0 5px;
+  display: inline-block;
   float: left;
   width: 81.25%;
 }
 .dot.form .field .fields-14 {
-  overflow: hidden;
+  font-size: 0;
   position: relative;
+}
+.dot.form .field .fields-14:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.form .field .fields-14 > .field:first-child {
   padding-left: 0;
@@ -6293,18 +6904,29 @@ img.dot.image.massive.circle {
   padding-right: 0;
 }
 .dot.form .field .fields-14 .field {
+  font-size: 15px;
   width: 7.14285714%;
+  display: inline-block;
   float: left;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-14 {
+  font-size: 15px;
   padding: 0 5px;
+  display: inline-block;
   float: left;
   width: 87.5%;
 }
 .dot.form .field .fields-15 {
-  overflow: hidden;
+  font-size: 0;
   position: relative;
+}
+.dot.form .field .fields-15:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.form .field .fields-15 > .field:first-child {
   padding-left: 0;
@@ -6313,18 +6935,29 @@ img.dot.image.massive.circle {
   padding-right: 0;
 }
 .dot.form .field .fields-15 .field {
+  font-size: 15px;
   width: 6.66666667%;
+  display: inline-block;
   float: left;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-15 {
+  font-size: 15px;
   padding: 0 5px;
+  display: inline-block;
   float: left;
   width: 93.75%;
 }
 .dot.form .field .fields-16 {
-  overflow: hidden;
+  font-size: 0;
   position: relative;
+}
+.dot.form .field .fields-16:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.form .field .fields-16 > .field:first-child {
   padding-left: 0;
@@ -6333,18 +6966,29 @@ img.dot.image.massive.circle {
   padding-right: 0;
 }
 .dot.form .field .fields-16 .field {
+  font-size: 15px;
   width: 6.25%;
+  display: inline-block;
   float: left;
   padding: 0 5px;
 }
 .dot.form .field .fields .field-16 {
+  font-size: 15px;
   padding: 0 5px;
+  display: inline-block;
   float: left;
   width: 100%;
 }
 .dot.form .field .fields {
-  overflow: hidden;
   position: relative;
+  font-size: 0;
+}
+.dot.form .field .fields:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 .dot.form .field .fields > :first-child {
   padding-left: 0;
@@ -6353,12 +6997,20 @@ img.dot.image.massive.circle {
   padding-right: 0;
 }
 .dot.form .field .fields > .field {
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 .dot.form .field .fields > .field:last-child {
   margin-bottom: 0;
 }
-.dot.form .field input,
+.dot.form .field input[type="text"],
+.dot.form .field input[type="number"],
+.dot.form .field input[type="url"],
+.dot.form .field input[type="tel"],
+.dot.form .field input[type="password"],
+.dot.form .field input[type="email"],
+.dot.form .field input[type="date"],
+.dot.form .field input[type="datetime-local"],
+.dot.form .field input[type="time"],
 .dot.form .field textarea,
 .dot.form .field select {
   width: 100%;
@@ -6374,265 +7026,549 @@ img.dot.image.massive.circle {
   text-align: right;
 }
 .dot.form.inline > .field {
-  width: 100%;
-  overflow: hidden;
   position: relative;
+}
+.dot.form.inline > .field > .field {
+  margin-left: 100px;
 }
 .dot.form.inline > .field > .label:nth-child(1) {
   vertical-align: top;
   width: 100px;
-  padding: 8px 0;
+  padding: 10px 0;
   padding-right: 10px;
   float: left;
 }
-.dot.form.inline .action {
+.dot.form.inline > .field > .fields-1 {
   margin-left: 100px;
+}
+.dot.form.inline > .field > .fields-2 {
+  margin-left: 100px;
+}
+.dot.form.inline > .field > .fields-3 {
+  margin-left: 100px;
+}
+.dot.form.inline > .field > .fields-4 {
+  margin-left: 100px;
+}
+.dot.form.inline > .field > .fields-5 {
+  margin-left: 100px;
+}
+.dot.form.inline > .field > .fields-6 {
+  margin-left: 100px;
+}
+.dot.form.inline > .field > .fields-7 {
+  margin-left: 100px;
+}
+.dot.form.inline > .field > .fields-8 {
+  margin-left: 100px;
+}
+.dot.form.inline > .field > .fields-9 {
+  margin-left: 100px;
+}
+.dot.form.inline > .field > .fields-10 {
+  margin-left: 100px;
+}
+.dot.form.inline > .field > .fields-11 {
+  margin-left: 100px;
+}
+.dot.form.inline > .field > .fields-12 {
+  margin-left: 100px;
+}
+.dot.form.inline > .field > .fields-13 {
+  margin-left: 100px;
+}
+.dot.form.inline > .field > .fields-14 {
+  margin-left: 100px;
+}
+.dot.form.inline > .field > .fields-15 {
+  margin-left: 100px;
+}
+.dot.form.inline > .field > .fields-16 {
+  margin-left: 100px;
+}
+.dot.form.inline > .field > .fields {
+  margin-left: 100px;
+}
+.dot.form.inline > .action {
+  margin-left: 100px;
+}
+.dot.form.basic {
+  padding: 0;
 }
 @media only screen and (max-width: 768px) {
   .dot.inline.form > .field > .label:nth-child(1) {
-    float: none;
     width: auto;
   }
   .dot.form .field .fields-1 .field {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-1 > .field:last-child {
     margin-bottom: 0;
   }
   .dot.form .field .fields .field-1 {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-2 .field {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-2 > .field:last-child {
     margin-bottom: 0;
   }
   .dot.form .field .fields .field-2 {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-3 .field {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-3 > .field:last-child {
     margin-bottom: 0;
   }
   .dot.form .field .fields .field-3 {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-4 .field {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-4 > .field:last-child {
     margin-bottom: 0;
   }
   .dot.form .field .fields .field-4 {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-5 .field {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-5 > .field:last-child {
     margin-bottom: 0;
   }
   .dot.form .field .fields .field-5 {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-6 .field {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-6 > .field:last-child {
     margin-bottom: 0;
   }
   .dot.form .field .fields .field-6 {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-7 .field {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-7 > .field:last-child {
     margin-bottom: 0;
   }
   .dot.form .field .fields .field-7 {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-8 .field {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-8 > .field:last-child {
     margin-bottom: 0;
   }
   .dot.form .field .fields .field-8 {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-9 .field {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-9 > .field:last-child {
     margin-bottom: 0;
   }
   .dot.form .field .fields .field-9 {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-10 .field {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-10 > .field:last-child {
     margin-bottom: 0;
   }
   .dot.form .field .fields .field-10 {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-11 .field {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-11 > .field:last-child {
     margin-bottom: 0;
   }
   .dot.form .field .fields .field-11 {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-12 .field {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-12 > .field:last-child {
     margin-bottom: 0;
   }
   .dot.form .field .fields .field-12 {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-13 .field {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-13 > .field:last-child {
     margin-bottom: 0;
   }
   .dot.form .field .fields .field-13 {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-14 .field {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-14 > .field:last-child {
     margin-bottom: 0;
   }
   .dot.form .field .fields .field-14 {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-15 .field {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-15 > .field:last-child {
     margin-bottom: 0;
   }
   .dot.form .field .fields .field-15 {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-16 .field {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .dot.form .field .fields-16 > .field:last-child {
     margin-bottom: 0;
   }
   .dot.form .field .fields .field-16 {
-    width: auto;
-    float: none;
+    width: 100%;
     padding: 0;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
+}
+.dot.menu {
+  margin: 0 -5px 10px;
+  padding: 0;
+  position: relative;
+  line-height: 60px;
+}
+.dot.menu:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.menu.angled .item {
+  border-radius: 0 !important;
+}
+.dot.menu .item {
+  vertical-align: middle;
+  display: inline-block;
+  font-size: 15px;
+  line-height: 30px;
+  padding: 0 12px;
+}
+.dot.menu > .item,
+.dot.menu .dot.item {
+  color: #383838;
+  border-radius: 5px;
+  margin: 0 5px;
+  -webkit-transition: background 0.3s, opacity 0.3s, color 0.3s, border-color 0.3s;
+  -o-transition: background 0.3s, opacity 0.3s, color 0.3s, border-color 0.3s;
+  transition: background 0.3s, opacity 0.3s, color 0.3s, border-color 0.3s;
+  cursor: pointer;
+}
+.dot.menu > .item:hover,
+.dot.menu .dot.item:hover,
+.dot.menu > .item.active,
+.dot.menu .dot.item.active {
+  color: #000000;
+  background: #F5F5F5;
+}
+.dot.menu.red > .item:hover,
+.dot.menu.red .dot.item:hover,
+.dot.menu.red > .item.active,
+.dot.menu.red .dot.item.active {
+  background: #EF5350;
+  color: #ffffff;
+}
+.dot.menu.black > .item:hover,
+.dot.menu.black .dot.item:hover,
+.dot.menu.black > .item.active,
+.dot.menu.black .dot.item.active {
+  background: #000000;
+  color: #ffffff;
+}
+.dot.menu.green > .item:hover,
+.dot.menu.green .dot.item:hover,
+.dot.menu.green > .item.active,
+.dot.menu.green .dot.item.active {
+  background: #66BB6A;
+  color: #ffffff;
+}
+.dot.menu.yellow > .item:hover,
+.dot.menu.yellow .dot.item:hover,
+.dot.menu.yellow > .item.active,
+.dot.menu.yellow .dot.item.active {
+  background: #FFEE58;
+}
+.dot.menu.blue > .item:hover,
+.dot.menu.blue .dot.item:hover,
+.dot.menu.blue > .item.active,
+.dot.menu.blue .dot.item.active {
+  background: #42A5F5;
+  color: #ffffff;
+}
+.dot.menu .menu.right {
+  display: inline;
+  float: right;
+}
+.dot.menu.lined {
+  margin: 0 0 10px;
+  line-height: 45px;
+}
+.dot.menu.lined > .item,
+.dot.menu.lined .dot.item {
+  color: #383838;
+  background: transparent !important;
+  border-radius: 0;
+  line-height: 36px;
+  border-bottom: 2px solid transparent;
+  padding: 0 12px;
+  margin: 0;
+}
+.dot.menu.lined > .item.active,
+.dot.menu.lined .dot.item.active {
+  border-color: #000000;
+  color: #000000;
+}
+.dot.menu.lined > .item:hover,
+.dot.menu.lined .dot.item:hover {
+  color: initial;
+  background: initial;
+}
+.dot.menu.lined.red > .item.active,
+.dot.menu.lined.red .dot.item.active {
+  border-color: #EF5350;
+}
+.dot.menu.lined.black > .item.active,
+.dot.menu.lined.black .dot.item.active {
+  border-color: #000000;
+}
+.dot.menu.lined.green > .item.active,
+.dot.menu.lined.green .dot.item.active {
+  border-color: #66BB6A;
+}
+.dot.menu.lined.yellow > .item.active,
+.dot.menu.lined.yellow .dot.item.active {
+  border-color: #FFEE58;
+}
+.dot.menu.lined.blue > .item.active,
+.dot.menu.lined.blue .dot.item.active {
+  border-color: #42A5F5;
+}
+.dot.menu.bar {
+  margin: 0 0 10px;
+  padding: 0;
+  border-radius: 5px;
+  height: 36px;
+  line-height: 36px;
+  border: 1px solid #EEEEEE;
+}
+.dot.menu.bar > .item + .item,
+.dot.menu.bar .dot.item + .item {
+  border-left: 1px solid #EEEEEE;
+}
+.dot.menu.bar > .item:first-child,
+.dot.menu.bar .dot.item:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.dot.menu.bar > .item:last-child,
+.dot.menu.bar .dot.item:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.dot.menu.bar > .item,
+.dot.menu.bar .dot.item {
+  margin: 0;
+  vertical-align: middle;
+  border-radius: 0;
+  line-height: 34px;
+  height: 100%;
+}
+.dot.menu.bar > .item {
+  float: left;
+}
+.dot.menu.bar .menu {
+  height: 100%;
+  line-height: 100%;
+}
+.dot.vertical.menu {
+  margin: 0;
+  width: 200px;
+  border: 1px solid #EEEEEE;
+  border-radius: 5px;
+}
+.dot.vertical.menu .item {
+  display: block;
+  margin: 0;
+  border-radius: 0;
+  line-height: 36px;
+}
+.dot.vertical.menu .item + .item {
+  border-top: 1px solid #EEEEEE;
+}
+.dot.vertical.menu .item:first-child {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.dot.vertical.menu .item:last-child {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.dot.vertical.menu.angled {
+  border-radius: 0;
+}
+.dot.vertical.menu.angled .item {
+  border-radius: 0;
+}
+.dot.vertical.lined.menu {
+  border: 0;
+  margin: 0;
+  border-radius: 0;
+  border-right: 2px solid #EEEEEE;
+}
+.dot.vertical.lined.menu .item {
+  border: 0;
+  margin-right: -2px;
+  border-right: 2px solid transparent;
+  border-radius: 0;
+}
+.dot.vertical.lined.menu .item.active {
+  border-color: #383838;
+}
+.dot.tab {
+  position: relative;
+}
+.dot.tab > .item {
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-bottom: 0;
+  padding: 0 12px;
+  margin: 0 0 -1px;
+  display: inline-block;
+  line-height: 36px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.dot.tab > .item.active {
+  border-color: #EEEEEE;
+  background: #ffffff;
+}
+.dot.section.tab {
+  border: 1px solid #EEEEEE;
+  border-bottom: 0;
+}
+.dot.section.tab > .item {
+  border: 0;
+  margin: 0;
+  border-radius: 0;
+  -webkit-transition: background .3s, color .3s;
+  -o-transition: background .3s, color .3s;
+  transition: background .3s, color .3s;
+}
+.dot.section.tab > .item + .item {
+  border-left: 1px solid #EEEEEE;
+}
+.dot.section.tab > .item:last-child {
+  border-right: 1px solid #EEEEEE;
+}
+.dot.section.tab > .item.active,
+.dot.section.tab > .item:hover {
+  background: #F5F5F5;
+}
+.dot.vertical.tab {
+  width: 200px;
+  float: left;
+}
+.dot.vertical.tab .item {
+  display: block;
+  border: 1px solid transparent;
+  border-right: 0;
+  margin-right: -1px;
+  border-radius: 5px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.dot.vertical.tab .item.active {
+  border-color: #EEEEEE;
+}
+.dot.vertical.tab + .module {
+  margin-left: 200px;
 }
 .dot.figure {
   padding-bottom: 100%;

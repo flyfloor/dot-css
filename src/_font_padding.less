@@ -10,7 +10,7 @@
     @_padding: @padding * @_pd/10;
     padding: @_padding @_padding * 2;
     @_font: @line_height * @size/15;
-    font-size: @_font;
+    font-size: @_font - 2px;
     line-height: @_font;
     >.icon {
         cursor: pointer;
@@ -32,7 +32,7 @@
                 opacity: 1;
             }
         }
-        :last-child.icon {
+        *+.icon {
             margin: 0 @_icon_pd * -1 0 @_icon_pd;
         }
     }
@@ -47,14 +47,14 @@
             border-radius: @radius 0 0 @radius;
             vertical-align: top;
         }
-        :last-child.image {
+        *+.image {
             border-radius: 0 @radius @radius 0;
             margin: @_padding * -1 @_padding * -2  @_padding * -1 @_padding;
         }
     }
 
     &.circle, &.labeled {
-        padding: @padding * @size/10;
+        padding: @padding * @size /10;
     }
 
     &.circle, &.labeled {

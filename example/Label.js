@@ -5,7 +5,7 @@ import {NS, COLORS} from './setting';
 const makeSizeLabels = (cn='') => {
     return <div className={CN(`${cn} icon label`)}>
                 <i className="icon">person</i>
-                {cn ? cn : 'label'}
+                <span>{cn ? cn : 'label'}</span>
             </div>;
 }
 
@@ -14,7 +14,7 @@ const colorLabels = (cn='') => {
             {COLORS.map((color, index) => {
                 return <div key={`${cn}-icon-${color}-label`} className={CN(`${cn} icon ${color} label`)}>
                             <i className="icon">photo_camera</i>
-                            {color}
+                            <span>{color}</span>
                         </div>;
             })}
         </div>
@@ -23,15 +23,15 @@ const colorLabels = (cn='') => {
 const makeLabelGroups = (cn='') => {
     return <div className={CN(`${cn} label-group`)}>
                 <div className="label">
-                    {cn ? cn : 'label'}
+                    <span>{cn ? cn : 'label'}</span>
                 </div>
                 <div className={CN('icon label')}>
-                    {cn ? cn : 'label'}
+                    <span>{cn ? cn : 'label'}</span>
                     <i className="icon">close</i>
                 </div>
                 <div className={CN('round icon label')}>
                     <i className="icon">fullscreen</i>
-                    {cn ? cn : 'label'}
+                    <span>{cn ? cn : 'label'}</span>
                 </div>
             </div>;
 }
@@ -46,32 +46,32 @@ export default class Label extends Component {
                         <h3>Label</h3>
                         <div className="field">
                             <div className={CN('label')}>
-                                label
+                                <span>label</span>
                             </div>
                             <pre>
                                 <code>{`<div class="${NS} label">label</div>`}</code>
                             </pre>
                             <div className={CN('icon label')}>
-                                label
+                                <span>label</span>
                                 <i className="icon">close</i>
                             </div>
                             <pre>
                                 <code>
 {`<div class="${NS} label">
-    label
+    <span>label</span>
     <i class="icon">close</i>
 </div>`}                                    
                                 </code>
                             </pre>
                             <div className={CN('icon label')}>
                                 <i className="icon">close</i>
-                                label
+                                <span>label</span>
                             </div>
                             <pre>
                                 <code>
 {`<div class="${NS} icon label">
     <i class="icon">close</i>
-    label
+    <span>label</span>
 </div>`}                                    
                                 </code>
                             </pre>
@@ -80,24 +80,24 @@ export default class Label extends Component {
                             <h4>Image label</h4>
                             <div className={CN('image label')}>
                                 <img src="http://braavos.me/dot-css/dist/img/avatar.png" className={CN('image')} alt=""/>
-                                label
+                                <span>label</span>
                             </div>
                             <pre>
                                 <code>
 {`<div class="${NS} image label">
     <img src="" alt="" />
-    label
+    <span>label</span>
 </div>`}                                    
                                 </code>
                             </pre>
                             <div className={CN('image label')}>
-                                label
+                                <span>label</span>
                                 <img src="http://braavos.me/dot-css/dist/img/avatar.png" className={CN('image')} alt=""/>
                             </div>
                             <pre>
                                 <code>
 {`<div class="${NS} image label">
-    label
+    <span>label</span>
     <img src="" alt="" />
 </div>`}                                          
                                 </code>
@@ -112,7 +112,7 @@ export default class Label extends Component {
                                 <code>
 {`<div class="${NS} icon red label">
     <i class="icon">photo_camera</i>
-    label
+    <span>label</span>
 </div>`}                                    
                                 </code>
                             </pre>
@@ -124,7 +124,7 @@ export default class Label extends Component {
                                 <code>
 {`<div class="${NS} icon basic red label">
     <i class="icon">photo_camera</i>
-    label
+    <span>label</span>
 </div>`}                                    
                                 </code>
                             </pre>
@@ -152,21 +152,21 @@ export default class Label extends Component {
                             <h4>Round label</h4>
                             <div className={CN('round icon label')}>
                                 <i className="icon">share</i>
-                                share
+                                <span>share</span>
                             </div>
                             <div className={CN('round red icon label')}>
-                                close
+                                <span>close</span>
                                 <i className="icon">close</i>
                             </div>
                             <div className={CN('round green basic icon label')}>
                                 <i className="icon">check</i>
-                                check
+                                <span>check</span>
                             </div>
                             <pre>
                                 <code>
 {`<div class="${NS} round icon label">
     <i class="icon">check</i>
-    label
+    <span>label</span>
 </div>`}                                    
                                 </code>
                             </pre>
@@ -194,7 +194,7 @@ export default class Label extends Component {
     <div class="label">label</div>
     <div class="icon label">
         <i class="icon">check</i>
-        label
+        <span>label</span>
     </div>
     <div class="label">label</div>
 </div>`}                                

@@ -5,7 +5,6 @@
 @{NS}.input {
     display: table;
     position: relative;
-    overflow: hidden;
     vertical-align: middle;
     .button, button {
         margin: auto;
@@ -63,24 +62,38 @@
 }
 
 .__input_size(@_lh, @_padding){
-    font-size: @_lh;
+    font-size: @_lh - 2px;
     padding: @_padding;
     line-height: @_lh;
     height: @_lh + @_padding * 2 + 2px;
-    overflow: hidden;
 }
 
 
-._INPUT_SIZE(@size, @_pd, @group) when(@group=true) {
+._INPUT_SIZE(@size, @_pd, @wrapper) when(@wrapper=true) {
     @_padding: @padding * @_pd / 10;
     @_lh: @line_height * @size / 15;
     @_border_radius: @line_height * @size / 15 + @padding * @_pd / 10;
     input, select, textarea, button, .button {
         .__input_size(@_lh, @_padding);
     }
+    &.round {
+        >:first-child {
+            border-top-left-radius: @_border_radius;
+            border-bottom-left-radius: @_border_radius;
+        }
+        >:last-child {
+            border-top-right-radius: @_border_radius;
+            border-bottom-right-radius: @_border_radius;
+        }
+    }
     &.icon {
         &.fluid {
             display: block;
+        }
+        &.round {
+            input {
+                border-radius: @_border_radius;
+            }
         }
         input {
             padding-left: @_padding;
@@ -100,44 +113,38 @@
         line-height: @_padding * 2 + @_lh + 2px;
         font-size: @_lh + 2px;
     }
-
-    &.round {
-        >:first-child {
-            border-top-left-radius: @_border_radius;
-            border-bottom-left-radius: @_border_radius;
-        }
-        >:last-child {
-            border-top-right-radius: @_border_radius;
-            border-bottom-right-radius: @_border_radius;
-        }
-    }
 }
 
-._INPUT_SIZE(@size, @_pd, @group) when(@group=false) {
+._INPUT_SIZE(@size, @_pd, @wrapper) when(@wrapper=false) {
     @_padding: @padding * @_pd / 10;
     @_lh: @line_height * @size / 15;
     @_border_radius: @line_height * @size / 15 + @padding * @_pd / 10;
     .__input_size(@_lh, @_padding);
+    &.round {
+        border-radius: @_border_radius;
+    }
 }
 
 
 @{NS}.input {
-    ._INPUT_SIZE(14, 7, true);
+    /*only wrapper style*/
+    ._INPUT_SIZE(16, 8, true);
+    overflow: hidden;
     &.tiny {
-        ._INPUT_SIZE(10, 5, true);
+        ._INPUT_SIZE(10, 4, true);
     }
     &.small {
-        ._INPUT_SIZE(12, 6, true);
+        ._INPUT_SIZE(14, 7, true);
     }
     &.large {
-        ._INPUT_SIZE(18, 9, true);
+        ._INPUT_SIZE(20, 10, true);
     }
     &.huge {
-        ._INPUT_SIZE(22, 11, true);
+        ._INPUT_SIZE(24, 12, true);
     }
 }
 
-@{NS} input, @{NS}input.input, @{NS} textarea, @{NS} select {
+@{NS} input, input@{NS}.input, @{NS} textarea, @{NS} select {
     vertical-align: middle;
     -webkit-transition: all .3s;
     -o-transition: all .3s;
@@ -154,19 +161,18 @@
     &.fluid {
         width: 100%;
     }
-    
-    ._INPUT_SIZE(14, 7, false);
+    ._INPUT_SIZE(16, 8, false);
     &.tiny {
-        ._INPUT_SIZE(10, 5, false);
+        ._INPUT_SIZE(10, 4, false);
     }
     &.small {
-        ._INPUT_SIZE(12, 6, false);
+        ._INPUT_SIZE(14, 7, false);
     }
     &.large {
-        ._INPUT_SIZE(18, 9, false);
+        ._INPUT_SIZE(20, 10, false);
     }
     &.huge {
-        ._INPUT_SIZE(22, 11, false);
+        ._INPUT_SIZE(24, 12, false);
     }
     
     &.disabled {
