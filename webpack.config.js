@@ -19,6 +19,11 @@ module.exports = {
         new ExtractTextPlugin("example.css"),
         new webpack.NoErrorsPlugin(),
         new ForceCaseSensitivityPlugin(),
+        new webpack.DefinePlugin({
+          "process.env": { 
+             NODE_ENV: JSON.stringify("production") 
+           }
+        })
         // new webpack.optimize.UglifyJsPlugin({
         //     sourceMap: false,
         //     mangle: false
