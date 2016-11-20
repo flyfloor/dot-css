@@ -16,6 +16,7 @@ import Text from './example/Text';
 import Image from './example/Image';
 import Comment from './example/Comment';
 import Item from './example/Item';
+import List from './example/List';
 import Card from './example/Card';
 import Message from './example/Message';
 import Progress from './example/Progress';
@@ -63,6 +64,7 @@ class App extends Component {
                                 <NavLink to="/image">image</NavLink>
                                 <NavLink to="/comment">comment</NavLink>
                                 <NavLink to="/item">item</NavLink>
+                                <NavLink to="/list">list</NavLink>
                                 <NavLink to="/card">card</NavLink>
                                 <NavLink to="/message">message</NavLink>
                                 <NavLink to="/progress">progress</NavLink>
@@ -123,6 +125,7 @@ ReactDOM.render(<Router history={hashHistory}>
                         <Route path="/image" component={Image}></Route>
                         <Route path="/comment" component={Comment}></Route>
                         <Route path="/item" component={Item}></Route>
+                        <Route path="/list" component={List}></Route>
                         <Route path="/card" component={Card}></Route>
                         <Route path="/message" component={Message}></Route>
                         <Route path="/progress" component={Progress}></Route>

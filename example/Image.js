@@ -8,6 +8,8 @@ const makeImage = (cn) => {
                 <div className={CN(`${cn} image`)}>
                     <img src="http://braavos.me/dot-css/dist/img/img.png"/>
                 </div>
+                <pre><code>{`<img src="image.png" class="${NS} ${cn} image" />`}</code></pre>
+                <br/>
             </div>
 };
 
@@ -30,10 +32,10 @@ export default class Image extends Component {
                 <ul>
                     <li>
                         <h3>Image</h3>
-                        <img src="http://braavos.me/dot-css/dist/img/img.png" className={CN('mini image')}/>
+                        {makeImage('mini')}
                         {makeImage('tiny')}
                         {makeImage('small')}
-                        {makeImage('middle')}
+                        {makeImage('')}
                         {makeImage('large')}
                         {makeImage('big')}
                         {makeImage('huge')}
