@@ -226,7 +226,7 @@ export default class List extends Component {
                     </li>
 
                     <li>
-                        <h4>Nested List</h4>
+                        <h4>Nested Ordered List</h4>
                         <ul className={CN('ordered list')}>
                             <li className="item">
                                 <div className="content">珍珠丸子又名蓑衣丸子</div>
@@ -236,7 +236,7 @@ export default class List extends Component {
                             </li>
                             <li className="item">
                                 <div className="content">风味独特、清香细嫩、鲜香可口</div>
-                                <ul>
+                                <ul className="ordered list">
                                     <li className="item">
                                         <div className="content">珍珠丸子又名蓑衣丸子</div>
                                     </li>
@@ -257,7 +257,7 @@ export default class List extends Component {
     </li>
     <li class="item">
         <div class="conetent"></div>
-        <ul>
+        <ul class="ordered list">
             <li class="item">
                 <div class="content">content</div>
             </li>
