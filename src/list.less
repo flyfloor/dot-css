@@ -4,22 +4,6 @@
 
 @{NS}.list {
     .clearfix;
-    &.ordered {
-        counter-reset: ordered;
-        .item {
-            &:before {
-                display: table-cell;
-                padding-right: @padding;
-                color: @deep_gray;
-                font-size: @normal_font_size - 2px;
-                counter-increment: ordered;
-                content: counters(ordered,".") " ";
-            }
-            >.content {
-                display: table-cell;
-            }
-        }    
-    }
     &.horizontal {
         margin: @padding * -1;
         >.item {
@@ -33,9 +17,26 @@
             }
         }
     }
-    ol, ul {
+    .ordered.list {
         margin-left: @padding;
         padding: @padding 0;
         counter-reset: ordered;
     }
+}
+
+.list.ordered {
+    counter-reset: ordered;
+    >.item {
+        &:before {
+            display: table-cell;
+            padding-right: @padding;
+            color: @deep_gray;
+            font-size: @normal_font_size - 2px;
+            counter-increment: ordered;
+            content: counters(ordered,".") " ";
+        }
+        >.content {
+            display: table-cell;
+        }
+    }    
 }
