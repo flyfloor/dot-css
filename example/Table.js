@@ -95,6 +95,17 @@ export default class Table extends Component {
                         </pre>
                     </li>
                     <li>
+                        <h3>center aligned table</h3>
+                        {makeTable('center')}
+                        <pre>
+                            <code>
+{`<table className="${NS} center table">
+    ...
+</table>`}                                
+                            </code>
+                        </pre>
+                    </li>
+                    <li>
                         <h3>fixed table</h3>
                         {makeTable('fixed')}
                         <pre>
