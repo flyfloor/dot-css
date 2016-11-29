@@ -7,11 +7,11 @@ const makeForm = (cn = '') => {
         return (
             <div className={CN(`${cn} form`)}>
                 <div className="field">
-                    <label className="label" placeholder="input name...">name:</label>
+                    <label placeholder="input name...">name:</label>
                     <input type="text"/>
                 </div>
                 <div className="field">
-                    <label className="label">radio:</label>
+                    <label>radio:</label>
                     <div className="fields-4">
                         <div className="field">
                             <label className={CN('checkbox')}>
@@ -40,19 +40,36 @@ const makeForm = (cn = '') => {
                     </div>
                 </div>
                 <div className="field">
+                    <label>inline field:</label>
+                    <div className="inline field">
+                        <select>
+                            <option value="ember">ember</option>
+                            <option value="react">react</option>
+                            <option value="vue">vue</option>
+                        </select>
+                        min:
+                        <input type="number"/>
+                        max:
+                        <input type="number"/>
+                        step:
+                        <input type="number" className="mini"/>
+                        <button className="dot button">save</button>
+                    </div>
+                </div>
+                <div className="field">
                     <div className="fields-2">
                         <div className="field">
-                            <label className="label">first name:</label>
+                            <label>first name:</label>
                             <input type="text"/>
                         </div>
                         <div className="field">
-                        <label className="label">last name:</label>
+                        <label>last name:</label>
                             <input type="email"/>
                         </div>
                     </div>
                 </div>
                 <div className="field">
-                    <label className="label">mix:</label>
+                    <label>mix:</label>
                     <div className="fields">
                         <div className="field-3">
                             <select name="" id="">
@@ -73,11 +90,11 @@ const makeForm = (cn = '') => {
                     </div>
                 </div>
                 <div className="field">
-                    <label className="label">address:</label>
+                    <label>address:</label>
                     <textarea></textarea>
                 </div>
                 <div className="field action">
-                    <button className={CN('button')}>提交</button>
+                    <button className={CN('button')}>submit</button>
                 </div>
             </div>
         )
@@ -85,63 +102,82 @@ const makeForm = (cn = '') => {
     return (
         <div className={CN(`${cn} form`)}>
             <div className="field">
-                <label className="label" placeholder="input name...">name:</label>
+                <label placeholder="input name...">name:</label>
                 <div className="field">
                     <input type="text"/>
                 </div>
             </div>
             <div className="field">
-                <label className="label">radio:</label>
+                <label>radio:</label>
                 <div className="fields-4">
                     <div className="field">
                         <label className={CN('checkbox')}>
                             <input type="checkbox" className="show"/>
-                            origin checkbox
+                            <span>origin checkbox</span>
                         </label>
                     </div>
                     <div className="field">
                         <label className={CN('radio')}>
                             <input type="radio" className="show"/>
-                            origin radio
+                            <span>origin radio</span>
                         </label>
                     </div>
                     <div className="field">
                         <label className={CN('checkbox')}>
                             <input type="checkbox"/>
-                            checkbox
+                            <span>checkbox</span>
                         </label>
                     </div>
                     <div className="field">
                         <label className={CN('radio')}>
                             <input type="radio"/>
-                            radio
+                            <span>radio</span>
                         </label>
                     </div>
                 </div>
             </div>
             <div className="field">
-                <label className="label">career:</label>
-                <div className="fields">
+                <label htmlFor="">inline field:</label>
+                <div className="inline field">
+                    <select>
+                        <option value="ember">ember</option>
+                        <option value="react">react</option>
+                        <option value="vue">vue</option>
+                    </select>
+                    min:
+                    <input type="number"/>
+                    max:
+                    <input type="number"/>
+                    step:
+                    <input type="number" className="mini"/>
+                    <button className="dot button">save</button>
+                </div>
+            </div>
+            <div className="field">
+                <label>career:</label>
+                <div className="field">
+                    <input type="text"/>
+                </div>
+            </div>
+            <div className="field">
+                <div className="field">
+                    <input type="email"/>
+                </div>
+            </div>
+            <div className="field">
+                <div className="fields-2">
                     <div className="field">
+                        <label>company:</label>
                         <input type="text"/>
                     </div>
                     <div className="field">
-                        <input type="email"/>
-                    </div>
-                    <div className="fields-2">
-                        <div className="field">
-                            <label className="label">company:</label>
-                            <input type="text"/>
-                        </div>
-                        <div className="field">
-                            <label className="label">year:</label>
-                            <input type="number"/>
-                        </div>
+                        <label>year:</label>
+                        <input type="number"/>
                     </div>
                 </div>
             </div>
             <div className="field">
-                <label className="label">mix:</label>
+                <label>mix:</label>
                 <div className="fields">
                     <div className="field-3">
                         <select name="" id="">
@@ -162,13 +198,13 @@ const makeForm = (cn = '') => {
                 </div>
             </div>
             <div className="field">
-                <label className="label">address:</label>
+                <label>address:</label>
                 <div className="field">
                     <textarea></textarea>
                 </div>
             </div>
             <div className="field action">
-                <button className={CN('button')}>提交</button>
+                <button className={CN('button')}>submit</button>
             </div>
         </div>
     )
@@ -187,52 +223,69 @@ export default class Form extends Component {
                             <code>
 {`<div class="${NS} form">
     <div class="field">
-        <label class="label" placeholder="input name...">name:</label>
+        <label placeholder="input name...">name:</label>
         <input type="text"/>
     </div>
     <div class="field">
-        <label class="label">radio:</label>
+        <label>radio:</label>
         <div class="fields-4">
             <div class="field">
                 <label class="${NS} checkbox">
                     <input type="checkbox" class="show"/>
-                    origin checkbox
+                    <span>origin checkbox</span>
                 </label>
             </div>
             <div class="field">
                 <label class="${NS} radio">
                     <input type="radio" class="show"/>
-                    origin radio
+                    <span>origin radio</span>
                 </label>
             </div>
             <div class="field">
                 <label class="${NS} checkbox">
                     <input type="checkbox"/>
-                    checkbox
+                    <span>checkbox</span>
                 </label>
             </div>
             <div class="field">
                 <label class="${NS} radio">
                     <input type="radio"/>
-                    radio
+                    <span>radio</span>
                 </label>
             </div>
         </div>
     </div>
     <div class="field">
+        <label>inline field:</label>
+        <div class="inline field">
+            <select>
+                <option value="ember">ember</option>
+                <option value="react">react</option>
+                <option value="vue">vue</option>
+            </select>
+            min:
+            <input type="number"/>
+            max:
+            <input type="number"/>
+            step:
+            <input type="number" class="mini"/>
+            <button class="dot button">save</button>
+        </div>
+    </div>
+    <div class="field">
         <div class="fields-2">
             <div class="field">
-                <label class="label">first name:</label>
+                <label>first name:</label>
                 <input type="text"/>
             </div>
             <div class="field">
-            <label class="label">last name:</label>
+            <label>last name:</label>
                 <input type="email"/>
             </div>
         </div>
     </div>
     <div class="field">
-        <label class="label">mix:</label>
+        <label>mix:</label>
         <div class="fields">
             <div class="field-3">
                 <select name="" id="">
@@ -253,11 +306,11 @@ export default class Form extends Component {
         </div>
     </div>
     <div class="field">
-        <label class="label">address:</label>
+        <label>address:</label>
         <textarea></textarea>
     </div>
     <div class="field action">
-        <button class="${NS} button">提交</button>
+        <button class="${NS} button">submit</button>
     </div>
 </div>`}                                
                             </code>
@@ -270,63 +323,84 @@ export default class Form extends Component {
                             <code>
 {`<div className="${NS} inline form">
     <div className="field">
-        <label className="label" placeholder="input name...">name:</label>
+        <label placeholder="input name...">name:</label>
         <div className="field">
             <input type="text"/>
         </div>
     </div>
     <div className="field">
-        <label className="label">radio:</label>
+        <label>radio:</label>
         <div className="fields-4">
             <div className="field">
                 <label className="${NS} checkbox">
                     <input type="checkbox" className="show"/>
-                    origin checkbox
+                    <span>origin checkbox</span>
                 </label>
             </div>
             <div className="field">
                 <label className="${NS} radio">
                     <input type="radio" className="show"/>
-                    origin radio
+                    <span>origin radio</span>
                 </label>
             </div>
             <div className="field">
                 <label className="${NS} checkbox">
                     <input type="checkbox"/>
-                    checkbox
+                    <span>checkbox</span>
                 </label>
             </div>
             <div className="field">
                 <label className="${NS} radio">
                     <input type="radio"/>
-                    radio
+                    <span>radio</span>
                 </label>
             </div>
         </div>
     </div>
+    <div class="field">
+        <label>inline field:</label>
+        <div class="inline field">
+            <select>
+                <option value="ember">ember</option>
+                <option value="react">react</option>
+                <option value="vue">vue</option>
+            </select>
+            min:
+            <input type="number"/>
+            max:
+            <input type="number"/>
+            step:
+            <input type="number" class="mini"/>
+            <button class="dot button">save</button>
+        </div>
+    </div>
     <div className="field">
-        <label className="label">career:</label>
-        <div className="fields">
+        <label>career:</label>
+        <div className="field">
             <div className="field">
                 <input type="text"/>
             </div>
-            <div className="field">
+        </div>
+        <div className="field">
+            <div class="field">
                 <input type="email"/>
             </div>
-            <div className="fields-2">
+        </div>
+        <div className="field">
+            <div class="fields-2">
                 <div className="field">
-                    <label className="label">company:</label>
+                    <label>company:</label>
                     <input type="text"/>
                 </div>
                 <div className="field">
-                    <label className="label">year:</label>
+                    <label>year:</label>
                     <input type="number"/>
                 </div>
             </div>
         </div>
     </div>
     <div className="field">
-        <label className="label">mix:</label>
+        <label>mix:</label>
         <div className="fields">
             <div className="field-3">
                 <select name="" id="">
@@ -347,13 +421,13 @@ export default class Form extends Component {
         </div>
     </div>
     <div className="field">
-        <label className="label">address:</label>
+        <label>address:</label>
         <div className="field">
             <textarea></textarea>
         </div>
     </div>
     <div className="field action">
-        <button className="${NS} button">提交</button>
+        <button className="${NS} button">submit</button>
     </div>
 </div>`}                                    
                             </code>
@@ -366,63 +440,84 @@ export default class Form extends Component {
                             <code>
 {`<div className="${NS} inline trim form">
     <div className="field">
-        <label className="label" placeholder="input name...">name:</label>
+        <label placeholder="input name...">name:</label>
         <div className="field">
             <input type="text"/>
         </div>
     </div>
     <div className="field">
-        <label className="label">radio:</label>
+        <label>radio:</label>
         <div className="fields-4">
             <div className="field">
                 <label className="${NS} checkbox">
                     <input type="checkbox" className="show"/>
-                    origin checkbox
+                    <span>origin checkbox</span>
                 </label>
             </div>
             <div className="field">
                 <label className="${NS} radio">
                     <input type="radio" className="show"/>
-                    origin radio
+                    <span>origin radio</span>
                 </label>
             </div>
             <div className="field">
                 <label className="${NS} checkbox">
                     <input type="checkbox"/>
-                    checkbox
+                    <span>checkbox</span>
                 </label>
             </div>
             <div className="field">
                 <label className="${NS} radio">
                     <input type="radio"/>
-                    radio
+                    <span>radio</span>
                 </label>
             </div>
         </div>
     </div>
+    <div class="field">
+        <label>inline field:</label>
+        <div class="inline field">
+            <select>
+                <option value="ember">ember</option>
+                <option value="react">react</option>
+                <option value="vue">vue</option>
+            </select>
+            min:
+            <input type="number"/>
+            max:
+            <input type="number"/>
+            step:
+            <input type="number" class="mini"/>
+            <button class="dot button">save</button>
+        </div>
+    </div>
     <div className="field">
-        <label className="label">career:</label>
-        <div className="fields">
+        <label>career:</label>
+        <div className="field">
             <div className="field">
                 <input type="text"/>
             </div>
+        </div>
+        <div class="field">
             <div className="field">
                 <input type="email"/>
             </div>
+        </div>
+        <div class="field">
             <div className="fields-2">
                 <div className="field">
-                    <label className="label">company:</label>
+                    <label>company:</label>
                     <input type="text"/>
                 </div>
                 <div className="field">
-                    <label className="label">year:</label>
+                    <label>year:</label>
                     <input type="number"/>
                 </div>
             </div>
         </div>
     </div>
     <div className="field">
-        <label className="label">mix:</label>
+        <label>mix:</label>
         <div className="fields">
             <div className="field-3">
                 <select name="" id="">
@@ -443,13 +538,13 @@ export default class Form extends Component {
         </div>
     </div>
     <div className="field">
-        <label className="label">address:</label>
+        <label>address:</label>
         <div className="field">
             <textarea></textarea>
         </div>
     </div>
     <div className="field action">
-        <button className="${NS} button">提交</button>
+        <button className="${NS} button">submit</button>
     </div>
 </div>`}                                    
                             </code>

@@ -183,17 +183,17 @@ export default class List extends Component {
                                     <div className="extra">programmer</div>
                                 </div>
                             </li>
-                            <pre>
-                                <code>
+                        </ul>
+                        <pre>
+                            <code>
 {`<ul class="${CN('horizontal ordered list')}">
-    ...
-    <li class="item"></li>
-    ...
+...
+<li class="item"></li>
+...
 </ul>
 `}                                    
-                                </code>
-                            </pre>
-                        </ul>
+                            </code>
+                        </pre>
                     </li>
 
                     <li>
