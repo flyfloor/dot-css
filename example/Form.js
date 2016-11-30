@@ -137,6 +137,26 @@ const makeForm = (cn = '') => {
                 </div>
             </div>
             <div className="field">
+                <label htmlFor="">group:</label>
+                <div className="inline field">
+                    <label htmlFor="">checkbox</label>
+                    <div className="dot checkbox-group">
+                        <label className={'checkbox'}>
+                            <input type="checkbox"/>
+                            <span>checkbox</span>
+                        </label>
+                        <label className={'checkbox'}>
+                            <input type="checkbox"/>
+                            <span>checkbox</span>
+                        </label>
+                        <label className={'checkbox'}>
+                            <input type="checkbox"/>
+                            <span>checkbox</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div className="field">
                 <label htmlFor="">inline field:</label>
                 <div className="inline field">
                     <select>
