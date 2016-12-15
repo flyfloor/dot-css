@@ -4034,6 +4034,8 @@ input.dot.input.error,
   width: 1em;
   height: 1em;
   font-family: 'Material Icons';
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
 }
 .dot .checkbox.disabled,
 .dot.checkbox.disabled,
