@@ -3,17 +3,29 @@
 
 @__form_label_width: 130px;
 
+.__displayLabel(){
+    background: initial;
+    text-shadow: none;
+    border-radius: 0;
+    margin: 0;
+    font-size: @line_height;
+    color: @deep_gray;
+    word-wrap: break-word;
+    display: block;
+    line-height: @padding * 2 + 4px;
+}
+
+/* fields 栅格 */
 .__makeFields(@n, @i: 1) when (@i =< @n) {
     .fields-@{i} {
         .clearfix;
         font-size: 0;
         position: relative;
-        margin: 0 @padding * -1 0;
+        margin: 0 @padding * -1 @padding * -1;
         >.field {
             padding: 0 @padding;
             font-size: @line_height;
             width: 100% / @i;
-            display: inline-block;
             float: left;
         }
     }
@@ -21,9 +33,10 @@
         >.field-@{i} {
             font-size: @line_height;
             padding: 0 @padding;
-            display: inline-block;
+            line-height: @padding * 3 + 4px;
             float: left;
             width: (@i / @column_count) * 100%;
+            margin-bottom: @padding;
         }
     }
     .__makeFields(@n, (@i + 1));
@@ -35,6 +48,8 @@
     }
     .__inlineField(@n, (@i + 1));
 }
+
+/*
 
 .__mobileFields(@n, @i: 1) when (@i =< @n) {
     .fields-@{i} {
@@ -57,44 +72,17 @@
         }
     }
     .__mobileFields(@n, (@i + 1));
-}
+}*/
 
 @{NS}.form {
-    @__margin_bottom: @padding * 1.6;
+    @__margin_bottom: @padding;
     padding: @padding * 2;
     width: 100%;
     .clearfix;
-    .field {
-        line-height: @__margin_bottom * 2 + 4;
+    .group {
         margin-bottom: @__margin_bottom;
-        input[type="text"], 
-        input[type="number"], 
-        input[type="url"], 
-        input[type="tel"], 
-        input[type="password"], 
-        input[type="email"], 
-        input[type="date"], 
-        input[type="datetime-local"], 
-        input[type="time"], textarea {
-            width: 100%;
-        }
-        .field {
-            margin-bottom: 0;
-        }
-        
-        .__makeFields(16);
-        .fields {
-            .clearfix;
-            position: relative;
-            font-size: 0;
-            margin: 0 -1 * @padding 0;
-            >.field {
-                padding: 0 @padding;
-                margin-bottom: @__margin_bottom;
-                &:last-child {
-                    margin-bottom: 0;
-                }
-            }
+        >label {
+            .__displayLabel();
         }
         input[type="text"], 
         input[type="number"], 
@@ -107,31 +95,86 @@
         input[type="time"], textarea, select {
             width: 100%;
         }
-        &.inline {
-            >* {
-                display: inline-block;
-                margin: 0 @padding;
+        .__makeFields(16);
+        /*列*/
+        .field {
+            margin-bottom: @__margin_bottom;
+            line-height: @padding * 3 + 4px;
+            >label:not(@{NS}) {
+                .__displayLabel();
             }
-            input, select {
-                width: @__form_label_width - @padding * 3;
-                display: inline;
-                &.max {
-                    width: @__form_label_width - @padding;
+            /*内联*/
+            &.inline {
+                >* {
+                    display: inline-block !important;
+                    margin: 0 @padding;
                 }
-                &.mini {
-                    width: @padding * 4;
-                    text-align: center;
+                input[type="text"], 
+                input[type="number"], 
+                input[type="url"], 
+                input[type="tel"], 
+                input[type="password"], 
+                input[type="email"], 
+                input[type="date"], 
+                input[type="datetime-local"], 
+                input[type="time"], textarea , select {
+                    width: @__form_label_width - @padding * 3;
+                    display: inline;
+                    &.max {
+                        width: @__form_label_width + @padding * 3;
+                    }
+                    &.mini {
+                        width: @padding * 4;
+                        text-align: center;
+                    }
+                }
+                >:first-child {
+                    margin-left: 0;
+                }
+                >:last-child {
+                    margin-right: 0;
                 }
             }
-            >:first-child {
-                margin-left: 0;
-            }
-            >:last-child {
-                margin-right: 0;
-            }
+
+        }
+        .fields {
+            .clearfix;
+            font-size: 0;
+            position: relative;
+            margin: 0 -1 * @padding @padding * -1;
         }
     }
 
+    &.inline {
+        &.trim .group {
+            >label:nth-child(1) {
+                text-align: right;
+            }
+        }
+        .group {
+            position: relative;
+            >label:nth-child(1) {
+                width: @__form_label_width - @padding;
+                vertical-align: top;
+                line-height: @padding * 3 + 4px;
+                padding-right: @padding;
+                float: left;
+            }
+
+            >.field {
+                margin-left: @__form_label_width;
+            }
+            .__inlineField(16);
+            >.fields {
+                margin-left: @__form_label_width - @padding;
+            }
+        }
+
+        >.action {
+            margin-left: @__form_label_width;
+        }
+    }
+    /*
     >.field {
         >label:not(@{NS}) {
             padding: 0 0 @padding * 4/10;
@@ -179,10 +222,10 @@
     }
     &.basic {
         padding: 0;
-    }
+    }*/
 }
 
-@media @mobile_view {
+/*@media @mobile_view {
     @__margin_bottom: @padding * 1.6;
     @{NS}.form {
         padding: @padding * .5;
@@ -210,5 +253,4 @@
         }
         .__mobileFields(16);
     }
-
-}
+}*/

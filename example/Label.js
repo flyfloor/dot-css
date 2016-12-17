@@ -57,7 +57,7 @@ export default class Label extends Component {
                             </div>
                             <pre>
                                 <code>
-{`<div class="${NS} label">
+{`<div class="${NS} icon label">
     <span>label</span>
     <i class="icon">close</i>
 </div>`}                                    

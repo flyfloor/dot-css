@@ -7,6 +7,10 @@ export default class Tab extends Component {
         return (
             <div>
                 {TitleBlock('Tab')}
+                <p className={`${NS} warning icon message`}>
+                    <i className="icon">warning</i>
+                    <div className="content">experimental</div>
+                </p>
                 <ul>
                     <li>
                         <h4>Default Tab</h4>
