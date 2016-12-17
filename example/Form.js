@@ -17,13 +17,13 @@ const makeForm = (cn = '') => {
                     <div className="field">
                         <label className={CN('checkbox')}>
                             <input type="checkbox" className="original"/>
-                            <span>origin checkbox</span>
+                            <span>checkbox</span>
                         </label>
                     </div>
                     <div className="field">
                         <label className={CN('radio')}>
                             <input type="radio" className="original"/>
-                            <span>origin radio</span>
+                            <span>radio</span>
                         </label>
                     </div>
                     <div className="field">
@@ -45,11 +45,11 @@ const makeForm = (cn = '') => {
                 <div className="inline field">
                     <label className={CN('checkbox')}>
                         <input type="checkbox" className="original"/>
-                        <span>origin checkbox</span>
+                        <span>checkbox</span>
                     </label>
                     <label className={CN('radio')}>
                         <input type="radio" className="original"/>
-                        <span>origin radio</span>
+                        <span>radio</span>
                     </label>
                     <label className={CN('checkbox')}>
                         <input type="checkbox"/>
@@ -66,7 +66,7 @@ const makeForm = (cn = '') => {
                 </div>
             </div>
             <div className="group">
-                <label>inline field:</label>
+                <label>inline:</label>
                 <div className="inline field">
                     <select>
                         <option value="ember">ember</option>
@@ -223,13 +223,13 @@ export default class Form extends Component {
             <div class="field">
                 <label class="${NS} checkbox">
                     <input type="checkbox" class="original"/>
-                    <span>origin checkbox</span>
+                    <span>checkbox</span>
                 </label>
             </div>
             <div class="field">
                 <label class="${NS} radio">
                     <input type="radio" class="original"/>
-                    <span>origin radio</span>
+                    <span>radio</span>
                 </label>
             </div>
             <div class="field">
@@ -251,11 +251,11 @@ export default class Form extends Component {
         <div class="inline field">
             <label class="${NS} checkbox">
                 <input type="checkbox" class="original"/>
-                <span>origin checkbox</span>
+                <span>checkbox</span>
             </label>
             <label class="${NS} radio">
                 <input type="radio" class="original"/>
-                <span>origin radio</span>
+                <span>radio</span>
             </label>
             <label class="${NS} checkbox">
                 <input type="checkbox"/>
@@ -272,7 +272,7 @@ export default class Form extends Component {
         </div>
     </div>
     <div class="group">
-        <label>inline field:</label>
+        <label>inline:</label>
         <div class="inline field">
             <select>
                 <option value="ember">ember</option>
@@ -409,13 +409,13 @@ export default class Form extends Component {
             <div class="field">
                 <label class="${NS} checkbox">
                     <input type="checkbox" class="original"/>
-                    <span>origin checkbox</span>
+                    <span>checkbox</span>
                 </label>
             </div>
             <div class="field">
                 <label class="${NS} radio">
                     <input type="radio" class="original"/>
-                    <span>origin radio</span>
+                    <span>radio</span>
                 </label>
             </div>
             <div class="field">
@@ -437,11 +437,11 @@ export default class Form extends Component {
         <div class="inline field">
             <label class="${NS} checkbox">
                 <input type="checkbox" class="original"/>
-                <span>origin checkbox</span>
+                <span>checkbox</span>
             </label>
             <label class="${NS} radio">
                 <input type="radio" class="original"/>
-                <span>origin radio</span>
+                <span>radio</span>
             </label>
             <label class="${NS} checkbox">
                 <input type="checkbox"/>
@@ -458,7 +458,7 @@ export default class Form extends Component {
         </div>
     </div>
     <div class="group">
-        <label>inline field:</label>
+        <label>inline:</label>
         <div class="inline field">
             <select>
                 <option value="ember">ember</option>
@@ -595,13 +595,13 @@ export default class Form extends Component {
             <div class="field">
                 <label class="${NS} checkbox">
                     <input type="checkbox" class="original"/>
-                    <span>origin checkbox</span>
+                    <span>checkbox</span>
                 </label>
             </div>
             <div class="field">
                 <label class="${NS} radio">
                     <input type="radio" class="original"/>
-                    <span>origin radio</span>
+                    <span>radio</span>
                 </label>
             </div>
             <div class="field">
@@ -623,11 +623,11 @@ export default class Form extends Component {
         <div class="inline field">
             <label class="${NS} checkbox">
                 <input type="checkbox" class="original"/>
-                <span>origin checkbox</span>
+                <span>checkbox</span>
             </label>
             <label class="${NS} radio">
                 <input type="radio" class="original"/>
-                <span>origin radio</span>
+                <span>radio</span>
             </label>
             <label class="${NS} checkbox">
                 <input type="checkbox"/>
@@ -644,7 +644,7 @@ export default class Form extends Component {
         </div>
     </div>
     <div class="group">
-        <label>inline field:</label>
+        <label>inline:</label>
         <div class="inline field">
             <select>
                 <option value="ember">ember</option>

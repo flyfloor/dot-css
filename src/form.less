@@ -49,7 +49,7 @@
     .__inlineField(@n, (@i + 1));
 }
 
-/*
+
 
 .__mobileFields(@n, @i: 1) when (@i =< @n) {
     .fields-@{i} {
@@ -72,7 +72,7 @@
         }
     }
     .__mobileFields(@n, (@i + 1));
-}*/
+}
 
 @{NS}.form {
     @__margin_bottom: @padding;
@@ -174,58 +174,13 @@
             margin-left: @__form_label_width;
         }
     }
-    /*
-    >.field {
-        >label:not(@{NS}) {
-            padding: 0 0 @padding * 4/10;
-            background: initial;
-            text-shadow: none;
-            border-radius: 0;
-            margin: 0;
-            line-height: @line_height;
-            font-size: @line_height;
-            color: @deep_gray;
-            word-wrap: break-word;
-            &:nth-child(1) {
-                display: block;
-            }
-        }
-    }
-
-    &.inline {
-        &.trim>.field {
-            >label:nth-child(1) {
-                text-align: right;
-            }
-        }
-        >.field {
-            position: relative;
-            >.field {
-                margin-left: @__form_label_width;
-            }
-            >label:nth-child(1) {
-                width: @__form_label_width - @padding;
-                vertical-align: top;
-                padding: @padding 0;
-                padding-right: @padding;
-                float: left;
-            }
-            .__inlineField(16);
-            >.fields {
-                margin-left: @__form_label_width - @padding;
-            }
-        }
-
-        >.action {
-            margin-left: @__form_label_width;
-        }
-    }
+    /* 无内边距 */
     &.basic {
         padding: 0;
-    }*/
+    }
 }
 
-/*@media @mobile_view {
+@media @mobile_view {
     @__margin_bottom: @padding * 1.6;
     @{NS}.form {
         padding: @padding * .5;
@@ -233,12 +188,12 @@
             line-height: @padding;
         }
     }
-    @{NS}.inline.form>.field>label:nth-child(1) {
+    @{NS}.inline.form .group>label:nth-child(1) {
         width: auto;
         float: none;
         text-align: initial !important;
     }
-    @{NS}.form>.field {
+    @{NS}.form .group {
         margin-bottom: @__margin_bottom * .5;
         >.fields {
             margin: @__margin_bottom * -0.5 0 !important;
@@ -246,11 +201,6 @@
         >.field, >.fields {
             margin-left: 0 !important;
         }
-        .inline.field {
-            input, select {
-                width: @padding * 3;
-            }
-        }
         .__mobileFields(16);
     }
-}*/
+}
