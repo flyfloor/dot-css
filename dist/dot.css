@@ -465,7 +465,7 @@ code {
     width: 768px;
   }
 }
-@media only screen and (min-width: 769px) and (max-width: 991px) {
+@media only screen and (min-width: 569px) and (max-width: 991px) {
   .dot.container {
     width: 768px;
   }
@@ -473,7 +473,7 @@ code {
     width: 568px;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 568px) {
   .dot.container,
   .dot.text {
     width: 100%;
@@ -1173,6 +1173,9 @@ code {
   height: 0;
 }
 .dot.module {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03);
+  border-radius: 5px;
+  border-radius: 0 0 5px 5px;
   display: block;
   padding: 10px;
   border: 1px solid #EEEEEE;
@@ -1185,6 +1188,9 @@ code {
   visibility: hidden;
   display: block;
   height: 0;
+}
+.dot.module:hover {
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
 }
 .dot.module.basic {
   border: none;
@@ -1226,6 +1232,39 @@ code {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+.bordered {
+  border: 1px solid #EEEEEE;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03);
+  border-radius: 5px;
+}
+.bordered:hover {
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
+}
+.link {
+  color: #383838;
+  cursor: pointer;
+}
+.link:hover {
+  color: #616161;
+}
+.blue_link {
+  color: #383838;
+  cursor: pointer;
+  color: #42A5F5;
+}
+.blue_link:hover {
+  color: #616161;
+}
+.blue_link:hover {
+  color: #03A9F4;
+}
+.revert_link {
+  cursor: pointer;
+  color: #F5F5F5;
+}
+.revert_link:hover {
+  color: #ffffff;
 }
 /* fallback */
 @font-face {
@@ -1337,9 +1376,9 @@ i.dot.icon:hover,
 .dot button.icon .icon:hover {
   opacity: 1;
 }
-.dot.button.icon :last-child.icon,
-.dot .button.icon :last-child.icon,
-.dot button.icon :last-child.icon {
+.dot.button.icon * + .icon,
+.dot .button.icon * + .icon,
+.dot button.icon * + .icon {
   margin: 0 -6px 0 6px;
 }
 .dot.button.image img,
@@ -1353,9 +1392,9 @@ i.dot.icon:hover,
   border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
-.dot.button.image :last-child.image,
-.dot .button.image :last-child.image,
-.dot button.image :last-child.image {
+.dot.button.image * + .image,
+.dot .button.image * + .image,
+.dot button.image * + .image {
   border-radius: 0 5px 5px 0;
   margin: -8px -16px -8px 8px;
 }
@@ -1427,9 +1466,9 @@ i.dot.icon:hover,
 .dot button.tiny.icon .icon:hover {
   opacity: 1;
 }
-.dot.button.tiny.icon :last-child.icon,
-.dot .button.tiny.icon :last-child.icon,
-.dot button.tiny.icon :last-child.icon {
+.dot.button.tiny.icon * + .icon,
+.dot .button.tiny.icon * + .icon,
+.dot button.tiny.icon * + .icon {
   margin: 0 -3px 0 3px;
 }
 .dot.button.tiny.image img,
@@ -1443,9 +1482,9 @@ i.dot.icon:hover,
   border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
-.dot.button.tiny.image :last-child.image,
-.dot .button.tiny.image :last-child.image,
-.dot button.tiny.image :last-child.image {
+.dot.button.tiny.image * + .image,
+.dot .button.tiny.image * + .image,
+.dot button.tiny.image * + .image {
   border-radius: 0 5px 5px 0;
   margin: -5px -10px -5px 5px;
 }
@@ -1517,9 +1556,9 @@ i.dot.icon:hover,
 .dot button.small.icon .icon:hover {
   opacity: 1;
 }
-.dot.button.small.icon :last-child.icon,
-.dot .button.small.icon :last-child.icon,
-.dot button.small.icon :last-child.icon {
+.dot.button.small.icon * + .icon,
+.dot .button.small.icon * + .icon,
+.dot button.small.icon * + .icon {
   margin: 0 -5px 0 5px;
 }
 .dot.button.small.image img,
@@ -1533,9 +1572,9 @@ i.dot.icon:hover,
   border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
-.dot.button.small.image :last-child.image,
-.dot .button.small.image :last-child.image,
-.dot button.small.image :last-child.image {
+.dot.button.small.image * + .image,
+.dot .button.small.image * + .image,
+.dot button.small.image * + .image {
   border-radius: 0 5px 5px 0;
   margin: -7px -14px -7px 7px;
 }
@@ -1607,9 +1646,9 @@ i.dot.icon:hover,
 .dot button.large.icon .icon:hover {
   opacity: 1;
 }
-.dot.button.large.icon :last-child.icon,
-.dot .button.large.icon :last-child.icon,
-.dot button.large.icon :last-child.icon {
+.dot.button.large.icon * + .icon,
+.dot .button.large.icon * + .icon,
+.dot button.large.icon * + .icon {
   margin: 0 -8px 0 8px;
 }
 .dot.button.large.image img,
@@ -1623,9 +1662,9 @@ i.dot.icon:hover,
   border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
-.dot.button.large.image :last-child.image,
-.dot .button.large.image :last-child.image,
-.dot button.large.image :last-child.image {
+.dot.button.large.image * + .image,
+.dot .button.large.image * + .image,
+.dot button.large.image * + .image {
   border-radius: 0 5px 5px 0;
   margin: -10px -20px -10px 10px;
 }
@@ -1697,9 +1736,9 @@ i.dot.icon:hover,
 .dot button.huge.icon .icon:hover {
   opacity: 1;
 }
-.dot.button.huge.icon :last-child.icon,
-.dot .button.huge.icon :last-child.icon,
-.dot button.huge.icon :last-child.icon {
+.dot.button.huge.icon * + .icon,
+.dot .button.huge.icon * + .icon,
+.dot button.huge.icon * + .icon {
   margin: 0 -10px 0 10px;
 }
 .dot.button.huge.image img,
@@ -1713,9 +1752,9 @@ i.dot.icon:hover,
   border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
-.dot.button.huge.image :last-child.image,
-.dot .button.huge.image :last-child.image,
-.dot button.huge.image :last-child.image {
+.dot.button.huge.image * + .image,
+.dot .button.huge.image * + .image,
+.dot button.huge.image * + .image {
   border-radius: 0 5px 5px 0;
   margin: -12px -24px -12px 12px;
 }
@@ -2387,7 +2426,7 @@ i.dot.icon:hover,
 .dot.button-group > .button.icon .icon:hover {
   opacity: 1;
 }
-.dot.button-group > .button.icon :last-child.icon {
+.dot.button-group > .button.icon * + .icon {
   margin: 0 -6px 0 6px;
 }
 .dot.button-group > .button.image img {
@@ -2399,7 +2438,7 @@ i.dot.icon:hover,
   border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
-.dot.button-group > .button.image :last-child.image {
+.dot.button-group > .button.image * + .image {
   border-radius: 0 5px 5px 0;
   margin: -8px -16px -8px 8px;
 }
@@ -2447,7 +2486,7 @@ i.dot.icon:hover,
 .dot.button-group.tiny > .button.icon .icon:hover {
   opacity: 1;
 }
-.dot.button-group.tiny > .button.icon :last-child.icon {
+.dot.button-group.tiny > .button.icon * + .icon {
   margin: 0 -3px 0 3px;
 }
 .dot.button-group.tiny > .button.image img {
@@ -2459,7 +2498,7 @@ i.dot.icon:hover,
   border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
-.dot.button-group.tiny > .button.image :last-child.image {
+.dot.button-group.tiny > .button.image * + .image {
   border-radius: 0 5px 5px 0;
   margin: -5px -10px -5px 5px;
 }
@@ -2507,7 +2546,7 @@ i.dot.icon:hover,
 .dot.button-group.small > .button.icon .icon:hover {
   opacity: 1;
 }
-.dot.button-group.small > .button.icon :last-child.icon {
+.dot.button-group.small > .button.icon * + .icon {
   margin: 0 -5px 0 5px;
 }
 .dot.button-group.small > .button.image img {
@@ -2519,7 +2558,7 @@ i.dot.icon:hover,
   border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
-.dot.button-group.small > .button.image :last-child.image {
+.dot.button-group.small > .button.image * + .image {
   border-radius: 0 5px 5px 0;
   margin: -7px -14px -7px 7px;
 }
@@ -2567,7 +2606,7 @@ i.dot.icon:hover,
 .dot.button-group.large > .button.icon .icon:hover {
   opacity: 1;
 }
-.dot.button-group.large > .button.icon :last-child.icon {
+.dot.button-group.large > .button.icon * + .icon {
   margin: 0 -8px 0 8px;
 }
 .dot.button-group.large > .button.image img {
@@ -2579,7 +2618,7 @@ i.dot.icon:hover,
   border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
-.dot.button-group.large > .button.image :last-child.image {
+.dot.button-group.large > .button.image * + .image {
   border-radius: 0 5px 5px 0;
   margin: -10px -20px -10px 10px;
 }
@@ -2627,7 +2666,7 @@ i.dot.icon:hover,
 .dot.button-group.huge > .button.icon .icon:hover {
   opacity: 1;
 }
-.dot.button-group.huge > .button.icon :last-child.icon {
+.dot.button-group.huge > .button.icon * + .icon {
   margin: 0 -10px 0 10px;
 }
 .dot.button-group.huge > .button.image img {
@@ -2639,7 +2678,7 @@ i.dot.icon:hover,
   border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
-.dot.button-group.huge > .button.image :last-child.image {
+.dot.button-group.huge > .button.image * + .image {
   border-radius: 0 5px 5px 0;
   margin: -12px -24px -12px 12px;
 }
@@ -3387,70 +3426,106 @@ i.dot.icon:hover,
 .basic.grid-16 > .column {
   padding: 0;
 }
-.table {
+.dot.table {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03);
+  border-radius: 5px;
+  position: relative;
+  overflow: initial;
+  display: table;
+  margin: 0;
+  border: 1px solid #EEEEEE;
+  width: 100%;
+  border-collapse: separate;
   /*shape size*/
   font-size: 14px;
   line-height: 14px;
   /*basic table layout*/
 }
-.table.dot {
-  position: relative;
-  display: table;
-  margin: 0;
-  border: 1px solid #EEEEEE;
-  width: 100%;
+.dot.table:hover {
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
 }
-.table.fixed {
+.dot.table.fixed {
   table-layout: fixed;
 }
-.table.celled td + td,
-.table.celled .cell + .cell {
-  border-left: 1px solid #EEEEEE;
-  border-top: 1px solid #EEEEEE;
+.dot.table.celled {
+  border-collapse: collapse;
 }
-.table.small {
+.dot.table.celled td + td,
+.dot.table.celled .cell + .cell {
+  border-left: 1px solid #EEEEEE;
+}
+.dot.table.center th,
+.dot.table.center td,
+.dot.table.center .cell {
+  text-align: center;
+}
+.dot.table.small {
   font-size: 12px;
   line-height: 12px;
 }
-.table.large {
+.dot.table.large {
   font-size: 18px;
   line-height: 18px;
 }
-.table .head .cell,
-.table thead .cell,
-.table .head th,
-.table thead th {
-  font-weight: 500;
-  border-top: 0;
-  background-color: #F5F5F5;
+.dot.table .head,
+.dot.table thead {
+  background: #F5F5F5;
 }
-.table .row,
-.table tr {
+.dot.table .head tr:first-child > .cell:first-child,
+.dot.table thead tr:first-child > .cell:first-child,
+.dot.table .head tr:first-child > th:first-child,
+.dot.table thead tr:first-child > th:first-child {
+  border-radius: 5px 0 0 0;
+}
+.dot.table .head tr:first-child > .cell:last-child,
+.dot.table thead tr:first-child > .cell:last-child,
+.dot.table .head tr:first-child > th:last-child,
+.dot.table thead tr:first-child > th:last-child {
+  border-radius: 0 5px 0 0;
+}
+.dot.table .head .cell,
+.dot.table thead .cell,
+.dot.table .head th,
+.dot.table thead th {
+  font-weight: 500;
+}
+.dot.table .row,
+.dot.table tr {
   display: table-row;
 }
-.table .row:nth-child(1) .cell,
-.table tr:nth-child(1) .cell,
-.table .row:nth-child(1) td,
-.table tr:nth-child(1) td {
-  border-top: 0;
-}
-.table .row .cell,
-.table tr .cell,
-.table .row td,
-.table tr td,
-.table .row th,
-.table tr th {
-  border-top: 1px solid #EEEEEE;
+.dot.table .row .cell,
+.dot.table tr .cell,
+.dot.table .row td,
+.dot.table tr td,
+.dot.table .row th,
+.dot.table tr th {
   padding: 10px 20px;
   vertical-align: middle;
   display: table-cell;
 }
-.table.basic {
+.dot.table .row + .row .cell,
+.dot.table tr + tr .cell,
+.dot.table .row + .row td,
+.dot.table tr + tr td,
+.dot.table .row + .row th,
+.dot.table tr + tr th {
+  border-top: 1px solid #EEEEEE;
+}
+.dot.table.basic {
+  border-radius: 0;
+  box-shadow: none;
   border: 0;
 }
-.table.basic .cell,
-.table.basic td,
-.table.basic th {
+.dot.table.basic:hover {
+  box-shadow: none;
+}
+.dot.table.basic thead,
+.dot.table.basic .head {
+  background: none;
+}
+.dot.table.basic .cell,
+.dot.table.basic td,
+.dot.table.basic th {
   background-color: initial;
   padding: 0;
   border: 0;
@@ -3852,7 +3927,9 @@ input.dot.input.error,
 .dot select.error {
   border-color: #EF5350;
 }
+.dot .checkbox,
 .dot.checkbox,
+.dot .radio,
 .dot.radio {
   float: none;
   min-height: initial;
@@ -3863,11 +3940,14 @@ input.dot.input.error,
   line-height: 1em;
   font-size: 15px;
   margin-right: 10px;
-  vertical-align: middle;
 }
+.dot .checkbox input[type=checkbox],
 .dot.checkbox input[type=checkbox],
+.dot .radio input[type=checkbox],
 .dot.radio input[type=checkbox],
+.dot .checkbox input[type=radio],
 .dot.checkbox input[type=radio],
+.dot .radio input[type=radio],
 .dot.radio input[type=radio] {
   position: absolute !important;
   left: 0;
@@ -3882,9 +3962,13 @@ input.dot.input.error,
   width: 100%;
   height: 100%;
 }
+.dot .checkbox input[type=checkbox].show,
 .dot.checkbox input[type=checkbox].show,
+.dot .radio input[type=checkbox].show,
 .dot.radio input[type=checkbox].show,
+.dot .checkbox input[type=radio].show,
 .dot.checkbox input[type=radio].show,
+.dot .radio input[type=radio].show,
 .dot.radio input[type=radio].show {
   opacity: 1;
   top: 1px;
@@ -3892,36 +3976,56 @@ input.dot.input.error,
   width: 14px;
   height: 14px;
 }
+.dot .checkbox input[type=checkbox].show + *,
 .dot.checkbox input[type=checkbox].show + *,
+.dot .radio input[type=checkbox].show + *,
 .dot.radio input[type=checkbox].show + *,
+.dot .checkbox input[type=radio].show + *,
 .dot.checkbox input[type=radio].show + *,
+.dot .radio input[type=radio].show + *,
 .dot.radio input[type=radio].show + * {
   padding-left: 1.3em;
 }
+.dot .checkbox input[type=checkbox].show + *:before,
 .dot.checkbox input[type=checkbox].show + *:before,
+.dot .radio input[type=checkbox].show + *:before,
 .dot.radio input[type=checkbox].show + *:before,
+.dot .checkbox input[type=radio].show + *:before,
 .dot.checkbox input[type=radio].show + *:before,
+.dot .radio input[type=radio].show + *:before,
 .dot.radio input[type=radio].show + *:before {
   content: none;
 }
+.dot .checkbox input[type=checkbox].show:checked + *:before,
 .dot.checkbox input[type=checkbox].show:checked + *:before,
+.dot .radio input[type=checkbox].show:checked + *:before,
 .dot.radio input[type=checkbox].show:checked + *:before,
+.dot .checkbox input[type=radio].show:checked + *:before,
 .dot.checkbox input[type=radio].show:checked + *:before,
+.dot .radio input[type=radio].show:checked + *:before,
 .dot.radio input[type=radio].show:checked + *:before {
   content: none;
 }
+.dot .checkbox input[type=checkbox] + *,
 .dot.checkbox input[type=checkbox] + *,
+.dot .radio input[type=checkbox] + *,
 .dot.radio input[type=checkbox] + *,
+.dot .checkbox input[type=radio] + *,
 .dot.checkbox input[type=radio] + *,
+.dot .radio input[type=radio] + *,
 .dot.radio input[type=radio] + * {
   position: relative;
   z-index: 0;
   padding-left: 1.2em;
   display: inline-block;
 }
+.dot .checkbox input[type=checkbox] + *:before,
 .dot.checkbox input[type=checkbox] + *:before,
+.dot .radio input[type=checkbox] + *:before,
 .dot.radio input[type=checkbox] + *:before,
+.dot .checkbox input[type=radio] + *:before,
 .dot.checkbox input[type=radio] + *:before,
+.dot .radio input[type=radio] + *:before,
 .dot.radio input[type=radio] + *:before {
   position: absolute;
   left: 0;
@@ -3930,36 +4034,58 @@ input.dot.input.error,
   width: 1em;
   height: 1em;
   font-family: 'Material Icons';
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
 }
+.dot .checkbox.disabled,
 .dot.checkbox.disabled,
+.dot .radio.disabled,
 .dot.radio.disabled {
   cursor: not-allowed;
 }
+.dot .checkbox.disabled input[type=checkbox],
 .dot.checkbox.disabled input[type=checkbox],
+.dot .radio.disabled input[type=checkbox],
 .dot.radio.disabled input[type=checkbox],
+.dot .checkbox.disabled input[type=radio],
 .dot.checkbox.disabled input[type=radio],
+.dot .radio.disabled input[type=radio],
 .dot.radio.disabled input[type=radio] {
   width: 0;
   pointer-events: none;
 }
+.dot .checkbox.disabled input[type=checkbox] + *:before,
 .dot.checkbox.disabled input[type=checkbox] + *:before,
+.dot .radio.disabled input[type=checkbox] + *:before,
 .dot.radio.disabled input[type=checkbox] + *:before,
+.dot .checkbox.disabled input[type=radio] + *:before,
 .dot.checkbox.disabled input[type=radio] + *:before,
+.dot .radio.disabled input[type=radio] + *:before,
 .dot.radio.disabled input[type=radio] + *:before {
   opacity: .7;
   color: #BDBDBD;
 }
+.dot .checkbox input[type=checkbox]:checked + *:before,
 .dot.checkbox input[type=checkbox]:checked + *:before {
   content: 'check_box';
 }
+.dot .checkbox input[type=checkbox] + *:before,
 .dot.checkbox input[type=checkbox] + *:before {
   content: 'check_box_outline_blank';
 }
+.dot .radio input[type=radio]:checked + *:before,
 .dot.radio input[type=radio]:checked + *:before {
   content: 'radio_button_checked';
 }
+.dot .radio input[type=radio] + *:before,
 .dot.radio input[type=radio] + *:before {
   content: 'radio_button_unchecked';
+}
+.dot.checkbox-group,
+.dot .checkbox-group,
+.dot.radio-group,
+.dot .radio-group {
+  display: inline-block;
 }
 .dot.label,
 .dot .label {
@@ -4007,8 +4133,8 @@ input.dot.input.error,
 .dot .label.icon .icon:hover {
   opacity: 1;
 }
-.dot.label.icon :last-child.icon,
-.dot .label.icon :last-child.icon {
+.dot.label.icon * + .icon,
+.dot .label.icon * + .icon {
   margin: 0 -4px 0 4px;
 }
 .dot.label.image img,
@@ -4021,8 +4147,8 @@ input.dot.input.error,
   border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
-.dot.label.image :last-child.image,
-.dot .label.image :last-child.image {
+.dot.label.image * + .image,
+.dot .label.image * + .image {
   border-radius: 0 5px 5px 0;
   margin: -6px -12px -6px 6px;
 }
@@ -4082,8 +4208,8 @@ input.dot.input.error,
 .dot .label.tiny.icon .icon:hover {
   opacity: 1;
 }
-.dot.label.tiny.icon :last-child.icon,
-.dot .label.tiny.icon :last-child.icon {
+.dot.label.tiny.icon * + .icon,
+.dot .label.tiny.icon * + .icon {
   margin: 0 -3px 0 3px;
 }
 .dot.label.tiny.image img,
@@ -4096,8 +4222,8 @@ input.dot.input.error,
   border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
-.dot.label.tiny.image :last-child.image,
-.dot .label.tiny.image :last-child.image {
+.dot.label.tiny.image * + .image,
+.dot .label.tiny.image * + .image {
   border-radius: 0 5px 5px 0;
   margin: -5px -10px -5px 5px;
 }
@@ -4157,8 +4283,8 @@ input.dot.input.error,
 .dot .label.small.icon .icon:hover {
   opacity: 1;
 }
-.dot.label.small.icon :last-child.icon,
-.dot .label.small.icon :last-child.icon {
+.dot.label.small.icon * + .icon,
+.dot .label.small.icon * + .icon {
   margin: 0 -4px 0 4px;
 }
 .dot.label.small.image img,
@@ -4171,8 +4297,8 @@ input.dot.input.error,
   border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
-.dot.label.small.image :last-child.image,
-.dot .label.small.image :last-child.image {
+.dot.label.small.image * + .image,
+.dot .label.small.image * + .image {
   border-radius: 0 5px 5px 0;
   margin: -6px -12px -6px 6px;
 }
@@ -4232,8 +4358,8 @@ input.dot.input.error,
 .dot .label.large.icon .icon:hover {
   opacity: 1;
 }
-.dot.label.large.icon :last-child.icon,
-.dot .label.large.icon :last-child.icon {
+.dot.label.large.icon * + .icon,
+.dot .label.large.icon * + .icon {
   margin: 0 -7px 0 7px;
 }
 .dot.label.large.image img,
@@ -4246,8 +4372,8 @@ input.dot.input.error,
   border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
-.dot.label.large.image :last-child.image,
-.dot .label.large.image :last-child.image {
+.dot.label.large.image * + .image,
+.dot .label.large.image * + .image {
   border-radius: 0 5px 5px 0;
   margin: -9px -18px -9px 9px;
 }
@@ -4307,8 +4433,8 @@ input.dot.input.error,
 .dot .label.huge.icon .icon:hover {
   opacity: 1;
 }
-.dot.label.huge.icon :last-child.icon,
-.dot .label.huge.icon :last-child.icon {
+.dot.label.huge.icon * + .icon,
+.dot .label.huge.icon * + .icon {
   margin: 0 -9px 0 9px;
 }
 .dot.label.huge.image img,
@@ -4321,8 +4447,8 @@ input.dot.input.error,
   border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
-.dot.label.huge.image :last-child.image,
-.dot .label.huge.image :last-child.image {
+.dot.label.huge.image * + .image,
+.dot .label.huge.image * + .image {
   border-radius: 0 5px 5px 0;
   margin: -11px -22px -11px 11px;
 }
@@ -4863,7 +4989,7 @@ input.dot.input.error,
 .dot.label-group .label.icon .icon:hover {
   opacity: 1;
 }
-.dot.label-group .label.icon :last-child.icon {
+.dot.label-group .label.icon * + .icon {
   margin: 0 -4px 0 4px;
 }
 .dot.label-group .label.image img {
@@ -4875,7 +5001,7 @@ input.dot.input.error,
   border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
-.dot.label-group .label.image :last-child.image {
+.dot.label-group .label.image * + .image {
   border-radius: 0 5px 5px 0;
   margin: -6px -12px -6px 6px;
 }
@@ -4923,7 +5049,7 @@ input.dot.input.error,
 .dot.label-group.tiny .label.icon .icon:hover {
   opacity: 1;
 }
-.dot.label-group.tiny .label.icon :last-child.icon {
+.dot.label-group.tiny .label.icon * + .icon {
   margin: 0 -2px 0 2px;
 }
 .dot.label-group.tiny .label.image img {
@@ -4935,7 +5061,7 @@ input.dot.input.error,
   border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
-.dot.label-group.tiny .label.image :last-child.image {
+.dot.label-group.tiny .label.image * + .image {
   border-radius: 0 5px 5px 0;
   margin: -4px -8px -4px 4px;
 }
@@ -4983,7 +5109,7 @@ input.dot.input.error,
 .dot.label-group.small .label.icon .icon:hover {
   opacity: 1;
 }
-.dot.label-group.small .label.icon :last-child.icon {
+.dot.label-group.small .label.icon * + .icon {
   margin: 0 -3px 0 3px;
 }
 .dot.label-group.small .label.image img {
@@ -4995,7 +5121,7 @@ input.dot.input.error,
   border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
-.dot.label-group.small .label.image :last-child.image {
+.dot.label-group.small .label.image * + .image {
   border-radius: 0 5px 5px 0;
   margin: -5px -10px -5px 5px;
 }
@@ -5043,7 +5169,7 @@ input.dot.input.error,
 .dot.label-group.large .label.icon .icon:hover {
   opacity: 1;
 }
-.dot.label-group.large .label.icon :last-child.icon {
+.dot.label-group.large .label.icon * + .icon {
   margin: 0 -6px 0 6px;
 }
 .dot.label-group.large .label.image img {
@@ -5055,7 +5181,7 @@ input.dot.input.error,
   border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
-.dot.label-group.large .label.image :last-child.image {
+.dot.label-group.large .label.image * + .image {
   border-radius: 0 5px 5px 0;
   margin: -8px -16px -8px 8px;
 }
@@ -5103,7 +5229,7 @@ input.dot.input.error,
 .dot.label-group.huge .label.icon .icon:hover {
   opacity: 1;
 }
-.dot.label-group.huge .label.icon :last-child.icon {
+.dot.label-group.huge .label.icon * + .icon {
   margin: 0 -8px 0 8px;
 }
 .dot.label-group.huge .label.image img {
@@ -5115,7 +5241,7 @@ input.dot.input.error,
   border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
-.dot.label-group.huge .label.image :last-child.image {
+.dot.label-group.huge .label.image * + .image {
   border-radius: 0 5px 5px 0;
   margin: -10px -20px -10px 10px;
 }
@@ -5166,22 +5292,22 @@ img.dot.image.middle.circle {
   border-radius: 150px;
 }
 img.dot.image.mini {
-  width: 35px;
+  width: 22px;
 }
 img.dot.image.mini.circle {
-  border-radius: 17.5px;
+  border-radius: 11px;
 }
 img.dot.image.tiny {
-  width: 60px;
+  width: 35px;
 }
 img.dot.image.tiny.circle {
-  border-radius: 30px;
+  border-radius: 17.5px;
 }
 img.dot.image.small {
-  width: 150px;
+  width: 60px;
 }
 img.dot.image.small.circle {
-  border-radius: 75px;
+  border-radius: 30px;
 }
 img.dot.image.large {
   width: 450px;
@@ -5258,8 +5384,8 @@ img.dot.image.massive.circle {
 .dot.image.mini.circle.landscape,
 .dot.image.mini.circle.portrait {
   overflow: hidden;
-  width: 35px;
-  height: 35px;
+  width: 22px;
+  height: 22px;
 }
 .dot.image.mini.circle.landscape > img,
 .dot.image.mini.circle.portrait > img {
@@ -5267,7 +5393,7 @@ img.dot.image.massive.circle {
   max-width: none;
   width: auto;
   height: 100%;
-  margin-left: -8.75px;
+  margin-left: -5.5px;
 }
 .dot.image.mini.circle.portrait > img {
   width: 100%;
@@ -5275,10 +5401,10 @@ img.dot.image.massive.circle {
   margin: 0;
 }
 .dot.image.mini > img {
-  width: 35px;
+  width: 22px;
 }
 .dot.image.mini > img.circle {
-  border-radius: 17.5px;
+  border-radius: 11px;
 }
 .dot.image.tiny.circle {
   border-radius: 50%;
@@ -5289,8 +5415,8 @@ img.dot.image.massive.circle {
 .dot.image.tiny.circle.landscape,
 .dot.image.tiny.circle.portrait {
   overflow: hidden;
-  width: 60px;
-  height: 60px;
+  width: 35px;
+  height: 35px;
 }
 .dot.image.tiny.circle.landscape > img,
 .dot.image.tiny.circle.portrait > img {
@@ -5298,7 +5424,7 @@ img.dot.image.massive.circle {
   max-width: none;
   width: auto;
   height: 100%;
-  margin-left: -15px;
+  margin-left: -8.75px;
 }
 .dot.image.tiny.circle.portrait > img {
   width: 100%;
@@ -5306,10 +5432,10 @@ img.dot.image.massive.circle {
   margin: 0;
 }
 .dot.image.tiny > img {
-  width: 60px;
+  width: 35px;
 }
 .dot.image.tiny > img.circle {
-  border-radius: 30px;
+  border-radius: 17.5px;
 }
 .dot.image.small.circle {
   border-radius: 50%;
@@ -5320,8 +5446,8 @@ img.dot.image.massive.circle {
 .dot.image.small.circle.landscape,
 .dot.image.small.circle.portrait {
   overflow: hidden;
-  width: 150px;
-  height: 150px;
+  width: 60px;
+  height: 60px;
 }
 .dot.image.small.circle.landscape > img,
 .dot.image.small.circle.portrait > img {
@@ -5329,7 +5455,7 @@ img.dot.image.massive.circle {
   max-width: none;
   width: auto;
   height: 100%;
-  margin-left: -37.5px;
+  margin-left: -15px;
 }
 .dot.image.small.circle.portrait > img {
   width: 100%;
@@ -5337,10 +5463,10 @@ img.dot.image.massive.circle {
   margin: 0;
 }
 .dot.image.small > img {
-  width: 150px;
+  width: 60px;
 }
 .dot.image.small > img.circle {
-  border-radius: 75px;
+  border-radius: 30px;
 }
 .dot.image.large.circle {
   border-radius: 50%;
@@ -5528,44 +5654,153 @@ img.dot.image.massive.circle {
 .dot.comment > .comments {
   margin-left: 50px;
 }
-.dot.item {
-  display: table;
+.dot.item,
+.dot.list .item {
+  display: list-item;
+  table-layout: fixed;
   margin-bottom: 10px;
 }
-.dot.item > .image,
-.dot.item > .content {
-  display: table-cell;
-  vertical-align: middle;
-}
-.dot.item > .content {
-  padding-left: 10px;
-}
-.dot.item > .content > .header {
-  color: #000000;
-}
-.dot.item.top > .content {
-  vertical-align: top;
-}
-.dot.item.bottom > .content {
-  vertical-align: bottom;
-}
-.dot.item > .image:after {
+.dot.item:after,
+.dot.list .item:after {
   content: ".";
   clear: both;
   visibility: hidden;
   display: block;
   height: 0;
 }
-.dot.item > .image > img {
-  float: left;
-  max-width: 100%;
-  height: auto;
+.dot.item > .image,
+.dot.list .item > .image,
+.dot.item > .icon,
+.dot.list .item > .icon {
+  display: table-cell;
+  vertical-align: top;
+}
+.dot.item > .image + .content,
+.dot.list .item > .image + .content,
+.dot.item > .icon + .content,
+.dot.list .item > .icon + .content {
+  display: table-cell;
+  vertical-align: top;
+  padding-left: 10px;
+}
+.dot.item > .icon,
+.dot.list .item > .icon {
+  vertical-align: middle;
+  font-size: 13px;
+}
+.dot.item > .image,
+.dot.list .item > .image {
+  width: 150px;
+}
+.dot.item > .image.circle img,
+.dot.list .item > .image.circle img {
+  border-radius: 75px;
+}
+.dot.item > .image.mini,
+.dot.list .item > .image.mini {
+  width: 22px;
+}
+.dot.item > .image.mini.circle img,
+.dot.list .item > .image.mini.circle img {
+  border-radius: 11px;
+}
+.dot.item > .image.tiny,
+.dot.list .item > .image.tiny {
+  width: 35px;
+}
+.dot.item > .image.tiny.circle img,
+.dot.list .item > .image.tiny.circle img {
+  border-radius: 17.5px;
+}
+.dot.item > .image.small,
+.dot.list .item > .image.small {
+  width: 60px;
+}
+.dot.item > .image.small.circle img,
+.dot.list .item > .image.small.circle img {
+  border-radius: 30px;
+}
+.dot.item > .image img,
+.dot.list .item > .image img {
+  width: 100%;
+}
+.dot.item > .content > .header,
+.dot.list .item > .content > .header {
+  color: #000000;
+  line-height: 19px;
+  font-size: 16px;
+}
+.dot.item > .content > .extra,
+.dot.list .item > .content > .extra {
+  font-size: 13px;
+}
+.dot.item.middle > .content,
+.dot.list .item.middle > .content,
+.dot.item.middle > .image,
+.dot.list .item.middle > .image {
+  vertical-align: middle;
+}
+.dot.item.bottom > .content,
+.dot.list .item.bottom > .content,
+.dot.item.bottom > .image,
+.dot.list .item.bottom > .image {
+  vertical-align: bottom;
+}
+.dot.list:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.list.horizontal {
+  margin: -10px;
+}
+.dot.list.horizontal > .item {
+  display: inline-block;
+  padding: 10px;
+}
+.dot.list.horizontal > .item:before {
+  vertical-align: middle;
+}
+.dot.list.horizontal > .item > .image img,
+.dot.list.horizontal > .item > .content {
+  vertical-align: middle;
+}
+.dot.list .ordered.list {
+  margin-left: 10px;
+  padding: 10px 0;
+  counter-reset: ordered;
+}
+.list.ordered {
+  counter-reset: ordered;
+}
+.list.ordered > .item:before {
+  display: table-cell;
+  padding-right: 10px;
+  color: #383838;
+  font-size: 14px;
+  counter-increment: ordered;
+  content: counters(ordered, ".") " ";
+}
+.list.ordered > .item > .content {
+  display: table-cell;
 }
 .dot.card {
+  border: 1px solid #EEEEEE;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03);
+  border-radius: 5px;
   display: block;
   background-color: #ffffff;
   border: 1px solid #F5F5F5;
   margin-bottom: 10px;
+}
+.dot.card:hover {
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
+}
+.dot.card > .image:first-child {
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
 }
 .dot.card > .content,
 .dot.card > .extra,
@@ -5590,6 +5825,9 @@ img.dot.image.massive.circle {
   height: 0;
 }
 .dot.cards > .card {
+  border: 1px solid #EEEEEE;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03);
+  border-radius: 5px;
   display: block;
   background-color: #ffffff;
   border: 1px solid #F5F5F5;
@@ -5599,6 +5837,13 @@ img.dot.image.massive.circle {
   float: left;
   line-height: 100%;
   height: 100%;
+}
+.dot.cards > .card:hover {
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
+}
+.dot.cards > .card > .image:first-child {
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
 }
 .dot.cards > .card > .content,
 .dot.cards > .card > .extra,
@@ -5661,6 +5906,7 @@ img.dot.image.massive.circle {
   width: calc(100%/16 - 10px* 2);
 }
 .dot.message {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03);
   margin: 10px 0;
   color: #616161;
   border-radius: 5px;
@@ -5671,6 +5917,9 @@ img.dot.image.massive.circle {
   line-height: 15px;
   padding-left: 10px;
   padding-right: 10px;
+}
+.dot.message:hover {
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
 }
 .dot.message > .header {
   line-height: initial;
@@ -5716,7 +5965,7 @@ img.dot.image.massive.circle {
 .dot.message.icon .icon:hover {
   opacity: 1;
 }
-.dot.message.icon :last-child.icon {
+.dot.message.icon * + .icon {
   margin: 0 -7px 0 7px;
 }
 .dot.message.image img {
@@ -5728,7 +5977,7 @@ img.dot.image.massive.circle {
   border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
-.dot.message.image :last-child.image {
+.dot.message.image * + .image {
   border-radius: 0 5px 5px 0;
   margin: -9px -18px -9px 9px;
 }
@@ -5778,7 +6027,7 @@ img.dot.image.massive.circle {
 .dot.message.tiny.icon .icon:hover {
   opacity: 1;
 }
-.dot.message.tiny.icon :last-child.icon {
+.dot.message.tiny.icon * + .icon {
   margin: 0 -4px 0 4px;
 }
 .dot.message.tiny.image img {
@@ -5790,7 +6039,7 @@ img.dot.image.massive.circle {
   border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
-.dot.message.tiny.image :last-child.image {
+.dot.message.tiny.image * + .image {
   border-radius: 0 5px 5px 0;
   margin: -6px -12px -6px 6px;
 }
@@ -5840,7 +6089,7 @@ img.dot.image.massive.circle {
 .dot.message.small.icon .icon:hover {
   opacity: 1;
 }
-.dot.message.small.icon :last-child.icon {
+.dot.message.small.icon * + .icon {
   margin: 0 -5px 0 5px;
 }
 .dot.message.small.image img {
@@ -5852,7 +6101,7 @@ img.dot.image.massive.circle {
   border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
-.dot.message.small.image :last-child.image {
+.dot.message.small.image * + .image {
   border-radius: 0 5px 5px 0;
   margin: -7px -14px -7px 7px;
 }
@@ -5902,7 +6151,7 @@ img.dot.image.massive.circle {
 .dot.message.large.icon .icon:hover {
   opacity: 1;
 }
-.dot.message.large.icon :last-child.icon {
+.dot.message.large.icon * + .icon {
   margin: 0 -10px 0 10px;
 }
 .dot.message.large.image img {
@@ -5914,7 +6163,7 @@ img.dot.image.massive.circle {
   border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
-.dot.message.large.image :last-child.image {
+.dot.message.large.image * + .image {
   border-radius: 0 5px 5px 0;
   margin: -12px -24px -12px 12px;
 }
@@ -5964,7 +6213,7 @@ img.dot.image.massive.circle {
 .dot.message.huge.icon .icon:hover {
   opacity: 1;
 }
-.dot.message.huge.icon :last-child.icon {
+.dot.message.huge.icon * + .icon {
   margin: 0 -13px 0 13px;
 }
 .dot.message.huge.image img {
@@ -5976,7 +6225,7 @@ img.dot.image.massive.circle {
   border-radius: 5px 0 0 5px;
   vertical-align: top;
 }
-.dot.message.huge.image :last-child.image {
+.dot.message.huge.image * + .image {
   border-radius: 0 5px 5px 0;
   margin: -15px -30px -15px 15px;
 }
@@ -6469,23 +6718,10 @@ img.dot.image.massive.circle {
 .dot.form .field .field {
   margin-bottom: 0;
 }
-.dot.form .field .label:not(.dot) {
-  padding: 0 0 4px;
-  background: initial;
-  text-shadow: none;
-  border-radius: 0;
-  margin: 0;
-  line-height: 15px;
-  font-size: 15px;
-  color: #383838;
-  word-wrap: break-word;
-}
-.dot.form .field .label:not(.dot):nth-child(1) {
-  display: block;
-}
 .dot.form .field .fields-1 {
   font-size: 0;
   position: relative;
+  margin: 0 -10px 0;
 }
 .dot.form .field .fields-1:after {
   content: ".";
@@ -6494,22 +6730,16 @@ img.dot.image.massive.circle {
   display: block;
   height: 0;
 }
-.dot.form .field .fields-1 > .field:first-child {
-  padding-left: 0;
-}
-.dot.form .field .fields-1 > .field:last-child {
-  padding-right: 0;
-}
-.dot.form .field .fields-1 .field {
+.dot.form .field .fields-1 > .field {
+  padding: 0 10px;
   font-size: 15px;
   width: 100%;
   display: inline-block;
   float: left;
-  padding: 0 5px;
 }
-.dot.form .field .fields .field-1 {
+.dot.form .field .fields > .field-1 {
   font-size: 15px;
-  padding: 0 5px;
+  padding: 0 10px;
   display: inline-block;
   float: left;
   width: 6.25%;
@@ -6517,6 +6747,7 @@ img.dot.image.massive.circle {
 .dot.form .field .fields-2 {
   font-size: 0;
   position: relative;
+  margin: 0 -10px 0;
 }
 .dot.form .field .fields-2:after {
   content: ".";
@@ -6525,22 +6756,16 @@ img.dot.image.massive.circle {
   display: block;
   height: 0;
 }
-.dot.form .field .fields-2 > .field:first-child {
-  padding-left: 0;
-}
-.dot.form .field .fields-2 > .field:last-child {
-  padding-right: 0;
-}
-.dot.form .field .fields-2 .field {
+.dot.form .field .fields-2 > .field {
+  padding: 0 10px;
   font-size: 15px;
   width: 50%;
   display: inline-block;
   float: left;
-  padding: 0 5px;
 }
-.dot.form .field .fields .field-2 {
+.dot.form .field .fields > .field-2 {
   font-size: 15px;
-  padding: 0 5px;
+  padding: 0 10px;
   display: inline-block;
   float: left;
   width: 12.5%;
@@ -6548,6 +6773,7 @@ img.dot.image.massive.circle {
 .dot.form .field .fields-3 {
   font-size: 0;
   position: relative;
+  margin: 0 -10px 0;
 }
 .dot.form .field .fields-3:after {
   content: ".";
@@ -6556,22 +6782,16 @@ img.dot.image.massive.circle {
   display: block;
   height: 0;
 }
-.dot.form .field .fields-3 > .field:first-child {
-  padding-left: 0;
-}
-.dot.form .field .fields-3 > .field:last-child {
-  padding-right: 0;
-}
-.dot.form .field .fields-3 .field {
+.dot.form .field .fields-3 > .field {
+  padding: 0 10px;
   font-size: 15px;
   width: 33.33333333%;
   display: inline-block;
   float: left;
-  padding: 0 5px;
 }
-.dot.form .field .fields .field-3 {
+.dot.form .field .fields > .field-3 {
   font-size: 15px;
-  padding: 0 5px;
+  padding: 0 10px;
   display: inline-block;
   float: left;
   width: 18.75%;
@@ -6579,6 +6799,7 @@ img.dot.image.massive.circle {
 .dot.form .field .fields-4 {
   font-size: 0;
   position: relative;
+  margin: 0 -10px 0;
 }
 .dot.form .field .fields-4:after {
   content: ".";
@@ -6587,22 +6808,16 @@ img.dot.image.massive.circle {
   display: block;
   height: 0;
 }
-.dot.form .field .fields-4 > .field:first-child {
-  padding-left: 0;
-}
-.dot.form .field .fields-4 > .field:last-child {
-  padding-right: 0;
-}
-.dot.form .field .fields-4 .field {
+.dot.form .field .fields-4 > .field {
+  padding: 0 10px;
   font-size: 15px;
   width: 25%;
   display: inline-block;
   float: left;
-  padding: 0 5px;
 }
-.dot.form .field .fields .field-4 {
+.dot.form .field .fields > .field-4 {
   font-size: 15px;
-  padding: 0 5px;
+  padding: 0 10px;
   display: inline-block;
   float: left;
   width: 25%;
@@ -6610,6 +6825,7 @@ img.dot.image.massive.circle {
 .dot.form .field .fields-5 {
   font-size: 0;
   position: relative;
+  margin: 0 -10px 0;
 }
 .dot.form .field .fields-5:after {
   content: ".";
@@ -6618,22 +6834,16 @@ img.dot.image.massive.circle {
   display: block;
   height: 0;
 }
-.dot.form .field .fields-5 > .field:first-child {
-  padding-left: 0;
-}
-.dot.form .field .fields-5 > .field:last-child {
-  padding-right: 0;
-}
-.dot.form .field .fields-5 .field {
+.dot.form .field .fields-5 > .field {
+  padding: 0 10px;
   font-size: 15px;
   width: 20%;
   display: inline-block;
   float: left;
-  padding: 0 5px;
 }
-.dot.form .field .fields .field-5 {
+.dot.form .field .fields > .field-5 {
   font-size: 15px;
-  padding: 0 5px;
+  padding: 0 10px;
   display: inline-block;
   float: left;
   width: 31.25%;
@@ -6641,6 +6851,7 @@ img.dot.image.massive.circle {
 .dot.form .field .fields-6 {
   font-size: 0;
   position: relative;
+  margin: 0 -10px 0;
 }
 .dot.form .field .fields-6:after {
   content: ".";
@@ -6649,22 +6860,16 @@ img.dot.image.massive.circle {
   display: block;
   height: 0;
 }
-.dot.form .field .fields-6 > .field:first-child {
-  padding-left: 0;
-}
-.dot.form .field .fields-6 > .field:last-child {
-  padding-right: 0;
-}
-.dot.form .field .fields-6 .field {
+.dot.form .field .fields-6 > .field {
+  padding: 0 10px;
   font-size: 15px;
   width: 16.66666667%;
   display: inline-block;
   float: left;
-  padding: 0 5px;
 }
-.dot.form .field .fields .field-6 {
+.dot.form .field .fields > .field-6 {
   font-size: 15px;
-  padding: 0 5px;
+  padding: 0 10px;
   display: inline-block;
   float: left;
   width: 37.5%;
@@ -6672,6 +6877,7 @@ img.dot.image.massive.circle {
 .dot.form .field .fields-7 {
   font-size: 0;
   position: relative;
+  margin: 0 -10px 0;
 }
 .dot.form .field .fields-7:after {
   content: ".";
@@ -6680,22 +6886,16 @@ img.dot.image.massive.circle {
   display: block;
   height: 0;
 }
-.dot.form .field .fields-7 > .field:first-child {
-  padding-left: 0;
-}
-.dot.form .field .fields-7 > .field:last-child {
-  padding-right: 0;
-}
-.dot.form .field .fields-7 .field {
+.dot.form .field .fields-7 > .field {
+  padding: 0 10px;
   font-size: 15px;
   width: 14.28571429%;
   display: inline-block;
   float: left;
-  padding: 0 5px;
 }
-.dot.form .field .fields .field-7 {
+.dot.form .field .fields > .field-7 {
   font-size: 15px;
-  padding: 0 5px;
+  padding: 0 10px;
   display: inline-block;
   float: left;
   width: 43.75%;
@@ -6703,6 +6903,7 @@ img.dot.image.massive.circle {
 .dot.form .field .fields-8 {
   font-size: 0;
   position: relative;
+  margin: 0 -10px 0;
 }
 .dot.form .field .fields-8:after {
   content: ".";
@@ -6711,22 +6912,16 @@ img.dot.image.massive.circle {
   display: block;
   height: 0;
 }
-.dot.form .field .fields-8 > .field:first-child {
-  padding-left: 0;
-}
-.dot.form .field .fields-8 > .field:last-child {
-  padding-right: 0;
-}
-.dot.form .field .fields-8 .field {
+.dot.form .field .fields-8 > .field {
+  padding: 0 10px;
   font-size: 15px;
   width: 12.5%;
   display: inline-block;
   float: left;
-  padding: 0 5px;
 }
-.dot.form .field .fields .field-8 {
+.dot.form .field .fields > .field-8 {
   font-size: 15px;
-  padding: 0 5px;
+  padding: 0 10px;
   display: inline-block;
   float: left;
   width: 50%;
@@ -6734,6 +6929,7 @@ img.dot.image.massive.circle {
 .dot.form .field .fields-9 {
   font-size: 0;
   position: relative;
+  margin: 0 -10px 0;
 }
 .dot.form .field .fields-9:after {
   content: ".";
@@ -6742,22 +6938,16 @@ img.dot.image.massive.circle {
   display: block;
   height: 0;
 }
-.dot.form .field .fields-9 > .field:first-child {
-  padding-left: 0;
-}
-.dot.form .field .fields-9 > .field:last-child {
-  padding-right: 0;
-}
-.dot.form .field .fields-9 .field {
+.dot.form .field .fields-9 > .field {
+  padding: 0 10px;
   font-size: 15px;
   width: 11.11111111%;
   display: inline-block;
   float: left;
-  padding: 0 5px;
 }
-.dot.form .field .fields .field-9 {
+.dot.form .field .fields > .field-9 {
   font-size: 15px;
-  padding: 0 5px;
+  padding: 0 10px;
   display: inline-block;
   float: left;
   width: 56.25%;
@@ -6765,6 +6955,7 @@ img.dot.image.massive.circle {
 .dot.form .field .fields-10 {
   font-size: 0;
   position: relative;
+  margin: 0 -10px 0;
 }
 .dot.form .field .fields-10:after {
   content: ".";
@@ -6773,22 +6964,16 @@ img.dot.image.massive.circle {
   display: block;
   height: 0;
 }
-.dot.form .field .fields-10 > .field:first-child {
-  padding-left: 0;
-}
-.dot.form .field .fields-10 > .field:last-child {
-  padding-right: 0;
-}
-.dot.form .field .fields-10 .field {
+.dot.form .field .fields-10 > .field {
+  padding: 0 10px;
   font-size: 15px;
   width: 10%;
   display: inline-block;
   float: left;
-  padding: 0 5px;
 }
-.dot.form .field .fields .field-10 {
+.dot.form .field .fields > .field-10 {
   font-size: 15px;
-  padding: 0 5px;
+  padding: 0 10px;
   display: inline-block;
   float: left;
   width: 62.5%;
@@ -6796,6 +6981,7 @@ img.dot.image.massive.circle {
 .dot.form .field .fields-11 {
   font-size: 0;
   position: relative;
+  margin: 0 -10px 0;
 }
 .dot.form .field .fields-11:after {
   content: ".";
@@ -6804,22 +6990,16 @@ img.dot.image.massive.circle {
   display: block;
   height: 0;
 }
-.dot.form .field .fields-11 > .field:first-child {
-  padding-left: 0;
-}
-.dot.form .field .fields-11 > .field:last-child {
-  padding-right: 0;
-}
-.dot.form .field .fields-11 .field {
+.dot.form .field .fields-11 > .field {
+  padding: 0 10px;
   font-size: 15px;
   width: 9.09090909%;
   display: inline-block;
   float: left;
-  padding: 0 5px;
 }
-.dot.form .field .fields .field-11 {
+.dot.form .field .fields > .field-11 {
   font-size: 15px;
-  padding: 0 5px;
+  padding: 0 10px;
   display: inline-block;
   float: left;
   width: 68.75%;
@@ -6827,6 +7007,7 @@ img.dot.image.massive.circle {
 .dot.form .field .fields-12 {
   font-size: 0;
   position: relative;
+  margin: 0 -10px 0;
 }
 .dot.form .field .fields-12:after {
   content: ".";
@@ -6835,22 +7016,16 @@ img.dot.image.massive.circle {
   display: block;
   height: 0;
 }
-.dot.form .field .fields-12 > .field:first-child {
-  padding-left: 0;
-}
-.dot.form .field .fields-12 > .field:last-child {
-  padding-right: 0;
-}
-.dot.form .field .fields-12 .field {
+.dot.form .field .fields-12 > .field {
+  padding: 0 10px;
   font-size: 15px;
   width: 8.33333333%;
   display: inline-block;
   float: left;
-  padding: 0 5px;
 }
-.dot.form .field .fields .field-12 {
+.dot.form .field .fields > .field-12 {
   font-size: 15px;
-  padding: 0 5px;
+  padding: 0 10px;
   display: inline-block;
   float: left;
   width: 75%;
@@ -6858,6 +7033,7 @@ img.dot.image.massive.circle {
 .dot.form .field .fields-13 {
   font-size: 0;
   position: relative;
+  margin: 0 -10px 0;
 }
 .dot.form .field .fields-13:after {
   content: ".";
@@ -6866,22 +7042,16 @@ img.dot.image.massive.circle {
   display: block;
   height: 0;
 }
-.dot.form .field .fields-13 > .field:first-child {
-  padding-left: 0;
-}
-.dot.form .field .fields-13 > .field:last-child {
-  padding-right: 0;
-}
-.dot.form .field .fields-13 .field {
+.dot.form .field .fields-13 > .field {
+  padding: 0 10px;
   font-size: 15px;
   width: 7.69230769%;
   display: inline-block;
   float: left;
-  padding: 0 5px;
 }
-.dot.form .field .fields .field-13 {
+.dot.form .field .fields > .field-13 {
   font-size: 15px;
-  padding: 0 5px;
+  padding: 0 10px;
   display: inline-block;
   float: left;
   width: 81.25%;
@@ -6889,6 +7059,7 @@ img.dot.image.massive.circle {
 .dot.form .field .fields-14 {
   font-size: 0;
   position: relative;
+  margin: 0 -10px 0;
 }
 .dot.form .field .fields-14:after {
   content: ".";
@@ -6897,22 +7068,16 @@ img.dot.image.massive.circle {
   display: block;
   height: 0;
 }
-.dot.form .field .fields-14 > .field:first-child {
-  padding-left: 0;
-}
-.dot.form .field .fields-14 > .field:last-child {
-  padding-right: 0;
-}
-.dot.form .field .fields-14 .field {
+.dot.form .field .fields-14 > .field {
+  padding: 0 10px;
   font-size: 15px;
   width: 7.14285714%;
   display: inline-block;
   float: left;
-  padding: 0 5px;
 }
-.dot.form .field .fields .field-14 {
+.dot.form .field .fields > .field-14 {
   font-size: 15px;
-  padding: 0 5px;
+  padding: 0 10px;
   display: inline-block;
   float: left;
   width: 87.5%;
@@ -6920,6 +7085,7 @@ img.dot.image.massive.circle {
 .dot.form .field .fields-15 {
   font-size: 0;
   position: relative;
+  margin: 0 -10px 0;
 }
 .dot.form .field .fields-15:after {
   content: ".";
@@ -6928,22 +7094,16 @@ img.dot.image.massive.circle {
   display: block;
   height: 0;
 }
-.dot.form .field .fields-15 > .field:first-child {
-  padding-left: 0;
-}
-.dot.form .field .fields-15 > .field:last-child {
-  padding-right: 0;
-}
-.dot.form .field .fields-15 .field {
+.dot.form .field .fields-15 > .field {
+  padding: 0 10px;
   font-size: 15px;
   width: 6.66666667%;
   display: inline-block;
   float: left;
-  padding: 0 5px;
 }
-.dot.form .field .fields .field-15 {
+.dot.form .field .fields > .field-15 {
   font-size: 15px;
-  padding: 0 5px;
+  padding: 0 10px;
   display: inline-block;
   float: left;
   width: 93.75%;
@@ -6951,6 +7111,7 @@ img.dot.image.massive.circle {
 .dot.form .field .fields-16 {
   font-size: 0;
   position: relative;
+  margin: 0 -10px 0;
 }
 .dot.form .field .fields-16:after {
   content: ".";
@@ -6959,22 +7120,16 @@ img.dot.image.massive.circle {
   display: block;
   height: 0;
 }
-.dot.form .field .fields-16 > .field:first-child {
-  padding-left: 0;
-}
-.dot.form .field .fields-16 > .field:last-child {
-  padding-right: 0;
-}
-.dot.form .field .fields-16 .field {
+.dot.form .field .fields-16 > .field {
+  padding: 0 10px;
   font-size: 15px;
   width: 6.25%;
   display: inline-block;
   float: left;
-  padding: 0 5px;
 }
-.dot.form .field .fields .field-16 {
+.dot.form .field .fields > .field-16 {
   font-size: 15px;
-  padding: 0 5px;
+  padding: 0 10px;
   display: inline-block;
   float: left;
   width: 100%;
@@ -6982,6 +7137,7 @@ img.dot.image.massive.circle {
 .dot.form .field .fields {
   position: relative;
   font-size: 0;
+  margin: 0 -10px 0;
 }
 .dot.form .field .fields:after {
   content: ".";
@@ -6990,13 +7146,8 @@ img.dot.image.massive.circle {
   display: block;
   height: 0;
 }
-.dot.form .field .fields > :first-child {
-  padding-left: 0;
-}
-.dot.form .field .fields > :last-child {
-  padding-right: 0;
-}
 .dot.form .field .fields > .field {
+  padding: 0 10px;
   margin-bottom: 16px;
 }
 .dot.form .field .fields > .field:last-child {
@@ -7015,297 +7166,414 @@ img.dot.image.massive.circle {
 .dot.form .field select {
   width: 100%;
 }
-.dot.form .field.inline input,
-.dot.form .field.inline textarea,
-.dot.form .field.inline select {
-  width: auto;
-  display: inline;
-  padding: 0 5px;
+.dot.form .field.inline > * {
+  display: inline-block;
+  margin: 0 10px;
 }
-.dot.form.inline.trim > .field > .label:nth-child(1) {
+.dot.form .field.inline input,
+.dot.form .field.inline select {
+  width: 100px;
+  display: inline;
+}
+.dot.form .field.inline input.max,
+.dot.form .field.inline select.max {
+  width: 120px;
+}
+.dot.form .field.inline input.mini,
+.dot.form .field.inline select.mini {
+  width: 40px;
+  text-align: center;
+}
+.dot.form .field.inline > :first-child {
+  margin-left: 0;
+}
+.dot.form .field.inline > :last-child {
+  margin-right: 0;
+}
+.dot.form > .field > label:not(.dot) {
+  padding: 0 0 4px;
+  background: initial;
+  text-shadow: none;
+  border-radius: 0;
+  margin: 0;
+  line-height: 15px;
+  font-size: 15px;
+  color: #383838;
+  word-wrap: break-word;
+}
+.dot.form > .field > label:not(.dot):nth-child(1) {
+  display: block;
+}
+.dot.form.inline.trim > .field > label:nth-child(1) {
   text-align: right;
 }
 .dot.form.inline > .field {
   position: relative;
 }
 .dot.form.inline > .field > .field {
-  margin-left: 100px;
+  margin-left: 130px;
 }
-.dot.form.inline > .field > .label:nth-child(1) {
+.dot.form.inline > .field > label:nth-child(1) {
+  width: 120px;
   vertical-align: top;
-  width: 100px;
   padding: 10px 0;
   padding-right: 10px;
   float: left;
 }
 .dot.form.inline > .field > .fields-1 {
-  margin-left: 100px;
+  margin-left: 120px;
 }
 .dot.form.inline > .field > .fields-2 {
-  margin-left: 100px;
+  margin-left: 120px;
 }
 .dot.form.inline > .field > .fields-3 {
-  margin-left: 100px;
+  margin-left: 120px;
 }
 .dot.form.inline > .field > .fields-4 {
-  margin-left: 100px;
+  margin-left: 120px;
 }
 .dot.form.inline > .field > .fields-5 {
-  margin-left: 100px;
+  margin-left: 120px;
 }
 .dot.form.inline > .field > .fields-6 {
-  margin-left: 100px;
+  margin-left: 120px;
 }
 .dot.form.inline > .field > .fields-7 {
-  margin-left: 100px;
+  margin-left: 120px;
 }
 .dot.form.inline > .field > .fields-8 {
-  margin-left: 100px;
+  margin-left: 120px;
 }
 .dot.form.inline > .field > .fields-9 {
-  margin-left: 100px;
+  margin-left: 120px;
 }
 .dot.form.inline > .field > .fields-10 {
-  margin-left: 100px;
+  margin-left: 120px;
 }
 .dot.form.inline > .field > .fields-11 {
-  margin-left: 100px;
+  margin-left: 120px;
 }
 .dot.form.inline > .field > .fields-12 {
-  margin-left: 100px;
+  margin-left: 120px;
 }
 .dot.form.inline > .field > .fields-13 {
-  margin-left: 100px;
+  margin-left: 120px;
 }
 .dot.form.inline > .field > .fields-14 {
-  margin-left: 100px;
+  margin-left: 120px;
 }
 .dot.form.inline > .field > .fields-15 {
-  margin-left: 100px;
+  margin-left: 120px;
 }
 .dot.form.inline > .field > .fields-16 {
-  margin-left: 100px;
+  margin-left: 120px;
 }
 .dot.form.inline > .field > .fields {
-  margin-left: 100px;
+  margin-left: 120px;
 }
 .dot.form.inline > .action {
-  margin-left: 100px;
+  margin-left: 130px;
 }
 .dot.form.basic {
   padding: 0;
 }
-@media only screen and (max-width: 768px) {
-  .dot.inline.form > .field > .label:nth-child(1) {
+@media only screen and (max-width: 568px) {
+  .dot.form {
+    padding: 5px;
+  }
+  .dot.form .field {
+    line-height: 10px;
+  }
+  .dot.inline.form > .field > label:nth-child(1) {
     width: auto;
+    float: none;
+    text-align: initial !important;
   }
-  .dot.form .field .fields-1 .field {
+  .dot.form > .field {
+    margin-bottom: 8px;
+  }
+  .dot.form > .field > .fields {
+    margin: -8px 0 !important;
+  }
+  .dot.form > .field > .field,
+  .dot.form > .field > .fields {
+    margin-left: 0 !important;
+  }
+  .dot.form > .field .inline.field input,
+  .dot.form > .field .inline.field select {
+    width: 30px;
+  }
+  .dot.form > .field .fields-1 {
+    margin: -8px 0 !important;
+  }
+  .dot.form > .field .fields-1 > .field {
     width: 100%;
-    padding: 0;
-    margin-bottom: 16px;
+    padding: 8px 0;
   }
-  .dot.form .field .fields-1 > .field:last-child {
-    margin-bottom: 0;
+  .dot.form > .field .fields-1 > .field:last-child {
+    padding-bottom: 0;
   }
-  .dot.form .field .fields .field-1 {
+  .dot.form > .field .fields > .field-1 {
     width: 100%;
-    padding: 0;
-    margin-bottom: 16px;
+    padding: 8px 0;
   }
-  .dot.form .field .fields-2 .field {
+  .dot.form > .field .fields > .field-1:last-child {
+    padding-bottom: 0;
+  }
+  .dot.form > .field .fields-2 {
+    margin: -8px 0 !important;
+  }
+  .dot.form > .field .fields-2 > .field {
     width: 100%;
-    padding: 0;
-    margin-bottom: 16px;
+    padding: 8px 0;
   }
-  .dot.form .field .fields-2 > .field:last-child {
-    margin-bottom: 0;
+  .dot.form > .field .fields-2 > .field:last-child {
+    padding-bottom: 0;
   }
-  .dot.form .field .fields .field-2 {
+  .dot.form > .field .fields > .field-2 {
     width: 100%;
-    padding: 0;
-    margin-bottom: 16px;
+    padding: 8px 0;
   }
-  .dot.form .field .fields-3 .field {
+  .dot.form > .field .fields > .field-2:last-child {
+    padding-bottom: 0;
+  }
+  .dot.form > .field .fields-3 {
+    margin: -8px 0 !important;
+  }
+  .dot.form > .field .fields-3 > .field {
     width: 100%;
-    padding: 0;
-    margin-bottom: 16px;
+    padding: 8px 0;
   }
-  .dot.form .field .fields-3 > .field:last-child {
-    margin-bottom: 0;
+  .dot.form > .field .fields-3 > .field:last-child {
+    padding-bottom: 0;
   }
-  .dot.form .field .fields .field-3 {
+  .dot.form > .field .fields > .field-3 {
     width: 100%;
-    padding: 0;
-    margin-bottom: 16px;
+    padding: 8px 0;
   }
-  .dot.form .field .fields-4 .field {
+  .dot.form > .field .fields > .field-3:last-child {
+    padding-bottom: 0;
+  }
+  .dot.form > .field .fields-4 {
+    margin: -8px 0 !important;
+  }
+  .dot.form > .field .fields-4 > .field {
     width: 100%;
-    padding: 0;
-    margin-bottom: 16px;
+    padding: 8px 0;
   }
-  .dot.form .field .fields-4 > .field:last-child {
-    margin-bottom: 0;
+  .dot.form > .field .fields-4 > .field:last-child {
+    padding-bottom: 0;
   }
-  .dot.form .field .fields .field-4 {
+  .dot.form > .field .fields > .field-4 {
     width: 100%;
-    padding: 0;
-    margin-bottom: 16px;
+    padding: 8px 0;
   }
-  .dot.form .field .fields-5 .field {
+  .dot.form > .field .fields > .field-4:last-child {
+    padding-bottom: 0;
+  }
+  .dot.form > .field .fields-5 {
+    margin: -8px 0 !important;
+  }
+  .dot.form > .field .fields-5 > .field {
     width: 100%;
-    padding: 0;
-    margin-bottom: 16px;
+    padding: 8px 0;
   }
-  .dot.form .field .fields-5 > .field:last-child {
-    margin-bottom: 0;
+  .dot.form > .field .fields-5 > .field:last-child {
+    padding-bottom: 0;
   }
-  .dot.form .field .fields .field-5 {
+  .dot.form > .field .fields > .field-5 {
     width: 100%;
-    padding: 0;
-    margin-bottom: 16px;
+    padding: 8px 0;
   }
-  .dot.form .field .fields-6 .field {
+  .dot.form > .field .fields > .field-5:last-child {
+    padding-bottom: 0;
+  }
+  .dot.form > .field .fields-6 {
+    margin: -8px 0 !important;
+  }
+  .dot.form > .field .fields-6 > .field {
     width: 100%;
-    padding: 0;
-    margin-bottom: 16px;
+    padding: 8px 0;
   }
-  .dot.form .field .fields-6 > .field:last-child {
-    margin-bottom: 0;
+  .dot.form > .field .fields-6 > .field:last-child {
+    padding-bottom: 0;
   }
-  .dot.form .field .fields .field-6 {
+  .dot.form > .field .fields > .field-6 {
     width: 100%;
-    padding: 0;
-    margin-bottom: 16px;
+    padding: 8px 0;
   }
-  .dot.form .field .fields-7 .field {
+  .dot.form > .field .fields > .field-6:last-child {
+    padding-bottom: 0;
+  }
+  .dot.form > .field .fields-7 {
+    margin: -8px 0 !important;
+  }
+  .dot.form > .field .fields-7 > .field {
     width: 100%;
-    padding: 0;
-    margin-bottom: 16px;
+    padding: 8px 0;
   }
-  .dot.form .field .fields-7 > .field:last-child {
-    margin-bottom: 0;
+  .dot.form > .field .fields-7 > .field:last-child {
+    padding-bottom: 0;
   }
-  .dot.form .field .fields .field-7 {
+  .dot.form > .field .fields > .field-7 {
     width: 100%;
-    padding: 0;
-    margin-bottom: 16px;
+    padding: 8px 0;
   }
-  .dot.form .field .fields-8 .field {
+  .dot.form > .field .fields > .field-7:last-child {
+    padding-bottom: 0;
+  }
+  .dot.form > .field .fields-8 {
+    margin: -8px 0 !important;
+  }
+  .dot.form > .field .fields-8 > .field {
     width: 100%;
-    padding: 0;
-    margin-bottom: 16px;
+    padding: 8px 0;
   }
-  .dot.form .field .fields-8 > .field:last-child {
-    margin-bottom: 0;
+  .dot.form > .field .fields-8 > .field:last-child {
+    padding-bottom: 0;
   }
-  .dot.form .field .fields .field-8 {
+  .dot.form > .field .fields > .field-8 {
     width: 100%;
-    padding: 0;
-    margin-bottom: 16px;
+    padding: 8px 0;
   }
-  .dot.form .field .fields-9 .field {
+  .dot.form > .field .fields > .field-8:last-child {
+    padding-bottom: 0;
+  }
+  .dot.form > .field .fields-9 {
+    margin: -8px 0 !important;
+  }
+  .dot.form > .field .fields-9 > .field {
     width: 100%;
-    padding: 0;
-    margin-bottom: 16px;
+    padding: 8px 0;
   }
-  .dot.form .field .fields-9 > .field:last-child {
-    margin-bottom: 0;
+  .dot.form > .field .fields-9 > .field:last-child {
+    padding-bottom: 0;
   }
-  .dot.form .field .fields .field-9 {
+  .dot.form > .field .fields > .field-9 {
     width: 100%;
-    padding: 0;
-    margin-bottom: 16px;
+    padding: 8px 0;
   }
-  .dot.form .field .fields-10 .field {
+  .dot.form > .field .fields > .field-9:last-child {
+    padding-bottom: 0;
+  }
+  .dot.form > .field .fields-10 {
+    margin: -8px 0 !important;
+  }
+  .dot.form > .field .fields-10 > .field {
     width: 100%;
-    padding: 0;
-    margin-bottom: 16px;
+    padding: 8px 0;
   }
-  .dot.form .field .fields-10 > .field:last-child {
-    margin-bottom: 0;
+  .dot.form > .field .fields-10 > .field:last-child {
+    padding-bottom: 0;
   }
-  .dot.form .field .fields .field-10 {
+  .dot.form > .field .fields > .field-10 {
     width: 100%;
-    padding: 0;
-    margin-bottom: 16px;
+    padding: 8px 0;
   }
-  .dot.form .field .fields-11 .field {
+  .dot.form > .field .fields > .field-10:last-child {
+    padding-bottom: 0;
+  }
+  .dot.form > .field .fields-11 {
+    margin: -8px 0 !important;
+  }
+  .dot.form > .field .fields-11 > .field {
     width: 100%;
-    padding: 0;
-    margin-bottom: 16px;
+    padding: 8px 0;
   }
-  .dot.form .field .fields-11 > .field:last-child {
-    margin-bottom: 0;
+  .dot.form > .field .fields-11 > .field:last-child {
+    padding-bottom: 0;
   }
-  .dot.form .field .fields .field-11 {
+  .dot.form > .field .fields > .field-11 {
     width: 100%;
-    padding: 0;
-    margin-bottom: 16px;
+    padding: 8px 0;
   }
-  .dot.form .field .fields-12 .field {
+  .dot.form > .field .fields > .field-11:last-child {
+    padding-bottom: 0;
+  }
+  .dot.form > .field .fields-12 {
+    margin: -8px 0 !important;
+  }
+  .dot.form > .field .fields-12 > .field {
     width: 100%;
-    padding: 0;
-    margin-bottom: 16px;
+    padding: 8px 0;
   }
-  .dot.form .field .fields-12 > .field:last-child {
-    margin-bottom: 0;
+  .dot.form > .field .fields-12 > .field:last-child {
+    padding-bottom: 0;
   }
-  .dot.form .field .fields .field-12 {
+  .dot.form > .field .fields > .field-12 {
     width: 100%;
-    padding: 0;
-    margin-bottom: 16px;
+    padding: 8px 0;
   }
-  .dot.form .field .fields-13 .field {
+  .dot.form > .field .fields > .field-12:last-child {
+    padding-bottom: 0;
+  }
+  .dot.form > .field .fields-13 {
+    margin: -8px 0 !important;
+  }
+  .dot.form > .field .fields-13 > .field {
     width: 100%;
-    padding: 0;
-    margin-bottom: 16px;
+    padding: 8px 0;
   }
-  .dot.form .field .fields-13 > .field:last-child {
-    margin-bottom: 0;
+  .dot.form > .field .fields-13 > .field:last-child {
+    padding-bottom: 0;
   }
-  .dot.form .field .fields .field-13 {
+  .dot.form > .field .fields > .field-13 {
     width: 100%;
-    padding: 0;
-    margin-bottom: 16px;
+    padding: 8px 0;
   }
-  .dot.form .field .fields-14 .field {
+  .dot.form > .field .fields > .field-13:last-child {
+    padding-bottom: 0;
+  }
+  .dot.form > .field .fields-14 {
+    margin: -8px 0 !important;
+  }
+  .dot.form > .field .fields-14 > .field {
     width: 100%;
-    padding: 0;
-    margin-bottom: 16px;
+    padding: 8px 0;
   }
-  .dot.form .field .fields-14 > .field:last-child {
-    margin-bottom: 0;
+  .dot.form > .field .fields-14 > .field:last-child {
+    padding-bottom: 0;
   }
-  .dot.form .field .fields .field-14 {
+  .dot.form > .field .fields > .field-14 {
     width: 100%;
-    padding: 0;
-    margin-bottom: 16px;
+    padding: 8px 0;
   }
-  .dot.form .field .fields-15 .field {
+  .dot.form > .field .fields > .field-14:last-child {
+    padding-bottom: 0;
+  }
+  .dot.form > .field .fields-15 {
+    margin: -8px 0 !important;
+  }
+  .dot.form > .field .fields-15 > .field {
     width: 100%;
-    padding: 0;
-    margin-bottom: 16px;
+    padding: 8px 0;
   }
-  .dot.form .field .fields-15 > .field:last-child {
-    margin-bottom: 0;
+  .dot.form > .field .fields-15 > .field:last-child {
+    padding-bottom: 0;
   }
-  .dot.form .field .fields .field-15 {
+  .dot.form > .field .fields > .field-15 {
     width: 100%;
-    padding: 0;
-    margin-bottom: 16px;
+    padding: 8px 0;
   }
-  .dot.form .field .fields-16 .field {
+  .dot.form > .field .fields > .field-15:last-child {
+    padding-bottom: 0;
+  }
+  .dot.form > .field .fields-16 {
+    margin: -8px 0 !important;
+  }
+  .dot.form > .field .fields-16 > .field {
     width: 100%;
-    padding: 0;
-    margin-bottom: 16px;
+    padding: 8px 0;
   }
-  .dot.form .field .fields-16 > .field:last-child {
-    margin-bottom: 0;
+  .dot.form > .field .fields-16 > .field:last-child {
+    padding-bottom: 0;
   }
-  .dot.form .field .fields .field-16 {
+  .dot.form > .field .fields > .field-16 {
     width: 100%;
-    padding: 0;
-    margin-bottom: 16px;
+    padding: 8px 0;
+  }
+  .dot.form > .field .fields > .field-16:last-child {
+    padding-bottom: 0;
   }
 }
 .dot.menu {
@@ -7513,27 +7781,58 @@ img.dot.image.massive.circle {
 }
 .dot.tab {
   position: relative;
+  margin-bottom: 10px;
 }
-.dot.tab > .item {
+.dot.tab > .bar {
+  margin-bottom: -1px;
+}
+.dot.tab > .bar > .item {
   cursor: pointer;
   border: 1px solid transparent;
-  border-bottom: 0;
-  padding: 0 12px;
-  margin: 0 0 -1px;
   display: inline-block;
+  padding: 0 12px;
   line-height: 36px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
-.dot.tab > .item.active {
+.dot.tab > .bar > .item.active {
   border-color: #EEEEEE;
+  border-bottom-color: transparent;
   background: #ffffff;
 }
-.dot.section.tab {
+.dot.tab > .content {
   border: 1px solid #EEEEEE;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03);
+  border-radius: 5px;
+  padding: 10px;
+  border-radius: 0 0 5px 5px;
+}
+.dot.tab > .content:hover {
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
+}
+.dot.tab.bottom > .content {
+  border-radius: 5px 5px 0 0;
+}
+.dot.tab.bottom > .bar > .item {
+  margin: -1px 0 0;
+  border-radius: 0 0 5px 5px;
+  border-top: 0;
+}
+.dot.tab.bottom > .bar > .item.active {
+  border-color: #EEEEEE;
+  border-top-color: transparent;
+}
+.dot.section.tab > .bar {
+  border: 1px solid #EEEEEE;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03);
+  border-radius: 5px;
+  border-radius: 5px 5px 0 0;
   border-bottom: 0;
 }
-.dot.section.tab > .item {
+.dot.section.tab > .bar:hover {
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
+}
+.dot.section.tab > .bar > .item {
   border: 0;
   margin: 0;
   border-radius: 0;
@@ -7541,34 +7840,69 @@ img.dot.image.massive.circle {
   -o-transition: background .3s, color .3s;
   transition: background .3s, color .3s;
 }
-.dot.section.tab > .item + .item {
+.dot.section.tab > .bar > .item + .item {
   border-left: 1px solid #EEEEEE;
 }
-.dot.section.tab > .item:last-child {
+.dot.section.tab > .bar > .item:last-child {
   border-right: 1px solid #EEEEEE;
 }
-.dot.section.tab > .item.active,
-.dot.section.tab > .item:hover {
+.dot.section.tab > .bar > .item.active,
+.dot.section.tab > .bar > .item:hover {
   background: #F5F5F5;
 }
-.dot.vertical.tab {
+.dot.section.tab.bottom > .bar {
+  border: 1px solid #EEEEEE;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03);
+  border-radius: 5px;
+  border-radius: 0 0 5px 5px;
+  border-top: 0;
+  margin: -1px 0 0 0;
+}
+.dot.section.tab.bottom > .bar:hover {
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
+}
+.dot.vertical.tab > .bar {
   width: 200px;
   float: left;
 }
-.dot.vertical.tab .item {
+.dot.vertical.tab > .bar > .item {
   display: block;
   border: 1px solid transparent;
-  border-right: 0;
   margin-right: -1px;
   border-radius: 5px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.dot.vertical.tab .item.active {
+.dot.vertical.tab > .bar > .item.active {
   border-color: #EEEEEE;
+  border-right-color: transparent;
 }
-.dot.vertical.tab + .module {
+.dot.vertical.tab > .content {
+  border-top-right-radius: 5px;
   margin-left: 200px;
+}
+.dot.vertical.tab.right {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+.dot.vertical.tab.right > .content {
+  margin-left: 0;
+  display: table-cell;
+  border-radius: 5px 0 5px 5px;
+}
+.dot.vertical.tab.right > .bar {
+  vertical-align: top;
+  display: table-cell;
+  float: initial;
+}
+.dot.vertical.tab.right > .bar > .item {
+  margin-left: -1px;
+  border-radius: 0 5px 5px 0;
+}
+.dot.vertical.tab.right > .bar > .item.active {
+  border-color: #EEEEEE;
+  border-left-color: transparent;
 }
 .dot.figure {
   padding-bottom: 100%;

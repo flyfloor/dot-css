@@ -63,21 +63,21 @@ export default class Checkbox extends Component {
                     <li>
                         <h3>original checkbox or label</h3>
                         <label className="dot checkbox">
-                            <input type="checkbox" className="show"/>
+                            <input type="checkbox" className="original"/>
                             <span>checkbox</span>
                         </label>
                         <label className="dot radio">
-                            <input type="radio" className="show"/>
+                            <input type="radio" className="original"/>
                             <span>radio</span>
                         </label>
                         <pre>
                             <code>
 {`<label class="${NS} radio">
-    <input type="radio" class="show"/>
+    <input type="radio" class="original"/>
     <span>radio</span>
 </label>
 <label class="${NS} checkbox">
-    <input type="checkbox" class="show"/>
+    <input type="checkbox" class="original"/>
     <span>radio</span>
 </label>`}                                
                             </code>
