@@ -3962,48 +3962,48 @@ input.dot.input.error,
   width: 100%;
   height: 100%;
 }
-.dot .checkbox input[type=checkbox].show,
-.dot.checkbox input[type=checkbox].show,
-.dot .radio input[type=checkbox].show,
-.dot.radio input[type=checkbox].show,
-.dot .checkbox input[type=radio].show,
-.dot.checkbox input[type=radio].show,
-.dot .radio input[type=radio].show,
-.dot.radio input[type=radio].show {
+.dot .checkbox input[type=checkbox].original,
+.dot.checkbox input[type=checkbox].original,
+.dot .radio input[type=checkbox].original,
+.dot.radio input[type=checkbox].original,
+.dot .checkbox input[type=radio].original,
+.dot.checkbox input[type=radio].original,
+.dot .radio input[type=radio].original,
+.dot.radio input[type=radio].original {
   opacity: 1;
   top: 1px;
   left: 1px;
   width: 14px;
   height: 14px;
 }
-.dot .checkbox input[type=checkbox].show + *,
-.dot.checkbox input[type=checkbox].show + *,
-.dot .radio input[type=checkbox].show + *,
-.dot.radio input[type=checkbox].show + *,
-.dot .checkbox input[type=radio].show + *,
-.dot.checkbox input[type=radio].show + *,
-.dot .radio input[type=radio].show + *,
-.dot.radio input[type=radio].show + * {
+.dot .checkbox input[type=checkbox].original + *,
+.dot.checkbox input[type=checkbox].original + *,
+.dot .radio input[type=checkbox].original + *,
+.dot.radio input[type=checkbox].original + *,
+.dot .checkbox input[type=radio].original + *,
+.dot.checkbox input[type=radio].original + *,
+.dot .radio input[type=radio].original + *,
+.dot.radio input[type=radio].original + * {
   padding-left: 1.3em;
 }
-.dot .checkbox input[type=checkbox].show + *:before,
-.dot.checkbox input[type=checkbox].show + *:before,
-.dot .radio input[type=checkbox].show + *:before,
-.dot.radio input[type=checkbox].show + *:before,
-.dot .checkbox input[type=radio].show + *:before,
-.dot.checkbox input[type=radio].show + *:before,
-.dot .radio input[type=radio].show + *:before,
-.dot.radio input[type=radio].show + *:before {
+.dot .checkbox input[type=checkbox].original + *:before,
+.dot.checkbox input[type=checkbox].original + *:before,
+.dot .radio input[type=checkbox].original + *:before,
+.dot.radio input[type=checkbox].original + *:before,
+.dot .checkbox input[type=radio].original + *:before,
+.dot.checkbox input[type=radio].original + *:before,
+.dot .radio input[type=radio].original + *:before,
+.dot.radio input[type=radio].original + *:before {
   content: none;
 }
-.dot .checkbox input[type=checkbox].show:checked + *:before,
-.dot.checkbox input[type=checkbox].show:checked + *:before,
-.dot .radio input[type=checkbox].show:checked + *:before,
-.dot.radio input[type=checkbox].show:checked + *:before,
-.dot .checkbox input[type=radio].show:checked + *:before,
-.dot.checkbox input[type=radio].show:checked + *:before,
-.dot .radio input[type=radio].show:checked + *:before,
-.dot.radio input[type=radio].show:checked + *:before {
+.dot .checkbox input[type=checkbox].original:checked + *:before,
+.dot.checkbox input[type=checkbox].original:checked + *:before,
+.dot .radio input[type=checkbox].original:checked + *:before,
+.dot.radio input[type=checkbox].original:checked + *:before,
+.dot .checkbox input[type=radio].original:checked + *:before,
+.dot.checkbox input[type=radio].original:checked + *:before,
+.dot .radio input[type=radio].original:checked + *:before,
+.dot.radio input[type=radio].original:checked + *:before {
   content: none;
 }
 .dot .checkbox input[type=checkbox] + *,
@@ -6688,9 +6688,11 @@ img.dot.image.massive.circle {
     transform: scale(1);
   }
 }
+/* fields 栅格 */
 .dot.form {
   padding: 20px;
   width: 100%;
+  /* 无内边距 */
 }
 .dot.form:after {
   content: ".";
@@ -6699,576 +6701,594 @@ img.dot.image.massive.circle {
   display: block;
   height: 0;
 }
-.dot.form .field {
-  line-height: 36px;
-  margin-bottom: 16px;
-}
-.dot.form .field input[type="text"],
-.dot.form .field input[type="number"],
-.dot.form .field input[type="url"],
-.dot.form .field input[type="tel"],
-.dot.form .field input[type="password"],
-.dot.form .field input[type="email"],
-.dot.form .field input[type="date"],
-.dot.form .field input[type="datetime-local"],
-.dot.form .field input[type="time"],
-.dot.form .field textarea {
-  width: 100%;
-}
-.dot.form .field .field {
-  margin-bottom: 0;
-}
-.dot.form .field .fields-1 {
-  font-size: 0;
-  position: relative;
-  margin: 0 -10px 0;
-}
-.dot.form .field .fields-1:after {
-  content: ".";
-  clear: both;
-  visibility: hidden;
-  display: block;
-  height: 0;
-}
-.dot.form .field .fields-1 > .field {
-  padding: 0 10px;
-  font-size: 15px;
-  width: 100%;
-  display: inline-block;
-  float: left;
-}
-.dot.form .field .fields > .field-1 {
-  font-size: 15px;
-  padding: 0 10px;
-  display: inline-block;
-  float: left;
-  width: 6.25%;
-}
-.dot.form .field .fields-2 {
-  font-size: 0;
-  position: relative;
-  margin: 0 -10px 0;
-}
-.dot.form .field .fields-2:after {
-  content: ".";
-  clear: both;
-  visibility: hidden;
-  display: block;
-  height: 0;
-}
-.dot.form .field .fields-2 > .field {
-  padding: 0 10px;
-  font-size: 15px;
-  width: 50%;
-  display: inline-block;
-  float: left;
-}
-.dot.form .field .fields > .field-2 {
-  font-size: 15px;
-  padding: 0 10px;
-  display: inline-block;
-  float: left;
-  width: 12.5%;
-}
-.dot.form .field .fields-3 {
-  font-size: 0;
-  position: relative;
-  margin: 0 -10px 0;
-}
-.dot.form .field .fields-3:after {
-  content: ".";
-  clear: both;
-  visibility: hidden;
-  display: block;
-  height: 0;
-}
-.dot.form .field .fields-3 > .field {
-  padding: 0 10px;
-  font-size: 15px;
-  width: 33.33333333%;
-  display: inline-block;
-  float: left;
-}
-.dot.form .field .fields > .field-3 {
-  font-size: 15px;
-  padding: 0 10px;
-  display: inline-block;
-  float: left;
-  width: 18.75%;
-}
-.dot.form .field .fields-4 {
-  font-size: 0;
-  position: relative;
-  margin: 0 -10px 0;
-}
-.dot.form .field .fields-4:after {
-  content: ".";
-  clear: both;
-  visibility: hidden;
-  display: block;
-  height: 0;
-}
-.dot.form .field .fields-4 > .field {
-  padding: 0 10px;
-  font-size: 15px;
-  width: 25%;
-  display: inline-block;
-  float: left;
-}
-.dot.form .field .fields > .field-4 {
-  font-size: 15px;
-  padding: 0 10px;
-  display: inline-block;
-  float: left;
-  width: 25%;
-}
-.dot.form .field .fields-5 {
-  font-size: 0;
-  position: relative;
-  margin: 0 -10px 0;
-}
-.dot.form .field .fields-5:after {
-  content: ".";
-  clear: both;
-  visibility: hidden;
-  display: block;
-  height: 0;
-}
-.dot.form .field .fields-5 > .field {
-  padding: 0 10px;
-  font-size: 15px;
-  width: 20%;
-  display: inline-block;
-  float: left;
-}
-.dot.form .field .fields > .field-5 {
-  font-size: 15px;
-  padding: 0 10px;
-  display: inline-block;
-  float: left;
-  width: 31.25%;
-}
-.dot.form .field .fields-6 {
-  font-size: 0;
-  position: relative;
-  margin: 0 -10px 0;
-}
-.dot.form .field .fields-6:after {
-  content: ".";
-  clear: both;
-  visibility: hidden;
-  display: block;
-  height: 0;
-}
-.dot.form .field .fields-6 > .field {
-  padding: 0 10px;
-  font-size: 15px;
-  width: 16.66666667%;
-  display: inline-block;
-  float: left;
-}
-.dot.form .field .fields > .field-6 {
-  font-size: 15px;
-  padding: 0 10px;
-  display: inline-block;
-  float: left;
-  width: 37.5%;
-}
-.dot.form .field .fields-7 {
-  font-size: 0;
-  position: relative;
-  margin: 0 -10px 0;
-}
-.dot.form .field .fields-7:after {
-  content: ".";
-  clear: both;
-  visibility: hidden;
-  display: block;
-  height: 0;
-}
-.dot.form .field .fields-7 > .field {
-  padding: 0 10px;
-  font-size: 15px;
-  width: 14.28571429%;
-  display: inline-block;
-  float: left;
-}
-.dot.form .field .fields > .field-7 {
-  font-size: 15px;
-  padding: 0 10px;
-  display: inline-block;
-  float: left;
-  width: 43.75%;
-}
-.dot.form .field .fields-8 {
-  font-size: 0;
-  position: relative;
-  margin: 0 -10px 0;
-}
-.dot.form .field .fields-8:after {
-  content: ".";
-  clear: both;
-  visibility: hidden;
-  display: block;
-  height: 0;
-}
-.dot.form .field .fields-8 > .field {
-  padding: 0 10px;
-  font-size: 15px;
-  width: 12.5%;
-  display: inline-block;
-  float: left;
-}
-.dot.form .field .fields > .field-8 {
-  font-size: 15px;
-  padding: 0 10px;
-  display: inline-block;
-  float: left;
-  width: 50%;
-}
-.dot.form .field .fields-9 {
-  font-size: 0;
-  position: relative;
-  margin: 0 -10px 0;
-}
-.dot.form .field .fields-9:after {
-  content: ".";
-  clear: both;
-  visibility: hidden;
-  display: block;
-  height: 0;
-}
-.dot.form .field .fields-9 > .field {
-  padding: 0 10px;
-  font-size: 15px;
-  width: 11.11111111%;
-  display: inline-block;
-  float: left;
-}
-.dot.form .field .fields > .field-9 {
-  font-size: 15px;
-  padding: 0 10px;
-  display: inline-block;
-  float: left;
-  width: 56.25%;
-}
-.dot.form .field .fields-10 {
-  font-size: 0;
-  position: relative;
-  margin: 0 -10px 0;
-}
-.dot.form .field .fields-10:after {
-  content: ".";
-  clear: both;
-  visibility: hidden;
-  display: block;
-  height: 0;
-}
-.dot.form .field .fields-10 > .field {
-  padding: 0 10px;
-  font-size: 15px;
-  width: 10%;
-  display: inline-block;
-  float: left;
-}
-.dot.form .field .fields > .field-10 {
-  font-size: 15px;
-  padding: 0 10px;
-  display: inline-block;
-  float: left;
-  width: 62.5%;
-}
-.dot.form .field .fields-11 {
-  font-size: 0;
-  position: relative;
-  margin: 0 -10px 0;
-}
-.dot.form .field .fields-11:after {
-  content: ".";
-  clear: both;
-  visibility: hidden;
-  display: block;
-  height: 0;
-}
-.dot.form .field .fields-11 > .field {
-  padding: 0 10px;
-  font-size: 15px;
-  width: 9.09090909%;
-  display: inline-block;
-  float: left;
-}
-.dot.form .field .fields > .field-11 {
-  font-size: 15px;
-  padding: 0 10px;
-  display: inline-block;
-  float: left;
-  width: 68.75%;
-}
-.dot.form .field .fields-12 {
-  font-size: 0;
-  position: relative;
-  margin: 0 -10px 0;
-}
-.dot.form .field .fields-12:after {
-  content: ".";
-  clear: both;
-  visibility: hidden;
-  display: block;
-  height: 0;
-}
-.dot.form .field .fields-12 > .field {
-  padding: 0 10px;
-  font-size: 15px;
-  width: 8.33333333%;
-  display: inline-block;
-  float: left;
-}
-.dot.form .field .fields > .field-12 {
-  font-size: 15px;
-  padding: 0 10px;
-  display: inline-block;
-  float: left;
-  width: 75%;
-}
-.dot.form .field .fields-13 {
-  font-size: 0;
-  position: relative;
-  margin: 0 -10px 0;
-}
-.dot.form .field .fields-13:after {
-  content: ".";
-  clear: both;
-  visibility: hidden;
-  display: block;
-  height: 0;
-}
-.dot.form .field .fields-13 > .field {
-  padding: 0 10px;
-  font-size: 15px;
-  width: 7.69230769%;
-  display: inline-block;
-  float: left;
-}
-.dot.form .field .fields > .field-13 {
-  font-size: 15px;
-  padding: 0 10px;
-  display: inline-block;
-  float: left;
-  width: 81.25%;
-}
-.dot.form .field .fields-14 {
-  font-size: 0;
-  position: relative;
-  margin: 0 -10px 0;
-}
-.dot.form .field .fields-14:after {
-  content: ".";
-  clear: both;
-  visibility: hidden;
-  display: block;
-  height: 0;
-}
-.dot.form .field .fields-14 > .field {
-  padding: 0 10px;
-  font-size: 15px;
-  width: 7.14285714%;
-  display: inline-block;
-  float: left;
-}
-.dot.form .field .fields > .field-14 {
-  font-size: 15px;
-  padding: 0 10px;
-  display: inline-block;
-  float: left;
-  width: 87.5%;
-}
-.dot.form .field .fields-15 {
-  font-size: 0;
-  position: relative;
-  margin: 0 -10px 0;
-}
-.dot.form .field .fields-15:after {
-  content: ".";
-  clear: both;
-  visibility: hidden;
-  display: block;
-  height: 0;
-}
-.dot.form .field .fields-15 > .field {
-  padding: 0 10px;
-  font-size: 15px;
-  width: 6.66666667%;
-  display: inline-block;
-  float: left;
-}
-.dot.form .field .fields > .field-15 {
-  font-size: 15px;
-  padding: 0 10px;
-  display: inline-block;
-  float: left;
-  width: 93.75%;
-}
-.dot.form .field .fields-16 {
-  font-size: 0;
-  position: relative;
-  margin: 0 -10px 0;
-}
-.dot.form .field .fields-16:after {
-  content: ".";
-  clear: both;
-  visibility: hidden;
-  display: block;
-  height: 0;
-}
-.dot.form .field .fields-16 > .field {
-  padding: 0 10px;
-  font-size: 15px;
-  width: 6.25%;
-  display: inline-block;
-  float: left;
-}
-.dot.form .field .fields > .field-16 {
-  font-size: 15px;
-  padding: 0 10px;
-  display: inline-block;
-  float: left;
-  width: 100%;
-}
-.dot.form .field .fields {
-  position: relative;
-  font-size: 0;
-  margin: 0 -10px 0;
-}
-.dot.form .field .fields:after {
-  content: ".";
-  clear: both;
-  visibility: hidden;
-  display: block;
-  height: 0;
-}
-.dot.form .field .fields > .field {
-  padding: 0 10px;
-  margin-bottom: 16px;
-}
-.dot.form .field .fields > .field:last-child {
-  margin-bottom: 0;
-}
-.dot.form .field input[type="text"],
-.dot.form .field input[type="number"],
-.dot.form .field input[type="url"],
-.dot.form .field input[type="tel"],
-.dot.form .field input[type="password"],
-.dot.form .field input[type="email"],
-.dot.form .field input[type="date"],
-.dot.form .field input[type="datetime-local"],
-.dot.form .field input[type="time"],
-.dot.form .field textarea,
-.dot.form .field select {
-  width: 100%;
-}
-.dot.form .field.inline > * {
-  display: inline-block;
-  margin: 0 10px;
-}
-.dot.form .field.inline input,
-.dot.form .field.inline select {
-  width: 100px;
-  display: inline;
-}
-.dot.form .field.inline input.max,
-.dot.form .field.inline select.max {
-  width: 120px;
-}
-.dot.form .field.inline input.mini,
-.dot.form .field.inline select.mini {
-  width: 40px;
-  text-align: center;
-}
-.dot.form .field.inline > :first-child {
-  margin-left: 0;
-}
-.dot.form .field.inline > :last-child {
-  margin-right: 0;
-}
-.dot.form > .field > label:not(.dot) {
-  padding: 0 0 4px;
+.dot.form .group {
+  margin-bottom: 10px;
+  /*列*/
+}
+.dot.form .group > label {
   background: initial;
   text-shadow: none;
   border-radius: 0;
   margin: 0;
-  line-height: 15px;
   font-size: 15px;
   color: #383838;
   word-wrap: break-word;
-}
-.dot.form > .field > label:not(.dot):nth-child(1) {
   display: block;
+  line-height: 24px;
 }
-.dot.form.inline.trim > .field > label:nth-child(1) {
+.dot.form .group input[type="text"],
+.dot.form .group input[type="number"],
+.dot.form .group input[type="url"],
+.dot.form .group input[type="tel"],
+.dot.form .group input[type="password"],
+.dot.form .group input[type="email"],
+.dot.form .group input[type="date"],
+.dot.form .group input[type="datetime-local"],
+.dot.form .group input[type="time"],
+.dot.form .group textarea,
+.dot.form .group select {
+  width: 100%;
+}
+.dot.form .group .fields-1 {
+  font-size: 0;
+  position: relative;
+  margin: 0 -10px -10px;
+}
+.dot.form .group .fields-1:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.form .group .fields-1 > .field {
+  padding: 0 10px;
+  font-size: 15px;
+  width: 100%;
+  float: left;
+}
+.dot.form .group .fields > .field-1 {
+  font-size: 15px;
+  padding: 0 10px;
+  line-height: 34px;
+  float: left;
+  width: 6.25%;
+  margin-bottom: 10px;
+}
+.dot.form .group .fields-2 {
+  font-size: 0;
+  position: relative;
+  margin: 0 -10px -10px;
+}
+.dot.form .group .fields-2:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.form .group .fields-2 > .field {
+  padding: 0 10px;
+  font-size: 15px;
+  width: 50%;
+  float: left;
+}
+.dot.form .group .fields > .field-2 {
+  font-size: 15px;
+  padding: 0 10px;
+  line-height: 34px;
+  float: left;
+  width: 12.5%;
+  margin-bottom: 10px;
+}
+.dot.form .group .fields-3 {
+  font-size: 0;
+  position: relative;
+  margin: 0 -10px -10px;
+}
+.dot.form .group .fields-3:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.form .group .fields-3 > .field {
+  padding: 0 10px;
+  font-size: 15px;
+  width: 33.33333333%;
+  float: left;
+}
+.dot.form .group .fields > .field-3 {
+  font-size: 15px;
+  padding: 0 10px;
+  line-height: 34px;
+  float: left;
+  width: 18.75%;
+  margin-bottom: 10px;
+}
+.dot.form .group .fields-4 {
+  font-size: 0;
+  position: relative;
+  margin: 0 -10px -10px;
+}
+.dot.form .group .fields-4:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.form .group .fields-4 > .field {
+  padding: 0 10px;
+  font-size: 15px;
+  width: 25%;
+  float: left;
+}
+.dot.form .group .fields > .field-4 {
+  font-size: 15px;
+  padding: 0 10px;
+  line-height: 34px;
+  float: left;
+  width: 25%;
+  margin-bottom: 10px;
+}
+.dot.form .group .fields-5 {
+  font-size: 0;
+  position: relative;
+  margin: 0 -10px -10px;
+}
+.dot.form .group .fields-5:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.form .group .fields-5 > .field {
+  padding: 0 10px;
+  font-size: 15px;
+  width: 20%;
+  float: left;
+}
+.dot.form .group .fields > .field-5 {
+  font-size: 15px;
+  padding: 0 10px;
+  line-height: 34px;
+  float: left;
+  width: 31.25%;
+  margin-bottom: 10px;
+}
+.dot.form .group .fields-6 {
+  font-size: 0;
+  position: relative;
+  margin: 0 -10px -10px;
+}
+.dot.form .group .fields-6:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.form .group .fields-6 > .field {
+  padding: 0 10px;
+  font-size: 15px;
+  width: 16.66666667%;
+  float: left;
+}
+.dot.form .group .fields > .field-6 {
+  font-size: 15px;
+  padding: 0 10px;
+  line-height: 34px;
+  float: left;
+  width: 37.5%;
+  margin-bottom: 10px;
+}
+.dot.form .group .fields-7 {
+  font-size: 0;
+  position: relative;
+  margin: 0 -10px -10px;
+}
+.dot.form .group .fields-7:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.form .group .fields-7 > .field {
+  padding: 0 10px;
+  font-size: 15px;
+  width: 14.28571429%;
+  float: left;
+}
+.dot.form .group .fields > .field-7 {
+  font-size: 15px;
+  padding: 0 10px;
+  line-height: 34px;
+  float: left;
+  width: 43.75%;
+  margin-bottom: 10px;
+}
+.dot.form .group .fields-8 {
+  font-size: 0;
+  position: relative;
+  margin: 0 -10px -10px;
+}
+.dot.form .group .fields-8:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.form .group .fields-8 > .field {
+  padding: 0 10px;
+  font-size: 15px;
+  width: 12.5%;
+  float: left;
+}
+.dot.form .group .fields > .field-8 {
+  font-size: 15px;
+  padding: 0 10px;
+  line-height: 34px;
+  float: left;
+  width: 50%;
+  margin-bottom: 10px;
+}
+.dot.form .group .fields-9 {
+  font-size: 0;
+  position: relative;
+  margin: 0 -10px -10px;
+}
+.dot.form .group .fields-9:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.form .group .fields-9 > .field {
+  padding: 0 10px;
+  font-size: 15px;
+  width: 11.11111111%;
+  float: left;
+}
+.dot.form .group .fields > .field-9 {
+  font-size: 15px;
+  padding: 0 10px;
+  line-height: 34px;
+  float: left;
+  width: 56.25%;
+  margin-bottom: 10px;
+}
+.dot.form .group .fields-10 {
+  font-size: 0;
+  position: relative;
+  margin: 0 -10px -10px;
+}
+.dot.form .group .fields-10:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.form .group .fields-10 > .field {
+  padding: 0 10px;
+  font-size: 15px;
+  width: 10%;
+  float: left;
+}
+.dot.form .group .fields > .field-10 {
+  font-size: 15px;
+  padding: 0 10px;
+  line-height: 34px;
+  float: left;
+  width: 62.5%;
+  margin-bottom: 10px;
+}
+.dot.form .group .fields-11 {
+  font-size: 0;
+  position: relative;
+  margin: 0 -10px -10px;
+}
+.dot.form .group .fields-11:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.form .group .fields-11 > .field {
+  padding: 0 10px;
+  font-size: 15px;
+  width: 9.09090909%;
+  float: left;
+}
+.dot.form .group .fields > .field-11 {
+  font-size: 15px;
+  padding: 0 10px;
+  line-height: 34px;
+  float: left;
+  width: 68.75%;
+  margin-bottom: 10px;
+}
+.dot.form .group .fields-12 {
+  font-size: 0;
+  position: relative;
+  margin: 0 -10px -10px;
+}
+.dot.form .group .fields-12:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.form .group .fields-12 > .field {
+  padding: 0 10px;
+  font-size: 15px;
+  width: 8.33333333%;
+  float: left;
+}
+.dot.form .group .fields > .field-12 {
+  font-size: 15px;
+  padding: 0 10px;
+  line-height: 34px;
+  float: left;
+  width: 75%;
+  margin-bottom: 10px;
+}
+.dot.form .group .fields-13 {
+  font-size: 0;
+  position: relative;
+  margin: 0 -10px -10px;
+}
+.dot.form .group .fields-13:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.form .group .fields-13 > .field {
+  padding: 0 10px;
+  font-size: 15px;
+  width: 7.69230769%;
+  float: left;
+}
+.dot.form .group .fields > .field-13 {
+  font-size: 15px;
+  padding: 0 10px;
+  line-height: 34px;
+  float: left;
+  width: 81.25%;
+  margin-bottom: 10px;
+}
+.dot.form .group .fields-14 {
+  font-size: 0;
+  position: relative;
+  margin: 0 -10px -10px;
+}
+.dot.form .group .fields-14:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.form .group .fields-14 > .field {
+  padding: 0 10px;
+  font-size: 15px;
+  width: 7.14285714%;
+  float: left;
+}
+.dot.form .group .fields > .field-14 {
+  font-size: 15px;
+  padding: 0 10px;
+  line-height: 34px;
+  float: left;
+  width: 87.5%;
+  margin-bottom: 10px;
+}
+.dot.form .group .fields-15 {
+  font-size: 0;
+  position: relative;
+  margin: 0 -10px -10px;
+}
+.dot.form .group .fields-15:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.form .group .fields-15 > .field {
+  padding: 0 10px;
+  font-size: 15px;
+  width: 6.66666667%;
+  float: left;
+}
+.dot.form .group .fields > .field-15 {
+  font-size: 15px;
+  padding: 0 10px;
+  line-height: 34px;
+  float: left;
+  width: 93.75%;
+  margin-bottom: 10px;
+}
+.dot.form .group .fields-16 {
+  font-size: 0;
+  position: relative;
+  margin: 0 -10px -10px;
+}
+.dot.form .group .fields-16:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.form .group .fields-16 > .field {
+  padding: 0 10px;
+  font-size: 15px;
+  width: 6.25%;
+  float: left;
+}
+.dot.form .group .fields > .field-16 {
+  font-size: 15px;
+  padding: 0 10px;
+  line-height: 34px;
+  float: left;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.dot.form .group .field {
+  margin-bottom: 10px;
+  line-height: 34px;
+  /*内联*/
+}
+.dot.form .group .field > label:not(.dot) {
+  background: initial;
+  text-shadow: none;
+  border-radius: 0;
+  margin: 0;
+  font-size: 15px;
+  color: #383838;
+  word-wrap: break-word;
+  display: block;
+  line-height: 24px;
+}
+.dot.form .group .field.inline > * {
+  display: inline-block !important;
+  margin: 0 10px;
+}
+.dot.form .group .field.inline input[type="text"],
+.dot.form .group .field.inline input[type="number"],
+.dot.form .group .field.inline input[type="url"],
+.dot.form .group .field.inline input[type="tel"],
+.dot.form .group .field.inline input[type="password"],
+.dot.form .group .field.inline input[type="email"],
+.dot.form .group .field.inline input[type="date"],
+.dot.form .group .field.inline input[type="datetime-local"],
+.dot.form .group .field.inline input[type="time"],
+.dot.form .group .field.inline textarea,
+.dot.form .group .field.inline select {
+  width: 100px;
+  display: inline;
+}
+.dot.form .group .field.inline input[type="text"].max,
+.dot.form .group .field.inline input[type="number"].max,
+.dot.form .group .field.inline input[type="url"].max,
+.dot.form .group .field.inline input[type="tel"].max,
+.dot.form .group .field.inline input[type="password"].max,
+.dot.form .group .field.inline input[type="email"].max,
+.dot.form .group .field.inline input[type="date"].max,
+.dot.form .group .field.inline input[type="datetime-local"].max,
+.dot.form .group .field.inline input[type="time"].max,
+.dot.form .group .field.inline textarea.max,
+.dot.form .group .field.inline select.max {
+  width: 160px;
+}
+.dot.form .group .field.inline input[type="text"].mini,
+.dot.form .group .field.inline input[type="number"].mini,
+.dot.form .group .field.inline input[type="url"].mini,
+.dot.form .group .field.inline input[type="tel"].mini,
+.dot.form .group .field.inline input[type="password"].mini,
+.dot.form .group .field.inline input[type="email"].mini,
+.dot.form .group .field.inline input[type="date"].mini,
+.dot.form .group .field.inline input[type="datetime-local"].mini,
+.dot.form .group .field.inline input[type="time"].mini,
+.dot.form .group .field.inline textarea.mini,
+.dot.form .group .field.inline select.mini {
+  width: 40px;
+  text-align: center;
+}
+.dot.form .group .field.inline > :first-child {
+  margin-left: 0;
+}
+.dot.form .group .field.inline > :last-child {
+  margin-right: 0;
+}
+.dot.form .group .fields {
+  font-size: 0;
+  position: relative;
+  margin: 0 -10px -10px;
+}
+.dot.form .group .fields:after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+.dot.form.inline.trim .group > label:nth-child(1) {
   text-align: right;
 }
-.dot.form.inline > .field {
+.dot.form.inline .group {
   position: relative;
 }
-.dot.form.inline > .field > .field {
-  margin-left: 130px;
-}
-.dot.form.inline > .field > label:nth-child(1) {
+.dot.form.inline .group > label:nth-child(1) {
   width: 120px;
   vertical-align: top;
-  padding: 10px 0;
+  line-height: 34px;
   padding-right: 10px;
   float: left;
 }
-.dot.form.inline > .field > .fields-1 {
+.dot.form.inline .group > .field {
+  margin-left: 130px;
+}
+.dot.form.inline .group > .fields-1 {
   margin-left: 120px;
 }
-.dot.form.inline > .field > .fields-2 {
+.dot.form.inline .group > .fields-2 {
   margin-left: 120px;
 }
-.dot.form.inline > .field > .fields-3 {
+.dot.form.inline .group > .fields-3 {
   margin-left: 120px;
 }
-.dot.form.inline > .field > .fields-4 {
+.dot.form.inline .group > .fields-4 {
   margin-left: 120px;
 }
-.dot.form.inline > .field > .fields-5 {
+.dot.form.inline .group > .fields-5 {
   margin-left: 120px;
 }
-.dot.form.inline > .field > .fields-6 {
+.dot.form.inline .group > .fields-6 {
   margin-left: 120px;
 }
-.dot.form.inline > .field > .fields-7 {
+.dot.form.inline .group > .fields-7 {
   margin-left: 120px;
 }
-.dot.form.inline > .field > .fields-8 {
+.dot.form.inline .group > .fields-8 {
   margin-left: 120px;
 }
-.dot.form.inline > .field > .fields-9 {
+.dot.form.inline .group > .fields-9 {
   margin-left: 120px;
 }
-.dot.form.inline > .field > .fields-10 {
+.dot.form.inline .group > .fields-10 {
   margin-left: 120px;
 }
-.dot.form.inline > .field > .fields-11 {
+.dot.form.inline .group > .fields-11 {
   margin-left: 120px;
 }
-.dot.form.inline > .field > .fields-12 {
+.dot.form.inline .group > .fields-12 {
   margin-left: 120px;
 }
-.dot.form.inline > .field > .fields-13 {
+.dot.form.inline .group > .fields-13 {
   margin-left: 120px;
 }
-.dot.form.inline > .field > .fields-14 {
+.dot.form.inline .group > .fields-14 {
   margin-left: 120px;
 }
-.dot.form.inline > .field > .fields-15 {
+.dot.form.inline .group > .fields-15 {
   margin-left: 120px;
 }
-.dot.form.inline > .field > .fields-16 {
+.dot.form.inline .group > .fields-16 {
   margin-left: 120px;
 }
-.dot.form.inline > .field > .fields {
+.dot.form.inline .group > .fields {
   margin-left: 120px;
 }
 .dot.form.inline > .action {
@@ -7284,295 +7304,291 @@ img.dot.image.massive.circle {
   .dot.form .field {
     line-height: 10px;
   }
-  .dot.inline.form > .field > label:nth-child(1) {
+  .dot.inline.form .group > label:nth-child(1) {
     width: auto;
     float: none;
     text-align: initial !important;
   }
-  .dot.form > .field {
+  .dot.form .group {
     margin-bottom: 8px;
   }
-  .dot.form > .field > .fields {
+  .dot.form .group > .fields {
     margin: -8px 0 !important;
   }
-  .dot.form > .field > .field,
-  .dot.form > .field > .fields {
+  .dot.form .group > .field,
+  .dot.form .group > .fields {
     margin-left: 0 !important;
   }
-  .dot.form > .field .inline.field input,
-  .dot.form > .field .inline.field select {
-    width: 30px;
-  }
-  .dot.form > .field .fields-1 {
+  .dot.form .group .fields-1 {
     margin: -8px 0 !important;
   }
-  .dot.form > .field .fields-1 > .field {
+  .dot.form .group .fields-1 > .field {
     width: 100%;
     padding: 8px 0;
   }
-  .dot.form > .field .fields-1 > .field:last-child {
+  .dot.form .group .fields-1 > .field:last-child {
     padding-bottom: 0;
   }
-  .dot.form > .field .fields > .field-1 {
+  .dot.form .group .fields > .field-1 {
     width: 100%;
     padding: 8px 0;
   }
-  .dot.form > .field .fields > .field-1:last-child {
+  .dot.form .group .fields > .field-1:last-child {
     padding-bottom: 0;
   }
-  .dot.form > .field .fields-2 {
+  .dot.form .group .fields-2 {
     margin: -8px 0 !important;
   }
-  .dot.form > .field .fields-2 > .field {
+  .dot.form .group .fields-2 > .field {
     width: 100%;
     padding: 8px 0;
   }
-  .dot.form > .field .fields-2 > .field:last-child {
+  .dot.form .group .fields-2 > .field:last-child {
     padding-bottom: 0;
   }
-  .dot.form > .field .fields > .field-2 {
+  .dot.form .group .fields > .field-2 {
     width: 100%;
     padding: 8px 0;
   }
-  .dot.form > .field .fields > .field-2:last-child {
+  .dot.form .group .fields > .field-2:last-child {
     padding-bottom: 0;
   }
-  .dot.form > .field .fields-3 {
+  .dot.form .group .fields-3 {
     margin: -8px 0 !important;
   }
-  .dot.form > .field .fields-3 > .field {
+  .dot.form .group .fields-3 > .field {
     width: 100%;
     padding: 8px 0;
   }
-  .dot.form > .field .fields-3 > .field:last-child {
+  .dot.form .group .fields-3 > .field:last-child {
     padding-bottom: 0;
   }
-  .dot.form > .field .fields > .field-3 {
+  .dot.form .group .fields > .field-3 {
     width: 100%;
     padding: 8px 0;
   }
-  .dot.form > .field .fields > .field-3:last-child {
+  .dot.form .group .fields > .field-3:last-child {
     padding-bottom: 0;
   }
-  .dot.form > .field .fields-4 {
+  .dot.form .group .fields-4 {
     margin: -8px 0 !important;
   }
-  .dot.form > .field .fields-4 > .field {
+  .dot.form .group .fields-4 > .field {
     width: 100%;
     padding: 8px 0;
   }
-  .dot.form > .field .fields-4 > .field:last-child {
+  .dot.form .group .fields-4 > .field:last-child {
     padding-bottom: 0;
   }
-  .dot.form > .field .fields > .field-4 {
+  .dot.form .group .fields > .field-4 {
     width: 100%;
     padding: 8px 0;
   }
-  .dot.form > .field .fields > .field-4:last-child {
+  .dot.form .group .fields > .field-4:last-child {
     padding-bottom: 0;
   }
-  .dot.form > .field .fields-5 {
+  .dot.form .group .fields-5 {
     margin: -8px 0 !important;
   }
-  .dot.form > .field .fields-5 > .field {
+  .dot.form .group .fields-5 > .field {
     width: 100%;
     padding: 8px 0;
   }
-  .dot.form > .field .fields-5 > .field:last-child {
+  .dot.form .group .fields-5 > .field:last-child {
     padding-bottom: 0;
   }
-  .dot.form > .field .fields > .field-5 {
+  .dot.form .group .fields > .field-5 {
     width: 100%;
     padding: 8px 0;
   }
-  .dot.form > .field .fields > .field-5:last-child {
+  .dot.form .group .fields > .field-5:last-child {
     padding-bottom: 0;
   }
-  .dot.form > .field .fields-6 {
+  .dot.form .group .fields-6 {
     margin: -8px 0 !important;
   }
-  .dot.form > .field .fields-6 > .field {
+  .dot.form .group .fields-6 > .field {
     width: 100%;
     padding: 8px 0;
   }
-  .dot.form > .field .fields-6 > .field:last-child {
+  .dot.form .group .fields-6 > .field:last-child {
     padding-bottom: 0;
   }
-  .dot.form > .field .fields > .field-6 {
+  .dot.form .group .fields > .field-6 {
     width: 100%;
     padding: 8px 0;
   }
-  .dot.form > .field .fields > .field-6:last-child {
+  .dot.form .group .fields > .field-6:last-child {
     padding-bottom: 0;
   }
-  .dot.form > .field .fields-7 {
+  .dot.form .group .fields-7 {
     margin: -8px 0 !important;
   }
-  .dot.form > .field .fields-7 > .field {
+  .dot.form .group .fields-7 > .field {
     width: 100%;
     padding: 8px 0;
   }
-  .dot.form > .field .fields-7 > .field:last-child {
+  .dot.form .group .fields-7 > .field:last-child {
     padding-bottom: 0;
   }
-  .dot.form > .field .fields > .field-7 {
+  .dot.form .group .fields > .field-7 {
     width: 100%;
     padding: 8px 0;
   }
-  .dot.form > .field .fields > .field-7:last-child {
+  .dot.form .group .fields > .field-7:last-child {
     padding-bottom: 0;
   }
-  .dot.form > .field .fields-8 {
+  .dot.form .group .fields-8 {
     margin: -8px 0 !important;
   }
-  .dot.form > .field .fields-8 > .field {
+  .dot.form .group .fields-8 > .field {
     width: 100%;
     padding: 8px 0;
   }
-  .dot.form > .field .fields-8 > .field:last-child {
+  .dot.form .group .fields-8 > .field:last-child {
     padding-bottom: 0;
   }
-  .dot.form > .field .fields > .field-8 {
+  .dot.form .group .fields > .field-8 {
     width: 100%;
     padding: 8px 0;
   }
-  .dot.form > .field .fields > .field-8:last-child {
+  .dot.form .group .fields > .field-8:last-child {
     padding-bottom: 0;
   }
-  .dot.form > .field .fields-9 {
+  .dot.form .group .fields-9 {
     margin: -8px 0 !important;
   }
-  .dot.form > .field .fields-9 > .field {
+  .dot.form .group .fields-9 > .field {
     width: 100%;
     padding: 8px 0;
   }
-  .dot.form > .field .fields-9 > .field:last-child {
+  .dot.form .group .fields-9 > .field:last-child {
     padding-bottom: 0;
   }
-  .dot.form > .field .fields > .field-9 {
+  .dot.form .group .fields > .field-9 {
     width: 100%;
     padding: 8px 0;
   }
-  .dot.form > .field .fields > .field-9:last-child {
+  .dot.form .group .fields > .field-9:last-child {
     padding-bottom: 0;
   }
-  .dot.form > .field .fields-10 {
+  .dot.form .group .fields-10 {
     margin: -8px 0 !important;
   }
-  .dot.form > .field .fields-10 > .field {
+  .dot.form .group .fields-10 > .field {
     width: 100%;
     padding: 8px 0;
   }
-  .dot.form > .field .fields-10 > .field:last-child {
+  .dot.form .group .fields-10 > .field:last-child {
     padding-bottom: 0;
   }
-  .dot.form > .field .fields > .field-10 {
+  .dot.form .group .fields > .field-10 {
     width: 100%;
     padding: 8px 0;
   }
-  .dot.form > .field .fields > .field-10:last-child {
+  .dot.form .group .fields > .field-10:last-child {
     padding-bottom: 0;
   }
-  .dot.form > .field .fields-11 {
+  .dot.form .group .fields-11 {
     margin: -8px 0 !important;
   }
-  .dot.form > .field .fields-11 > .field {
+  .dot.form .group .fields-11 > .field {
     width: 100%;
     padding: 8px 0;
   }
-  .dot.form > .field .fields-11 > .field:last-child {
+  .dot.form .group .fields-11 > .field:last-child {
     padding-bottom: 0;
   }
-  .dot.form > .field .fields > .field-11 {
+  .dot.form .group .fields > .field-11 {
     width: 100%;
     padding: 8px 0;
   }
-  .dot.form > .field .fields > .field-11:last-child {
+  .dot.form .group .fields > .field-11:last-child {
     padding-bottom: 0;
   }
-  .dot.form > .field .fields-12 {
+  .dot.form .group .fields-12 {
     margin: -8px 0 !important;
   }
-  .dot.form > .field .fields-12 > .field {
+  .dot.form .group .fields-12 > .field {
     width: 100%;
     padding: 8px 0;
   }
-  .dot.form > .field .fields-12 > .field:last-child {
+  .dot.form .group .fields-12 > .field:last-child {
     padding-bottom: 0;
   }
-  .dot.form > .field .fields > .field-12 {
+  .dot.form .group .fields > .field-12 {
     width: 100%;
     padding: 8px 0;
   }
-  .dot.form > .field .fields > .field-12:last-child {
+  .dot.form .group .fields > .field-12:last-child {
     padding-bottom: 0;
   }
-  .dot.form > .field .fields-13 {
+  .dot.form .group .fields-13 {
     margin: -8px 0 !important;
   }
-  .dot.form > .field .fields-13 > .field {
+  .dot.form .group .fields-13 > .field {
     width: 100%;
     padding: 8px 0;
   }
-  .dot.form > .field .fields-13 > .field:last-child {
+  .dot.form .group .fields-13 > .field:last-child {
     padding-bottom: 0;
   }
-  .dot.form > .field .fields > .field-13 {
+  .dot.form .group .fields > .field-13 {
     width: 100%;
     padding: 8px 0;
   }
-  .dot.form > .field .fields > .field-13:last-child {
+  .dot.form .group .fields > .field-13:last-child {
     padding-bottom: 0;
   }
-  .dot.form > .field .fields-14 {
+  .dot.form .group .fields-14 {
     margin: -8px 0 !important;
   }
-  .dot.form > .field .fields-14 > .field {
+  .dot.form .group .fields-14 > .field {
     width: 100%;
     padding: 8px 0;
   }
-  .dot.form > .field .fields-14 > .field:last-child {
+  .dot.form .group .fields-14 > .field:last-child {
     padding-bottom: 0;
   }
-  .dot.form > .field .fields > .field-14 {
+  .dot.form .group .fields > .field-14 {
     width: 100%;
     padding: 8px 0;
   }
-  .dot.form > .field .fields > .field-14:last-child {
+  .dot.form .group .fields > .field-14:last-child {
     padding-bottom: 0;
   }
-  .dot.form > .field .fields-15 {
+  .dot.form .group .fields-15 {
     margin: -8px 0 !important;
   }
-  .dot.form > .field .fields-15 > .field {
+  .dot.form .group .fields-15 > .field {
     width: 100%;
     padding: 8px 0;
   }
-  .dot.form > .field .fields-15 > .field:last-child {
+  .dot.form .group .fields-15 > .field:last-child {
     padding-bottom: 0;
   }
-  .dot.form > .field .fields > .field-15 {
+  .dot.form .group .fields > .field-15 {
     width: 100%;
     padding: 8px 0;
   }
-  .dot.form > .field .fields > .field-15:last-child {
+  .dot.form .group .fields > .field-15:last-child {
     padding-bottom: 0;
   }
-  .dot.form > .field .fields-16 {
+  .dot.form .group .fields-16 {
     margin: -8px 0 !important;
   }
-  .dot.form > .field .fields-16 > .field {
+  .dot.form .group .fields-16 > .field {
     width: 100%;
     padding: 8px 0;
   }
-  .dot.form > .field .fields-16 > .field:last-child {
+  .dot.form .group .fields-16 > .field:last-child {
     padding-bottom: 0;
   }
-  .dot.form > .field .fields > .field-16 {
+  .dot.form .group .fields > .field-16 {
     width: 100%;
     padding: 8px 0;
   }
-  .dot.form > .field .fields > .field-16:last-child {
+  .dot.form .group .fields > .field-16:last-child {
     padding-bottom: 0;
   }
 }
