@@ -1,5 +1,9 @@
 ## Dot css
 
+[![Downloads](https://img.shields.io/npm/dt/dot-css.svg)](https://www.npmjs.com/package/dot-css)
+[![Version](https://img.shields.io/npm/v/dot-css.svg)](https://www.npmjs.com/package/dot-css)
+
+
 Very basic css scaffold. [dot-css](http://braavos.me/dot-css)
 
 ###Usage
