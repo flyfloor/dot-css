@@ -6755,6 +6755,25 @@ img.dot.image.massive.circle {
   width: 6.25%;
   margin-bottom: 10px;
 }
+.dot.form .group .fields > .field-1 > label:not(.dot) {
+  background: initial;
+  text-shadow: none;
+  border-radius: 0;
+  margin: 0;
+  font-size: 15px;
+  color: #383838;
+  word-wrap: break-word;
+  display: block;
+  line-height: 24px;
+}
+.dot.form .group .fields > .field-1 .dropdown,
+.dot.form .group .fields > .field-1 .datepicker,
+.dot.form .group .fields > .field-1 .datetime-picker,
+.dot.form .group .fields > .field-1 .timepicker,
+.dot.form .group .fields > .field-1 .timeinput {
+  min-width: initial;
+  width: 100%;
+}
 .dot.form .group .fields-2 {
   font-size: 0;
   position: relative;
@@ -6780,6 +6799,25 @@ img.dot.image.massive.circle {
   float: left;
   width: 12.5%;
   margin-bottom: 10px;
+}
+.dot.form .group .fields > .field-2 > label:not(.dot) {
+  background: initial;
+  text-shadow: none;
+  border-radius: 0;
+  margin: 0;
+  font-size: 15px;
+  color: #383838;
+  word-wrap: break-word;
+  display: block;
+  line-height: 24px;
+}
+.dot.form .group .fields > .field-2 .dropdown,
+.dot.form .group .fields > .field-2 .datepicker,
+.dot.form .group .fields > .field-2 .datetime-picker,
+.dot.form .group .fields > .field-2 .timepicker,
+.dot.form .group .fields > .field-2 .timeinput {
+  min-width: initial;
+  width: 100%;
 }
 .dot.form .group .fields-3 {
   font-size: 0;
@@ -6807,6 +6845,25 @@ img.dot.image.massive.circle {
   width: 18.75%;
   margin-bottom: 10px;
 }
+.dot.form .group .fields > .field-3 > label:not(.dot) {
+  background: initial;
+  text-shadow: none;
+  border-radius: 0;
+  margin: 0;
+  font-size: 15px;
+  color: #383838;
+  word-wrap: break-word;
+  display: block;
+  line-height: 24px;
+}
+.dot.form .group .fields > .field-3 .dropdown,
+.dot.form .group .fields > .field-3 .datepicker,
+.dot.form .group .fields > .field-3 .datetime-picker,
+.dot.form .group .fields > .field-3 .timepicker,
+.dot.form .group .fields > .field-3 .timeinput {
+  min-width: initial;
+  width: 100%;
+}
 .dot.form .group .fields-4 {
   font-size: 0;
   position: relative;
@@ -6832,6 +6889,25 @@ img.dot.image.massive.circle {
   float: left;
   width: 25%;
   margin-bottom: 10px;
+}
+.dot.form .group .fields > .field-4 > label:not(.dot) {
+  background: initial;
+  text-shadow: none;
+  border-radius: 0;
+  margin: 0;
+  font-size: 15px;
+  color: #383838;
+  word-wrap: break-word;
+  display: block;
+  line-height: 24px;
+}
+.dot.form .group .fields > .field-4 .dropdown,
+.dot.form .group .fields > .field-4 .datepicker,
+.dot.form .group .fields > .field-4 .datetime-picker,
+.dot.form .group .fields > .field-4 .timepicker,
+.dot.form .group .fields > .field-4 .timeinput {
+  min-width: initial;
+  width: 100%;
 }
 .dot.form .group .fields-5 {
   font-size: 0;
@@ -6859,6 +6935,25 @@ img.dot.image.massive.circle {
   width: 31.25%;
   margin-bottom: 10px;
 }
+.dot.form .group .fields > .field-5 > label:not(.dot) {
+  background: initial;
+  text-shadow: none;
+  border-radius: 0;
+  margin: 0;
+  font-size: 15px;
+  color: #383838;
+  word-wrap: break-word;
+  display: block;
+  line-height: 24px;
+}
+.dot.form .group .fields > .field-5 .dropdown,
+.dot.form .group .fields > .field-5 .datepicker,
+.dot.form .group .fields > .field-5 .datetime-picker,
+.dot.form .group .fields > .field-5 .timepicker,
+.dot.form .group .fields > .field-5 .timeinput {
+  min-width: initial;
+  width: 100%;
+}
 .dot.form .group .fields-6 {
   font-size: 0;
   position: relative;
@@ -6884,6 +6979,25 @@ img.dot.image.massive.circle {
   float: left;
   width: 37.5%;
   margin-bottom: 10px;
+}
+.dot.form .group .fields > .field-6 > label:not(.dot) {
+  background: initial;
+  text-shadow: none;
+  border-radius: 0;
+  margin: 0;
+  font-size: 15px;
+  color: #383838;
+  word-wrap: break-word;
+  display: block;
+  line-height: 24px;
+}
+.dot.form .group .fields > .field-6 .dropdown,
+.dot.form .group .fields > .field-6 .datepicker,
+.dot.form .group .fields > .field-6 .datetime-picker,
+.dot.form .group .fields > .field-6 .timepicker,
+.dot.form .group .fields > .field-6 .timeinput {
+  min-width: initial;
+  width: 100%;
 }
 .dot.form .group .fields-7 {
   font-size: 0;
@@ -6911,6 +7025,25 @@ img.dot.image.massive.circle {
   width: 43.75%;
   margin-bottom: 10px;
 }
+.dot.form .group .fields > .field-7 > label:not(.dot) {
+  background: initial;
+  text-shadow: none;
+  border-radius: 0;
+  margin: 0;
+  font-size: 15px;
+  color: #383838;
+  word-wrap: break-word;
+  display: block;
+  line-height: 24px;
+}
+.dot.form .group .fields > .field-7 .dropdown,
+.dot.form .group .fields > .field-7 .datepicker,
+.dot.form .group .fields > .field-7 .datetime-picker,
+.dot.form .group .fields > .field-7 .timepicker,
+.dot.form .group .fields > .field-7 .timeinput {
+  min-width: initial;
+  width: 100%;
+}
 .dot.form .group .fields-8 {
   font-size: 0;
   position: relative;
@@ -6936,6 +7069,25 @@ img.dot.image.massive.circle {
   float: left;
   width: 50%;
   margin-bottom: 10px;
+}
+.dot.form .group .fields > .field-8 > label:not(.dot) {
+  background: initial;
+  text-shadow: none;
+  border-radius: 0;
+  margin: 0;
+  font-size: 15px;
+  color: #383838;
+  word-wrap: break-word;
+  display: block;
+  line-height: 24px;
+}
+.dot.form .group .fields > .field-8 .dropdown,
+.dot.form .group .fields > .field-8 .datepicker,
+.dot.form .group .fields > .field-8 .datetime-picker,
+.dot.form .group .fields > .field-8 .timepicker,
+.dot.form .group .fields > .field-8 .timeinput {
+  min-width: initial;
+  width: 100%;
 }
 .dot.form .group .fields-9 {
   font-size: 0;
@@ -6963,6 +7115,25 @@ img.dot.image.massive.circle {
   width: 56.25%;
   margin-bottom: 10px;
 }
+.dot.form .group .fields > .field-9 > label:not(.dot) {
+  background: initial;
+  text-shadow: none;
+  border-radius: 0;
+  margin: 0;
+  font-size: 15px;
+  color: #383838;
+  word-wrap: break-word;
+  display: block;
+  line-height: 24px;
+}
+.dot.form .group .fields > .field-9 .dropdown,
+.dot.form .group .fields > .field-9 .datepicker,
+.dot.form .group .fields > .field-9 .datetime-picker,
+.dot.form .group .fields > .field-9 .timepicker,
+.dot.form .group .fields > .field-9 .timeinput {
+  min-width: initial;
+  width: 100%;
+}
 .dot.form .group .fields-10 {
   font-size: 0;
   position: relative;
@@ -6988,6 +7159,25 @@ img.dot.image.massive.circle {
   float: left;
   width: 62.5%;
   margin-bottom: 10px;
+}
+.dot.form .group .fields > .field-10 > label:not(.dot) {
+  background: initial;
+  text-shadow: none;
+  border-radius: 0;
+  margin: 0;
+  font-size: 15px;
+  color: #383838;
+  word-wrap: break-word;
+  display: block;
+  line-height: 24px;
+}
+.dot.form .group .fields > .field-10 .dropdown,
+.dot.form .group .fields > .field-10 .datepicker,
+.dot.form .group .fields > .field-10 .datetime-picker,
+.dot.form .group .fields > .field-10 .timepicker,
+.dot.form .group .fields > .field-10 .timeinput {
+  min-width: initial;
+  width: 100%;
 }
 .dot.form .group .fields-11 {
   font-size: 0;
@@ -7015,6 +7205,25 @@ img.dot.image.massive.circle {
   width: 68.75%;
   margin-bottom: 10px;
 }
+.dot.form .group .fields > .field-11 > label:not(.dot) {
+  background: initial;
+  text-shadow: none;
+  border-radius: 0;
+  margin: 0;
+  font-size: 15px;
+  color: #383838;
+  word-wrap: break-word;
+  display: block;
+  line-height: 24px;
+}
+.dot.form .group .fields > .field-11 .dropdown,
+.dot.form .group .fields > .field-11 .datepicker,
+.dot.form .group .fields > .field-11 .datetime-picker,
+.dot.form .group .fields > .field-11 .timepicker,
+.dot.form .group .fields > .field-11 .timeinput {
+  min-width: initial;
+  width: 100%;
+}
 .dot.form .group .fields-12 {
   font-size: 0;
   position: relative;
@@ -7040,6 +7249,25 @@ img.dot.image.massive.circle {
   float: left;
   width: 75%;
   margin-bottom: 10px;
+}
+.dot.form .group .fields > .field-12 > label:not(.dot) {
+  background: initial;
+  text-shadow: none;
+  border-radius: 0;
+  margin: 0;
+  font-size: 15px;
+  color: #383838;
+  word-wrap: break-word;
+  display: block;
+  line-height: 24px;
+}
+.dot.form .group .fields > .field-12 .dropdown,
+.dot.form .group .fields > .field-12 .datepicker,
+.dot.form .group .fields > .field-12 .datetime-picker,
+.dot.form .group .fields > .field-12 .timepicker,
+.dot.form .group .fields > .field-12 .timeinput {
+  min-width: initial;
+  width: 100%;
 }
 .dot.form .group .fields-13 {
   font-size: 0;
@@ -7067,6 +7295,25 @@ img.dot.image.massive.circle {
   width: 81.25%;
   margin-bottom: 10px;
 }
+.dot.form .group .fields > .field-13 > label:not(.dot) {
+  background: initial;
+  text-shadow: none;
+  border-radius: 0;
+  margin: 0;
+  font-size: 15px;
+  color: #383838;
+  word-wrap: break-word;
+  display: block;
+  line-height: 24px;
+}
+.dot.form .group .fields > .field-13 .dropdown,
+.dot.form .group .fields > .field-13 .datepicker,
+.dot.form .group .fields > .field-13 .datetime-picker,
+.dot.form .group .fields > .field-13 .timepicker,
+.dot.form .group .fields > .field-13 .timeinput {
+  min-width: initial;
+  width: 100%;
+}
 .dot.form .group .fields-14 {
   font-size: 0;
   position: relative;
@@ -7092,6 +7339,25 @@ img.dot.image.massive.circle {
   float: left;
   width: 87.5%;
   margin-bottom: 10px;
+}
+.dot.form .group .fields > .field-14 > label:not(.dot) {
+  background: initial;
+  text-shadow: none;
+  border-radius: 0;
+  margin: 0;
+  font-size: 15px;
+  color: #383838;
+  word-wrap: break-word;
+  display: block;
+  line-height: 24px;
+}
+.dot.form .group .fields > .field-14 .dropdown,
+.dot.form .group .fields > .field-14 .datepicker,
+.dot.form .group .fields > .field-14 .datetime-picker,
+.dot.form .group .fields > .field-14 .timepicker,
+.dot.form .group .fields > .field-14 .timeinput {
+  min-width: initial;
+  width: 100%;
 }
 .dot.form .group .fields-15 {
   font-size: 0;
@@ -7119,6 +7385,25 @@ img.dot.image.massive.circle {
   width: 93.75%;
   margin-bottom: 10px;
 }
+.dot.form .group .fields > .field-15 > label:not(.dot) {
+  background: initial;
+  text-shadow: none;
+  border-radius: 0;
+  margin: 0;
+  font-size: 15px;
+  color: #383838;
+  word-wrap: break-word;
+  display: block;
+  line-height: 24px;
+}
+.dot.form .group .fields > .field-15 .dropdown,
+.dot.form .group .fields > .field-15 .datepicker,
+.dot.form .group .fields > .field-15 .datetime-picker,
+.dot.form .group .fields > .field-15 .timepicker,
+.dot.form .group .fields > .field-15 .timeinput {
+  min-width: initial;
+  width: 100%;
+}
 .dot.form .group .fields-16 {
   font-size: 0;
   position: relative;
@@ -7145,9 +7430,29 @@ img.dot.image.massive.circle {
   width: 100%;
   margin-bottom: 10px;
 }
+.dot.form .group .fields > .field-16 > label:not(.dot) {
+  background: initial;
+  text-shadow: none;
+  border-radius: 0;
+  margin: 0;
+  font-size: 15px;
+  color: #383838;
+  word-wrap: break-word;
+  display: block;
+  line-height: 24px;
+}
+.dot.form .group .fields > .field-16 .dropdown,
+.dot.form .group .fields > .field-16 .datepicker,
+.dot.form .group .fields > .field-16 .datetime-picker,
+.dot.form .group .fields > .field-16 .timepicker,
+.dot.form .group .fields > .field-16 .timeinput {
+  min-width: initial;
+  width: 100%;
+}
 .dot.form .group .field {
   margin-bottom: 10px;
   line-height: 34px;
+  /*非内联*/
   /*内联*/
 }
 .dot.form .group .field > label:not(.dot) {
@@ -7161,48 +7466,61 @@ img.dot.image.massive.circle {
   display: block;
   line-height: 24px;
 }
+.dot.form .group .field:not(.inline) .dropdown,
+.dot.form .group .field:not(.inline) .datepicker,
+.dot.form .group .field:not(.inline) .datetime-picker,
+.dot.form .group .field:not(.inline) .timepicker,
+.dot.form .group .field:not(.inline) .timeinput {
+  min-width: initial;
+  width: 100%;
+}
 .dot.form .group .field.inline > * {
   display: inline-block !important;
   margin: 0 10px;
 }
-.dot.form .group .field.inline input[type="text"],
-.dot.form .group .field.inline input[type="number"],
-.dot.form .group .field.inline input[type="url"],
-.dot.form .group .field.inline input[type="tel"],
-.dot.form .group .field.inline input[type="password"],
-.dot.form .group .field.inline input[type="email"],
-.dot.form .group .field.inline input[type="date"],
-.dot.form .group .field.inline input[type="datetime-local"],
-.dot.form .group .field.inline input[type="time"],
-.dot.form .group .field.inline textarea,
-.dot.form .group .field.inline select {
+.dot.form .group .field.inline > input[type="text"],
+.dot.form .group .field.inline > input[type="number"],
+.dot.form .group .field.inline > input[type="url"],
+.dot.form .group .field.inline > input[type="tel"],
+.dot.form .group .field.inline > input[type="password"],
+.dot.form .group .field.inline > input[type="email"],
+.dot.form .group .field.inline > input[type="date"],
+.dot.form .group .field.inline > input[type="datetime-local"],
+.dot.form .group .field.inline > input[type="time"] {
   width: 100px;
   display: inline;
 }
-.dot.form .group .field.inline input[type="text"].max,
-.dot.form .group .field.inline input[type="number"].max,
-.dot.form .group .field.inline input[type="url"].max,
-.dot.form .group .field.inline input[type="tel"].max,
-.dot.form .group .field.inline input[type="password"].max,
-.dot.form .group .field.inline input[type="email"].max,
-.dot.form .group .field.inline input[type="date"].max,
-.dot.form .group .field.inline input[type="datetime-local"].max,
-.dot.form .group .field.inline input[type="time"].max,
-.dot.form .group .field.inline textarea.max,
-.dot.form .group .field.inline select.max {
+.dot.form .group .field.inline > input[type="text"].max,
+.dot.form .group .field.inline > input[type="number"].max,
+.dot.form .group .field.inline > input[type="url"].max,
+.dot.form .group .field.inline > input[type="tel"].max,
+.dot.form .group .field.inline > input[type="password"].max,
+.dot.form .group .field.inline > input[type="email"].max,
+.dot.form .group .field.inline > input[type="date"].max,
+.dot.form .group .field.inline > input[type="datetime-local"].max,
+.dot.form .group .field.inline > input[type="time"].max {
   width: 160px;
 }
-.dot.form .group .field.inline input[type="text"].mini,
-.dot.form .group .field.inline input[type="number"].mini,
-.dot.form .group .field.inline input[type="url"].mini,
-.dot.form .group .field.inline input[type="tel"].mini,
-.dot.form .group .field.inline input[type="password"].mini,
-.dot.form .group .field.inline input[type="email"].mini,
-.dot.form .group .field.inline input[type="date"].mini,
-.dot.form .group .field.inline input[type="datetime-local"].mini,
-.dot.form .group .field.inline input[type="time"].mini,
-.dot.form .group .field.inline textarea.mini,
-.dot.form .group .field.inline select.mini {
+.dot.form .group .field.inline > input[type="text"].mini,
+.dot.form .group .field.inline > input[type="number"].mini,
+.dot.form .group .field.inline > input[type="url"].mini,
+.dot.form .group .field.inline > input[type="tel"].mini,
+.dot.form .group .field.inline > input[type="password"].mini,
+.dot.form .group .field.inline > input[type="email"].mini,
+.dot.form .group .field.inline > input[type="date"].mini,
+.dot.form .group .field.inline > input[type="datetime-local"].mini,
+.dot.form .group .field.inline > input[type="time"].mini {
+  width: 40px;
+  text-align: center;
+}
+.dot.form .group .field.inline > select {
+  width: 100px;
+  display: inline;
+}
+.dot.form .group .field.inline > select.max {
+  width: 160px;
+}
+.dot.form .group .field.inline > select.mini {
   width: 40px;
   text-align: center;
 }
