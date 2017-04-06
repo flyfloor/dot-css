@@ -321,6 +321,7 @@ input[type="datetime-local"],
 input[type="time"],
 textarea,
 select {
+  font-family: inherit;
   margin: 0;
   box-shadow: none;
   -webkit-appearance: none;
@@ -451,7 +452,7 @@ blockquote:after {
 pre,
 code,
 tt {
-  font-family: Monaco, "Andale Mono", "lucida console", "Courier New", monospace;
+  font-family: Monaco, "Andale Mono", "lucida console", "Courier New", monospace, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', SimSun, sans-serif;
 }
 pre {
   font-size: 13px;
@@ -3641,7 +3642,7 @@ i.dot.icon:hover,
   /*only wrapper style*/
   overflow: hidden;
 }
-.dot.input input,
+.dot.input input:not(.button),
 .dot.input select,
 .dot.input textarea,
 .dot.input button,
@@ -3680,7 +3681,7 @@ i.dot.icon:hover,
   line-height: 34px;
   font-size: 18px;
 }
-.dot.input.tiny input,
+.dot.input.tiny input:not(.button),
 .dot.input.tiny select,
 .dot.input.tiny textarea,
 .dot.input.tiny button,
@@ -3719,7 +3720,7 @@ i.dot.icon:hover,
   line-height: 20px;
   font-size: 12px;
 }
-.dot.input.small input,
+.dot.input.small input:not(.button),
 .dot.input.small select,
 .dot.input.small textarea,
 .dot.input.small button,
@@ -3758,7 +3759,7 @@ i.dot.icon:hover,
   line-height: 30px;
   font-size: 16px;
 }
-.dot.input.large input,
+.dot.input.large input:not(.button),
 .dot.input.large select,
 .dot.input.large textarea,
 .dot.input.large button,
@@ -3797,7 +3798,7 @@ i.dot.icon:hover,
   line-height: 42px;
   font-size: 22px;
 }
-.dot.input.huge input,
+.dot.input.huge input:not(.button),
 .dot.input.huge select,
 .dot.input.huge textarea,
 .dot.input.huge button,
@@ -3836,7 +3837,7 @@ i.dot.icon:hover,
   line-height: 50px;
   font-size: 26px;
 }
-.dot input,
+.dot input:not(.button),
 input.dot.input,
 .dot textarea,
 .dot select {
@@ -3849,35 +3850,35 @@ input.dot.input,
   line-height: 16px;
   height: 36px;
 }
-.dot input:focus,
+.dot input:not(.button):focus,
 input.dot.input:focus,
 .dot textarea:focus,
 .dot select:focus,
-.dot input.focus,
+.dot input:not(.button).focus,
 input.dot.input.focus,
 .dot textarea.focus,
 .dot select.focus {
   border-color: #03A9F4;
 }
-.dot input.angled,
+.dot input:not(.button).angled,
 input.dot.input.angled,
 .dot textarea.angled,
 .dot select.angled {
   border-radius: 0;
 }
-.dot input.fluid,
+.dot input:not(.button).fluid,
 input.dot.input.fluid,
 .dot textarea.fluid,
 .dot select.fluid {
   width: 100%;
 }
-.dot input.round,
+.dot input:not(.button).round,
 input.dot.input.round,
 .dot textarea.round,
 .dot select.round {
   border-radius: 24px;
 }
-.dot input.tiny,
+.dot input:not(.button).tiny,
 input.dot.input.tiny,
 .dot textarea.tiny,
 .dot select.tiny {
@@ -3886,13 +3887,13 @@ input.dot.input.tiny,
   line-height: 10px;
   height: 22px;
 }
-.dot input.tiny.round,
+.dot input:not(.button).tiny.round,
 input.dot.input.tiny.round,
 .dot textarea.tiny.round,
 .dot select.tiny.round {
   border-radius: 14px;
 }
-.dot input.small,
+.dot input:not(.button).small,
 input.dot.input.small,
 .dot textarea.small,
 .dot select.small {
@@ -3901,13 +3902,13 @@ input.dot.input.small,
   line-height: 14px;
   height: 32px;
 }
-.dot input.small.round,
+.dot input:not(.button).small.round,
 input.dot.input.small.round,
 .dot textarea.small.round,
 .dot select.small.round {
   border-radius: 21px;
 }
-.dot input.large,
+.dot input:not(.button).large,
 input.dot.input.large,
 .dot textarea.large,
 .dot select.large {
@@ -3916,13 +3917,13 @@ input.dot.input.large,
   line-height: 20px;
   height: 44px;
 }
-.dot input.large.round,
+.dot input:not(.button).large.round,
 input.dot.input.large.round,
 .dot textarea.large.round,
 .dot select.large.round {
   border-radius: 30px;
 }
-.dot input.huge,
+.dot input:not(.button).huge,
 input.dot.input.huge,
 .dot textarea.huge,
 .dot select.huge {
@@ -3931,13 +3932,13 @@ input.dot.input.huge,
   line-height: 24px;
   height: 52px;
 }
-.dot input.huge.round,
+.dot input:not(.button).huge.round,
 input.dot.input.huge.round,
 .dot textarea.huge.round,
 .dot select.huge.round {
   border-radius: 36px;
 }
-.dot input.disabled,
+.dot input:not(.button).disabled,
 input.dot.input.disabled,
 .dot textarea.disabled,
 .dot select.disabled {
@@ -3948,7 +3949,7 @@ input.dot.input.disabled,
   background-color: #FAFAFA;
   opacity: .85;
 }
-.dot input.error,
+.dot input:not(.button).error,
 input.dot.input.error,
 .dot textarea.error,
 .dot select.error {
