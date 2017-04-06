@@ -5,6 +5,33 @@
   display: block;
   height: 0;
 }
+.icon_font {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  vertical-align: middle;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+.input_icon {
+  cursor: pointer;
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: normal;
+  vertical-align: middle;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  position: absolute;
+  right: 5px;
+  top: 0;
+  font-size: 24px;
+}
+.css_transition {
+  -webkit-transition: opacity 0.3s, background 0.3s, visibility 0.3s, max-height 0.3s, transform 0.3s;
+  -o-transition: opacity 0.3s, background 0.3s, visibility 0.3s, max-height 0.3s, transform 0.3s;
+  transition: opacity 0.3s, background 0.3s, visibility 0.3s, max-height 0.3s, transform 0.3s;
+}
 /* reset css */
 * {
   outline: none;
@@ -304,7 +331,7 @@ select {
   transition: all .2s;
   line-height: 15px;
   font-size: 15px;
-  border-radius: 5px;
+  border-radius: 3px;
   color: #212121;
 }
 input[type="text"]:focus,
@@ -1174,8 +1201,8 @@ code {
 }
 .dot.module {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03);
-  border-radius: 5px;
-  border-radius: 0 0 5px 5px;
+  border-radius: 3px;
+  border-radius: 0 0 3px 3px;
   display: block;
   padding: 10px;
   border: 1px solid #EEEEEE;
@@ -1236,7 +1263,7 @@ code {
 .bordered {
   border: 1px solid #EEEEEE;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03);
-  border-radius: 5px;
+  border-radius: 3px;
 }
 .bordered:hover {
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
@@ -1309,7 +1336,7 @@ i.dot.icon:hover,
   text-decoration: none;
   vertical-align: middle;
   color: #383838;
-  border-radius: 5px;
+  border-radius: 3px;
   background-color: #F5F5F5;
   font-weight: 500;
   font-size: 15px;
@@ -1321,7 +1348,7 @@ i.dot.icon:hover,
   -o-transition: all .2s;
   transition: all .2s;
   /*button size*/
-  padding: 8px 16px;
+  padding: 7px 14px;
   font-size: 14px;
   line-height: 16px;
   /*color button*/
@@ -1368,7 +1395,7 @@ i.dot.icon:hover,
 .dot button.icon .icon {
   vertical-align: top;
   /*default icon left*/
-  margin: 0 6px 0 -6px;
+  margin: 0 5px 0 -5px;
   opacity: .95;
 }
 .dot.button.icon .icon:hover,
@@ -1379,7 +1406,7 @@ i.dot.icon:hover,
 .dot.button.icon * + .icon,
 .dot .button.icon * + .icon,
 .dot button.icon * + .icon {
-  margin: 0 -6px 0 6px;
+  margin: 0 -5px 0 5px;
 }
 .dot.button.image img,
 .dot .button.image img,
@@ -1387,16 +1414,16 @@ i.dot.icon:hover,
   max-width: none;
   max-height: none;
   display: inline-block;
-  height: 32px;
-  margin: -8px 8px -8px -16px;
-  border-radius: 5px 0 0 5px;
+  height: 30px;
+  margin: -7px 7px -7px -14px;
+  border-radius: 3px 0 0 3px;
   vertical-align: top;
 }
 .dot.button.image * + .image,
 .dot .button.image * + .image,
 .dot button.image * + .image {
-  border-radius: 0 5px 5px 0;
-  margin: -8px -16px -8px 8px;
+  border-radius: 0 3px 3px 0;
+  margin: -7px -14px -7px 7px;
 }
 .dot.button.circle,
 .dot .button.circle,
@@ -1404,7 +1431,7 @@ i.dot.icon:hover,
 .dot.button.labeled,
 .dot .button.labeled,
 .dot button.labeled {
-  padding: 16px;
+  padding: 15px;
 }
 .dot.button.circle,
 .dot .button.circle,
@@ -1440,7 +1467,7 @@ i.dot.icon:hover,
 .dot.button.tiny,
 .dot .button.tiny,
 .dot button.tiny {
-  padding: 5px 10px;
+  padding: 4px 8px;
   font-size: 8px;
   line-height: 10px;
 }
@@ -1458,7 +1485,7 @@ i.dot.icon:hover,
 .dot button.tiny.icon .icon {
   vertical-align: top;
   /*default icon left*/
-  margin: 0 3px 0 -3px;
+  margin: 0 2px 0 -2px;
   opacity: .95;
 }
 .dot.button.tiny.icon .icon:hover,
@@ -1469,7 +1496,7 @@ i.dot.icon:hover,
 .dot.button.tiny.icon * + .icon,
 .dot .button.tiny.icon * + .icon,
 .dot button.tiny.icon * + .icon {
-  margin: 0 -3px 0 3px;
+  margin: 0 -2px 0 2px;
 }
 .dot.button.tiny.image img,
 .dot .button.tiny.image img,
@@ -1477,16 +1504,16 @@ i.dot.icon:hover,
   max-width: none;
   max-height: none;
   display: inline-block;
-  height: 20px;
-  margin: -5px 5px -5px -10px;
-  border-radius: 5px 0 0 5px;
+  height: 18px;
+  margin: -4px 4px -4px -8px;
+  border-radius: 3px 0 0 3px;
   vertical-align: top;
 }
 .dot.button.tiny.image * + .image,
 .dot .button.tiny.image * + .image,
 .dot button.tiny.image * + .image {
-  border-radius: 0 5px 5px 0;
-  margin: -5px -10px -5px 5px;
+  border-radius: 0 3px 3px 0;
+  margin: -4px -8px -4px 4px;
 }
 .dot.button.tiny.circle,
 .dot .button.tiny.circle,
@@ -1494,7 +1521,7 @@ i.dot.icon:hover,
 .dot.button.tiny.labeled,
 .dot .button.tiny.labeled,
 .dot button.tiny.labeled {
-  padding: 10px;
+  padding: 9px;
 }
 .dot.button.tiny.circle,
 .dot .button.tiny.circle,
@@ -1530,7 +1557,7 @@ i.dot.icon:hover,
 .dot.button.small,
 .dot .button.small,
 .dot button.small {
-  padding: 7px 14px;
+  padding: 6px 12px;
   font-size: 12px;
   line-height: 14px;
 }
@@ -1548,7 +1575,7 @@ i.dot.icon:hover,
 .dot button.small.icon .icon {
   vertical-align: top;
   /*default icon left*/
-  margin: 0 5px 0 -5px;
+  margin: 0 4px 0 -4px;
   opacity: .95;
 }
 .dot.button.small.icon .icon:hover,
@@ -1559,7 +1586,7 @@ i.dot.icon:hover,
 .dot.button.small.icon * + .icon,
 .dot .button.small.icon * + .icon,
 .dot button.small.icon * + .icon {
-  margin: 0 -5px 0 5px;
+  margin: 0 -4px 0 4px;
 }
 .dot.button.small.image img,
 .dot .button.small.image img,
@@ -1567,16 +1594,16 @@ i.dot.icon:hover,
   max-width: none;
   max-height: none;
   display: inline-block;
-  height: 28px;
-  margin: -7px 7px -7px -14px;
-  border-radius: 5px 0 0 5px;
+  height: 26px;
+  margin: -6px 6px -6px -12px;
+  border-radius: 3px 0 0 3px;
   vertical-align: top;
 }
 .dot.button.small.image * + .image,
 .dot .button.small.image * + .image,
 .dot button.small.image * + .image {
-  border-radius: 0 5px 5px 0;
-  margin: -7px -14px -7px 7px;
+  border-radius: 0 3px 3px 0;
+  margin: -6px -12px -6px 6px;
 }
 .dot.button.small.circle,
 .dot .button.small.circle,
@@ -1584,7 +1611,7 @@ i.dot.icon:hover,
 .dot.button.small.labeled,
 .dot .button.small.labeled,
 .dot button.small.labeled {
-  padding: 14px;
+  padding: 13px;
 }
 .dot.button.small.circle,
 .dot .button.small.circle,
@@ -1620,7 +1647,7 @@ i.dot.icon:hover,
 .dot.button.large,
 .dot .button.large,
 .dot button.large {
-  padding: 10px 20px;
+  padding: 9px 18px;
   font-size: 18px;
   line-height: 20px;
 }
@@ -1638,7 +1665,7 @@ i.dot.icon:hover,
 .dot button.large.icon .icon {
   vertical-align: top;
   /*default icon left*/
-  margin: 0 8px 0 -8px;
+  margin: 0 7px 0 -7px;
   opacity: .95;
 }
 .dot.button.large.icon .icon:hover,
@@ -1649,7 +1676,7 @@ i.dot.icon:hover,
 .dot.button.large.icon * + .icon,
 .dot .button.large.icon * + .icon,
 .dot button.large.icon * + .icon {
-  margin: 0 -8px 0 8px;
+  margin: 0 -7px 0 7px;
 }
 .dot.button.large.image img,
 .dot .button.large.image img,
@@ -1657,16 +1684,16 @@ i.dot.icon:hover,
   max-width: none;
   max-height: none;
   display: inline-block;
-  height: 40px;
-  margin: -10px 10px -10px -20px;
-  border-radius: 5px 0 0 5px;
+  height: 38px;
+  margin: -9px 9px -9px -18px;
+  border-radius: 3px 0 0 3px;
   vertical-align: top;
 }
 .dot.button.large.image * + .image,
 .dot .button.large.image * + .image,
 .dot button.large.image * + .image {
-  border-radius: 0 5px 5px 0;
-  margin: -10px -20px -10px 10px;
+  border-radius: 0 3px 3px 0;
+  margin: -9px -18px -9px 9px;
 }
 .dot.button.large.circle,
 .dot .button.large.circle,
@@ -1674,7 +1701,7 @@ i.dot.icon:hover,
 .dot.button.large.labeled,
 .dot .button.large.labeled,
 .dot button.large.labeled {
-  padding: 20px;
+  padding: 19px;
 }
 .dot.button.large.circle,
 .dot .button.large.circle,
@@ -1710,7 +1737,7 @@ i.dot.icon:hover,
 .dot.button.huge,
 .dot .button.huge,
 .dot button.huge {
-  padding: 12px 24px;
+  padding: 11px 22px;
   font-size: 22px;
   line-height: 24px;
 }
@@ -1728,7 +1755,7 @@ i.dot.icon:hover,
 .dot button.huge.icon .icon {
   vertical-align: top;
   /*default icon left*/
-  margin: 0 10px 0 -10px;
+  margin: 0 9px 0 -9px;
   opacity: .95;
 }
 .dot.button.huge.icon .icon:hover,
@@ -1739,7 +1766,7 @@ i.dot.icon:hover,
 .dot.button.huge.icon * + .icon,
 .dot .button.huge.icon * + .icon,
 .dot button.huge.icon * + .icon {
-  margin: 0 -10px 0 10px;
+  margin: 0 -9px 0 9px;
 }
 .dot.button.huge.image img,
 .dot .button.huge.image img,
@@ -1747,16 +1774,16 @@ i.dot.icon:hover,
   max-width: none;
   max-height: none;
   display: inline-block;
-  height: 48px;
-  margin: -12px 12px -12px -24px;
-  border-radius: 5px 0 0 5px;
+  height: 46px;
+  margin: -11px 11px -11px -22px;
+  border-radius: 3px 0 0 3px;
   vertical-align: top;
 }
 .dot.button.huge.image * + .image,
 .dot .button.huge.image * + .image,
 .dot button.huge.image * + .image {
-  border-radius: 0 5px 5px 0;
-  margin: -12px -24px -12px 12px;
+  border-radius: 0 3px 3px 0;
+  margin: -11px -22px -11px 11px;
 }
 .dot.button.huge.circle,
 .dot .button.huge.circle,
@@ -1764,7 +1791,7 @@ i.dot.icon:hover,
 .dot.button.huge.labeled,
 .dot .button.huge.labeled,
 .dot button.huge.labeled {
-  padding: 24px;
+  padding: 23px;
 }
 .dot.button.huge.circle,
 .dot .button.huge.circle,
@@ -2377,12 +2404,12 @@ i.dot.icon:hover,
   margin: 0 !important;
 }
 .dot.button-group > .button:first-child {
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
 }
 .dot.button-group > .button:last-child {
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
   margin-right: 10px;
 }
 .dot.button-group.vertical {
@@ -2395,18 +2422,18 @@ i.dot.icon:hover,
   border-radius: 0;
 }
 .dot.button-group.vertical > .button:first-child {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 }
 .dot.button-group.vertical > .button:last-child {
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 .dot.button-group.float-right {
   margin-right: 0;
 }
 .dot.button-group > .button {
-  padding: 8px 16px;
+  padding: 7px 14px;
   font-size: 14px;
   line-height: 16px;
 }
@@ -2420,31 +2447,31 @@ i.dot.icon:hover,
 .dot.button-group > .button.icon .icon {
   vertical-align: top;
   /*default icon left*/
-  margin: 0 6px 0 -6px;
+  margin: 0 5px 0 -5px;
   opacity: .95;
 }
 .dot.button-group > .button.icon .icon:hover {
   opacity: 1;
 }
 .dot.button-group > .button.icon * + .icon {
-  margin: 0 -6px 0 6px;
+  margin: 0 -5px 0 5px;
 }
 .dot.button-group > .button.image img {
   max-width: none;
   max-height: none;
   display: inline-block;
-  height: 32px;
-  margin: -8px 8px -8px -16px;
-  border-radius: 5px 0 0 5px;
+  height: 30px;
+  margin: -7px 7px -7px -14px;
+  border-radius: 3px 0 0 3px;
   vertical-align: top;
 }
 .dot.button-group > .button.image * + .image {
-  border-radius: 0 5px 5px 0;
-  margin: -8px -16px -8px 8px;
+  border-radius: 0 3px 3px 0;
+  margin: -7px -14px -7px 7px;
 }
 .dot.button-group > .button.circle,
 .dot.button-group > .button.labeled {
-  padding: 16px;
+  padding: 15px;
 }
 .dot.button-group > .button.circle,
 .dot.button-group > .button.labeled {
@@ -2466,7 +2493,7 @@ i.dot.icon:hover,
   border-radius: 24px;
 }
 .dot.button-group.tiny > .button {
-  padding: 5px 10px;
+  padding: 4px 8px;
   font-size: 8px;
   line-height: 10px;
 }
@@ -2480,31 +2507,31 @@ i.dot.icon:hover,
 .dot.button-group.tiny > .button.icon .icon {
   vertical-align: top;
   /*default icon left*/
-  margin: 0 3px 0 -3px;
+  margin: 0 2px 0 -2px;
   opacity: .95;
 }
 .dot.button-group.tiny > .button.icon .icon:hover {
   opacity: 1;
 }
 .dot.button-group.tiny > .button.icon * + .icon {
-  margin: 0 -3px 0 3px;
+  margin: 0 -2px 0 2px;
 }
 .dot.button-group.tiny > .button.image img {
   max-width: none;
   max-height: none;
   display: inline-block;
-  height: 20px;
-  margin: -5px 5px -5px -10px;
-  border-radius: 5px 0 0 5px;
+  height: 18px;
+  margin: -4px 4px -4px -8px;
+  border-radius: 3px 0 0 3px;
   vertical-align: top;
 }
 .dot.button-group.tiny > .button.image * + .image {
-  border-radius: 0 5px 5px 0;
-  margin: -5px -10px -5px 5px;
+  border-radius: 0 3px 3px 0;
+  margin: -4px -8px -4px 4px;
 }
 .dot.button-group.tiny > .button.circle,
 .dot.button-group.tiny > .button.labeled {
-  padding: 10px;
+  padding: 9px;
 }
 .dot.button-group.tiny > .button.circle,
 .dot.button-group.tiny > .button.labeled {
@@ -2526,7 +2553,7 @@ i.dot.icon:hover,
   border-radius: 15px;
 }
 .dot.button-group.small > .button {
-  padding: 7px 14px;
+  padding: 6px 12px;
   font-size: 12px;
   line-height: 14px;
 }
@@ -2540,31 +2567,31 @@ i.dot.icon:hover,
 .dot.button-group.small > .button.icon .icon {
   vertical-align: top;
   /*default icon left*/
-  margin: 0 5px 0 -5px;
+  margin: 0 4px 0 -4px;
   opacity: .95;
 }
 .dot.button-group.small > .button.icon .icon:hover {
   opacity: 1;
 }
 .dot.button-group.small > .button.icon * + .icon {
-  margin: 0 -5px 0 5px;
+  margin: 0 -4px 0 4px;
 }
 .dot.button-group.small > .button.image img {
   max-width: none;
   max-height: none;
   display: inline-block;
-  height: 28px;
-  margin: -7px 7px -7px -14px;
-  border-radius: 5px 0 0 5px;
+  height: 26px;
+  margin: -6px 6px -6px -12px;
+  border-radius: 3px 0 0 3px;
   vertical-align: top;
 }
 .dot.button-group.small > .button.image * + .image {
-  border-radius: 0 5px 5px 0;
-  margin: -7px -14px -7px 7px;
+  border-radius: 0 3px 3px 0;
+  margin: -6px -12px -6px 6px;
 }
 .dot.button-group.small > .button.circle,
 .dot.button-group.small > .button.labeled {
-  padding: 14px;
+  padding: 13px;
 }
 .dot.button-group.small > .button.circle,
 .dot.button-group.small > .button.labeled {
@@ -2586,7 +2613,7 @@ i.dot.icon:hover,
   border-radius: 21px;
 }
 .dot.button-group.large > .button {
-  padding: 10px 20px;
+  padding: 9px 18px;
   font-size: 18px;
   line-height: 20px;
 }
@@ -2600,31 +2627,31 @@ i.dot.icon:hover,
 .dot.button-group.large > .button.icon .icon {
   vertical-align: top;
   /*default icon left*/
-  margin: 0 8px 0 -8px;
+  margin: 0 7px 0 -7px;
   opacity: .95;
 }
 .dot.button-group.large > .button.icon .icon:hover {
   opacity: 1;
 }
 .dot.button-group.large > .button.icon * + .icon {
-  margin: 0 -8px 0 8px;
+  margin: 0 -7px 0 7px;
 }
 .dot.button-group.large > .button.image img {
   max-width: none;
   max-height: none;
   display: inline-block;
-  height: 40px;
-  margin: -10px 10px -10px -20px;
-  border-radius: 5px 0 0 5px;
+  height: 38px;
+  margin: -9px 9px -9px -18px;
+  border-radius: 3px 0 0 3px;
   vertical-align: top;
 }
 .dot.button-group.large > .button.image * + .image {
-  border-radius: 0 5px 5px 0;
-  margin: -10px -20px -10px 10px;
+  border-radius: 0 3px 3px 0;
+  margin: -9px -18px -9px 9px;
 }
 .dot.button-group.large > .button.circle,
 .dot.button-group.large > .button.labeled {
-  padding: 20px;
+  padding: 19px;
 }
 .dot.button-group.large > .button.circle,
 .dot.button-group.large > .button.labeled {
@@ -2646,7 +2673,7 @@ i.dot.icon:hover,
   border-radius: 30px;
 }
 .dot.button-group.huge > .button {
-  padding: 12px 24px;
+  padding: 11px 22px;
   font-size: 22px;
   line-height: 24px;
 }
@@ -2660,31 +2687,31 @@ i.dot.icon:hover,
 .dot.button-group.huge > .button.icon .icon {
   vertical-align: top;
   /*default icon left*/
-  margin: 0 10px 0 -10px;
+  margin: 0 9px 0 -9px;
   opacity: .95;
 }
 .dot.button-group.huge > .button.icon .icon:hover {
   opacity: 1;
 }
 .dot.button-group.huge > .button.icon * + .icon {
-  margin: 0 -10px 0 10px;
+  margin: 0 -9px 0 9px;
 }
 .dot.button-group.huge > .button.image img {
   max-width: none;
   max-height: none;
   display: inline-block;
-  height: 48px;
-  margin: -12px 12px -12px -24px;
-  border-radius: 5px 0 0 5px;
+  height: 46px;
+  margin: -11px 11px -11px -22px;
+  border-radius: 3px 0 0 3px;
   vertical-align: top;
 }
 .dot.button-group.huge > .button.image * + .image {
-  border-radius: 0 5px 5px 0;
-  margin: -12px -24px -12px 12px;
+  border-radius: 0 3px 3px 0;
+  margin: -11px -22px -11px 11px;
 }
 .dot.button-group.huge > .button.circle,
 .dot.button-group.huge > .button.labeled {
-  padding: 24px;
+  padding: 23px;
 }
 .dot.button-group.huge > .button.circle,
 .dot.button-group.huge > .button.labeled {
@@ -3428,7 +3455,7 @@ i.dot.icon:hover,
 }
 .dot.table {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03);
-  border-radius: 5px;
+  border-radius: 3px;
   position: relative;
   overflow: initial;
   display: table;
@@ -3475,13 +3502,13 @@ i.dot.icon:hover,
 .dot.table thead tr:first-child > .cell:first-child,
 .dot.table .head tr:first-child > th:first-child,
 .dot.table thead tr:first-child > th:first-child {
-  border-radius: 5px 0 0 0;
+  border-radius: 3px 0 0 0;
 }
 .dot.table .head tr:first-child > .cell:last-child,
 .dot.table thead tr:first-child > .cell:last-child,
 .dot.table .head tr:first-child > th:last-child,
 .dot.table thead tr:first-child > th:last-child {
-  border-radius: 0 5px 0 0;
+  border-radius: 0 3px 0 0;
 }
 .dot.table .head .cell,
 .dot.table thead .cell,
@@ -3579,16 +3606,16 @@ i.dot.icon:hover,
   width: 100%;
 }
 .dot.input > :first-child {
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 .dot.input > :last-child {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 .dot.input.fluid {
   width: 100%;
@@ -3597,7 +3624,7 @@ i.dot.icon:hover,
   width: 5em;
 }
 .dot.input.icon > input {
-  border-radius: 5px;
+  border-radius: 3px;
 }
 .dot.input .icon {
   position: absolute;
@@ -3622,7 +3649,7 @@ i.dot.icon:hover,
   font-size: 14px;
   padding: 8px;
   line-height: 16px;
-  height: 34px;
+  height: 36px;
 }
 .dot.input.round > :first-child {
   border-top-left-radius: 24px;
@@ -3661,7 +3688,7 @@ i.dot.icon:hover,
   font-size: 8px;
   padding: 4px;
   line-height: 10px;
-  height: 20px;
+  height: 22px;
 }
 .dot.input.tiny.round > :first-child {
   border-top-left-radius: 14px;
@@ -3700,7 +3727,7 @@ i.dot.icon:hover,
   font-size: 12px;
   padding: 7px;
   line-height: 14px;
-  height: 30px;
+  height: 32px;
 }
 .dot.input.small.round > :first-child {
   border-top-left-radius: 21px;
@@ -3739,7 +3766,7 @@ i.dot.icon:hover,
   font-size: 18px;
   padding: 10px;
   line-height: 20px;
-  height: 42px;
+  height: 44px;
 }
 .dot.input.large.round > :first-child {
   border-top-left-radius: 30px;
@@ -3778,7 +3805,7 @@ i.dot.icon:hover,
   font-size: 22px;
   padding: 12px;
   line-height: 24px;
-  height: 50px;
+  height: 52px;
 }
 .dot.input.huge.round > :first-child {
   border-top-left-radius: 36px;
@@ -3820,7 +3847,7 @@ input.dot.input,
   font-size: 14px;
   padding: 8px;
   line-height: 16px;
-  height: 34px;
+  height: 36px;
 }
 .dot input:focus,
 input.dot.input:focus,
@@ -3857,7 +3884,7 @@ input.dot.input.tiny,
   font-size: 8px;
   padding: 4px;
   line-height: 10px;
-  height: 20px;
+  height: 22px;
 }
 .dot input.tiny.round,
 input.dot.input.tiny.round,
@@ -3872,7 +3899,7 @@ input.dot.input.small,
   font-size: 12px;
   padding: 7px;
   line-height: 14px;
-  height: 30px;
+  height: 32px;
 }
 .dot input.small.round,
 input.dot.input.small.round,
@@ -3887,7 +3914,7 @@ input.dot.input.large,
   font-size: 18px;
   padding: 10px;
   line-height: 20px;
-  height: 42px;
+  height: 44px;
 }
 .dot input.large.round,
 input.dot.input.large.round,
@@ -3902,7 +3929,7 @@ input.dot.input.huge,
   font-size: 22px;
   padding: 12px;
   line-height: 24px;
-  height: 50px;
+  height: 52px;
 }
 .dot input.huge.round,
 input.dot.input.huge.round,
@@ -3939,7 +3966,7 @@ input.dot.input.error,
   display: inline-block;
   line-height: 1em;
   font-size: 15px;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 .dot .checkbox input[type=checkbox],
 .dot.checkbox input[type=checkbox],
@@ -4096,7 +4123,7 @@ input.dot.input.error,
   border: 0;
   background-color: #F5F5F5;
   vertical-align: middle;
-  border-radius: 5px;
+  border-radius: 3px;
   cursor: pointer;
   /*size*/
   padding: 6px 12px;
@@ -4144,19 +4171,19 @@ input.dot.input.error,
   display: inline-block;
   height: 26px;
   margin: -6px 6px -6px -12px;
-  border-radius: 5px 0 0 5px;
+  border-radius: 3px 0 0 3px;
   vertical-align: top;
 }
 .dot.label.image * + .image,
 .dot .label.image * + .image {
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 3px 3px 0;
   margin: -6px -12px -6px 6px;
 }
 .dot.label.circle,
 .dot .label.circle,
 .dot.label.labeled,
 .dot .label.labeled {
-  padding: 14px;
+  padding: 13px;
 }
 .dot.label.circle,
 .dot .label.circle,
@@ -4219,19 +4246,19 @@ input.dot.input.error,
   display: inline-block;
   height: 20px;
   margin: -5px 5px -5px -10px;
-  border-radius: 5px 0 0 5px;
+  border-radius: 3px 0 0 3px;
   vertical-align: top;
 }
 .dot.label.tiny.image * + .image,
 .dot .label.tiny.image * + .image {
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 3px 3px 0;
   margin: -5px -10px -5px 5px;
 }
 .dot.label.tiny.circle,
 .dot .label.tiny.circle,
 .dot.label.tiny.labeled,
 .dot .label.tiny.labeled {
-  padding: 10px;
+  padding: 9px;
 }
 .dot.label.tiny.circle,
 .dot .label.tiny.circle,
@@ -4294,19 +4321,19 @@ input.dot.input.error,
   display: inline-block;
   height: 24px;
   margin: -6px 6px -6px -12px;
-  border-radius: 5px 0 0 5px;
+  border-radius: 3px 0 0 3px;
   vertical-align: top;
 }
 .dot.label.small.image * + .image,
 .dot .label.small.image * + .image {
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 3px 3px 0;
   margin: -6px -12px -6px 6px;
 }
 .dot.label.small.circle,
 .dot .label.small.circle,
 .dot.label.small.labeled,
 .dot .label.small.labeled {
-  padding: 12px;
+  padding: 11px;
 }
 .dot.label.small.circle,
 .dot .label.small.circle,
@@ -4369,19 +4396,19 @@ input.dot.input.error,
   display: inline-block;
   height: 36px;
   margin: -9px 9px -9px -18px;
-  border-radius: 5px 0 0 5px;
+  border-radius: 3px 0 0 3px;
   vertical-align: top;
 }
 .dot.label.large.image * + .image,
 .dot .label.large.image * + .image {
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 3px 3px 0;
   margin: -9px -18px -9px 9px;
 }
 .dot.label.large.circle,
 .dot .label.large.circle,
 .dot.label.large.labeled,
 .dot .label.large.labeled {
-  padding: 18px;
+  padding: 17px;
 }
 .dot.label.large.circle,
 .dot .label.large.circle,
@@ -4444,19 +4471,19 @@ input.dot.input.error,
   display: inline-block;
   height: 44px;
   margin: -11px 11px -11px -22px;
-  border-radius: 5px 0 0 5px;
+  border-radius: 3px 0 0 3px;
   vertical-align: top;
 }
 .dot.label.huge.image * + .image,
 .dot .label.huge.image * + .image {
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 3px 3px 0;
   margin: -11px -22px -11px 11px;
 }
 .dot.label.huge.circle,
 .dot .label.huge.circle,
 .dot.label.huge.labeled,
 .dot .label.huge.labeled {
-  padding: 22px;
+  padding: 21px;
 }
 .dot.label.huge.circle,
 .dot .label.huge.circle,
@@ -4998,16 +5025,16 @@ input.dot.input.error,
   display: inline-block;
   height: 24px;
   margin: -6px 6px -6px -12px;
-  border-radius: 5px 0 0 5px;
+  border-radius: 3px 0 0 3px;
   vertical-align: top;
 }
 .dot.label-group .label.image * + .image {
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 3px 3px 0;
   margin: -6px -12px -6px 6px;
 }
 .dot.label-group .label.circle,
 .dot.label-group .label.labeled {
-  padding: 12px;
+  padding: 11px;
 }
 .dot.label-group .label.circle,
 .dot.label-group .label.labeled {
@@ -5058,16 +5085,16 @@ input.dot.input.error,
   display: inline-block;
   height: 16px;
   margin: -4px 4px -4px -8px;
-  border-radius: 5px 0 0 5px;
+  border-radius: 3px 0 0 3px;
   vertical-align: top;
 }
 .dot.label-group.tiny .label.image * + .image {
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 3px 3px 0;
   margin: -4px -8px -4px 4px;
 }
 .dot.label-group.tiny .label.circle,
 .dot.label-group.tiny .label.labeled {
-  padding: 8px;
+  padding: 7px;
 }
 .dot.label-group.tiny .label.circle,
 .dot.label-group.tiny .label.labeled {
@@ -5118,16 +5145,16 @@ input.dot.input.error,
   display: inline-block;
   height: 20px;
   margin: -5px 5px -5px -10px;
-  border-radius: 5px 0 0 5px;
+  border-radius: 3px 0 0 3px;
   vertical-align: top;
 }
 .dot.label-group.small .label.image * + .image {
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 3px 3px 0;
   margin: -5px -10px -5px 5px;
 }
 .dot.label-group.small .label.circle,
 .dot.label-group.small .label.labeled {
-  padding: 10px;
+  padding: 9px;
 }
 .dot.label-group.small .label.circle,
 .dot.label-group.small .label.labeled {
@@ -5178,16 +5205,16 @@ input.dot.input.error,
   display: inline-block;
   height: 32px;
   margin: -8px 8px -8px -16px;
-  border-radius: 5px 0 0 5px;
+  border-radius: 3px 0 0 3px;
   vertical-align: top;
 }
 .dot.label-group.large .label.image * + .image {
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 3px 3px 0;
   margin: -8px -16px -8px 8px;
 }
 .dot.label-group.large .label.circle,
 .dot.label-group.large .label.labeled {
-  padding: 16px;
+  padding: 15px;
 }
 .dot.label-group.large .label.circle,
 .dot.label-group.large .label.labeled {
@@ -5238,16 +5265,16 @@ input.dot.input.error,
   display: inline-block;
   height: 40px;
   margin: -10px 10px -10px -20px;
-  border-radius: 5px 0 0 5px;
+  border-radius: 3px 0 0 3px;
   vertical-align: top;
 }
 .dot.label-group.huge .label.image * + .image {
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 3px 3px 0;
   margin: -10px -20px -10px 10px;
 }
 .dot.label-group.huge .label.circle,
 .dot.label-group.huge .label.labeled {
-  padding: 20px;
+  padding: 19px;
 }
 .dot.label-group.huge .label.circle,
 .dot.label-group.huge .label.labeled {
@@ -5279,7 +5306,7 @@ img.dot.image {
   height: auto;
 }
 img.dot.image.round {
-  border-radius: 5px;
+  border-radius: 3px;
 }
 img.dot.image.fluid {
   display: block;
@@ -5342,7 +5369,7 @@ img.dot.image.massive.circle {
   width: 100%;
 }
 .dot.image.round > img {
-  border-radius: 5px;
+  border-radius: 3px;
 }
 .dot.image.middle.circle {
   border-radius: 50%;
@@ -5613,7 +5640,7 @@ img.dot.image.massive.circle {
   width: 100%;
   height: 100%;
   background-color: #F5F5F5;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 .dot.comment > .avatar.angled img {
   border-radius: 0;
@@ -5789,7 +5816,7 @@ img.dot.image.massive.circle {
 .dot.card {
   border: 1px solid #EEEEEE;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03);
-  border-radius: 5px;
+  border-radius: 3px;
   display: block;
   background-color: #ffffff;
   border: 1px solid #F5F5F5;
@@ -5799,7 +5826,7 @@ img.dot.image.massive.circle {
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
 }
 .dot.card > .image:first-child {
-  border-radius: 5px 5px 0 0;
+  border-radius: 3px 3px 0 0;
   overflow: hidden;
 }
 .dot.card > .content,
@@ -5827,7 +5854,7 @@ img.dot.image.massive.circle {
 .dot.cards > .card {
   border: 1px solid #EEEEEE;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03);
-  border-radius: 5px;
+  border-radius: 3px;
   display: block;
   background-color: #ffffff;
   border: 1px solid #F5F5F5;
@@ -5842,7 +5869,7 @@ img.dot.image.massive.circle {
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
 }
 .dot.cards > .card > .image:first-child {
-  border-radius: 5px 5px 0 0;
+  border-radius: 3px 3px 0 0;
   overflow: hidden;
 }
 .dot.cards > .card > .content,
@@ -5909,7 +5936,7 @@ img.dot.image.massive.circle {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03);
   margin: 10px 0;
   color: #616161;
-  border-radius: 5px;
+  border-radius: 3px;
   background-color: #FAFAFA;
   border: 1px solid #EEEEEE;
   padding: 9px 18px;
@@ -5974,16 +6001,16 @@ img.dot.image.massive.circle {
   display: inline-block;
   height: 33px;
   margin: -9px 9px -9px -18px;
-  border-radius: 5px 0 0 5px;
+  border-radius: 3px 0 0 3px;
   vertical-align: top;
 }
 .dot.message.image * + .image {
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 3px 3px 0;
   margin: -9px -18px -9px 9px;
 }
 .dot.message.circle,
 .dot.message.labeled {
-  padding: 15px;
+  padding: 14px;
 }
 .dot.message.circle,
 .dot.message.labeled {
@@ -6036,16 +6063,16 @@ img.dot.image.massive.circle {
   display: inline-block;
   height: 22px;
   margin: -6px 6px -6px -12px;
-  border-radius: 5px 0 0 5px;
+  border-radius: 3px 0 0 3px;
   vertical-align: top;
 }
 .dot.message.tiny.image * + .image {
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 3px 3px 0;
   margin: -6px -12px -6px 6px;
 }
 .dot.message.tiny.circle,
 .dot.message.tiny.labeled {
-  padding: 10px;
+  padding: 9px;
 }
 .dot.message.tiny.circle,
 .dot.message.tiny.labeled {
@@ -6098,16 +6125,16 @@ img.dot.image.massive.circle {
   display: inline-block;
   height: 26px;
   margin: -7px 7px -7px -14px;
-  border-radius: 5px 0 0 5px;
+  border-radius: 3px 0 0 3px;
   vertical-align: top;
 }
 .dot.message.small.image * + .image {
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 3px 3px 0;
   margin: -7px -14px -7px 7px;
 }
 .dot.message.small.circle,
 .dot.message.small.labeled {
-  padding: 12px;
+  padding: 11px;
 }
 .dot.message.small.circle,
 .dot.message.small.labeled {
@@ -6160,16 +6187,16 @@ img.dot.image.massive.circle {
   display: inline-block;
   height: 44px;
   margin: -12px 12px -12px -24px;
-  border-radius: 5px 0 0 5px;
+  border-radius: 3px 0 0 3px;
   vertical-align: top;
 }
 .dot.message.large.image * + .image {
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 3px 3px 0;
   margin: -12px -24px -12px 12px;
 }
 .dot.message.large.circle,
 .dot.message.large.labeled {
-  padding: 20px;
+  padding: 19px;
 }
 .dot.message.large.circle,
 .dot.message.large.labeled {
@@ -6222,16 +6249,16 @@ img.dot.image.massive.circle {
   display: inline-block;
   height: 55px;
   margin: -15px 15px -15px -30px;
-  border-radius: 5px 0 0 5px;
+  border-radius: 3px 0 0 3px;
   vertical-align: top;
 }
 .dot.message.huge.image * + .image {
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 3px 3px 0;
   margin: -15px -30px -15px 15px;
 }
 .dot.message.huge.circle,
 .dot.message.huge.labeled {
-  padding: 25px;
+  padding: 24px;
 }
 .dot.message.huge.circle,
 .dot.message.huge.labeled {
@@ -6702,7 +6729,7 @@ img.dot.image.massive.circle {
   height: 0;
 }
 .dot.form .group {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   /*列*/
 }
 .dot.form .group > label {
@@ -6732,7 +6759,7 @@ img.dot.image.massive.circle {
 .dot.form .group .fields-1 {
   font-size: 0;
   position: relative;
-  margin: 0 -10px -10px;
+  margin: 0 -10px -20px;
 }
 .dot.form .group .fields-1:after {
   content: ".";
@@ -6753,7 +6780,7 @@ img.dot.image.massive.circle {
   line-height: 34px;
   float: left;
   width: 6.25%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .dot.form .group .fields > .field-1 > label:not(.dot) {
   background: initial;
@@ -6777,7 +6804,7 @@ img.dot.image.massive.circle {
 .dot.form .group .fields-2 {
   font-size: 0;
   position: relative;
-  margin: 0 -10px -10px;
+  margin: 0 -10px -20px;
 }
 .dot.form .group .fields-2:after {
   content: ".";
@@ -6798,7 +6825,7 @@ img.dot.image.massive.circle {
   line-height: 34px;
   float: left;
   width: 12.5%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .dot.form .group .fields > .field-2 > label:not(.dot) {
   background: initial;
@@ -6822,7 +6849,7 @@ img.dot.image.massive.circle {
 .dot.form .group .fields-3 {
   font-size: 0;
   position: relative;
-  margin: 0 -10px -10px;
+  margin: 0 -10px -20px;
 }
 .dot.form .group .fields-3:after {
   content: ".";
@@ -6843,7 +6870,7 @@ img.dot.image.massive.circle {
   line-height: 34px;
   float: left;
   width: 18.75%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .dot.form .group .fields > .field-3 > label:not(.dot) {
   background: initial;
@@ -6867,7 +6894,7 @@ img.dot.image.massive.circle {
 .dot.form .group .fields-4 {
   font-size: 0;
   position: relative;
-  margin: 0 -10px -10px;
+  margin: 0 -10px -20px;
 }
 .dot.form .group .fields-4:after {
   content: ".";
@@ -6888,7 +6915,7 @@ img.dot.image.massive.circle {
   line-height: 34px;
   float: left;
   width: 25%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .dot.form .group .fields > .field-4 > label:not(.dot) {
   background: initial;
@@ -6912,7 +6939,7 @@ img.dot.image.massive.circle {
 .dot.form .group .fields-5 {
   font-size: 0;
   position: relative;
-  margin: 0 -10px -10px;
+  margin: 0 -10px -20px;
 }
 .dot.form .group .fields-5:after {
   content: ".";
@@ -6933,7 +6960,7 @@ img.dot.image.massive.circle {
   line-height: 34px;
   float: left;
   width: 31.25%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .dot.form .group .fields > .field-5 > label:not(.dot) {
   background: initial;
@@ -6957,7 +6984,7 @@ img.dot.image.massive.circle {
 .dot.form .group .fields-6 {
   font-size: 0;
   position: relative;
-  margin: 0 -10px -10px;
+  margin: 0 -10px -20px;
 }
 .dot.form .group .fields-6:after {
   content: ".";
@@ -6978,7 +7005,7 @@ img.dot.image.massive.circle {
   line-height: 34px;
   float: left;
   width: 37.5%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .dot.form .group .fields > .field-6 > label:not(.dot) {
   background: initial;
@@ -7002,7 +7029,7 @@ img.dot.image.massive.circle {
 .dot.form .group .fields-7 {
   font-size: 0;
   position: relative;
-  margin: 0 -10px -10px;
+  margin: 0 -10px -20px;
 }
 .dot.form .group .fields-7:after {
   content: ".";
@@ -7023,7 +7050,7 @@ img.dot.image.massive.circle {
   line-height: 34px;
   float: left;
   width: 43.75%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .dot.form .group .fields > .field-7 > label:not(.dot) {
   background: initial;
@@ -7047,7 +7074,7 @@ img.dot.image.massive.circle {
 .dot.form .group .fields-8 {
   font-size: 0;
   position: relative;
-  margin: 0 -10px -10px;
+  margin: 0 -10px -20px;
 }
 .dot.form .group .fields-8:after {
   content: ".";
@@ -7068,7 +7095,7 @@ img.dot.image.massive.circle {
   line-height: 34px;
   float: left;
   width: 50%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .dot.form .group .fields > .field-8 > label:not(.dot) {
   background: initial;
@@ -7092,7 +7119,7 @@ img.dot.image.massive.circle {
 .dot.form .group .fields-9 {
   font-size: 0;
   position: relative;
-  margin: 0 -10px -10px;
+  margin: 0 -10px -20px;
 }
 .dot.form .group .fields-9:after {
   content: ".";
@@ -7113,7 +7140,7 @@ img.dot.image.massive.circle {
   line-height: 34px;
   float: left;
   width: 56.25%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .dot.form .group .fields > .field-9 > label:not(.dot) {
   background: initial;
@@ -7137,7 +7164,7 @@ img.dot.image.massive.circle {
 .dot.form .group .fields-10 {
   font-size: 0;
   position: relative;
-  margin: 0 -10px -10px;
+  margin: 0 -10px -20px;
 }
 .dot.form .group .fields-10:after {
   content: ".";
@@ -7158,7 +7185,7 @@ img.dot.image.massive.circle {
   line-height: 34px;
   float: left;
   width: 62.5%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .dot.form .group .fields > .field-10 > label:not(.dot) {
   background: initial;
@@ -7182,7 +7209,7 @@ img.dot.image.massive.circle {
 .dot.form .group .fields-11 {
   font-size: 0;
   position: relative;
-  margin: 0 -10px -10px;
+  margin: 0 -10px -20px;
 }
 .dot.form .group .fields-11:after {
   content: ".";
@@ -7203,7 +7230,7 @@ img.dot.image.massive.circle {
   line-height: 34px;
   float: left;
   width: 68.75%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .dot.form .group .fields > .field-11 > label:not(.dot) {
   background: initial;
@@ -7227,7 +7254,7 @@ img.dot.image.massive.circle {
 .dot.form .group .fields-12 {
   font-size: 0;
   position: relative;
-  margin: 0 -10px -10px;
+  margin: 0 -10px -20px;
 }
 .dot.form .group .fields-12:after {
   content: ".";
@@ -7248,7 +7275,7 @@ img.dot.image.massive.circle {
   line-height: 34px;
   float: left;
   width: 75%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .dot.form .group .fields > .field-12 > label:not(.dot) {
   background: initial;
@@ -7272,7 +7299,7 @@ img.dot.image.massive.circle {
 .dot.form .group .fields-13 {
   font-size: 0;
   position: relative;
-  margin: 0 -10px -10px;
+  margin: 0 -10px -20px;
 }
 .dot.form .group .fields-13:after {
   content: ".";
@@ -7293,7 +7320,7 @@ img.dot.image.massive.circle {
   line-height: 34px;
   float: left;
   width: 81.25%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .dot.form .group .fields > .field-13 > label:not(.dot) {
   background: initial;
@@ -7317,7 +7344,7 @@ img.dot.image.massive.circle {
 .dot.form .group .fields-14 {
   font-size: 0;
   position: relative;
-  margin: 0 -10px -10px;
+  margin: 0 -10px -20px;
 }
 .dot.form .group .fields-14:after {
   content: ".";
@@ -7338,7 +7365,7 @@ img.dot.image.massive.circle {
   line-height: 34px;
   float: left;
   width: 87.5%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .dot.form .group .fields > .field-14 > label:not(.dot) {
   background: initial;
@@ -7362,7 +7389,7 @@ img.dot.image.massive.circle {
 .dot.form .group .fields-15 {
   font-size: 0;
   position: relative;
-  margin: 0 -10px -10px;
+  margin: 0 -10px -20px;
 }
 .dot.form .group .fields-15:after {
   content: ".";
@@ -7383,7 +7410,7 @@ img.dot.image.massive.circle {
   line-height: 34px;
   float: left;
   width: 93.75%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .dot.form .group .fields > .field-15 > label:not(.dot) {
   background: initial;
@@ -7407,7 +7434,7 @@ img.dot.image.massive.circle {
 .dot.form .group .fields-16 {
   font-size: 0;
   position: relative;
-  margin: 0 -10px -10px;
+  margin: 0 -10px -20px;
 }
 .dot.form .group .fields-16:after {
   content: ".";
@@ -7428,7 +7455,7 @@ img.dot.image.massive.circle {
   line-height: 34px;
   float: left;
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .dot.form .group .fields > .field-16 > label:not(.dot) {
   background: initial;
@@ -7450,7 +7477,7 @@ img.dot.image.massive.circle {
   width: 100%;
 }
 .dot.form .group .field {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   line-height: 34px;
   /*非内联*/
   /*内联*/
@@ -7466,11 +7493,11 @@ img.dot.image.massive.circle {
   display: block;
   line-height: 24px;
 }
-.dot.form .group .field:not(.inline) .dropdown,
-.dot.form .group .field:not(.inline) .datepicker,
-.dot.form .group .field:not(.inline) .datetime-picker,
-.dot.form .group .field:not(.inline) .timepicker,
-.dot.form .group .field:not(.inline) .timeinput {
+.dot.form .group .field:not(.inline) > .dropdown,
+.dot.form .group .field:not(.inline) > .datepicker,
+.dot.form .group .field:not(.inline) > .datetime-picker,
+.dot.form .group .field:not(.inline) > .timepicker,
+.dot.form .group .field:not(.inline) > .timeinput {
   min-width: initial;
   width: 100%;
 }
@@ -7936,7 +7963,7 @@ img.dot.image.massive.circle {
 .dot.menu > .item,
 .dot.menu .dot.item {
   color: #383838;
-  border-radius: 5px;
+  border-radius: 3px;
   margin: 0 5px;
   -webkit-transition: background 0.3s, opacity 0.3s, color 0.3s, border-color 0.3s;
   -o-transition: background 0.3s, opacity 0.3s, color 0.3s, border-color 0.3s;
@@ -8035,7 +8062,7 @@ img.dot.image.massive.circle {
 .dot.menu.bar {
   margin: 0 0 10px;
   padding: 0;
-  border-radius: 5px;
+  border-radius: 3px;
   height: 36px;
   line-height: 36px;
   border: 1px solid #EEEEEE;
@@ -8046,13 +8073,13 @@ img.dot.image.massive.circle {
 }
 .dot.menu.bar > .item:first-child,
 .dot.menu.bar .dot.item:first-child {
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
 }
 .dot.menu.bar > .item:last-child,
 .dot.menu.bar .dot.item:last-child {
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 .dot.menu.bar > .item,
 .dot.menu.bar .dot.item {
@@ -8073,7 +8100,7 @@ img.dot.image.massive.circle {
   margin: 0;
   width: 200px;
   border: 1px solid #EEEEEE;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 .dot.vertical.menu .item {
   display: block;
@@ -8085,12 +8112,12 @@ img.dot.image.massive.circle {
   border-top: 1px solid #EEEEEE;
 }
 .dot.vertical.menu .item:first-child {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 }
 .dot.vertical.menu .item:last-child {
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 .dot.vertical.menu.angled {
   border-radius: 0;
@@ -8126,8 +8153,8 @@ img.dot.image.massive.circle {
   display: inline-block;
   padding: 0 12px;
   line-height: 36px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 }
 .dot.tab > .bar > .item.active {
   border-color: #EEEEEE;
@@ -8137,19 +8164,19 @@ img.dot.image.massive.circle {
 .dot.tab > .content {
   border: 1px solid #EEEEEE;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03);
-  border-radius: 5px;
+  border-radius: 3px;
   padding: 10px;
-  border-radius: 0 0 5px 5px;
+  border-radius: 0 0 3px 3px;
 }
 .dot.tab > .content:hover {
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
 }
 .dot.tab.bottom > .content {
-  border-radius: 5px 5px 0 0;
+  border-radius: 3px 3px 0 0;
 }
 .dot.tab.bottom > .bar > .item {
   margin: -1px 0 0;
-  border-radius: 0 0 5px 5px;
+  border-radius: 0 0 3px 3px;
   border-top: 0;
 }
 .dot.tab.bottom > .bar > .item.active {
@@ -8159,8 +8186,8 @@ img.dot.image.massive.circle {
 .dot.section.tab > .bar {
   border: 1px solid #EEEEEE;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03);
-  border-radius: 5px;
-  border-radius: 5px 5px 0 0;
+  border-radius: 3px;
+  border-radius: 3px 3px 0 0;
   border-bottom: 0;
 }
 .dot.section.tab > .bar:hover {
@@ -8187,8 +8214,8 @@ img.dot.image.massive.circle {
 .dot.section.tab.bottom > .bar {
   border: 1px solid #EEEEEE;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.03);
-  border-radius: 5px;
-  border-radius: 0 0 5px 5px;
+  border-radius: 3px;
+  border-radius: 0 0 3px 3px;
   border-top: 0;
   margin: -1px 0 0 0;
 }
@@ -8203,7 +8230,7 @@ img.dot.image.massive.circle {
   display: block;
   border: 1px solid transparent;
   margin-right: -1px;
-  border-radius: 5px;
+  border-radius: 3px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
@@ -8212,7 +8239,7 @@ img.dot.image.massive.circle {
   border-right-color: transparent;
 }
 .dot.vertical.tab > .content {
-  border-top-right-radius: 5px;
+  border-top-right-radius: 3px;
   margin-left: 200px;
 }
 .dot.vertical.tab.right {
@@ -8223,7 +8250,7 @@ img.dot.image.massive.circle {
 .dot.vertical.tab.right > .content {
   margin-left: 0;
   display: table-cell;
-  border-radius: 5px 0 5px 5px;
+  border-radius: 3px 0 3px 3px;
 }
 .dot.vertical.tab.right > .bar {
   vertical-align: top;
@@ -8232,7 +8259,7 @@ img.dot.image.massive.circle {
 }
 .dot.vertical.tab.right > .bar > .item {
   margin-left: -1px;
-  border-radius: 0 5px 5px 0;
+  border-radius: 0 3px 3px 0;
 }
 .dot.vertical.tab.right > .bar > .item.active {
   border-color: #EEEEEE;
